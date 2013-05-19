@@ -100,12 +100,15 @@ header h1 {
 }
 
 .tile .arrow-down {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  height: 0px;
   right: 10px;
   bottom: -10px;
   position: absolute;
-  background-color: #123;
+  /* triangle trick */
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid red;
 }
 
 .tile.red   { background-color: red; }
@@ -119,6 +122,10 @@ header h1 {
 .offers {
   min-height: 400px;
   background-color: white;
+}
+
+.offers .offer-data {
+  margin: 15px;
 }
 
 .span1,
