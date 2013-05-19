@@ -60,18 +60,86 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+header {
+  height: 300px;
+  position: relative;
+  padding-top; 20px;
+}
 
+header .slide {
+  position: absolute;
+  right: 80px;
+  top: 20px;
+  width: 400px;
+  height: 200px;
+  background-color: black;
+}
 
+header h1 {
+  padding-top: 80px;
+  padding-left: 20px;
+}
 
+.container {
+  width: 900px;
+  clear: both;
+  margin: auto;
+  background-color: grey;
+}
 
+.tile {
+  display: inline-block;
+  width: 150px;
+  margin: 0;
+  position: relative;
+}
 
+.tile,
+.tile-height {
+  height: 150px;
+}
 
+.tile .arrow-down {
+  width: 10px;
+  height: 10px;
+  right: 10px;
+  bottom: -10px;
+  position: absolute;
+  background-color: #123;
+}
 
+.tile.red   { background-color: red; }
+.tile.green { background-color: green; }
+.tile.blue  { background-color: blue; }
 
+.aside p {
+  margin: 10px 100px 10px 10px;
+}
 
+.offers {
+  min-height: 400px;
+  background-color: white;
+}
 
+.span1,
+.span2,
+.span3,
+.span4 {
+  display: inline-block;
+  vertical-align: top;
+}
 
+.span1 {
+  width: 150px;
+}
 
+.span2 {
+  width: 300px;
+}
+
+.span4 {
+  width: 600px;
+}
 
 
 /* ==========================================================================
