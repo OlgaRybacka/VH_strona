@@ -60,13 +60,26 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  background-color: #d2d3d5;
   font-family: Anivers-Regular;
   color: #404040;
 }
-   
+
+.home-page {
+  background-color: #d2d3d5;
+}
+ 
+body .search-page {
+  background-color: #ffffff;
+}
+ 
 .home-page header {
   height: 250px;
+  position: relative;
+  padding-top; 20px;
+}
+
+.search-page header {
+  height: 100px;
   position: relative;
   padding-top; 20px;
 }
@@ -86,33 +99,61 @@ body {
   top: 290px;
 }
 
-.home-page .small-buttons .small-button {
+.search-page header .small-buttons {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 34px;
+}
+
+.small-buttons .small-button {
   height: 34px;
   width: 38px;
   margin-left: 1px;
-  margin-top: 3px;
   background-color: #481368;
   display: inline-block;
   position: relative;
 }
 
-.home-page .small-buttons .small-button img {
+.search-page .small-buttons .small-button {
+  margin-top: 0;
+}
+
+.home-page .small-buttons .small-button {
+  margin-top: 3px;
+}
+
+.home-page .small-buttons .small-button img,
+.search-page .small-buttons .small-button img {
   margin: 0;
   top: 0;
   left: 0;
 }
 
 
-.home-page header h1 {
+.home-page header h1 
+{
   padding-top: 80px;
   padding-left: 20px;
   color: #d2d3d5;
 }
 
+.search-page header h1 
+{
+  padding-top: 80px;
+  padding-left: 20px;
+  color: #fff;
+}
 .home-page header img {
   position:absolute;
   left: 10px;
   top:50px;
+}
+
+.search-page header img {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 
 .container {
@@ -288,6 +329,30 @@ body {
   margin: auto;
 }
 
+.search-page header .violet-line {
+  background-color: #481368;
+  height: 34px;
+  width: 560px;
+  position: absolute;
+  bottom: 0px;
+  right: 165px;
+}
+
+.search-page .container.search-form {
+  background-color: #6d6e71;
+  height: 200px;
+  width: 900px;
+  margin-top: 30px;
+}
+
+.search-page .search-form.form-label {
+  width: 200px;
+  background-color: #d1d2d4;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+}
 
 /* ==========================================================================
    Media Queries
