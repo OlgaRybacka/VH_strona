@@ -62,6 +62,7 @@ textarea {
 body {
   background-color: #d2d3d5;
   font-family: Anivers-Regular;
+  color: #404040;
 }
    
 header {
@@ -78,6 +79,29 @@ header .slide {
   height: 270px;
   background-image:url('../img/main_foto.jpg');
 }
+
+header .small-buttons {
+  position: absolute;
+  right: 75px;
+  top: 290px;
+}
+
+.small-buttons .small-button {
+  height: 34px;
+  width: 38px;
+  margin-left: 1px;
+  margin-top: 3px;
+  background-color: #481368;
+  display: inline-block;
+  position: relative;
+}
+
+.small-buttons .small-button img {
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
 
 header h1 {
   padding-top: 80px;
@@ -109,16 +133,18 @@ header img {
   height: 150px;
 }
 
-.tile .arrow-down {
+.tile .arrow-down, 
+.offer-data.status .arrow-down {
   width: 0px;
   height: 0px;
-  right: 10px;
+  right: 4px;
   bottom: -10px;
   position: absolute;
   /* triangle trick */
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 10px solid;
+  z-index: 10;
 }
 
 .tile .arrow-down.violet {
@@ -129,16 +155,30 @@ header img {
   border-top-color: #6d6e71;
 }
 
-.tile .arrow-right.violet {
+.tile .arrow-right.violet, 
+.oferty_tygodnia .arrow-right.violet {
   width: 0px;
   height: 0px;
-  top: 10px;
   right: -10px;
   position: absolute;
   /* triangle trick */
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 10px solid #481368;
+  z-index: 10;
+}
+
+.tile .arrow-right.violet {
+  top: 10px;
+}
+
+.oferty_tygodnia .arrow-right.violet {
+  bottom: 10px;
+}
+
+.offer-data.status .arrow-down.lila {
+  border-top-color: #c5bcd4;
+  left: 6px;
 }
 
 .tile.violet   { background-color: #481368; }
@@ -157,14 +197,14 @@ header img {
   height: 310px;
   top: 0px;
   left: -55px;
-  position: relative;
+  position: absolute;
 }
 
 .aside .span2 {
   background-image:url('../img/stamp.png');
   background-repeat:no-repeat;
   background-position: left bottom;
-  min-height: 450px;
+  min-height: 550px;
 }
 
 .aside p {
@@ -174,11 +214,28 @@ header img {
 .offers {
   min-height: 400px;
   background-color: white;
+  position: relative;
 }
 
 .offers .offer-data {
   margin: 15px;
+  text-align: center;
 }
+
+.offers .offer-data.status {
+  background-color: #c5bcd4;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  position: relative;
+}
+
+.offers .skrot {
+  font-size: 10pt;
+  text-align: justify;
+}
+
 
 .span1,
 .span2,
@@ -192,12 +249,44 @@ header img {
   width: 150px;
 }
 
+.offers .span1{
+  border-right: 2px solid #dddee0;
+  min-height: 400px;
+  width: 148px;
+}
+
 .span2 {
   width: 300px;
 }
 
+.span3 {
+  width: 450px;
+}
+
 .span4 {
   width: 600px;
+}
+
+.big-number {
+  font-size: 15pt;
+  font-weight: bold;
+}
+
+.offers .offer-data.phone_nr {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.miejsce1 {
+  font-weight: bold;
+}
+
+.dane_center {
+  display: block;
+  margin: auto;
 }
 
 
