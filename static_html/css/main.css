@@ -126,6 +126,28 @@ body {
   width: 150px;
   margin: 0;
   position: relative;
+  cursor: pointer;
+}
+
+.home-page .tile,
+.home-page .tile .arrow-down,
+.home-page .tile .arrow-right {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.home-page .tile.violet:hover {
+  background-color: #59208A;
+}
+.home-page .tile.violet:hover .arrow-down,
+.home-page .tile.violet:hover .arrow-right {
+  border-color: #59208A;
+}
+.home-page .tile.violet:hover .arrow-down {
+  bottom: -10px;
 }
 
 .home-page .tile,
@@ -133,16 +155,16 @@ body {
   height: 150px;
 }
 
-.home-page .tile .arrow-down, 
+.home-page .tile .arrow-down,
 .home-page .offer-data.status .arrow-down {
   width: 0px;
   height: 0px;
   right: 4px;
-  bottom: -10px;
+  bottom: -7px;
   position: absolute;
   /* triangle trick */
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
+  border-left: 10px solid transparent !important;
+  border-right: 10px solid transparent !important;
   border-top: 10px solid;
   z-index: 10;
 }
@@ -162,8 +184,8 @@ body {
   right: -10px;
   position: absolute;
   /* triangle trick */
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
+  border-top: 10px solid transparent !important;
+  border-bottom: 10px solid transparent !important;
   border-left: 10px solid #481368;
   z-index: 10;
 }
@@ -217,12 +239,12 @@ body {
   position: relative;
 }
 
-.home-page .offers .offer-data {
+.home-page .offer-data {
   margin: 15px;
   text-align: center;
 }
 
-.home-page .offers .offer-data.status {
+.home-page .offer-data.status {
   background-color: #c5bcd4;
   margin: 0;
   padding-top: 5px;
@@ -236,10 +258,17 @@ body {
   text-align: justify;
 }
 
-.home-page .offers .span1{
+.home-page .offers .span1,
+.home-page .sales .span1 {
   border-right: 2px solid #dddee0;
-  min-height: 400px;
   width: 148px;
+}
+.home-page .offers .span1 {
+  min-height: 400px;
+}
+
+.home-page .sales {
+  background: white;
 }
 
 .span1,
@@ -271,7 +300,7 @@ body {
   font-weight: bold;
 }
 
-.home-page .offers .offer-data.phone_nr {
+.home-page .offer-data.phone_nr {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
