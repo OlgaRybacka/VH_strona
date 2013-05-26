@@ -65,13 +65,13 @@ body {
   color: #404040;
 }
    
-header {
+.home-page header {
   height: 250px;
   position: relative;
   padding-top; 20px;
 }
 
-header .slide {
+.home-page header .slide {
   position: absolute;
   right: 75px;
   top: 20px;
@@ -80,13 +80,13 @@ header .slide {
   background-image:url('../img/main_foto.jpg');
 }
 
-header .small-buttons {
+.home-page header .small-buttons {
   position: absolute;
   right: 75px;
   top: 290px;
 }
 
-.small-buttons .small-button {
+.home-page .small-buttons .small-button {
   height: 34px;
   width: 38px;
   margin-left: 1px;
@@ -96,20 +96,20 @@ header .small-buttons {
   position: relative;
 }
 
-.small-buttons .small-button img {
+.home-page .small-buttons .small-button img {
   margin: 0;
   top: 0;
   left: 0;
 }
 
 
-header h1 {
+.home-page header h1 {
   padding-top: 80px;
   padding-left: 20px;
   color: #d2d3d5;
 }
 
-header img {
+.home-page header img {
   position:absolute;
   left: 10px;
   top:50px;
@@ -121,20 +121,20 @@ header img {
   margin: auto;
 }
 
-.tile {
+.home-page .tile {
   display: inline-block;
   width: 150px;
   margin: 0;
   position: relative;
 }
 
-.tile,
-.tile-height {
+.home-page .tile,
+.home-page .tile-height {
   height: 150px;
 }
 
-.tile .arrow-down, 
-.offer-data.status .arrow-down {
+.home-page .tile .arrow-down, 
+.home-page .offer-data.status .arrow-down {
   width: 0px;
   height: 0px;
   right: 4px;
@@ -147,16 +147,16 @@ header img {
   z-index: 10;
 }
 
-.tile .arrow-down.violet {
+.home-page .tile .arrow-down.violet {
   border-top-color: #481368;
 }
 
-.tile .arrow-down.gray {
+.home-page .tile .arrow-down.gray {
   border-top-color: #6d6e71;
 }
 
-.tile .arrow-right.violet, 
-.oferty_tygodnia .arrow-right.violet {
+.home-page .tile .arrow-right.violet, 
+.home-page .oferty_tygodnia .arrow-right.violet {
   width: 0px;
   height: 0px;
   right: -10px;
@@ -168,30 +168,30 @@ header img {
   z-index: 10;
 }
 
-.tile .arrow-right.violet {
+.home-page .tile .arrow-right.violet {
   top: 10px;
 }
 
-.oferty_tygodnia .arrow-right.violet {
+.home-page .oferty_tygodnia .arrow-right.violet {
   bottom: 10px;
 }
 
-.offer-data.status .arrow-down.lila {
+.home-page .offer-data.status .arrow-down.lila {
   border-top-color: #c5bcd4;
   left: 6px;
 }
 
-.tile.violet   { background-color: #481368; }
-.tile.gray { background-color: #6d6e71; }
-.tile.img1 { background-image:url('../img/tile_img1.jpg'); }
+.home-page .tile.violet   { background-color: #481368; }
+.home-page .tile.gray { background-color: #6d6e71; }
+.home-page .tile.img1 { background-image:url('../img/tile_img1.jpg'); }
 
-.tile > img {
+.home-page .tile > img {
   display: block;
   margin: auto;
   margin-top: 75px;
 }
 
-.aside .oferty_tygodnia {
+.home-page .aside .oferty_tygodnia {
   background-color: #481368;
   width: 55px;
   height: 310px;
@@ -200,29 +200,29 @@ header img {
   position: absolute;
 }
 
-.aside .span2 {
+.home-page .aside .span2 {
   background-image:url('../img/stamp.png');
   background-repeat:no-repeat;
   background-position: left bottom;
   min-height: 550px;
 }
 
-.aside p {
+.home-page .aside p {
   margin: 10px 100px 10px 10px;
 }
 
-.offers {
+.home-page .offers {
   min-height: 400px;
   background-color: white;
   position: relative;
 }
 
-.offers .offer-data {
+.home-page .offers .offer-data {
   margin: 15px;
   text-align: center;
 }
 
-.offers .offer-data.status {
+.home-page .offers .offer-data.status {
   background-color: #c5bcd4;
   margin: 0;
   padding-top: 5px;
@@ -231,11 +231,16 @@ header img {
   position: relative;
 }
 
-.offers .skrot {
+.home-page .offers .skrot {
   font-size: 10pt;
   text-align: justify;
 }
 
+.home-page .offers .span1{
+  border-right: 2px solid #dddee0;
+  min-height: 400px;
+  width: 148px;
+}
 
 .span1,
 .span2,
@@ -247,12 +252,6 @@ header img {
 
 .span1 {
   width: 150px;
-}
-
-.offers .span1{
-  border-right: 2px solid #dddee0;
-  min-height: 400px;
-  width: 148px;
 }
 
 .span2 {
@@ -272,7 +271,7 @@ header img {
   font-weight: bold;
 }
 
-.offers .offer-data.phone_nr {
+.home-page .offers .offer-data.phone_nr {
   margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -280,11 +279,11 @@ header img {
   font-weight: bold;
 }
 
-.miejsce1 {
+.home-page .miejsce1 {
   font-weight: bold;
 }
 
-.dane_center {
+.home-page .dane_center {
   display: block;
   margin: auto;
 }
