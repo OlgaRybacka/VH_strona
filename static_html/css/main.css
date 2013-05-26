@@ -231,6 +231,19 @@ body .search-page {
   z-index: 10;
 }
 
+.search-page .search-form.form-label .arrow-right.lila2 {
+  width: 0px;
+  height: 0px;
+  right: -8px;
+  bottom: 8px;
+  position: absolute;
+  /* triangle trick */
+  border-top: 8px solid transparent !important;
+  border-bottom: 8px solid transparent !important;
+  border-left: 8px solid #d1d2d4;
+  z-index: 10;
+}
+
 .home-page .tile .arrow-right.violet {
   top: 10px;
 }
@@ -369,18 +382,165 @@ body .search-page {
 
 .search-page .container.search-form {
   background-color: #6d6e71;
-  height: 200px;
+  height: 170px;
   width: 900px;
   margin-top: 30px;
+  position: relative;
 }
 
 .search-page .search-form.form-label {
-  width: 200px;
+  width: 190px;
   background-color: #d1d2d4;
   padding-left: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
+  position: absolute;
+}
+
+.search-page .search-form.row1 {
+  top: 15px;
+}
+
+.search-page .search-form.row2 {
+  top: 50px;
+}
+
+.search-page .search-form.row3 {
+  top: 85px;
+}
+
+.search-page .search-form.row4 {
+  top: 120px;
+}
+
+.search-page .search-form.col1 {
+  left: 20px;
+}
+
+.search-page .search-form.col2 {
+  left: 240px;
+}
+
+.search-page .search-form.col2a {
+  left: 341px;
+}
+
+.search-page .search-form.col3 {
+  right: 221px;
+}
+
+.search-page .search-form.col4 {
+  right: 121px;
+}
+
+.search-page .search-form.col4a {
+  right: 20px;
+}
+
+.search-page .search-form.input {
+  border: none;
+  background: #fff;
+  height: 31px;
+  position: absolute;
+  padding-left: 10px;
+  width: 191px
+}
+
+.search-page .search-form.input.half {
+  width: 90px
+}
+
+::-webkit-input-placeholder {
+   font-family: Anivers-Regular;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-family: Anivers-Regular;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-family: Anivers-Regular;  
+}
+
+:-ms-input-placeholder {  
+   font-family: Anivers-Regular;  
+}
+
+input {
+   font-family: Anivers-Regular;  
+}
+
+.search-form .styled-select select{
+  border: none;
+  background: #fff;
+  height: 33px;
+  position: absolute;
+  padding-left: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  width: 201px;
+  -webkit-appearance: none;
+  font-family: Anivers-Regular;
+}
+
+.search-page .offers-container {
+  margin-top: 30px;
   position: relative;
+}
+
+.search-page .offers-container {
+  position: relative;
+}
+
+.search-page .offers-container .offers-list .offer {
+  width: 266px;
+  height: 60px;
+  background-color: #d1d2d4;
+  position: relative;
+  margin-top: 4px;
+}
+
+.search-page .offers-container .offers-list .offer .offer-data {
+  text-align: center;
+  width: 86px;
+  background-color: #fff;
+  height: 25px;
+  margin-top: 2px;
+  position:absolute;
+  font-weight: bold;
+}
+
+.search-page .offers-container .offers-list .offer .offer-zobacz-button {
+  text-align: center;
+  width: 50px;
+  background-color: #6d6e71;
+  height: 16px;
+  top: 36px;
+  right: 8px;
+  position:absolute;
+  color: #fff;
+  font-size: 11px;
+}
+
+.search-page .offers-container .offers-list .offer .offer-skrot {
+  text-align: left;
+  top: 32px;
+  position:absolute;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.search-page .offers-container .offers-list .offer .offer-data.data1 {
+  margin-left: 2px;
+}
+
+.search-page .offers-container .offers-list .offer .offer-data.data2 {
+  margin-left: 90px;
+}
+
+.search-page .offers-container .offers-list .offer .offer-data.data3 {
+  margin-left: 178px;
 }
 
 /* ==========================================================================

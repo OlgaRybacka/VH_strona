@@ -45,11 +45,111 @@
             </header>
         </div>
         <div class="container search-form">
-		  <div class="search-form form-label">cena całościowa [od / do]
-		    <div class="arrow-right grey"></div>
+		  <div class="search-form form-label row1 col1">cena całościowa [od / do]
+		    <div class="arrow-right lila2"></div>
 		  </div>
+		  <input type="text" class="search-form input row1 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input type="text" class="search-form input row1 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <div class="search-form form-label row2 col1">cena za m<sup>2</sup> [od / do]
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <input type="text" class="search-form input row2 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input type="text" class="search-form input row2 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <div class="search-form form-label row3 col1">metraż [od / do]
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <input type="text" class="search-form input row3 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <datalist id="metraz">
+			<option value="10">
+			<option value="20">
+			<option value="30">
+			<option value="40">
+			<option value="50">
+			<option value="60">
+			<option value="70">
+			<option value="80">
+			<option value="90">
+			<option value="100">
+			<option value="150">
+			<option value="200">
+		  </datalist> 
+		  <input type="text" class="search-form input row3 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <div class="search-form form-label row4 col1">liczba pokoi [od / do]
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <input type="text" class="search-form input row4 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
+		  <datalist id="pokoje">
+			<option value="1">
+			<option value="2">
+			<option value="3">
+			<option value="4">
+			<option value="5">
+			<option value="6">
+			<option value="7">
+     	  </datalist> 
+		  <input type="text" class="search-form input row4 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <div class="search-form form-label row1 col3">typ budynku
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <div class="styled-select">
+		    <select class="search-form row1 col4a">
+			  <option>dowolny</option>
+			  <option>blok</option>
+			  <option>kamienica</option>
+			  <option>dom wielorodzinny</option>
+			  <option>apartamentowiec</option>
+			  <option>wieżowiec</option>
+            </select>
+		  </div>
+		  <div class="search-form form-label row2 col3">rok budowy [od / do]
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <input type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
+		  <datalist id="rok_budowy">
+			<option value="2012">
+			<option value="2011">
+			<option value="2010">
+			<option value="2009">
+			<option value="2008">
+			<option value="2005">
+			<option value="2000">
+			<option value="1995">
+			<option value="1990">
+			<option value="1980">
+			<option value="1970">
+			<option value="1960">
+     	  </datalist> 
+		  <input type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
+		  <div class="search-form form-label row3 col3">lokalizacja
+		    <div class="arrow-right lila2"></div>
+		  </div>
+		  <input type="text" class="search-form input row3 col4a" />
 		</div>
-
+        <div class=" container offers-container">
+		  <span class="offers-list">
+		    <div class="offer">
+			  <div class="offer-data data1">65 m<sup>2</sup></div>
+			  <div class="offer-data data2">2 pok.</div>
+			  <div class="offer-data data3">265 000 zł</div>
+			  <div class="offer-skrot">os. Piastowskie / nr 11987</div>
+			  <div class="offer-zobacz-button">zobacz</div>
+			</div>
+			<div class="offer">
+			  <div class="offer-data data1">65 m<sup>2</sup></div>
+			  <div class="offer-data data2">2 pok.</div>
+			  <div class="offer-data data3">265 000 zł</div>
+			  <div class="offer-skrot">os. Piastowskie / nr 11987</div>
+			  <div class="offer-zobacz-button">zobacz</div>
+			</div>
+			<div class="offer">
+			  <div class="offer-data data1">65 m<sup>2</sup></div>
+			  <div class="offer-data data2">2 pok.</div>
+			  <div class="offer-data data3">265 000 zł</div>
+			  <div class="offer-skrot">os. Piastowskie / nr 11987</div>
+			  <div class="offer-zobacz-button">zobacz</div>
+			</div>
+		  </span>
+		</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 
