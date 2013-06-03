@@ -7,7 +7,7 @@ class ImportService {
     static $was = false;
     if ( !$was ) {
       $was = true;
-      self::$logger = Logger::getLogger("PDOHelper");
+      self::$logger = Logger::getLogger("ImportService");
     }
   }
 
