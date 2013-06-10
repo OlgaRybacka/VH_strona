@@ -10,3 +10,10 @@ require_once "{$dir}/data/Zdjecie.php";
 require_once "{$dir}/data/ZdjeciaRepository.php";
 require_once "{$dir}/data/Nieruchomosc.php";
 require_once "{$dir}/data/NieruchomosciRepository.php";
+
+header('Content-Type: text/html; charset=utf-8');
+
+function getUrl( $path ) {
+  global $config;
+  return $config['urlRoot'] . $path;
+}
