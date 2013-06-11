@@ -34,6 +34,14 @@ class Zdjecie {
     return $zdjecie;
   }
 
+  public static function fromArray( array $array ) {
+    $n = new Zdjecie();
+    foreach( $array as $i => $v ) {
+      $n->$i = $v;
+    }
+    return $n;
+  }
+
   public function setId($id) {
     $this->id = $id;
   }

@@ -7,7 +7,7 @@ class ImportService {
     static $was = false;
     if ( !$was ) {
       $was = true;
-      self::$logger = Logger::getLogger("PDOHelper");
+      self::$logger = Logger::getLogger("ImportService");
     }
   }
 
@@ -128,12 +128,17 @@ class ImportService {
         self::$logger->warn("No entry for {$zdj->getNazwa()} in img Map");
       }
       $zdj->setUrl( $imgMap[$zdj->getNazwa()] );
-      $this->zdjeciaRepository->insert( $zdj );
+      $this->zdjeciaRepository->insertOrUpdate( $zdj );
     }
     $list = $xpath->query('/plik/lista_ofert/dzial/oferta');
     for( $i = 0; $i<$list->length; $i++ ) {
       $nieruchomosc = Nieruchomosc::fromDomElement( $list->item($i) );
-      $this->nieruchomosciRepository->insert($nieruchomosc);
+      $this->nieruchomosciRepository->insertOrUpdate($nieruchomosc);
+    }
+    $list = $xpath->query('/plik/lista_ofert/dzial/oferta_usun/id');
+    for( $i = 0; $i<$list->length; $i++ ) {
+      $id = intval( $list->item($i)->textContent );
+      $this->nieruchomosciRepository->delete( $id );
     }
   }
 

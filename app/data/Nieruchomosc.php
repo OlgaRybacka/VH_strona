@@ -38,6 +38,8 @@ class Nieruchomosc {
     $simple_varchar = array('kraj', 'miejscowosc', 'miasto', 'typbudynkumieszk', 'ulica', 'dzielnica', 'wojewodztwo'
         , 'agent_gg', 'agent_skype', 'agent_tel_kom', 'agent_tel_biuro', 'agent_email', 'agent_nazwisko', 'forma_wlasnosci', 'typzabudowy' );
     $nieruchomosc = new Nieruchomosc();
+    $nieruchomosc->setDzialTab( $domElement->parentNode->getAttribute("tab") );
+    $nieruchomosc->setDzialTyp( $domElement->parentNode->getAttribute("typ") );
     for( $i = 0; $i < $domElement->childNodes->length; $i++ ) {
       $child = $domElement->childNodes->item( $i );
       if( $child instanceof DOMElement ) {
@@ -52,7 +54,7 @@ class Nieruchomosc {
           $nieruchomosc->opis = '';
           for ( $j = 0; $j<$child->childNodes->length; $j++ ) {
             $lineNode = $child->childNodes->item($j);
-            if ( $lineNode instanceof DOMElement and $lineNode->tagName == 'line') {
+            if ( $lineNode instanceof DOMElement and $lineNode->tagName == 'linia') {
               $nieruchomosc->opis .= $lineNode->textContent . '<br/>';
             }
           }
@@ -65,6 +67,8 @@ class Nieruchomosc {
           $nieruchomosc->pietro = intval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'pokoje' ) {
           $nieruchomosc->pokoje = intval( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'ulica' ) {
+          $nieruchomosc->ulica = ( $child->textContent );
         } else if ( $child->tagName == 'id' ) {
           $nieruchomosc->id = intval( $child->textContent );
         } else if ( $child->tagName == 'cena' ) {
@@ -75,7 +79,15 @@ class Nieruchomosc {
     }
     return $nieruchomosc;
   }
-  
+
+  public static function fromArray( array $array ) {
+    $n = new Nieruchomosc();
+    foreach( $array as $i => $v ) {
+      $n->$i = $v;
+    }
+    return $n;
+  }
+
   public function setAgentEmail($agent_email) {
     $this->agent_email = $agent_email;
   }
