@@ -57,7 +57,7 @@ class NieruchomosciRepository {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`");
     $prepared->execute();
     $cur = null;
-    $result = [];
+    $result = array();
     while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
       $result[] = Nieruchomosc::fromArray( $cur );
     }
@@ -70,7 +70,7 @@ class NieruchomosciRepository {
     $prepared->bindValue( ":dzial_tab", $tab );
     $prepared->execute();
 
-    $result = [];
+    $result = array();
     while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
       $result[] = Nieruchomosc::fromArray( $cur );
     }
@@ -80,6 +80,11 @@ class NieruchomosciRepository {
   public function delete( $id ) {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE `id` = :id");
     $prepared->bindValue( ":id", $id );
+    $prepared->execute();
+  }
+
+  public function deleteAll() {
+    $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc`");
     $prepared->execute();
   }
 }

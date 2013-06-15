@@ -40,7 +40,7 @@ class ImportService {
     $this->oldDir     = "{$appDir}/import/old/";
     $this->imgDir     = "{$appDir}/public/img/";
     $this->imgUrlRoot = "/public/img/";
-    $this->tmpDir     = sys_get_temp_dir();
+    $this->tmpDir     = "{$appDir}/tmp/"; //sys_get_temp_dir();
   }
 
 
@@ -121,6 +121,15 @@ class ImportService {
     $doc = new DOMDocument();
     $doc->load($path);
     $xpath = new DOMXPath( $doc );
+
+    $list = $xpath->query('/plik/header/zawartosc_pliku');
+    for( $i = 0; $i<$list->length; $i++ ) {
+      if ( $list->item( $i )->textContent == 'calosc' ) {
+        self::$logger->info("Full import. Delete all!");
+        $this->nieruchomosciRepository->deleteAll();
+      }
+    }
+
     $list = $xpath->query('/plik/zdjecia/zdjecie');
     for( $i = 0; $i<$list->length; $i++ ) {
       $zdj = Zdjecie::fromDomElement( $list->item($i) );

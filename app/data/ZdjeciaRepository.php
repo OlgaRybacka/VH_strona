@@ -62,7 +62,7 @@ class ZdjeciaRepository {
     $prepared->bindValue( ":nieruchomosc", $id );
     $prepared->execute();
 
-    $results = [];
+    $results = array();
     $cur = null;
     while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
       $results[] = Zdjecie::fromArray( $cur );

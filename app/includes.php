@@ -1,6 +1,6 @@
 <?php
 
-$dir = __dir__;
+$dir = __DIR__;
 require_once "{$dir}/vendor/autoload.php";
 require_once "{$dir}/config.php";
 require_once "{$dir}/data/PDOHelper.php";

@@ -40,7 +40,7 @@ $nie = new NieruchomosciRepository( $pdo );
   </head>
   <body>
 <?php
-$tabs = ["mieszkania", "domy", "dzialki", "lokale"];
+$tabs = array("mieszkania", "domy", "dzialki", "lokale");
 foreach ( $tabs as $tab ) {
   echo "<h2>$tab</h2>\n";
   echo "<ul class=\"sortable\">";
