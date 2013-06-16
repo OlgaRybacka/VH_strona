@@ -33,6 +33,7 @@ foreach( $files as $f ) {
 	if ( !is_dir($f) && preg_match( "/.*.zip/i", $f) ) {
 		echo "import $f<br/>";
 		$importService->import($f);
+		break; // do at most one at the time
 	} else {
 		echo "skip $f<br/>";
 	}
