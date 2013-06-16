@@ -6,7 +6,7 @@
  */
 
 class SearchQuery {
-	private static $params = ["cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax"];
+	private static $params = array ( "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax" );
 	private $cenaMin;             // float
 	private $cenaMax;             // float
 	private $cenaM2Min;           // float

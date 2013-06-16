@@ -33,10 +33,14 @@ class NieruchomosciRepository {
 	 * @param Nieruchomosc $obj
 	 */
 	public function update( Nieruchomosc $obj ) {
+    $sets = array();
+		foreach( array_keys($map) as $x ) {
+			$sets[] = " `${x}` = :${x} ";
+		}
     $map = $obj->getKeyValueMap();
     unset($map['id']);
     $prepared = $this->pdo->prepare("UPDATE `nieruchomosc` SET " .
-      implode(",", array_map(function($x) { return " `${x}` = :${x} "; }, array_keys($map))) .
+      implode(",", $sets ) .
       " WHERE `id` = :id");
     foreach ( $obj->getKeyValueMap() as $key => $value ) {
       $prepared->bindValue( ":$key", $value);
@@ -48,9 +52,15 @@ class NieruchomosciRepository {
 	 * @param Nieruchomosc $obj
 	 */
 	public function insert( Nieruchomosc $obj ) {
+	$keys = array();
+	$values = array();
+	foreach( array_keys($obj->getKeyValueMap()) as $x ){
+		$keys[] = "`${x}`";
+		$values[] = ":${x}";
+	}
     $prepared = $this->pdo->prepare("INSERT INTO `nieruchomosc` " .
-        "(". implode(",", array_map(function($x) { return "`${x}`"; }, array_keys($obj->getKeyValueMap()))) . ") " .
-      "VALUES (". implode(",", array_map(function($x) { return ":${x}"; }, array_keys($obj->getKeyValueMap()))) . ")");
+        "(". implode(",", $keys) . ") " .
+      "VALUES (". implode(",", $values) . ")");
 
     foreach ( $obj->getKeyValueMap() as $key => $value ) {
       $prepared->bindValue( ":$key", $value);
