@@ -20,3 +20,6 @@ function getUrl( $path ) {
   global $config;
   return $config['urlRoot'] . $path;
 }
+
+
+

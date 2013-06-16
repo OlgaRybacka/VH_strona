@@ -5,6 +5,48 @@
  * Time: 01:24
  */
 
+function mb_wordwrap_array($string, $width) {
+	if (($len = mb_strlen($string, 'UTF-8')) <= $width) {
+		return array($string);
+	}
+
+	$return = array();
+	$last_space = FALSE;
+	$i = 0;
+
+	do {
+		if (mb_substr($string, $i, 1, 'UTF-8') == ' ') {
+			$last_space = $i;
+		}
+		if ($i > $width) {
+			$last_space = ($last_space == 0) ? $width : $last_space;
+
+			$return[] = trim(mb_substr($string, 0, $last_space, 'UTF-8'));
+			$string = mb_substr($string, $last_space, $len, 'UTF-8');
+			$len = mb_strlen($string, 'UTF-8');
+			$i = 0;
+		}
+		$i++;
+	} while ($i < $len);
+
+	$return[] = trim($string);
+
+	return $return;
+}
+
+function trim_lines( $string, $width, $lines ) {
+	$array = mb_wordwrap_array( $string, $width, $lines);
+	$str = '';
+	foreach( $array as $i => $line ) {
+		$str .= ' ' . $line;
+		if ( $i > $lines ) { break; }
+	}
+	if ( sizeof($array) > $lines ) {
+		$str .= ' ...';
+	}
+	return $str;
+}
+
 class Nieruchomosc {
   private $id;               // int(15)     
   private $typzabudowy;      // varchar(255)
@@ -238,6 +280,10 @@ class Nieruchomosc {
 
   public function setOpis($opis) {
     $this->opis = $opis;
+  }
+
+  public function getOpisTrimed() {
+    return trim_lines( $this->getOpis(), 20, 5 );
   }
 
   public function getOpis() {

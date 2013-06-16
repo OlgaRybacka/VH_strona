@@ -117,7 +117,7 @@ foreach ( $nieruchomosci as $v ) {
 				</div>
 				<img src="' . getUrl($zdjecie[$nieruchomosc->getId()]->getUrl()) . '" style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
 				<div class="offer-data skrot">
-					' . $nieruchomosc->getOpis() . '
+					' . $nieruchomosc->getOpisTrimed() . '
 				</div>
             </span>';
 } ?>
