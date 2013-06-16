@@ -34,8 +34,14 @@ class Nieruchomosc {
   private $miejscowosc;      // varchar(45) 
   private $kraj;             // varchar(45)
 
+  private $typdzialki;
+  private $liczbapomieszczen;
+  private $typlokalu;
+  private $powierzchniadzialki;
+  private $liczbapieter;
+
   public static function fromDomElement( DOMElement $domElement ) {
-    $simple_varchar = array('kraj', 'miejscowosc', 'miasto', 'typbudynkumieszk', 'ulica', 'dzielnica', 'wojewodztwo'
+    $simple_varchar = array('typdzialki', 'typlokalu', 'kraj', 'miejscowosc', 'miasto', 'typbudynkumieszk', 'ulica', 'dzielnica', 'wojewodztwo'
         , 'agent_gg', 'agent_skype', 'agent_tel_kom', 'agent_tel_biuro', 'agent_email', 'agent_nazwisko', 'forma_wlasnosci', 'typzabudowy' );
     $nieruchomosc = new Nieruchomosc();
     $nieruchomosc->setDzialTab( $domElement->parentNode->getAttribute("tab") );
@@ -65,7 +71,7 @@ class Nieruchomosc {
           $nieruchomosc->powierzchnia = floatval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'pietro' ) {
           $nieruchomosc->pietro = intval( $child->textContent );
-        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'pokoje' ) {
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'liczbapokoi' ) {
           $nieruchomosc->pokoje = intval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'ulica' ) {
           $nieruchomosc->ulica = ( $child->textContent );
@@ -74,6 +80,12 @@ class Nieruchomosc {
         } else if ( $child->tagName == 'cena' ) {
           $nieruchomosc->setWaluta( trim( $child->getAttribute('kod') ) );
           $nieruchomosc->setCena( floatval( $child->textContent ) );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'liczbapomieszczen' ) {
+          $nieruchomosc->liczbapomieszczen = intval( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'powierzchniadzialki' ) {
+          $nieruchomosc->powierzchniadzialki = floatval( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'liczbapieter' ) {
+          $nieruchomosc->liczbapieter = intval( $child->textContent );
         }
       }
     }
@@ -306,5 +318,45 @@ class Nieruchomosc {
   
   public function getKeyValueMap() {
     return get_object_vars($this);
+  }
+
+  public function setLiczbapieter($liczbapieter) {
+    $this->liczbapieter = $liczbapieter;
+  }
+
+  public function getLiczbapieter() {
+    return $this->liczbapieter;
+  }
+
+  public function setLiczbapomieszczen($liczbapomieszczen) {
+    $this->liczbapomieszczen = $liczbapomieszczen;
+  }
+
+  public function getLiczbapomieszczen() {
+    return $this->liczbapomieszczen;
+  }
+
+  public function setPowierzchniadzialki($powierzchniadzialki) {
+    $this->powierzchniadzialki = $powierzchniadzialki;
+  }
+
+  public function getPowierzchniadzialki() {
+    return $this->powierzchniadzialki;
+  }
+
+  public function setTypdzialki($typdzialki) {
+    $this->typdzialki = $typdzialki;
+  }
+
+  public function getTypdzialki() {
+    return $this->typdzialki;
+  }
+
+  public function setTyplokalu($typlokalu) {
+    $this->typlokalu = $typlokalu;
+  }
+
+  public function getTyplokalu() {
+    return $this->typlokalu;
   }
 }
