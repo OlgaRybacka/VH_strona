@@ -5,7 +5,7 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
 $query = SearchQuery::fromParams($_GET);
-$offertype = isset($_GET['t']) ? (bool) $_GET['t'] : "mieszkania";
+$offertype = isset($_GET['t']) ? $_GET['t'] : "mieszkania";
 $found = $nie->search($query);
 
 
@@ -508,6 +508,8 @@ $found = $nie->search($query);
                   <span class="offers-list">
 <?php
                   foreach( $found as $res ) {
+                      /** @var Nieruchomosc $res*/
+                      if($res->getDzialTab() == "mieszkania"){
                     echo '
 		    <div class="offer">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
@@ -516,6 +518,37 @@ $found = $nie->search($query);
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
 			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
                     </div>';
+                      }
+                      if($res->getDzialTab() == "domy"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
+                      if($res->getDzialTab() == "dzialki"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2"> </div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
+                      if($res->getDzialTab() == "lokale"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2"> </div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
                   }
 ?>
 		  </span>
