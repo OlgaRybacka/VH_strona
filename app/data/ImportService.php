@@ -80,7 +80,7 @@ class ImportService {
     if ( !$success ) {
       throw new ImportException("Cannot open zip file: $workPath.");
     }
-    $tmp = "{$this->tmpDir}/" . date('Y-m-d_H_i_s_u'). '/';
+    $tmp = "{$this->tmpDir}/" . date('Y-m-d_H_i_s_u').'_'. rand(). '/';
     $success = mkdir($tmp);
     if ( !$success ) {
       throw new ImportException("Cannot create tmp dir $tmp.");
@@ -92,7 +92,7 @@ class ImportService {
     $files = scandir($tmp);
     $imgMap = array();
     foreach( $files as $file ) {
-      if ( preg_match( '/\.(jpg|png|jpeg|bmp)$/', $file ) ) {
+      if ( preg_match( '/\.(jpg|png|jpeg|bmp|gif)$/', $file ) ) {
         $imgMap[$file] = $this->handleImage( $tmp, $file );
       }
     }
