@@ -5,7 +5,7 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
 $query = SearchQuery::fromParams($_GET);
-
+$offertype = isset($_GET['t']) ? (bool) $_GET['t'] : "mieszkania";
 $found = $nie->search($query);
 
 
@@ -184,7 +184,7 @@ $found = $nie->search($query);
           --><a class="zakladka_dzialki">działki</a><!--
           --><a class="zakladka_komercyjne">lokale komercyjne</a><!--
           --></span>
-	  <div class="search-form1" style="visibility:visible;">
+	  <div class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -278,7 +278,7 @@ $found = $nie->search($query);
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  
-	  <div class="search-form2" style="visibility:hidden;">
+	  <div class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -375,7 +375,7 @@ $found = $nie->search($query);
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
-	  <div class="search-form3 style="visibility:hidden;">
+	  <div class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -420,7 +420,7 @@ $found = $nie->search($query);
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
-	  <div class="search-form4" style="visibility:hidden;">
+	  <div class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
