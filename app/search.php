@@ -492,7 +492,6 @@ $found = $nie->all();
                   }
 ?>
 		  </span>
-
 		</div>
 
         <script src="public/static/js/plugins.js"></script>

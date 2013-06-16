@@ -64,6 +64,19 @@ class NieruchomosciRepository {
     return $result;
   }
 
+  public function tab( $tab ) {
+    $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`
+      WHERE dzial_tab = :dzial_tab");
+    $prepared->bindValue( ":dzial_tab", $tab );
+    $prepared->execute();
+
+    $result = [];
+    while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
+      $result[] = Nieruchomosc::fromArray( $cur );
+    }
+    return $result;
+  }
+
   public function delete( $id ) {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE `id` = :id");
     $prepared->bindValue( ":id", $id );

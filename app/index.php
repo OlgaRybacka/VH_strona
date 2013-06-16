@@ -3,13 +3,14 @@ require "includes.php";
 $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
+
 $mieszkanie = $nie->tab('mieszkania');
 $dom        = $nie->tab('domy')[0];
 $dzialka    = $nie->tab('dzialki')[0];
 $lokal      = $nie->tab('lokale')[0];
 
 $nieruchomosci = array($mieszkanie[0], $dom, $dzialka, $lokal);
-$zdjecie = array();
+$zdjecie = [];
 foreach ( $nieruchomosci as $v ) {
   $zdjecie[$v->getId()] = $zdj->getForNieruchomosc( $v->getId() )[0];
 }
