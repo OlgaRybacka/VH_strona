@@ -7,6 +7,7 @@ $pdo = PDOHelper::fromConfig();
 $importService = new ImportService( $pdo, new ZdjeciaRepository( $pdo ), new  NieruchomosciRepository( $pdo ) );
 $logger = Logger::getLogger(__FILE__);
 
+// LOCK
 $fp = fopen("{$appDir}/tmp/__LOCK__", "a+");
 if (flock($fp, LOCK_EX)) {  // acquire an exclusive lock
 	fwrite($fp, date('l jS F Y h:i:s A') ."\n");
@@ -14,6 +15,17 @@ if (flock($fp, LOCK_EX)) {  // acquire an exclusive lock
 } else {
 	$logger->info("locking file failed");
 	die("cannot acquire lock.");
+}
+// end LOCK
+
+// fix issue with wrong path !!
+$files = scandir("./import/");
+foreach( $files as $f ) {
+	if ( !is_dir($f) && preg_match( "/waiting.*.zip/i", $f) ) {
+		echo "move ./import/$f to ./import/waiting/$f";
+		rename("./import/$f", "./import/waiting/$f");
+	} else {
+	}
 }
 
 $files = scandir("./import/waiting/");

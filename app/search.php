@@ -4,7 +4,10 @@ $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
-$found = $nie->all();
+$query = SearchQuery::fromParams($_GET);
+
+$found = $nie->search($query);
+
 
 
 ?><!DOCTYPE html>

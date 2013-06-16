@@ -10,6 +10,7 @@ require_once "{$dir}/data/Zdjecie.php";
 require_once "{$dir}/data/ZdjeciaRepository.php";
 require_once "{$dir}/data/Nieruchomosc.php";
 require_once "{$dir}/data/NieruchomosciRepository.php";
+require_once "{$dir}/data/SearchQuery.php";
 
 header('Content-Type: text/html; charset=utf-8');
 
