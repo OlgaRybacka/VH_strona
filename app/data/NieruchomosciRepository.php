@@ -133,7 +133,7 @@ class NieruchomosciRepository {
     }
 
 	public function search( SearchQuery $query ) {
-		$toBind = [];
+		$toBind = array();
 		$queryString = "SELECT * FROM `nieruchomosc`  ";
 		$where = "WHERE";
 
