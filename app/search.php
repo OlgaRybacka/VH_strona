@@ -486,84 +486,11 @@ $found = $nie->all();
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getUlica() . ' / nr ' . $res->getId() . '</div>
+			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
 			  <div class="offer-zobacz-button">zobacz</div>
                     </div>';
                   }
 ?>
-		  </span>
-		  <span class="offer-details">
-		    <div class="basic-info">
-			  <img src="public/static/./img/oferta_mini.png" class="miniatura"></img>
-			  <span class="basic-info-text">
-			    <span class="dane_center"><span class="big-number">999</span> m<sup>2</sup> / <span class="big-number">2</span> pok.<br/></span>
-                <span class="dane_center"><span class="big-number">123 000</span> zł</span>
-				<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 10px; margin-bottom: 10px"></img>
-				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"> 603 398 098</span></span>
-			    <div class="status-nr">
-				  <span class="status">sprzedaż</span>
-				  <span class="nr">123456</span>
-				</div>
-			  </span>
-			</div>
-			<div class="offer-description">
-			  <div class="location"><div class="location-text"><b>Rataje</b>, os. Piastowskie</div></div>
-			  <div class="row1">
-			    <span class="col1">
-				  <div class="text">
-				    <span style="font-size:12px;">typ zabudowy</span><br/>
-				    <span style="font-size: 14px; font-weight:bold">dom wielorodzinny/cegła</span>
-				  </div>
-				</span>
-				<span class="col2">
-				  <div class="text">
-				    <span style="font-size:12px;">piętro / pokoje</span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center">3/2</span>
-				  </div>
-				</span>
-			  </div>
-			  <div class="row2">
-			    <span class="col1">
-				  <div class="text">
-				    <span style="font-size:12px;">forma własności</span><br/>
-				    <span style="font-size: 14px; font-weight:bold">spółdzielczo-własnościowe</span>
-				  </div>
-				</span>
-				<span class="col2">
-				  <div class="text">
-				    <span style="font-size:12px;">cena zł/m<sup>2</sup></span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center">5600 zł</span>
-				  </div>
-				</span>
-			  </div>
-			  <span class="offer-text">
-			    <span class="text-text">
-				lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. lorem lorem ipsum ipsum lor lor ipsum lor em ip ip sum sum mus mus lorem ipum lorem ipsum. Dalej opis tej oferty, długo musi być, bo o to w tym przykładzie chodzi, cóż poradzić. 
-				</span>
-			  </span>
-			  <span class="offer-buttons">
-			    <a class="offer-button" href="javascript:;" id="gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
-            --><a class="offer-button" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
-            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php"><img src="public/static/./img/off_but3.png"></img></a><!--
-            --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
-            --></span>
-			  <div class="contact-data">
-			    <div class="text">
-				  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
-				  <b>Strzesak Mateusz</b> Van Hausen Nieruchomości<br/>
-				  tel. <b>897 887 887</b><br/>
-				  m.strzesak@vanhausen.pl<br/>
-				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 12987</span><br/>
-				</div>
-			  </div>
-			</div>
-		  </span>
-		  <span class="offer-photos">
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
 		  </span>
 		</div>
 

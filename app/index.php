@@ -3,13 +3,14 @@ require "includes.php";
 $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
+
 $mieszkanie = $nie->tab('mieszkania');
 $dom        = $nie->tab('domy')[0];
 $dzialka    = $nie->tab('dzialki')[0];
 $lokal      = $nie->tab('lokale')[0];
 
 $nieruchomosci = array($mieszkanie[0], $dom, $dzialka, $lokal);
-$zdjecie = array();
+$zdjecie = [];
 foreach ( $nieruchomosci as $v ) {
   $zdjecie[$v->getId()] = $zdj->getForNieruchomosc( $v->getId() )[0];
 }
@@ -41,10 +42,10 @@ foreach ( $nieruchomosci as $v ) {
             <header>
                 <div class="logo">
 					<h1>Van Hausen</h1>
-					<img src="public/static/./img/logo.png" ></img>
+					<img src="public/static/./img/logo.png" />
 				</div>
                 <div class="slide">
-                    <img></img>
+                    <img/>
                 </div>
 				<div class="small-buttons">
 					<span class="small-button but1">
@@ -108,10 +109,10 @@ foreach ( $nieruchomosci as $v ) {
 <?php foreach( $nieruchomosci as $nieruchomosc) {
 	echo '<span class="span1">
 				<div class="offer-data">
-					<span class="dane_center"><span class="big-number">'. round($nieruchomosc->getCena()/$nieruchomosc->getPowierzchnia()).'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
+					<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
 					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
 					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
-					<span class="miejsce1 dane_center">' . $nieruchomosc->getMiasto() .'</span>
+					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
 					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>
 				</div>
 				<img src="' . getUrl($zdjecie[$nieruchomosc->getId()]->getUrl()) . '" style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
