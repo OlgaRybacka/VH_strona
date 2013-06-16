@@ -104,14 +104,14 @@ class ImportService {
   }
 
   public function handleImage( $tmp, $file ) {
-    self::$logger->info("Handling {$file} ({$tmp}).");
+    //self::$logger->info("Handling {$file} ({$tmp}).");
     //$hash = md5_file("{$tmp}{$file}");
     $src  = "{$tmp}{$file}";
     $dest = "{$this->imgDir}_{$file}";
-    self::$logger->info("copy {$src} -> {$dest}.");
-    $success = copy( $src, $dest );
+    $success = rename( $src, $dest );
     if( !$success ) {
-      throw new ImportException("Cannot copy image.");
+      self::$logger->error("move {$src} -> {$dest} failed");
+      //throw new ImportException("Cannot copy image.");
     }
     return "{$this->imgUrlRoot}_{$file}";
   }
