@@ -122,8 +122,13 @@ $found = $nie->all();
 		});
 
 		$(function() {
-			$('document').delegate('.offer-zobacz-button', 'click', function () {
-				
+			$('.offer-zobacz-button').click(function () {
+				var id = $(this).data('id');
+				$.get("item.php", {
+					id: id
+				}, function (data) {
+					$('.details-container').html(data);
+				})
 			});
 		});
 		</script>
@@ -498,10 +503,11 @@ $found = $nie->all();
                   }
 ?>
 		  </span>
+	      <span class="details-container">
+          </span>
 		</div>
 
-        <span class="details-container">
-        </span>
+
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>

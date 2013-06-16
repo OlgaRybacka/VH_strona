@@ -77,9 +77,9 @@ if ($element == null) {
 			  </div>
 			</div>
 		  </span>
-		  <span class="offer-photos">
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
-			<img src="public/static/./img/photo1.png"></img>
-		  </span>
+<span class="offer-photos">
+	<img src="public/static/./img/photo1.png"></img>
+	<img src="public/static/./img/photo1.png"></img>
+	<img src="public/static/./img/photo1.png"></img>
+	<img src="public/static/./img/photo1.png"></img>
+</span>
