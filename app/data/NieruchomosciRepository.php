@@ -11,18 +11,28 @@ class NieruchomosciRepository {
    */
   private $pdo;
 
-  public function __construct($pdo) {
+	/**
+	 * @param $pdo
+	 */
+	public function __construct($pdo) {
     $this->pdo = $pdo;
   }
 
-  public function exists( $id ) {
+	/**
+	 * @param $id
+	 * @return bool
+	 */
+	public function exists( $id ) {
     $prepared = $this->pdo->prepare("SELECT id FROM `nieruchomosc` WHERE id = :id");
     $prepared->bindValue( ":id", $id );
     $prepared->execute();
     return $prepared->rowCount() > 0;
   }
 
-  public function update( Nieruchomosc $obj ) {
+	/**
+	 * @param Nieruchomosc $obj
+	 */
+	public function update( Nieruchomosc $obj ) {
     $map = $obj->getKeyValueMap();
     unset($map['id']);
     $prepared = $this->pdo->prepare("UPDATE `nieruchomosc` SET " .
@@ -34,7 +44,10 @@ class NieruchomosciRepository {
     $prepared->execute();
   }
 
-  public function insert( Nieruchomosc $obj ) {
+	/**
+	 * @param Nieruchomosc $obj
+	 */
+	public function insert( Nieruchomosc $obj ) {
     $prepared = $this->pdo->prepare("INSERT INTO `nieruchomosc` " .
         "(". implode(",", array_map(function($x) { return "`${x}`"; }, array_keys($obj->getKeyValueMap()))) . ") " .
       "VALUES (". implode(",", array_map(function($x) { return ":${x}"; }, array_keys($obj->getKeyValueMap()))) . ")");
@@ -45,7 +58,10 @@ class NieruchomosciRepository {
     $prepared->execute();
   }
 
-  public function insertOrUpdate( Nieruchomosc $obj ) {
+	/**
+	 * @param Nieruchomosc $obj
+	 */
+	public function insertOrUpdate( Nieruchomosc $obj ) {
     if ( $this->exists($obj->getId()) ) {
       $this->update( $obj );
     } else {
@@ -53,7 +69,10 @@ class NieruchomosciRepository {
     }
   }
 
-  public function all( ) {
+	/**
+	 * @return Nieruchomosc[]
+	 */
+	public function all( ) {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`");
     $prepared->execute();
     $cur = null;
@@ -64,7 +83,11 @@ class NieruchomosciRepository {
     return $result;
   }
 
-  public function tab( $tab ) {
+	/**
+	 * @param $tab
+	 * @return array
+	 */
+	public function tab( $tab ) {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`
       WHERE dzial_tab = :dzial_tab");
     $prepared->bindValue( ":dzial_tab", $tab );
@@ -77,14 +100,35 @@ class NieruchomosciRepository {
     return $result;
   }
 
-  public function delete( $id ) {
+	/**
+	 * @param $id
+	 */
+	public function delete( $id ) {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE `id` = :id");
     $prepared->bindValue( ":id", $id );
     $prepared->execute();
   }
 
-  public function deleteAll() {
+	/**
+	 *
+	 */
+	public function deleteAll() {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc`");
     $prepared->execute();
   }
+
+	/**
+	 * @param $id
+	 * @return Nieruchomosc|null
+	 */
+	public function get( $id ) {
+    $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc` WHERE id = :id");
+    $prepared->bindValue( ":id", (int) $id );
+    $prepared->execute();
+    $cur = null;
+    while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
+      return Nieruchomosc::fromArray( $cur );
+    }
+    return null;
+    }
 }

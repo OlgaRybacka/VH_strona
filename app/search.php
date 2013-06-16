@@ -120,6 +120,12 @@ $found = $nie->all();
 			}); 
 			//$( document ).tooltip();
 		});
+
+		$(function() {
+			$('document').delegate('.offer-zobacz-button', 'click', function () {
+				
+			});
+		});
 		</script>
     </head>
     <body class="search-page">
@@ -487,12 +493,15 @@ $found = $nie->all();
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-			  <div class="offer-zobacz-button">zobacz</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
                     </div>';
                   }
 ?>
 		  </span>
 		</div>
+
+        <span class="details-container">
+        </span>
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>
