@@ -27,4 +27,4 @@ $config['dbConnectionString']
   = 'mysql:host=localhost;dbname=vanhausen_0001';
 $config['dbUserName'] = 'vanhausen_0001';
 $config['dbPassword'] = 'q5IP2dyaX9Nt';
-$config['urlRoot'] = "/van/";
+$config['urlRoot'] = "";

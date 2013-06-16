@@ -79,22 +79,22 @@ foreach ( $nieruchomosci as $v ) {
 			  <img src="public/static/./img/about.png"></img>
 			</span><!--
             --><span class="tile"></span><!--
-            --><a class="tile violet" href="search.php?bookmark=1">
+            --><a class="tile violet" href="search.php?t=mieszkania">
 			  <img src="public/static/./img/mieszkania.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?bookmark=2">
+            --><a class="tile gray" href="search.php?t=domy">
               <img src="public/static/./img/domy.png"></img>
               <div class="arrow-down gray"></div>
 			</a><!--
-            --><span class="tile violet">
+            --><a class="tile violet" href="search.php?t=dzialki">
 			  <img src="public/static/./img/dzialki.png"></img>
               <div class="arrow-down violet"></div>
-            </span><!--
-            --><span class="tile gray">
+            </a><!--
+            --><a class="tile gray" href="search.php?t=lokale">
 			  <img src="public/static/./img/komercyjne.png" style="margin-top: 65px"></img>
               <div class="arrow-down gray"></div>
-            </span>
+            </a>
         </div>
         <div class="container aside">
             <span class="span2">

@@ -179,10 +179,10 @@ $found = $nie->search($query);
         </div>
         <div class="container search-form">
 		<span class="zakladki"><!--
-          --><a class="zakladka_mieszkania active">mieszkania</a><!--
-          --><a class="zakladka_domy">domy</a><!--
-          --><a class="zakladka_dzialki">działki</a><!--
-          --><a class="zakladka_komercyjne">lokale komercyjne</a><!--
+          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?>">mieszkania</a><!--
+          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>">domy</a><!--
+          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>">działki</a><!--
+          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>">lokale komercyjne</a><!--
           --></span>
 	  <div class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
