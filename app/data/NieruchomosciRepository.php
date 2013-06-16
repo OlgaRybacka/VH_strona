@@ -11,33 +11,33 @@ class NieruchomosciRepository {
    */
   private $pdo;
 
-	/**
-	 * @param $pdo
-	 */
-	public function __construct($pdo) {
+  /**
+   * @param $pdo
+   */
+  public function __construct($pdo) {
     $this->pdo = $pdo;
   }
 
-	/**
-	 * @param $id
-	 * @return bool
-	 */
-	public function exists( $id ) {
+  /**
+   * @param $id
+   * @return bool
+   */
+  public function exists( $id ) {
     $prepared = $this->pdo->prepare("SELECT id FROM `nieruchomosc` WHERE id = :id");
     $prepared->bindValue( ":id", $id );
     $prepared->execute();
     return $prepared->rowCount() > 0;
   }
 
-	/**
-	 * @param Nieruchomosc $obj
-	 */
-	public function update( Nieruchomosc $obj ) {
-    $sets = array();
-		foreach( array_keys($map) as $x ) {
-			$sets[] = " `${x}` = :${x} ";
-		}
+  /**
+   * @param Nieruchomosc $obj
+   */
+  public function update( Nieruchomosc $obj ) {
     $map = $obj->getKeyValueMap();
+        $sets = array();
+    foreach( array_keys($map) as $x ) {
+      $sets[] = " `${x}` = :${x} ";
+    }
     unset($map['id']);
     $prepared = $this->pdo->prepare("UPDATE `nieruchomosc` SET " .
       implode(",", $sets ) .
@@ -48,16 +48,16 @@ class NieruchomosciRepository {
     $prepared->execute();
   }
 
-	/**
-	 * @param Nieruchomosc $obj
-	 */
-	public function insert( Nieruchomosc $obj ) {
-	$keys = array();
-	$values = array();
-	foreach( array_keys($obj->getKeyValueMap()) as $x ){
-		$keys[] = "`${x}`";
-		$values[] = ":${x}";
-	}
+  /**
+   * @param Nieruchomosc $obj
+   */
+  public function insert( Nieruchomosc $obj ) {
+  $keys = array();
+  $values = array();
+  foreach( array_keys($obj->getKeyValueMap()) as $x ){
+    $keys[] = "`${x}`";
+    $values[] = ":${x}";
+  }
     $prepared = $this->pdo->prepare("INSERT INTO `nieruchomosc` " .
         "(". implode(",", $keys) . ") " .
       "VALUES (". implode(",", $values) . ")");
@@ -68,10 +68,10 @@ class NieruchomosciRepository {
     $prepared->execute();
   }
 
-	/**
-	 * @param Nieruchomosc $obj
-	 */
-	public function insertOrUpdate( Nieruchomosc $obj ) {
+  /**
+   * @param Nieruchomosc $obj
+   */
+  public function insertOrUpdate( Nieruchomosc $obj ) {
     if ( $this->exists($obj->getId()) ) {
       $this->update( $obj );
     } else {
@@ -79,10 +79,10 @@ class NieruchomosciRepository {
     }
   }
 
-	/**
-	 * @return Nieruchomosc[]
-	 */
-	public function all( ) {
+  /**
+   * @return Nieruchomosc[]
+   */
+  public function all( ) {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`");
     $prepared->execute();
     $cur = null;
@@ -93,11 +93,11 @@ class NieruchomosciRepository {
     return $result;
   }
 
-	/**
-	 * @param $tab
-	 * @return array
-	 */
-	public function tab( $tab ) {
+  /**
+   * @param $tab
+   * @return array
+   */
+  public function tab( $tab ) {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc`
       WHERE dzial_tab = :dzial_tab");
     $prepared->bindValue( ":dzial_tab", $tab );
@@ -110,28 +110,28 @@ class NieruchomosciRepository {
     return $result;
   }
 
-	/**
-	 * @param $id
-	 */
-	public function delete( $id ) {
+  /**
+   * @param $id
+   */
+  public function delete( $id ) {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE `id` = :id");
     $prepared->bindValue( ":id", $id );
     $prepared->execute();
   }
 
-	/**
-	 *
-	 */
-	public function deleteAll() {
+  /**
+   *
+   */
+  public function deleteAll() {
     $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc`");
     $prepared->execute();
   }
 
-	/**
-	 * @param $id
-	 * @return Nieruchomosc|null
-	 */
-	public function get( $id ) {
+  /**
+   * @param $id
+   * @return Nieruchomosc|null
+   */
+  public function get( $id ) {
     $prepared = $this->pdo->prepare("SELECT * FROM `nieruchomosc` WHERE id = :id");
     $prepared->bindValue( ":id", (int) $id );
     $prepared->execute();
@@ -142,52 +142,52 @@ class NieruchomosciRepository {
     return null;
     }
 
-	public function search( SearchQuery $query ) {
-		$toBind = array();
-		$queryString = "SELECT * FROM `nieruchomosc`  ";
-		$where = "WHERE";
+  public function search( SearchQuery $query ) {
+    $toBind = array();
+    $queryString = "SELECT * FROM `nieruchomosc`  ";
+    $where = "WHERE";
 
-		if( $query->getCenaM2Max() != null ) {
-			$where .= " cena/powierzchnia <= :CenaM2Max";
-			$toBind[':CenaM2Max'] = $query->getCenaM2Max();
-		}
-		if( $query->getCenaM2Min() != null ) {
-			$where .= " cena/powierzchnia >= :CenaM2Min";
-			$toBind[':CenaM2Min'] = $query->getCenaM2Min();
-		}
+    if( $query->getCenaM2Max() != null ) {
+      $where .= " cena/powierzchnia <= :CenaM2Max";
+      $toBind[':CenaM2Max'] = $query->getCenaM2Max();
+    }
+    if( $query->getCenaM2Min() != null ) {
+      $where .= " cena/powierzchnia >= :CenaM2Min";
+      $toBind[':CenaM2Min'] = $query->getCenaM2Min();
+    }
 
-		if( $query->getCenaMax() != null ) {
-			$where .= " cena <= :CenaMax";
-			$toBind[':CenaMax'] = $query->getCenaMax();
-		}
-		if( $query->getCenaMin() != null ) {
-			$where .= " cena >= :CenaMin";
-			$toBind[':CenaMin'] = $query->getCenaMin();
-		}
+    if( $query->getCenaMax() != null ) {
+      $where .= " cena <= :CenaMax";
+      $toBind[':CenaMax'] = $query->getCenaMax();
+    }
+    if( $query->getCenaMin() != null ) {
+      $where .= " cena >= :CenaMin";
+      $toBind[':CenaMin'] = $query->getCenaMin();
+    }
 
-		if( $query->getPowierzchniaMax() != null ) {
-			$where .= " cena <= :PowierzchniaMax";
-			$toBind[':PowierzchniaMax'] = $query->getPowierzchniaMax();
-		}
-		if( $query->getPowierzchniaMin() != null ) {
-			$where .= " cena >= :CenaMin";
-			$toBind[':CenaMin'] = $query->getPowierzchniaMin();
-		}
+    if( $query->getPowierzchniaMax() != null ) {
+      $where .= " cena <= :PowierzchniaMax";
+      $toBind[':PowierzchniaMax'] = $query->getPowierzchniaMax();
+    }
+    if( $query->getPowierzchniaMin() != null ) {
+      $where .= " cena >= :CenaMin";
+      $toBind[':CenaMin'] = $query->getPowierzchniaMin();
+    }
 
-		if( $where != "WHERE" ) {
-			$queryString .= $where;
-		}
+    if( $where != "WHERE" ) {
+      $queryString .= $where;
+    }
 
-		$prepared = $this->pdo->prepare($queryString);
-		foreach( $toBind as $key => $value ) {
-			$prepared->bindValue($key, $value);
-		}
-		$prepared->execute();
-		$cur = null;
-		$result = array();
-		while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
-			$result[] = Nieruchomosc::fromArray( $cur );
-		}
-		return $result;
-	}
+    $prepared = $this->pdo->prepare($queryString);
+    foreach( $toBind as $key => $value ) {
+      $prepared->bindValue($key, $value);
+    }
+    $prepared->execute();
+    $cur = null;
+    $result = array();
+    while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
+      $result[] = Nieruchomosc::fromArray( $cur );
+    }
+    return $result;
+  }
 }

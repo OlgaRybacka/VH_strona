@@ -53,8 +53,8 @@ class ImportService {
       $this->pdo->commit();
       $this->moveToOld( $workPath, $fileName );
     } catch ( Exception $e ) {
-      self::$logger->error("Rolling back after error.", $e);
       if ( $this->pdo->inTransaction() ) {
+        self::$logger->error("Rolling back after error.", $e);
         $this->pdo->rollback();
       }
       throw $e;
@@ -105,15 +105,15 @@ class ImportService {
 
   public function handleImage( $tmp, $file ) {
     self::$logger->info("Handling {$file} ({$tmp}).");
-    $hash = md5_file("{$tmp}{$file}");
+    //$hash = md5_file("{$tmp}{$file}");
     $src  = "{$tmp}{$file}";
-    $dest = "{$this->imgDir}{$hash}_{$file}";
+    $dest = "{$this->imgDir}_{$file}";
     self::$logger->info("copy {$src} -> {$dest}.");
     $success = copy( $src, $dest );
     if( !$success ) {
       throw new ImportException("Cannot copy image.");
     }
-    return "{$this->imgUrlRoot}{$hash}_{$file}";
+    return "{$this->imgUrlRoot}_{$file}";
   }
 
   public function handleXml( $tmp, $file, $imgMap ) {
@@ -127,9 +127,11 @@ class ImportService {
       if ( $list->item( $i )->textContent == 'calosc' ) {
         self::$logger->info("Full import. Delete all!");
         $this->nieruchomosciRepository->deleteAll();
+        self::$logger->info("deleted!");
       }
     }
 
+    self::$logger->info("photos ... ");
     $list = $xpath->query('/plik/zdjecia/zdjecie');
     for( $i = 0; $i<$list->length; $i++ ) {
       $zdj = Zdjecie::fromDomElement( $list->item($i) );
@@ -139,11 +141,15 @@ class ImportService {
       $zdj->setUrl( $imgMap[$zdj->getNazwa()] );
       $this->zdjeciaRepository->insertOrUpdate( $zdj );
     }
+
+    self::$logger->info("offers ... ");
     $list = $xpath->query('/plik/lista_ofert/dzial/oferta');
     for( $i = 0; $i<$list->length; $i++ ) {
       $nieruchomosc = Nieruchomosc::fromDomElement( $list->item($i) );
       $this->nieruchomosciRepository->insertOrUpdate($nieruchomosc);
     }
+
+    self::$logger->info("remove offers ... ");
     $list = $xpath->query('/plik/lista_ofert/dzial/oferta_usun/id');
     for( $i = 0; $i<$list->length; $i++ ) {
       $id = intval( $list->item($i)->textContent );
