@@ -122,13 +122,26 @@ $found = $nie->all();
 		});
 
 		$(function() {
-			$('.offer-zobacz-button').click(function () {
-				var id = $(this).data('id');
+			var currentFetchingId = undefined;
+			function fetch( id ) {
+				currentFetchingId = id;
 				$.get("item.php", {
 					id: id
 				}, function (data) {
-					$('.details-container').html(data);
-				})
+					if ( id == currentFetchingId ) {
+						$('.details-container').html(data);
+						// TODO: enable scroll
+					}
+				});
+			}
+			// preload first item
+			if( $('.offer-zobacz-button').size() > 0 ) {
+				var id = $($('.offer-zobacz-button').get(0)).data('id');
+				fetch(id);
+			}
+			$('.offer-zobacz-button').click(function () {
+				var id = $(this).data('id');
+				fetch( id );
 			});
 		});
 		</script>
