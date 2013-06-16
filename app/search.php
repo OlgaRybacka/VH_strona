@@ -198,17 +198,17 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input name="cenaMin" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input name="cenaMax" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input name="cenaM2Min" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input name="cenaM2Max" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row4 col1">metraż [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <input name="powierzchniaMin" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
 		  <datalist id="metraz">
 			<option value="10">
 			<option value="20">
@@ -223,11 +223,11 @@ $found = $nie->search($query);
 			<option value="150">
 			<option value="200">
 		  </datalist> 
-		  <input type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <input name="powierzchniaMax" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
 		  <div class="search-form form-label row5 col1">liczba pokoi [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
+		  <input name="pokojeMin" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
 		  <datalist id="pokoje">
 			<option value="1">
 			<option value="2">
@@ -237,7 +237,7 @@ $found = $nie->search($query);
 			<option value="6">
 			<option value="7">
      	          </datalist> 
-		  <input type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <input  name="pokojeMax" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
 		  <div class="search-form form-label row1 col3">typ budynku
 		    <div class="arrow-right lila2"></div>
 		  </div>

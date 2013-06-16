@@ -131,4 +131,53 @@ class NieruchomosciRepository {
     }
     return null;
     }
+
+	public function search( SearchQuery $query ) {
+		$toBind = [];
+		$queryString = "SELECT * FROM `nieruchomosc`  ";
+		$where = "WHERE";
+
+		if( $query->getCenaM2Max() != null ) {
+			$where .= " cena/powierzchnia <= :CenaM2Max";
+			$toBind[':CenaM2Max'] = $query->getCenaM2Max();
+		}
+		if( $query->getCenaM2Min() != null ) {
+			$where .= " cena/powierzchnia >= :CenaM2Min";
+			$toBind[':CenaM2Min'] = $query->getCenaM2Min();
+		}
+
+		if( $query->getCenaMax() != null ) {
+			$where .= " cena <= :CenaMax";
+			$toBind[':CenaMax'] = $query->getCenaMax();
+		}
+		if( $query->getCenaMin() != null ) {
+			$where .= " cena >= :CenaMin";
+			$toBind[':CenaMin'] = $query->getCenaMin();
+		}
+
+		if( $query->getPowierzchniaMax() != null ) {
+			$where .= " cena <= :PowierzchniaMax";
+			$toBind[':PowierzchniaMax'] = $query->getPowierzchniaMax();
+		}
+		if( $query->getPowierzchniaMin() != null ) {
+			$where .= " cena >= :CenaMin";
+			$toBind[':CenaMin'] = $query->getPowierzchniaMin();
+		}
+
+		if( $where != "WHERE" ) {
+			$queryString .= $where;
+		}
+
+		$prepared = $this->pdo->prepare($queryString);
+		foreach( $toBind as $key => $value ) {
+			$prepared->bindValue($key, $value);
+		}
+		$prepared->execute();
+		$cur = null;
+		$result = array();
+		while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
+			$result[] = Nieruchomosc::fromArray( $cur );
+		}
+		return $result;
+	}
 }
