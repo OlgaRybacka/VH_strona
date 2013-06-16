@@ -6,13 +6,14 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 $id = (int) $_GET['id'];
 $element = $nie->get($id);
+$zdjecia = $zdj->getForNieruchomosc( $id );
 if ($element == null) {
     die();
 }
 ?>
 <span class="offer-details">
 		    <div class="basic-info">
-			  <img src="public/static/./img/oferta_mini.png" class="miniatura"></img>
+                <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
 			  <span class="basic-info-text">
 			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> / <span class="big-number"><?php echo $element->getPokoje(); ?></span> pok.<br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
@@ -78,8 +79,8 @@ if ($element == null) {
 			</div>
 		  </span>
 <span class="offer-photos">
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
+	<?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
 </span>
