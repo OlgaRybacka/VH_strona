@@ -68,17 +68,20 @@ if ($element == null) {
 			</div>
 			<div class="offer-description">
 			  <div class="location"><div class="location-text"><b><?php echo $element->getDzielnica(); ?></b>, <?php echo $element->getUlica(); ?></div></div>
-			  <div class="row1">
-			    <span class="col1">
-				  <div class="text">
-				    <span style="font-size:12px;">typ zabudowy</span><br/>
-				    <span style="font-size: 14px; font-weight:bold"><?php echo $element->getTypzabudowy(); ?></span>
+			  <?php
+              if ($element->getDzialTab() == "mieszkania") {
+                  echo
+                      '<div class="row1">
+                        <span class="col1">
+                          <div class="text">
+                            <span style="font-size:12px;">typ zabudowy</span><br/>
+                            <span style="font-size: 14px; font-weight:bold">' . $element->getTypzabudowy() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
 				  <div class="text">
 				    <span style="font-size:12px;">piętro / pokoje</span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center"><?php echo $element->getPietro(); ?>/<?php echo $element->getPokoje(); ?></span>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getPietro() .' / ' . $element->getPokoje() .'</span>
 				  </div>
 				</span>
 			  </div>
@@ -86,17 +89,100 @@ if ($element == null) {
 			    <span class="col1">
 				  <div class="text">
 				    <span style="font-size:12px;">forma własności</span><br/>
-				    <span style="font-size: 14px; font-weight:bold"><?php echo $element->getFormaWlasnosci(); ?></span>
+				    <span style="font-size: 14px; font-weight:bold">' .$element->getFormaWlasnosci() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
 				  <div class="text">
 				    <span style="font-size:12px;">cena zł/m<sup>2</sup></span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center"><?php echo round($element->getCena()/$element->getPowierzchnia()); ?> zł</span>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . round($element->getCena()/$element->getPowierzchnia()) .' zł</span>
 				  </div>
 				</span>
 			  </div>
-			</div>
+			</div>';
+              }
+              else if ($element->getDzialTab() == "domy"){
+              echo
+              '<div class="row1">
+			    <span class="col1">
+				  <div class="text">
+				    <span style="font-size:12px;">powierzchnia działki</span><br/>
+				    <span style="font-size: 14px; font-weight:bold">' . $element->getPowierzchnia() . '</span>
+				  </div>
+				</span>
+				<span class="col2">
+				  <div class="text">
+				    <span style="font-size:12px;">kondygnacje / pokoje</span><br/>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getPietro() .' / ' . $element->getPokoje() .'</span>
+				  </div>
+				</span>
+			  </div>
+			  <div class="row2">
+			    <span class="col1">
+				  <div class="text">
+				    <span style="font-size:12px;">powierzchnia domu</span><br/>
+				    <span style="font-size: 14px; font-weight:bold">' .$element->getPowierzchnia() . '</span>
+				  </div>
+				</span>
+				<span class="col2">
+				  <div class="text">
+				    <span style="font-size:12px;">cena zł/m<sup>2</sup></span><br/>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . round($element->getCena()/$element->getPowierzchnia()) .' zł</span>
+				  </div>
+				</span>
+			  </div>
+			</div>'; }
+            else if ($element->getDzialTab() == "dzialki") {
+                  echo
+                      '<div class="row1">
+                        <span class="col1">
+                          <div class="text">
+                            <span style="font-size:12px;">typ działki</span><br/>
+                            <span style="font-size: 14px; font-weight:bold"> tu bedzie typ działki</span>
+				  </div>
+				</span>
+				<span class="col2">
+				  <div class="text">
+				    <span style="font-size:12px;">cena za m<sup>2</sup></span><br/>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . round($element->getCena()/$element->getPowierzchnia()) .'</span>
+				  </div>
+				</span>
+			  </div>
+			</div>';
+              }
+              else if ($element->getDzialTab() == "lokale") {
+                  echo
+                      '<div class="row1">
+                        <span class="col1">
+                          <div class="text">
+                            <span style="font-size:12px;">typ lokalu</span><br/>
+                            <span style="font-size: 14px; font-weight:bold"> tu będzie typ lokalu </span>
+				  </div>
+				</span>
+				<span class="col2">
+				  <div class="text">
+				    <span style="font-size:12px;">piętro</span><br/>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getPietro()  .'</span>
+				  </div>
+				</span>
+			  </div>
+			  <div class="row2">
+			    <span class="col1">
+				  <div class="text">
+				    <span style="font-size:12px;">liczba pomieszczeń</span><br/>
+				    <span style="font-size: 14px; font-weight:bold"> tu będzie liczba pomieszczeń</span>
+				  </div>
+				</span>
+				<span class="col2">
+				  <div class="text">
+				    <span style="font-size:12px;">cena zł/m<sup>2</sup></span><br/>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . round($element->getCena()/$element->getPowierzchnia()) .' zł</span>
+				  </div>
+				</span>
+			  </div>
+			</div>';
+              }
+              ?>
 			<div class="offer-text">
 			    <div class="text-text">
                     <?php echo $element->getOpis(); ?>
