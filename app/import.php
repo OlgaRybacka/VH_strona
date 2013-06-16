@@ -19,16 +19,16 @@ if (flock($fp, LOCK_EX)) {  // acquire an exclusive lock
 // end LOCK
 
 // fix issue with wrong path !!
-$files = scandir("./import/");
+$files = scandir("$appDir/import/");
 foreach( $files as $f ) {
 	if ( !is_dir($f) && preg_match( "/waiting.*.zip/i", $f) ) {
-		echo "move ./import/$f to ./import/waiting/$f";
-		rename("./import/$f", "./import/waiting/$f");
+		echo "move $appDir/import/$f to $appDir/import/waiting/$f";
+		rename("$appDir/import/$f", "$appDir/import/waiting/$f");
 	} else {
 	}
 }
 
-$files = scandir("./import/waiting/");
+$files = scandir("$appDir/import/waiting/");
 foreach( $files as $f ) {
 	if ( !is_dir($f) && preg_match( "/.*.zip/i", $f) ) {
 		echo "import $f<br/>";
@@ -51,11 +51,11 @@ function rrmdir($dir) {
 	}
 	rmdir($dir);
 }
-$files = scandir("./tmp/");
+$files = scandir("$appDir/tmp/");
 foreach( $files as $f ) {
-	if ( is_dir("./tmp/$f") && preg_match( "/20[0-9][0-9][0-9\\-_]+/i", $f) ) {
+	if ( is_dir("$appDir/tmp/$f") && preg_match( "/20[0-9][0-9][0-9\\-_]+/i", $f) ) {
 		// remove dirs like 2013-06-15_19_38_16_000000_1307212396
-		rrmdir( "./tmp/$f" );
+		rrmdir( "$appDir/tmp/$f" );
 	} else {
 		echo "skip deleting $f<br/>";
 	}
