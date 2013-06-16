@@ -108,13 +108,31 @@ foreach ( $nieruchomosci as $v ) {
 			</div>
 <?php foreach( $nieruchomosci as $nieruchomosc) {
 	echo '<span class="span1">
-				<div class="offer-data">
-					<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
+				<div class="offer-data">';
+                /** @var Nieruchomosc $nieruchomosc */
+                if ($nieruchomosc->getDzialTab() == "mieszkania" || $nieruchomosc->getDzialTab() == "domy") {
+                echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
 					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
 					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
 					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
-					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>
-				</div>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+				}
+                else if ($nieruchomosc->getDzialTab() == "dzialki") {
+                    echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup><br/></span>
+					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
+					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
+					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+                }
+                else if ($nieruchomosc->getDzialTab() == "lokale") {
+                    echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup><br/></span>
+					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
+					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
+					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+                }
+				echo
+                '</div>
 				<img src="' . getUrl($zdjecie[$nieruchomosc->getId()]->getUrl()) . '" style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
 				<div class="offer-data skrot">
 					' . $nieruchomosc->getOpisTrimed() . '
