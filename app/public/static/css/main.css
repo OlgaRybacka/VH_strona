@@ -182,7 +182,9 @@ body .favourites-page {
 
 .home-page .tile,
 .home-page .tile .arrow-down,
-.home-page .tile .arrow-right {
+.home-page .tile .arrow-right,
+.home-page .oferty_tygodnia,
+.home-page .oferty_tygodnia .arrow-right {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -200,6 +202,19 @@ body .favourites-page {
 .home-page .tile.violet:hover .arrow-down {
   bottom: -10px;
 }
+
+
+.home-page .tile.gray:hover {
+    background-color: #7f7c81;
+}
+.home-page .tile.gray:hover .arrow-down,
+.home-page .tile.gray:hover .arrow-right {
+    border-color: #7f7c81;
+}
+.home-page .tile.gray:hover .arrow-down {
+    bottom: -10px;
+}
+
 
 .home-page .tile,
 .home-page .tile-height {
@@ -232,13 +247,23 @@ body .favourites-page {
 .home-page .oferty_tygodnia .arrow-right.violet {
   width: 0px;
   height: 0px;
-  right: -10px;
+  right: -5px;
   position: absolute;
   /* triangle trick */
   border-top: 10px solid transparent !important;
   border-bottom: 10px solid transparent !important;
   border-left: 10px solid #481368;
   z-index: 10;
+}
+
+.home-page .tile:hover .arrow-right.violet,
+.home-page .oferty_tygodnia:hover .arrow-right.violet {
+    right: -10px;
+    border-color: #59208A;
+}
+
+.home-page .aside .oferty_tygodnia:hover {
+    background-color: #59208A;
 }
 
 .search-page .search-form.form-label .arrow-right.lila2 {
@@ -433,9 +458,9 @@ body .favourites-page {
   background-color: #d1d2d4;
   margin-right: 1px;
   -moz-border-radius:0 15px 0 0; /* FF */
-  -webkit-border-radius:0 15px 0 0; /* przegl¹darki z webkitem (Safari, Chrome itp.) */
-  -khtml-border-radius:0 15px 0 0; /* przegl¹darki typu K-meleon (typowo Linuxowe) */
-  border-radius:0 15px 0 0; /* pozosta³e przegl¹darki */
+  -webkit-border-radius:0 15px 0 0; /* przeglï¿½darki z webkitem (Safari, Chrome itp.) */
+  -khtml-border-radius:0 15px 0 0; /* przeglï¿½darki typu K-meleon (typowo Linuxowe) */
+  border-radius:0 15px 0 0; /* pozostaï¿½e przeglï¿½darki */
 }
 
 .search-page .container.search-form .zakladki .zakladka_mieszkania.active,
