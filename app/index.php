@@ -79,22 +79,22 @@ foreach ( $nieruchomosci as $v ) {
 			  <img src="public/static/./img/about.png"></img>
 			</span><!--
             --><span class="tile"></span><!--
-            --><a class="tile violet" href="search.php?bookmark=1">
+            --><a class="tile violet" href="search.php?t=mieszkania">
 			  <img src="public/static/./img/mieszkania.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?bookmark=2">
+            --><a class="tile gray" href="search.php?t=domy">
               <img src="public/static/./img/domy.png"></img>
               <div class="arrow-down gray"></div>
 			</a><!--
-            --><span class="tile violet">
+            --><a class="tile violet" href="search.php?t=dzialki">
 			  <img src="public/static/./img/dzialki.png"></img>
               <div class="arrow-down violet"></div>
-            </span><!--
-            --><span class="tile gray">
+            </a><!--
+            --><a class="tile gray" href="search.php?t=lokale">
 			  <img src="public/static/./img/komercyjne.png" style="margin-top: 65px"></img>
               <div class="arrow-down gray"></div>
-            </span>
+            </a>
         </div>
         <div class="container aside">
             <span class="span2">
@@ -108,13 +108,31 @@ foreach ( $nieruchomosci as $v ) {
 			</div>
 <?php foreach( $nieruchomosci as $nieruchomosc) {
 	echo '<span class="span1">
-				<div class="offer-data">
-					<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
+				<div class="offer-data">';
+                /** @var Nieruchomosc $nieruchomosc */
+                if ($nieruchomosc->getDzialTab() == "mieszkania" || $nieruchomosc->getDzialTab() == "domy") {
+                echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup> / <span class="big-number">' . $nieruchomosc->getPokoje() . '</span> pok.<br/></span>
 					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
 					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
 					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
-					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>
-				</div>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+				}
+                else if ($nieruchomosc->getDzialTab() == "dzialki") {
+                    echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup><br/></span>
+					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
+					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
+					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+                }
+                else if ($nieruchomosc->getDzialTab() == "lokale") {
+                    echo '<span class="dane_center"><span class="big-number">'. $nieruchomosc->getPowierzchnia().'</span> m<sup>2</sup><br/></span>
+					<span class="dane_center"><span class="big-number">' . $nieruchomosc->getCena() . '</span> zł</span>
+					<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
+					<span class="miejsce1 dane_center">' . $nieruchomosc->getDzielnica() .'</span>
+					<span class="miejsce2 dane_center">' . $nieruchomosc->getUlica() . '&nbsp;</span>';
+                }
+				echo
+                '</div>
 				<img src="' . getUrl($zdjecie[$nieruchomosc->getId()]->getUrl()) . '" style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
 				<div class="offer-data skrot">
 					' . $nieruchomosc->getOpisTrimed() . '

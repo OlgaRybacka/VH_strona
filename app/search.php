@@ -5,7 +5,7 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
 $query = SearchQuery::fromParams($_GET);
-
+$offertype = isset($_GET['t']) ? $_GET['t'] : "mieszkania";
 $found = $nie->search($query);
 
 
@@ -179,12 +179,12 @@ $found = $nie->search($query);
         </div>
         <div class="container search-form">
 		<span class="zakladki"><!--
-          --><a class="zakladka_mieszkania active">mieszkania</a><!--
-          --><a class="zakladka_domy">domy</a><!--
-          --><a class="zakladka_dzialki">działki</a><!--
-          --><a class="zakladka_komercyjne">lokale komercyjne</a><!--
+          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?>">mieszkania</a><!--
+          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>">domy</a><!--
+          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>">działki</a><!--
+          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>">lokale komercyjne</a><!--
           --></span>
-	  <div class="search-form1" style="visibility:visible;">
+	  <div class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -278,7 +278,7 @@ $found = $nie->search($query);
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  
-	  <div class="search-form2" style="visibility:hidden;">
+	  <div class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -375,7 +375,7 @@ $found = $nie->search($query);
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
-	  <div class="search-form3 style="visibility:hidden;">
+	  <div class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -420,7 +420,7 @@ $found = $nie->search($query);
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
 	  </div>
-	  <div class="search-form4" style="visibility:hidden;">
+	  <div class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 		  <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -508,6 +508,8 @@ $found = $nie->search($query);
                   <span class="offers-list">
 <?php
                   foreach( $found as $res ) {
+                      /** @var Nieruchomosc $res*/
+                      if($res->getDzialTab() == "mieszkania"){
                     echo '
 		    <div class="offer">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
@@ -516,6 +518,37 @@ $found = $nie->search($query);
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
 			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
                     </div>';
+                      }
+                      if($res->getDzialTab() == "domy"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
+                      if($res->getDzialTab() == "dzialki"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2"> </div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
+                      if($res->getDzialTab() == "lokale"){
+                          echo '
+		    <div class="offer">
+			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
+			  <div class="offer-data data2"> </div>
+			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
+			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+                    </div>';
+                      }
                   }
 ?>
 		  </span>

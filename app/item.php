@@ -5,14 +5,16 @@ $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 $id = (int) $_GET['id'];
+$favourites = isset($_GET['f']) ? (bool) $_GET['f'] : false;
 $element = $nie->get($id);
+$zdjecia = $zdj->getForNieruchomosc( $id );
 if ($element == null) {
     die();
 }
 ?>
 <span class="offer-details">
 		    <div class="basic-info">
-			  <img src="public/static/./img/oferta_mini.png" class="miniatura"></img>
+                <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
 			  <span class="basic-info-text">
 			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> / <span class="big-number"><?php echo $element->getPokoje(); ?></span> pok.<br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
@@ -59,13 +61,23 @@ if ($element == null) {
                     <?php echo $element->getOpis(); ?>
 				</span>
 			  </span>
-			  <span class="offer-buttons">
+              <?php if ($favourites==true) {
+              echo ' <span class="offer-buttons">
+			    <a class="offer-button" title="Przeglądaj zdjęcia oferty"><img src="./img/off_but1.png"></img></a><!--
+            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=www.onet.pl"><img src="./img/off_but3.png"></img></a><!--
+            --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="./img/off_but4.png"></img></a><!--
+            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="./img/off_but5.png"></img></a><!--
+            --></span>'; }
+              else {
+              echo ' <span class="offer-buttons">
 			    <a class="offer-button" href="javascript:;" id="gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
             --><a class="offer-button" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
             --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id=<?php echo $id; ?>"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
             --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
-            --></span>
+            --></span>';
+              }
+              ?>
 			  <div class="contact-data">
 			    <div class="text">
 				  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
@@ -78,8 +90,8 @@ if ($element == null) {
 			</div>
 		  </span>
 <span class="offer-photos">
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
-	<img src="public/static/./img/photo1.png"></img>
+	<?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
+    <?php echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
 </span>
