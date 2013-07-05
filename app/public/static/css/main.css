@@ -472,6 +472,8 @@ body .favourites-page {
   padding-top: 3px;
   background-color: #d1d2d4;
   margin-right: 1px;
+  color: #481368;
+  text-decoration: none;
   -moz-border-radius:0 15px 0 0; /* FF */
   -webkit-border-radius:0 15px 0 0; /* przegl�darki z webkitem (Safari, Chrome itp.) */
   -khtml-border-radius:0 15px 0 0; /* przegl�darki typu K-meleon (typowo Linuxowe) */
@@ -551,7 +553,7 @@ body .favourites-page {
 .search-page .search-form.input {
   border: none;
   background: #fff;
-  height: 31px;
+  height: 30px;
   position: absolute;
   padding-left: 10px;
   width: 191px
@@ -598,7 +600,7 @@ input {
 .search-form .styled-select select{
   border: none;
   background: #fff;
-  height: 33px;
+  height: 32px;
   position: absolute;
   padding-left: 7px;
   padding-top: 5px;
@@ -649,6 +651,7 @@ input {
 .search-page .offers-container .offers-list .offer .offer-zobacz-button,
 .favourites-page .offers-container .offers-list .offer .offer-zobacz-button {
   text-align: center;
+  text-decoration: none;
   width: 50px;
   background-color: #6d6e71;
   height: 16px;
@@ -657,6 +660,7 @@ input {
   position:absolute;
   color: #fff;
   font-size: 11px;
+  cursor: pointer;
 }
 
 .search-page .offers-container .offers-list .offer .offer-skrot,
@@ -777,6 +781,10 @@ input {
   height: 543px;
   width: 334px;
   background-color: #d1d2d4;
+}
+
+.search-page .search-button {
+    cursor: pointer;
 }
 
 .offer-page .offer-details .offer-description {

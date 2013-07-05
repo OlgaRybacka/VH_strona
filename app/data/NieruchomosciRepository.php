@@ -147,6 +147,11 @@ class NieruchomosciRepository {
     $queryString = "SELECT * FROM `nieruchomosc`  ";
     $conditions = array();
 
+      if( $query->getTab() != null ) {
+          $conditions[] = " dzial_tab = :Tab";
+          $toBind[':Tab'] = $query->getTab();
+      }
+
     if( $query->getCenaM2Max() != null ) {
       $conditions[] = " cena/powierzchnia <= :CenaM2Max";
       $toBind[':CenaM2Max'] = $query->getCenaM2Max();
@@ -166,12 +171,12 @@ class NieruchomosciRepository {
     }
 
     if( $query->getPowierzchniaMax() != null ) {
-      $conditions[] = " cena <= :PowierzchniaMax";
+      $conditions[] = " powierzchnia <= :PowierzchniaMax";
       $toBind[':PowierzchniaMax'] = $query->getPowierzchniaMax();
     }
     if( $query->getPowierzchniaMin() != null ) {
-      $conditions[] = " cena >= :CenaMin";
-      $toBind[':CenaMin'] = $query->getPowierzchniaMin();
+      $conditions[] = " powierzchnia >= :PowierzchniaMin";
+      $toBind[':PowierzchniaMin'] = $query->getPowierzchniaMin();
     }
 
     if( sizeof($conditions) != 0 ) {
