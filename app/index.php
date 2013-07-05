@@ -28,6 +28,7 @@ foreach ( $nieruchomosci as $v ) {
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
 
@@ -137,6 +138,7 @@ foreach ( $nieruchomosci as $v ) {
 				<div class="offer-data skrot">
 					' . $nieruchomosc->getOpisTrimed() . '
 				</div>
+				<div class="offer-data wiecej"><a href="#">więcej...</a></div>
             </span>';
 } ?>
 		</div>

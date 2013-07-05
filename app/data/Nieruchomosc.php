@@ -283,7 +283,7 @@ class Nieruchomosc {
   }
 
   public function getOpisTrimed() {
-    return trim_lines( $this->getOpis(), 20, 5 );
+    return trim_lines( $this->getOpis(), 40, 5 );
   }
 
   public function getOpis() {
