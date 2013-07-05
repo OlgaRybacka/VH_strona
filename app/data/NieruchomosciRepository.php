@@ -145,37 +145,37 @@ class NieruchomosciRepository {
   public function search( SearchQuery $query ) {
     $toBind = array();
     $queryString = "SELECT * FROM `nieruchomosc`  ";
-    $where = "WHERE";
+    $conditions = array();
 
     if( $query->getCenaM2Max() != null ) {
-      $where .= " cena/powierzchnia <= :CenaM2Max";
+      $conditions[] = " cena/powierzchnia <= :CenaM2Max";
       $toBind[':CenaM2Max'] = $query->getCenaM2Max();
     }
     if( $query->getCenaM2Min() != null ) {
-      $where .= " cena/powierzchnia >= :CenaM2Min";
+      $conditions[] = " cena/powierzchnia >= :CenaM2Min";
       $toBind[':CenaM2Min'] = $query->getCenaM2Min();
     }
 
     if( $query->getCenaMax() != null ) {
-      $where .= " cena <= :CenaMax";
+      $conditions[] = " cena <= :CenaMax";
       $toBind[':CenaMax'] = $query->getCenaMax();
     }
     if( $query->getCenaMin() != null ) {
-      $where .= " cena >= :CenaMin";
+      $conditions[] = " cena >= :CenaMin";
       $toBind[':CenaMin'] = $query->getCenaMin();
     }
 
     if( $query->getPowierzchniaMax() != null ) {
-      $where .= " cena <= :PowierzchniaMax";
+      $conditions[] = " cena <= :PowierzchniaMax";
       $toBind[':PowierzchniaMax'] = $query->getPowierzchniaMax();
     }
     if( $query->getPowierzchniaMin() != null ) {
-      $where .= " cena >= :CenaMin";
+      $conditions[] = " cena >= :CenaMin";
       $toBind[':CenaMin'] = $query->getPowierzchniaMin();
     }
 
-    if( $where != "WHERE" ) {
-      $queryString .= $where;
+    if( sizeof($conditions) != 0 ) {
+      $queryString .= "WHERE " . join(" and ", $conditions );
     }
 
     $prepared = $this->pdo->prepare($queryString);
