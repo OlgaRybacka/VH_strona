@@ -6,7 +6,7 @@
  */
 
 class SearchQuery {
-	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax" );
+	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax", "lokalizacja" );
     private $tab;
     private $cenaMin;             // float
 	private $cenaMax;             // float
@@ -20,6 +20,7 @@ class SearchQuery {
     private $typOferty;
     private $pokojeMin;
     private $pokojeMax;
+    private $lokalizacja;
 
 	public static function fromParams( $params ) {
 		$query = new SearchQuery();
@@ -133,5 +134,13 @@ class SearchQuery {
 
     public function getPokojeMin() {
         return $this->pokojeMin;
+    }
+
+    public function setLokalizacja($lokalizacja) {
+        $this->pokojeMin = $lokalizacja;
+    }
+
+    public function getLokalizacja() {
+        return $this->lokalizacja;
     }
 }

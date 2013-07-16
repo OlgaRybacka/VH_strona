@@ -204,6 +204,10 @@ class NieruchomosciRepository {
       $conditions[] = " pokoje >= :PokojeMin";
       $toBind[':PokojeMin'] = $query->getPokojeMin();
     }
+    if( $query->getLokalizacja() != null ) {
+      $conditions[] = "(upper(ulica) like upper(:Lokalizacja) OR upper(dzielnica) like upper(:Lokalizacja))";
+      $toBind[':Lokalizacja'] = $query->getLokalizacja();
+    }
 
 
       if( sizeof($conditions) != 0 ) {

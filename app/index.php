@@ -52,7 +52,7 @@ foreach ( $nieruchomosci as $v ) {
 					<span class="small-button but1">
 						<img src="public/static/./img/but1.png"></img>
 					</span><!--
-					--><a href="index.html" class="small-button but2">
+					--><a href="index.php" class="small-button but2">
 						<img src="public/static/./img/but2.png"></img>
 					</a><!--
 					--><span class="small-button but3">
@@ -136,10 +136,25 @@ foreach ( $nieruchomosci as $v ) {
                 '</div>
 				<img src="' . getUrl($zdjecie[$nieruchomosc->getId()]->getUrl()) . '" style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
 				<div class="offer-data skrot">
-					' . $nieruchomosc->getOpisTrimed() . '
-				</div>
-				<div class="offer-data wiecej"><a href="#">więcej...</a></div>
-            </span>';
+					' . $nieruchomosc->getOpis() . '
+				</div>';
+                if ($nieruchomosc->getDzialTab() == "mieszkania")
+                 echo
+				'<div class="offer-data wiecej"><a href="search.php?tab=mieszkania&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
+                </span>';
+                else  if ($nieruchomosc->getDzialTab() == "domy")
+                 echo
+                 '<div class="offer-data wiecej"><a href="search.php?tab=domy&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
+                </span>';
+                else  if ($nieruchomosc->getDzialTab() == "dzialki")
+                 echo
+                 '<div class="offer-data wiecej"><a href="search.php?tab=dzialki&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
+                </span>';
+                else  if ($nieruchomosc->getDzialTab() == "lokale")
+                 echo
+                 '<div class="offer-data wiecej"><a href="search.php?tab=lokale&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
+                </span>';
+
 } ?>
 		</div>
                 <div class="sales">

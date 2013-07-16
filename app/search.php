@@ -59,6 +59,8 @@ $found = $nie->search($query);
                         document.getElementsByName('pokojeMin_mi')[0].value = getURLParameter("pokojeMin");
                     if (getURLParameter("pokojeMax") != '')
                         document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax");
+                    if (getURLParameter("lokalizacja") != '')
+                        document.getElementsByName('lokalizacja_mi')[0].value = getURLParameter("lokalizacja");
                 });
 			})(jQuery);
 
@@ -97,6 +99,8 @@ $found = $nie->search($query);
                     newURL = newURL.concat("&pokojeMin=", document.getElementsByName('pokojeMin_mi')[0].value);
                 if (document.getElementsByName('pokojeMax_mi')[0].value != '')
                     newURL = newURL.concat("&pokojeMax=", document.getElementsByName('pokojeMax_mi')[0].value);
+                if (document.getElementsByName('lokalizacja_mi')[0].value != '')
+                    newURL = newURL.concat("&lokalizacja=", document.getElementsByName('lokalizacja_mi')[0].value);
 
             }
             window.location.href = newURL;
@@ -144,7 +148,11 @@ $found = $nie->search($query);
 			}
 			// preload first item
 			if( $('.offer-zobacz-button').size() > 0 ) {
-				var id = $($('.offer-zobacz-button').get(0)).data('id');
+                var id;
+                if (getURLParameter("id") != null)
+                  id = getURLParameter("id");
+                else
+				  id = $($('.offer-zobacz-button').get(0)).data('id');
 				fetch(id);
 			}
 			$('.offer-zobacz-button').click(function () {
@@ -278,7 +286,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row3 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+		  <input name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
 	  </div>
