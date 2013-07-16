@@ -93,8 +93,8 @@ if ($element == null) {
 			</div>
 		  </span>
 <span class="offer-photos">
-	<?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
-    <?php echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
-    <?php echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
-    <?php echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
+	<?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
+    <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
+    <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
+    <?php if (count($zdjecia) >= 4) echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
 </span>
