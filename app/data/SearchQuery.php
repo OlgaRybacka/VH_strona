@@ -6,8 +6,9 @@
  */
 
 class SearchQuery {
-	private static $params = array ( "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax" );
-	private $cenaMin;             // float
+	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax" );
+    private $tab;
+    private $cenaMin;             // float
 	private $cenaMax;             // float
 	private $cenaM2Min;           // float
 	private $cenaM2Max;           // float
@@ -25,6 +26,14 @@ class SearchQuery {
 		}
 		return $query;
 	}
+
+    public function setTab($tab) {
+        $this->tab = $tab;
+    }
+
+    public function getTab() {
+        return $this->tab;
+    }
 
 	public function setCenaM2Max($cenaM2Max) {
 		$this->cenaM2Max = $cenaM2Max;

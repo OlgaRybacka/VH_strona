@@ -28,6 +28,7 @@ foreach ( $nieruchomosci as $v ) {
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
 
@@ -79,19 +80,19 @@ foreach ( $nieruchomosci as $v ) {
 			  <img src="public/static/./img/about.png"></img>
 			</span><!--
             --><span class="tile"></span><!--
-            --><a class="tile violet" href="search.php?t=mieszkania">
+            --><a class="tile violet" href="search.php?tab=mieszkania">
 			  <img src="public/static/./img/mieszkania.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?t=domy">
+            --><a class="tile gray" href="search.php?tab=domy">
               <img src="public/static/./img/domy.png"></img>
               <div class="arrow-down gray"></div>
 			</a><!--
-            --><a class="tile violet" href="search.php?t=dzialki">
+            --><a class="tile violet" href="search.php?tab=dzialki">
 			  <img src="public/static/./img/dzialki.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?t=lokale">
+            --><a class="tile gray" href="search.php?tab=lokale">
 			  <img src="public/static/./img/komercyjne.png" style="margin-top: 65px"></img>
               <div class="arrow-down gray"></div>
             </a>
@@ -137,6 +138,7 @@ foreach ( $nieruchomosci as $v ) {
 				<div class="offer-data skrot">
 					' . $nieruchomosc->getOpisTrimed() . '
 				</div>
+				<div class="offer-data wiecej"><a href="#">więcej...</a></div>
             </span>';
 } ?>
 		</div>

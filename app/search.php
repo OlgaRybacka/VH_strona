@@ -5,10 +5,8 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
 $query = SearchQuery::fromParams($_GET);
-$offertype = isset($_GET['t']) ? $_GET['t'] : "mieszkania";
+$offertype = isset($_GET['tab']) ? $_GET['tab'] : "mieszkania";
 $found = $nie->search($query);
-
-
 
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -38,54 +36,32 @@ $found = $nie->search($query);
 				$(window).load(function(){
 					$(".text-text").mCustomScrollbar({scrollButtons:{enable:true}});
 					$(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
-				});			
+				});
 			})(jQuery);
-		</script>
-		<script>
-		function removeActives()
-		{
-			$(".zakladka_domy").removeClass('active');
-			$(".zakladka_mieszkania").removeClass('active');
-			$(".zakladka_dzialki").removeClass('active');
-			$(".zakladka_komercyjne").removeClass('active');
-		}
-		
-		function hideForms()
-		{
-			$(".search-form1").css( "visibility", "hidden" );
-			$(".search-form2").css( "visibility", "hidden" );
-			$(".search-form3").css( "visibility", "hidden" );
-			$(".search-form4").css( "visibility", "hidden" );
-		}
-		
-		function showMieszkania() {
-			removeActives();
-			$(".zakladka_mieszkania").addClass('active');
-			hideForms();
-			$(".search-form1").css( "visibility", "visible" );
-		}
-		
-		function showDomy() {
-			removeActives();
-			$(".zakladka_domy").addClass('active');
-			hideForms();
-			$(".search-form2").css( "visibility", "visible" );
-		}
-		
-		function showDzialki() {
-			removeActives();
-			$(".zakladka_dzialki").addClass('active');
-			hideForms();
-			$(".search-form3").css( "visibility", "visible" );
-		}
-		
-		function showKomercyjne() {
-			removeActives();
-			$(".zakladka_komercyjne").addClass('active');
-			hideForms();
-			$(".search-form4").css( "visibility", "visible" );
-		}
-		
+
+        function getURLParameter(name) {
+            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+        }
+        function search()
+        {
+            var newURL = "http://alpha.vanhausen.pl/search.php";
+            newURL = newURL.concat("?tab=");
+            var tab = getURLParameter("tab");
+            newURL = newURL.concat(tab);
+            if(tab == "mieszkania")
+            {
+                if (document.getElementsByName('cenaMin_mi')[0].value != '')
+                    newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_mi')[0].value);
+                if (document.getElementsByName('cenaMax_mi')[0].value != '')
+                    newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_mi')[0].value);
+                if (document.getElementsByName('powierzchniaMin_mi')[0].value != '')
+                    newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powierzchniaMin_mi')[0].value);
+                if (document.getElementsByName('powierzchniaMax_mi')[0].value != '')
+                    newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powierzchniaMax_mi')[0].value);
+            }
+            window.location.href = newURL;
+        }
+
 		$(function(){
 			$(document).ready(function() {
 				/*var bmark = getUrlVars()["bookmark"];
@@ -96,18 +72,7 @@ $found = $nie->search($query);
 					showDomy();
 				}*/
 			});
-			$(".zakladka_mieszkania").click(function () {
-				showMieszkania();
-			});
-			$(".zakladka_domy").click(function () {
-				showDomy();
-			});
-			$(".zakladka_dzialki").click(function () {
-				showDzialki();
-			});
-			$(".zakladka_komercyjne").click(function () {
-				showKomercyjne();
-			});
+
 			$("#gallery_button").click(function() {
 				$.fancybox([
 				'http://farm5.static.flickr.com/4044/4286199901_33844563eb.jpg',
@@ -179,10 +144,10 @@ $found = $nie->search($query);
         </div>
         <div class="container search-form">
 		<span class="zakladki"><!--
-          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?>">mieszkania</a><!--
-          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>">domy</a><!--
-          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>">działki</a><!--
-          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>">lokale komercyjne</a><!--
+          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?> " href="search.php?tab=mieszkania">mieszkania</a><!--
+          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>" href="search.php?tab=domy">domy</a><!--
+          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="search.php?tab=dzialki">działki</a><!--
+          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="search.php?tab=lokale">lokale komercyjne</a><!--
           --></span>
 	  <div class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
@@ -198,17 +163,17 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaMin" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input name="cenaMax" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input name="cenaMin_mi" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input name="cenaMax_mi" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaM2Min" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input name="cenaM2Max" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input name="cenaM2Min_mi" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input name="cenaM2Max_mi" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row4 col1">metraż [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powierzchniaMin" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <input name="powierzchniaMin_mi" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
 		  <datalist id="metraz">
 			<option value="10">
 			<option value="20">
@@ -223,11 +188,11 @@ $found = $nie->search($query);
 			<option value="150">
 			<option value="200">
 		  </datalist> 
-		  <input name="powierzchniaMax" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <input name="powierzchniaMax_mi" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
 		  <div class="search-form form-label row5 col1">liczba pokoi [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="pokojeMin" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
+		  <input name="pokojeMin_mi" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
 		  <datalist id="pokoje">
 			<option value="1">
 			<option value="2">
@@ -237,7 +202,7 @@ $found = $nie->search($query);
 			<option value="6">
 			<option value="7">
      	          </datalist> 
-		  <input  name="pokojeMax" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <input  name="pokojeMax_mi" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
 		  <div class="search-form form-label row1 col3">typ budynku
 		    <div class="arrow-right lila2"></div>
 		  </div>
@@ -275,7 +240,7 @@ $found = $nie->search($query);
 		  </div>
 		  <input type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
+		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  
 	  <div class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
@@ -373,7 +338,7 @@ $found = $nie->search($query);
 		  </div>
 		  <input type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
+		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  <div class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 		  <div class="search-form form-label row1 col1">rodzaj oferty
@@ -418,7 +383,7 @@ $found = $nie->search($query);
 		  </div>
 		  <input type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
+		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  <div class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 		  <div class="search-form form-label row1 col1">rodzaj oferty
@@ -495,7 +460,7 @@ $found = $nie->search($query);
 		  </div>
 		  <input type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a"><img src="public/static/./img/search.png"/></div>
+		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
 	  </div>
 	  
 	</div>
@@ -516,7 +481,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
                       if($res->getDzialTab() == "domy"){
@@ -526,7 +491,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
                       if($res->getDzialTab() == "dzialki"){
@@ -536,7 +501,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
 			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
-			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
                       if($res->getDzialTab() == "lokale"){
@@ -546,7 +511,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
 			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-			  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>
+			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
                   }
