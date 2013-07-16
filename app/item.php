@@ -58,7 +58,10 @@ if ($element == null) {
 			  </div>
 			  <span class="offer-text">
 			    <span class="text-text">
-                    <?php echo $element->getOpis(); ?>
+                    <?php
+                    $opis = $element->getOpis();
+                    echo stristr($opis, 'kontakt i prezentacja', true);
+                    ?>
 				</span>
 			  </span>
               <?php if ($favourites==true) {
@@ -81,10 +84,10 @@ if ($element == null) {
 			  <div class="contact-data">
 			    <div class="text">
 				  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
-				  <b>Strzesak Mateusz</b> Van Hausen Nieruchomości<br/>
-				  tel. <b>897 887 887</b><br/>
-				  m.strzesak@vanhausen.pl<br/>
-				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 12987</span><br/>
+				  <b><?php echo $element->getAgentNazwisko(); ?></b><br/>
+				  tel. <b><?php echo $element->getAgentTelKom(); ?></b><br/>
+                  <?php echo $element->getAgentEmail(); ?><br/>
+				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: xxx</span><br/>
 				</div>
 			  </div>
 			</div>

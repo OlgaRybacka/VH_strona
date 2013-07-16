@@ -968,25 +968,21 @@ input {
   margin-top: 20px;
 }
 
-._mCS_1 .mCSB_scrollTools,
-._mCS_2 .mCSB_scrollTools {
+.search-page .mCSB_scrollTools {
     width: 18px;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_draggerContainer,
-._mCS_2 .mCSB_scrollTools .mCSB_draggerContainer {
+.search-page .mCSB_scrollTools .mCSB_draggerContainer {
     visibility: hidden;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_buttonUp,
-._mCS_2 .mCSB_scrollTools .mCSB_buttonUp {
+.search-page .mCSB_scrollTools .mCSB_buttonUp{
     background-image: url('../img/roll_up_arrow.png');
     background-repeat: no-repeat;
 	height: 26px;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_buttonDown,
-._mCS_2 .mCSB_scrollTools .mCSB_buttonDown {
+.search-page .mCSB_scrollTools .mCSB_buttonDown {
     background-image: url('../img/roll_down_arrow.png');
 	background-position: 0 0;
     background-repeat: no-repeat;

@@ -25,7 +25,7 @@ $found = $nie->search($query);
         <link rel="stylesheet" href="public/static/css/main.css">
 		<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="public/static/css/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
-		
+
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
 		<script src="public/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
@@ -34,9 +34,32 @@ $found = $nie->search($query);
 		<script>
 			(function($){
 				$(window).load(function(){
-					$(".text-text").mCustomScrollbar({scrollButtons:{enable:true}});
-					$(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
-				});
+                    $(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
+                    if (getURLParameter("cenaMin") != '')
+                        document.getElementsByName('cenaMin_mi')[0].value = getURLParameter("cenaMin");
+                    if (getURLParameter("cenaMax") != '')
+                        document.getElementsByName('cenaMax_mi')[0].value = getURLParameter("cenaMax");
+                    if (getURLParameter("cenaM2Min") != '')
+                        document.getElementsByName('cenaM2Min_mi')[0].value = getURLParameter("cenaM2Min");
+                    if (getURLParameter("cenaM2Max") != '')
+                        document.getElementsByName('cenaM2Max_mi')[0].value = getURLParameter("cenaM2Max");
+                    if (getURLParameter("powierzchniaMin") != '')
+                        document.getElementsByName('powierzchniaMin_mi')[0].value = getURLParameter("powierzchniaMin");
+                    if (getURLParameter("powierzchniaMax") != '')
+                        document.getElementsByName('powierzchniaMax_mi')[0].value = getURLParameter("powierzchniaMax");
+                    if (getURLParameter("rokbudowyMin") != '')
+                        document.getElementsByName('rokbudowyMin_mi')[0].value = getURLParameter("rokbudowyMin");
+                    if (getURLParameter("rokbudowyMax") != '')
+                        document.getElementsByName('rokbudowyMax_mi')[0].value = getURLParameter("rokbudowyMax");
+                    if (getURLParameter("typBudynkuMieszk") != '')
+                        document.getElementsByName('typBudynkuMieszk_mi')[0].value = getURLParameter("typBudynkuMieszk");
+                    if (getURLParameter("typOferty") != '')
+                        document.getElementsByName('typOferty_mi')[0].value = getURLParameter("typOferty");
+                    if (getURLParameter("pokojeMin") != '')
+                        document.getElementsByName('pokojeMin_mi')[0].value = getURLParameter("pokojeMin");
+                    if (getURLParameter("pokojeMax") != '')
+                        document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax");
+                });
 			})(jQuery);
 
         function getURLParameter(name) {
@@ -54,10 +77,27 @@ $found = $nie->search($query);
                     newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_mi')[0].value);
                 if (document.getElementsByName('cenaMax_mi')[0].value != '')
                     newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_mi')[0].value);
+                if (document.getElementsByName('cenaM2Min_mi')[0].value != '')
+                    newURL = newURL.concat("&cenaM2Min=", document.getElementsByName('cenaM2Min_mi')[0].value);
+                if (document.getElementsByName('cenaM2Max_mi')[0].value != '')
+                    newURL = newURL.concat("&cenaM2Max=", document.getElementsByName('cenaM2Max_mi')[0].value);
                 if (document.getElementsByName('powierzchniaMin_mi')[0].value != '')
                     newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powierzchniaMin_mi')[0].value);
                 if (document.getElementsByName('powierzchniaMax_mi')[0].value != '')
                     newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powierzchniaMax_mi')[0].value);
+                if (document.getElementsByName('rokbudowyMin_mi')[0].value != '')
+                    newURL = newURL.concat("&rokbudowyMin=", document.getElementsByName('rokbudowyMin_mi')[0].value);
+                if (document.getElementsByName('rokbudowyMax_mi')[0].value != '')
+                    newURL = newURL.concat("&rokbudowyMax=", document.getElementsByName('rokbudowyMax_mi')[0].value);
+                if (document.getElementsByName('typBudynkuMieszk_mi')[0].value != 'dowolny')
+                    newURL = newURL.concat("&typBudynkuMieszk=", document.getElementsByName('typBudynkuMieszk_mi')[0].value);
+                if (document.getElementsByName('typOferty_mi')[0].value != 'dowolna')
+                    newURL = newURL.concat("&typOferty=", document.getElementsByName('typOferty_mi')[0].value);
+                if (document.getElementsByName('pokojeMin_mi')[0].value != '')
+                    newURL = newURL.concat("&pokojeMin=", document.getElementsByName('pokojeMin_mi')[0].value);
+                if (document.getElementsByName('pokojeMax_mi')[0].value != '')
+                    newURL = newURL.concat("&pokojeMax=", document.getElementsByName('pokojeMax_mi')[0].value);
+
             }
             window.location.href = newURL;
         }
@@ -73,7 +113,7 @@ $found = $nie->search($query);
 				}*/
 			});
 
-			$("#gallery_button").click(function() {
+			/*$("#gallery_button").click(function() {
 				$.fancybox([
 				'http://farm5.static.flickr.com/4044/4286199901_33844563eb.jpg',
 				'http://farm3.static.flickr.com/2687/4220681515_cc4f42d6b9.jpg',
@@ -85,7 +125,7 @@ $found = $nie->search($query);
 				'type' : 'image',
 				'changeFade' : 0
 				});
-			}); 
+			});*/
 			//$( document ).tooltip();
 		});
 
@@ -98,7 +138,7 @@ $found = $nie->search($query);
 				}, function (data) {
 					if ( id == currentFetchingId ) {
 						$('.details-container').html(data);
-						// TODO: enable scroll
+                        $(".text-text").mCustomScrollbar({scrollButtons:{enable:true}});
 					}
 				});
 			}
@@ -154,7 +194,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select class="search-form row1 col2">
+		    <select name="typOferty_mi" class="search-form row1 col2">
 			  <option>dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
@@ -207,7 +247,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select class="search-form row1 col4a">
+		    <select name="typBudynkuMieszk_mi" class="search-form row1 col4a">
 			  <option>dowolny</option>
 			  <option>blok</option>
 			  <option>kamienica</option>
@@ -219,7 +259,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col3">rok budowy [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
+		  <input name="rokbudowyMin_mi" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
 		  <datalist id="rok_budowy">
 			<option value="2012">
 			<option value="2011">
@@ -234,7 +274,7 @@ $found = $nie->search($query);
 			<option value="1970">
 			<option value="1960">
 		  </datalist> 
-		  <input type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
+		  <input name="rokbudowyMax_mi" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
 		  <div class="search-form form-label row3 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>

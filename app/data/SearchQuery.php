@@ -6,7 +6,7 @@
  */
 
 class SearchQuery {
-	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax" );
+	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax" );
     private $tab;
     private $cenaMin;             // float
 	private $cenaMax;             // float
@@ -16,6 +16,10 @@ class SearchQuery {
 	private $powierzchniaMax;     // float
 	private $rokbudowyMin;        // int(11)
 	private $rokbudowyMax;
+    private $typBudynkuMieszk;
+    private $typOferty;
+    private $pokojeMin;
+    private $pokojeMax;
 
 	public static function fromParams( $params ) {
 		$query = new SearchQuery();
@@ -98,4 +102,36 @@ class SearchQuery {
 	public function getRokbudowyMin() {
 		return $this->rokbudowyMin;
 	}        // int(11)
+
+    public function setTypBudynkuMieszk($typBudynkuMieszk) {
+        $this->typBudynkuMieszk = $typBudynkuMieszk;
+    }
+
+    public function getTypBudynkuMieszk() {
+        return $this->typBudynkuMieszk;
+    }        // int(11)
+
+    public function setTypOferty($typOferty) {
+        $this->typOferty = $typOferty;
+    }
+
+    public function getTypOferty() {
+        return $this->typOferty;
+    }
+
+    public function setPokojeMax($pokojeMax) {
+        $this->pokojeMax = $pokojeMax;
+    }
+
+    public function getPokojeMax() {
+        return $this->pokojeMax;
+    }
+
+    public function setPokojeMin($pokojeMin) {
+        $this->pokojeMin = $pokojeMin;
+    }
+
+    public function getPokojeMin() {
+        return $this->pokojeMin;
+    }
 }

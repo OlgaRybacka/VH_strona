@@ -178,8 +178,35 @@ class NieruchomosciRepository {
       $conditions[] = " powierzchnia >= :PowierzchniaMin";
       $toBind[':PowierzchniaMin'] = $query->getPowierzchniaMin();
     }
+    if( $query->getRokbudowyMin() != null ) {
+      $conditions[] = " rokbudowy >= :RokBudowyMin";
+      $toBind[':RokBudowyMin'] = $query->getRokbudowyMin();
+    }
+    if( $query->getRokbudowyMax() != null ) {
+      $conditions[] = " rokbudowy <= :RokBudowyMax";
+      $toBind[':RokBudowyMax'] = $query->getRokbudowyMax();
+    }
+    if( $query->getTypBudynkuMieszk() != null ) {
+      $conditions[] = " typbudynkumieszk = :TypBudynkuMieszk";
+      $toBind[':TypBudynkuMieszk'] = $query->getTypBudynkuMieszk();
+    }
+    if( $query->getTypOferty() != null ) {
+      if ($query->getTypOferty() == "sprzedaż")
+        $conditions[] = " dzial_typ = 'sprzedaz'";
+      else
+        $conditions[] = " dzial_typ = 'wynajem'";
+    }
+    if( $query->getPokojeMax() != null ) {
+      $conditions[] = " pokoje <= :PokojeMax";
+      $toBind[':PokojeMax'] = $query->getPokojeMax();
+    }
+    if( $query->getPokojeMin() != null ) {
+      $conditions[] = " pokoje >= :PokojeMin";
+      $toBind[':PokojeMin'] = $query->getPokojeMin();
+    }
 
-    if( sizeof($conditions) != 0 ) {
+
+      if( sizeof($conditions) != 0 ) {
       $queryString .= "WHERE " . join(" and ", $conditions );
     }
 
