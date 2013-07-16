@@ -97,7 +97,9 @@ class Nieruchomosc {
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'geo_lat' ) {
           $nieruchomosc->lat = floatval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'geo_lng' ) {
-          $nieruchomosc->lng = floatval( $child->textContent );
+            $nieruchomosc->lng = floatval( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'rokbudowy' ) {
+            $nieruchomosc->rokbudowy = intval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'opis' ) {
           $nieruchomosc->opis = '';
           for ( $j = 0; $j<$child->childNodes->length; $j++ ) {

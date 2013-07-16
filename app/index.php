@@ -10,7 +10,7 @@ $dzialka    = $nie->tab('dzialki')[0];
 $lokal      = $nie->tab('lokale')[0];
 
 $nieruchomosci = array($mieszkanie[0], $dom, $dzialka, $lokal);
-$zdjecie = [];
+$zdjecie = array();
 foreach ( $nieruchomosci as $v ) {
   $zdjecie[$v->getId()] = $zdj->getForNieruchomosc( $v->getId() )[0];
 }
