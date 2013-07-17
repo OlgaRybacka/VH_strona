@@ -14,7 +14,7 @@ if ($element == null) {
 ?>
 <span class="offer-details">
 		    <div class="basic-info">
-                <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
+                <?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
 			  <span class="basic-info-text">
 			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> / <span class="big-number"><?php echo $element->getPokoje(); ?></span> pok.<br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
@@ -87,7 +87,7 @@ if ($element == null) {
 				  <b><?php echo $element->getAgentNazwisko(); ?></b><br/>
 				  tel. <b><?php echo $element->getAgentTelKom(); ?></b><br/>
                   <?php echo $element->getAgentEmail(); ?><br/>
-				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: xxx</span><br/>
+				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 9479</span><br/>
 				</div>
 			  </div>
 			</div>

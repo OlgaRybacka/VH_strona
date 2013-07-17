@@ -6,7 +6,7 @@
  */
 
 class SearchQuery {
-	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax", "lokalizacja" );
+	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax", "lokalizacja", "powDzialkiMin", "powDzialkiMax", "typLokalu", "miasto" );
     private $tab;
     private $cenaMin;             // float
 	private $cenaMax;             // float
@@ -21,6 +21,10 @@ class SearchQuery {
     private $pokojeMin;
     private $pokojeMax;
     private $lokalizacja;
+    private $powDzialkiMin;
+    private $powDzialkiMax;
+    private $typLokalu;
+    private $miasto;
 
 	public static function fromParams( $params ) {
 		$query = new SearchQuery();
@@ -137,10 +141,42 @@ class SearchQuery {
     }
 
     public function setLokalizacja($lokalizacja) {
-        $this->pokojeMin = $lokalizacja;
+        $this->lokalizacja = $lokalizacja;
     }
 
     public function getLokalizacja() {
         return $this->lokalizacja;
+    }
+
+    public function setMiasto($miasto) {
+        $this->miasto = $miasto;
+    }
+
+    public function getMiasto() {
+        return $this->miasto;
+    }
+
+    public function setPowDzialkiMax($powDzialkiMax) {
+        $this->powDzialkiMax = $powDzialkiMax;
+    }
+
+    public function getPowDzialkiMax() {
+        return $this->powDzialkiMax;
+    }
+
+    public function setPowDzialkiMin($powDzialkiMin) {
+        $this->powDzialkiMin = $powDzialkiMin;
+    }
+
+    public function getPowDzialkiMin() {
+        return $this->powDzialkiMin;
+    }
+
+    public function setTypLokalu($typLokalu) {
+        $this->typLokalu = $typLokalu;
+    }
+
+    public function getTypLokalu() {
+        return $this->typLokalu;
     }
 }

@@ -4,23 +4,22 @@
     <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" afterPath="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/SearchQuery.php" afterPath="$PROJECT_DIR$/app/data/SearchQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/css/main.css" afterPath="$PROJECT_DIR$/app/public/static/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/item.php" afterPath="$PROJECT_DIR$/app/item.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/search.php" afterPath="$PROJECT_DIR$/app/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VH_strona.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373978974625" ignored="false" />
+    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374062918350" ignored="false" />
     <file path="/.htaccess" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371401005603" ignored="false" />
     <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411024663" ignored="false" />
     <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373978716097" ignored="false" />
     <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373981586778" ignored="false" />
     <file path="/config.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411340174" ignored="false" />
-    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373980724344" ignored="false" />
+    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374069809378" ignored="false" />
     <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373972012459" ignored="false" />
-    <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373979548991" ignored="false" />
-    <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373979507531" ignored="false" />
+    <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070245191" ignored="false" />
+    <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070189597" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5.rnc" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373960780305" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +43,7 @@
       <file leaf-file-name="NieruchomosciRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/data/NieruchomosciRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="107" selection-start="5777" selection-end="5777" vertical-scroll-proportion="-8.5">
+            <state line="216" column="46" selection-start="6184" selection-end="6184" vertical-scroll-proportion="-4.576923">
               <folding />
             </state>
           </provider>
@@ -53,7 +52,7 @@
       <file leaf-file-name="ImportService.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="43.384617">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,16 +61,16 @@
       <file leaf-file-name="Nieruchomosc.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/data/Nieruchomosc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="20" selection-start="1927" selection-end="1937" vertical-scroll-proportion="50.346153">
+            <state line="71" column="20" selection-start="1927" selection-end="1937" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchQuery.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SearchQuery.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/data/SearchQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="232" selection-start="312" selection-end="312" vertical-scroll-proportion="79.61539">
+            <state line="8" column="290" selection-start="370" selection-end="370" vertical-scroll-proportion="0.18681319">
               <folding />
             </state>
           </provider>
@@ -80,7 +79,7 @@
       <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="49" selection-start="8440" selection-end="8440" vertical-scroll-proportion="-2.3333333">
+            <state line="233" column="51" selection-start="18070" selection-end="18070" vertical-scroll-proportion="-5.6666665">
               <folding />
             </state>
           </provider>
@@ -89,24 +88,13 @@
       <file leaf-file-name="item.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="34" selection-start="5063" selection-end="5063" vertical-scroll-proportion="-62.115383">
+            <state line="16" column="48" selection-start="450" selection-end="450" vertical-scroll-proportion="-10.461538">
               <folding>
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#span#0;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#span#0;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#span#1;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#span#1;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#span#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#span#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#span#1;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#span#1;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#div#0;n#div#3;n#div#1;n#span#0;n#!!top" expanded="true" />
-                <marker date="1373978790413" expanded="true" signature="3061:3596" placeholder="..." />
-                <marker date="1373978790413" expanded="true" signature="3172:3185" placeholder="..." />
-                <marker date="1373978790413" expanded="true" signature="3328:3341" placeholder="..." />
-                <marker date="1373978790413" expanded="true" signature="3460:3473" placeholder="..." />
-                <marker date="1373978790413" expanded="true" signature="3574:3587" placeholder="..." />
+                <marker date="1374068301078" expanded="true" signature="3087:3622" placeholder="..." />
+                <marker date="1374068301078" expanded="true" signature="3198:3211" placeholder="..." />
+                <marker date="1374068301078" expanded="true" signature="3354:3367" placeholder="..." />
+                <marker date="1374068301078" expanded="true" signature="3486:3499" placeholder="..." />
+                <marker date="1374068301078" expanded="true" signature="3600:3613" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -115,25 +103,16 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="333" column="43" selection-start="6196" selection-end="6196" vertical-scroll-proportion="-7.92">
+            <state line="333" column="43" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="51" selection-start="680" selection-end="723" vertical-scroll-proportion="137.96153">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="41" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.33144477">
+            <state line="70" column="23" selection-start="2869" selection-end="2869" vertical-scroll-proportion="-45.76923">
               <folding>
                 <marker date="1373981592298" expanded="true" signature="4585:4614" placeholder="..." />
                 <marker date="1373981592298" expanded="true" signature="8029:8105" placeholder="..." />
@@ -168,21 +147,19 @@
         <option value="$PROJECT_DIR$/app/public/static/.htaccess" />
         <option value="$PROJECT_DIR$/app/data/Nieruchomosc.php" />
         <option value="$PROJECT_DIR$/app/public/static/search.html" />
-        <option value="$PROJECT_DIR$/app/item.php" />
-        <option value="$PROJECT_DIR$/app/data/SearchQuery.php" />
-        <option value="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" />
         <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
-        <option value="$PROJECT_DIR$/app/search.php" />
         <option value="$PROJECT_DIR$/app/index.php" />
+        <option value="$PROJECT_DIR$/app/item.php" />
+        <option value="$PROJECT_DIR$/app/search.php" />
+        <option value="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" />
+        <option value="$PROJECT_DIR$/app/data/SearchQuery.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="776" />
+    <option name="width" value="1280" />
+    <option name="height" value="760" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -210,7 +187,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,16 +323,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/tmp" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="PublishConfig" serverName="vanhausen@vanhausen.home.pl" serverId="50a4c31e-b3e4-41d7-ab5a-21859ea23a5a" autoUpload="true">
@@ -374,119 +351,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projekty\VH_strona\app" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree">
-    <UpdateInfo date="Moments ago" ActionInfo="_Update">
-      <UpdatedFiles>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated from server" />
-          <option name="myStatusName" value="Changed on server" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CHANGED_ON_SERVER" />
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Updated" />
-            <option name="myStatusName" value="Changed" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="UPDATED" />
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/data/Nieruchomosc.php</PATH>
-            <PATH vcs="Git" revision="">$PROJECT_DIR$/app/index.php</PATH>
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Created" />
-            <option name="myStatusName" value="Created" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="CREATED" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Deleted" />
-            <option name="myStatusName" value="Deleted" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="true" />
-            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" value="Restored" />
-            <option name="myStatusName" value="Will be restored" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" value="RESTORED" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Modified" />
-          <option name="myStatusName" value="Modified" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MODIFIED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Skipped" />
-          <option name="myStatusName" value="Skipped" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SKIPPED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with conflicts" />
-          <option name="myStatusName" value="Will be merged with conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with tree conflicts" />
-          <option name="myStatusName" value="Merged with tree conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged with property conflicts" />
-          <option name="myStatusName" value="Will be merged with property conflicts" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Merged" />
-          <option name="myStatusName" value="Will be merged" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="MERGED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Not in repository" />
-          <option name="myStatusName" value="Not in repository" />
-          <option name="mySupportsDeletion" value="true" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UNKNOWN" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally added" />
-          <option name="myStatusName" value="Locally added" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_ADDED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Locally removed" />
-          <option name="myStatusName" value="Locally removed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="LOCALLY_REMOVED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Switched" />
-          <option name="myStatusName" value="Switched" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="SWITCHED" />
-        </FILE-GROUP>
-      </UpdatedFiles>
-    </UpdateInfo>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -573,20 +437,23 @@
       <created>1373978979901</created>
       <updated>1373978979901</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="linki: więcej..., wyszukiwanie po lokalizacji">
+      <created>1373981626442</created>
+      <updated>1373981626442</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="760" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24797407" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25373134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31685576" sideWeight="0.7520259" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32676518" sideWeight="0.74626863" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -597,6 +464,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32901135" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.66450566" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -644,7 +512,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawione: sytuacja, gdy nie ma 4 zdjęć" />
+    <option name="LAST_COMMIT_MESSAGE" value="linki: więcej..., wyszukiwanie po lokalizacji" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -668,6 +536,7 @@
     <MESSAGE value="przełączanie między zakładkami w searchu, początek wyszukiwania. Kursor łapka na przycisku &quot;zobacz&quot;" />
     <MESSAGE value="poprawione suwaki, wyszukiwanie w mieszkaniach, dane agenta" />
     <MESSAGE value="poprawione: sytuacja, gdy nie ma 4 zdjęć" />
+    <MESSAGE value="linki: więcej..., wyszukiwanie po lokalizacji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -695,108 +564,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/data/Zdjecie.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="10" selection-end="11" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="4" selection-start="10" selection-end="11" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/static/js/fancybox/jquery.fancybox-1.3.4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="826" column="6" selection-start="20644" selection-end="20644" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1371395239607" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="51" selection-start="680" selection-end="723" vertical-scroll-proportion="137.96153">
-          <folding />
-        </state>
+        <state line="826" column="6" selection-start="20644" selection-end="20644" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="43.384617">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/data/Nieruchomosc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="20" selection-start="1927" selection-end="1937" vertical-scroll-proportion="50.346153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="34" selection-start="5063" selection-end="5063" vertical-scroll-proportion="-62.115383">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#span#0;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#span#0;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#span#1;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#span#1;n#div#1;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#span#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#span#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#span#1;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#span#1;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#3;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#3;n#div#1;n#span#0;n#!!top" expanded="true" />
-            <marker date="1373978790413" expanded="true" signature="3061:3596" placeholder="..." />
-            <marker date="1373978790413" expanded="true" signature="3172:3185" placeholder="..." />
-            <marker date="1373978790413" expanded="true" signature="3328:3341" placeholder="..." />
-            <marker date="1373978790413" expanded="true" signature="3460:3473" placeholder="..." />
-            <marker date="1373978790413" expanded="true" signature="3574:3587" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/SearchQuery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="232" selection-start="312" selection-end="312" vertical-scroll-proportion="79.61539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/NieruchomosciRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="107" selection-start="5777" selection-end="5777" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="43" selection-start="6196" selection-end="6196" vertical-scroll-proportion="-7.92">
+        <state line="71" column="20" selection-start="1927" selection-end="1937" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="2242" selection-end="2242" vertical-scroll-proportion="-0.24645892">
+        <state line="55" column="45" selection-start="2242" selection-end="2242" vertical-scroll-proportion="-0.24645892" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="23" selection-start="2869" selection-end="2869" vertical-scroll-proportion="-45.76923">
+          <folding>
+            <marker date="1373981592298" expanded="true" signature="4585:4614" placeholder="..." />
+            <marker date="1373981592298" expanded="true" signature="8029:8105" placeholder="..." />
+            <marker date="1373981592298" expanded="true" signature="8833:8857" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="450" selection-end="450" vertical-scroll-proportion="-10.461538">
+          <folding>
+            <marker date="1374068301078" expanded="true" signature="3087:3622" placeholder="..." />
+            <marker date="1374068301078" expanded="true" signature="3198:3211" placeholder="..." />
+            <marker date="1374068301078" expanded="true" signature="3354:3367" placeholder="..." />
+            <marker date="1374068301078" expanded="true" signature="3486:3499" placeholder="..." />
+            <marker date="1374068301078" expanded="true" signature="3600:3613" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/static/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="51" selection-start="680" selection-end="723" vertical-scroll-proportion="0.046703298">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="333" column="43" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="49" selection-start="8440" selection-end="8440" vertical-scroll-proportion="-2.3333333">
+        <state line="233" column="51" selection-start="18070" selection-end="18070" vertical-scroll-proportion="-5.6666665">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.php">
+    <entry file="file://$PROJECT_DIR$/app/data/NieruchomosciRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="41" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.33144477">
-          <folding>
-            <marker date="1373981592298" expanded="true" signature="4585:4614" placeholder="..." />
-            <marker date="1373981592298" expanded="true" signature="8029:8105" placeholder="..." />
-            <marker date="1373981592298" expanded="true" signature="8833:8857" placeholder="..." />
-          </folding>
+        <state line="216" column="46" selection-start="6184" selection-end="6184" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/SearchQuery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="290" selection-start="370" selection-end="370" vertical-scroll-proportion="0.18681319">
+          <folding />
         </state>
       </provider>
     </entry>
