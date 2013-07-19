@@ -558,6 +558,11 @@ body .favourites-page {
   width: 191px
 }
 
+.search-page .search-form.error {
+    position: absolute;
+    width: 421px;
+}
+
 .search-page .search-form.button {
   background: #512b68;
   position: absolute;
@@ -566,6 +571,13 @@ body .favourites-page {
   color: #fff;
   font-weight: bold;
   height: 31px;
+  border: none;
+}
+
+.search-page .search-form.search-button {
+    background-image: url('../img/search.png');
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 .search-page .search-form.search-mode {

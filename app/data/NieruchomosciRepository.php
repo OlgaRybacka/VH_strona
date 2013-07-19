@@ -229,6 +229,7 @@ class NieruchomosciRepository {
       $queryString .= "WHERE " . join(" and ", $conditions );
     }
 
+
     $prepared = $this->pdo->prepare($queryString);
     foreach( $toBind as $key => $value ) {
       $prepared->bindValue($key, $value);

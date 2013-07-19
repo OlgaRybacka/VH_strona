@@ -5,6 +5,8 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
 $query = SearchQuery::fromParams($_GET);
+
+
 $offertype = isset($_GET['tab']) ? $_GET['tab'] : "mieszkania";
 $found = $nie->search($query);
 
@@ -27,6 +29,7 @@ $found = $nie->search($query);
 		<link rel="stylesheet" href="public/static/css/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+        <script src="public/static/js/jquery.validate.js"></script>
 		<script src="public/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
@@ -37,108 +40,108 @@ $found = $nie->search($query);
                     $(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
                     if (getURLParameter("tab") == "mieszkania")
                     {
-                        if (getURLParameter("cenaMin") != '')
-                            document.getElementsByName('cenaMin_mi')[0].value = getURLParameter("cenaMin");
-                        if (getURLParameter("cenaMax") != '')
-                            document.getElementsByName('cenaMax_mi')[0].value = getURLParameter("cenaMax");
-                        if (getURLParameter("cenaM2Min") != '')
-                            document.getElementsByName('cenaM2Min_mi')[0].value = getURLParameter("cenaM2Min");
-                        if (getURLParameter("cenaM2Max") != '')
-                            document.getElementsByName('cenaM2Max_mi')[0].value = getURLParameter("cenaM2Max");
-                        if (getURLParameter("powierzchniaMin") != '')
-                            document.getElementsByName('powierzchniaMin_mi')[0].value = getURLParameter("powierzchniaMin");
-                        if (getURLParameter("powierzchniaMax") != '')
-                            document.getElementsByName('powierzchniaMax_mi')[0].value = getURLParameter("powierzchniaMax");
-                        if (getURLParameter("rokbudowyMin") != '')
-                            document.getElementsByName('rokbudowyMin_mi')[0].value = getURLParameter("rokbudowyMin");
-                        if (getURLParameter("rokbudowyMax") != '')
-                            document.getElementsByName('rokbudowyMax_mi')[0].value = getURLParameter("rokbudowyMax");
-                        if (getURLParameter("typBudynkuMieszk") != '')
-                            document.getElementsByName('typBudynkuMieszk_mi')[0].value = getURLParameter("typBudynkuMieszk");
-                        if (getURLParameter("typOferty") != '')
-                            document.getElementsByName('typOferty_mi')[0].value = getURLParameter("typOferty");
-                        if (getURLParameter("pokojeMin") != '')
-                            document.getElementsByName('pokojeMin_mi')[0].value = getURLParameter("pokojeMin");
-                        if (getURLParameter("pokojeMax") != '')
-                            document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax");
-                        if (getURLParameter("lokalizacja") != '')
-                            document.getElementsByName('lokalizacja_mi')[0].value = getURLParameter("lokalizacja");
+                        if (getURLParameter("cenaMin_mi") != '')
+                            document.getElementsByName('cenaMin_mi')[0].value = getURLParameter("cenaMin_mi");
+                        if (getURLParameter("cenaMax_mi") != '')
+                            document.getElementsByName('cenaMax_mi')[0].value = getURLParameter("cenaMax_mi");
+                        if (getURLParameter("cenaM2Min_mi") != '')
+                            document.getElementsByName('cenaM2Min_mi')[0].value = getURLParameter("cenaM2Min_mi");
+                        if (getURLParameter("cenaM2Max_mi") != '')
+                            document.getElementsByName('cenaM2Max_mi')[0].value = getURLParameter("cenaM2Max_mi");
+                        if (getURLParameter("powierzchniaMin_mi") != '')
+                            document.getElementsByName('powierzchniaMin_mi')[0].value = getURLParameter("powierzchniaMin_mi");
+                        if (getURLParameter("powierzchniaMax_mi") != '')
+                            document.getElementsByName('powierzchniaMax_mi')[0].value = getURLParameter("powierzchniaMax_mi");
+                        if (getURLParameter("rokbudowyMin_mi") != '')
+                            document.getElementsByName('rokbudowyMin_mi')[0].value = getURLParameter("rokbudowyMin_mi");
+                        if (getURLParameter("rokbudowyMax_mi") != '')
+                            document.getElementsByName('rokbudowyMax_mi')[0].value = getURLParameter("rokbudowyMax_mi");
+                        if (getURLParameter("typBudynkuMieszk_mi") != '')
+                            document.getElementsByName('typBudynkuMieszk_mi')[0].value = getURLParameter("typBudynkuMieszk_mi");
+                        if (getURLParameter("typOferty_mi") != '')
+                            document.getElementsByName('typOferty_mi')[0].value = getURLParameter("typOferty_mi");
+                        if (getURLParameter("pokojeMin_mi") != '')
+                            document.getElementsByName('pokojeMin_mi')[0].value = getURLParameter("pokojeMin_mi");
+                        if (getURLParameter("pokojeMax_mi") != '')
+                            document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax_mi");
+                        if (getURLParameter("lokalizacja_mi") != '')
+                            document.getElementsByName('lokalizacja_mi')[0].value = getURLParameter("lokalizacja_mi");
                     }
                     else if (getURLParameter("tab") == "domy")
                     {
-                        if (getURLParameter("typOferty") != '')
-                            document.getElementsByName('typOferty_do')[0].value = getURLParameter("typOferty");
-                        if (getURLParameter("cenaMin") != '')
-                            document.getElementsByName('cenaMin_do')[0].value = getURLParameter("cenaMin");
-                        if (getURLParameter("cenaMax") != '')
-                            document.getElementsByName('cenaMax_do')[0].value = getURLParameter("cenaMax");
-                        if (getURLParameter("cenaM2Min") != '')
-                            document.getElementsByName('cenaM2Min_do')[0].value = getURLParameter("cenaM2Min");
-                        if (getURLParameter("cenaM2Max") != '')
-                            document.getElementsByName('cenaM2Max_do')[0].value = getURLParameter("cenaM2Max");
-                        if (getURLParameter("powierzchniaMin") != '')
-                            document.getElementsByName('powierzchniaMin_do')[0].value = getURLParameter("powierzchniaMin");
-                        if (getURLParameter("powierzchniaMax") != '')
-                            document.getElementsByName('powierzchniaMax_do')[0].value = getURLParameter("powierzchniaMax");
-                        if (getURLParameter("pokojeMin") != '')
-                            document.getElementsByName('pokojeMin_do')[0].value = getURLParameter("pokojeMin");
-                        if (getURLParameter("pokojeMax") != '')
-                            document.getElementsByName('pokojeMax_do')[0].value = getURLParameter("pokojeMax");
-                        if (getURLParameter("powDzialkiMin") != '')
-                            document.getElementsByName('powDzialkiMin_do')[0].value = getURLParameter("powDzialkiMin");
-                        if (getURLParameter("powDzialkiMax") != '')
-                            document.getElementsByName('powDzialkiMax_do')[0].value = getURLParameter("powDzialkiMax");
-                        if (getURLParameter("rokbudowyMin") != '')
-                            document.getElementsByName('rokbudowyMin_do')[0].value = getURLParameter("rokbudowyMin");
-                        if (getURLParameter("rokbudowyMax") != '')
-                            document.getElementsByName('rokbudowyMax_do')[0].value = getURLParameter("rokbudowyMax");
-                        if (getURLParameter("lokalizacja") != '')
-                            document.getElementsByName('lokalizacja_do')[0].value = getURLParameter("lokalizacja");
+                        if (getURLParameter("typOferty_do") != '')
+                            document.getElementsByName('typOferty_do')[0].value = getURLParameter("typOferty_do");
+                        if (getURLParameter("cenaMin_do") != '')
+                            document.getElementsByName('cenaMin_do')[0].value = getURLParameter("cenaMin_do");
+                        if (getURLParameter("cenaMax_do") != '')
+                            document.getElementsByName('cenaMax_do')[0].value = getURLParameter("cenaMax_do");
+                        if (getURLParameter("cenaM2Min_do") != '')
+                            document.getElementsByName('cenaM2Min_do')[0].value = getURLParameter("cenaM2Min_do");
+                        if (getURLParameter("cenaM2Max_do") != '')
+                            document.getElementsByName('cenaM2Max_do')[0].value = getURLParameter("cenaM2Max_do");
+                        if (getURLParameter("powierzchniaMin_do") != '')
+                            document.getElementsByName('powierzchniaMin_do')[0].value = getURLParameter("powierzchniaMin_do");
+                        if (getURLParameter("powierzchniaMax_do") != '')
+                            document.getElementsByName('powierzchniaMax_do')[0].value = getURLParameter("powierzchniaMax_do");
+                        if (getURLParameter("pokojeMin_do") != '')
+                            document.getElementsByName('pokojeMin_do')[0].value = getURLParameter("pokojeMin_do");
+                        if (getURLParameter("pokojeMax_do") != '')
+                            document.getElementsByName('pokojeMax_do')[0].value = getURLParameter("pokojeMax_do");
+                        if (getURLParameter("powDzialkiMin_do") != '')
+                            document.getElementsByName('powDzialkiMin_do')[0].value = getURLParameter("powDzialkiMin_do");
+                        if (getURLParameter("powDzialkiMax_do") != '')
+                            document.getElementsByName('powDzialkiMax_do')[0].value = getURLParameter("powDzialkiMax_do");
+                        if (getURLParameter("rokbudowyMin_do") != '')
+                            document.getElementsByName('rokbudowyMin_do')[0].value = getURLParameter("rokbudowyMin_do");
+                        if (getURLParameter("rokbudowyMax_do") != '')
+                            document.getElementsByName('rokbudowyMax_do')[0].value = getURLParameter("rokbudowyMax_do");
+                        if (getURLParameter("lokalizacja_do") != '')
+                            document.getElementsByName('lokalizacja_do')[0].value = getURLParameter("lokalizacja_do");
                     }
                     else if (getURLParameter("tab") == "dzialki")
                     {
-                        if (getURLParameter("typOferty") != '')
-                            document.getElementsByName('typOferty_dz')[0].value = getURLParameter("typOferty");
-                        if (getURLParameter("cenaMin") != '')
-                            document.getElementsByName('cenaMin_dz')[0].value = getURLParameter("cenaMin");
-                        if (getURLParameter("cenaMax") != '')
-                            document.getElementsByName('cenaMax_dz')[0].value = getURLParameter("cenaMax");
-                        if (getURLParameter("cenaM2Min") != '')
-                            document.getElementsByName('cenaM2Min_dz')[0].value = getURLParameter("cenaM2Min");
-                        if (getURLParameter("cenaM2Max") != '')
-                            document.getElementsByName('cenaM2Max_dz')[0].value = getURLParameter("cenaM2Max");
-                        if (getURLParameter("powierzchniaMin") != '')
-                            document.getElementsByName('powDzialkiMin_dz')[0].value = getURLParameter("powierzchniaMin");
-                        if (getURLParameter("powierzchniaMax") != '')
-                            document.getElementsByName('powDzialkiMax_dz')[0].value = getURLParameter("powierzchniaMax");
-                        if (getURLParameter("miasto") != '')
-                            document.getElementsByName('lokalizacja_dz')[0].value = getURLParameter("miasto");
+                        if (getURLParameter("typOferty_dz") != '')
+                            document.getElementsByName('typOferty_dz')[0].value = getURLParameter("typOferty_dz");
+                        if (getURLParameter("cenaMin_dz") != '')
+                            document.getElementsByName('cenaMin_dz')[0].value = getURLParameter("cenaMin_dz");
+                        if (getURLParameter("cenaMax_dz") != '')
+                            document.getElementsByName('cenaMax_dz')[0].value = getURLParameter("cenaMax_dz");
+                        if (getURLParameter("cenaM2Min_dz") != '')
+                            document.getElementsByName('cenaM2Min_dz')[0].value = getURLParameter("cenaM2Min_dz");
+                        if (getURLParameter("cenaM2Max_dz") != '')
+                            document.getElementsByName('cenaM2Max_dz')[0].value = getURLParameter("cenaM2Max_dz");
+                        if (getURLParameter("powierzchniaMin_dz") != '')
+                            document.getElementsByName('powierzchniaMin_dz')[0].value = getURLParameter("powierzchniaMin_dz");
+                        if (getURLParameter("powierzchniaMax_dz") != '')
+                            document.getElementsByName('powierzchniaMax_dz')[0].value = getURLParameter("powierzchniaMax_dz");
+                        if (getURLParameter("miasto_dz") != '')
+                            document.getElementsByName('miasto_dz')[0].value = getURLParameter("miasto_dz");
 
                     }
                     else if (getURLParameter("tab") == "lokale")
                     {
-                        if (getURLParameter("typOferty") != '')
-                            document.getElementsByName('typOferty_lo')[0].value = getURLParameter("typOferty");
-                        if (getURLParameter("cenaMin") != '')
-                            document.getElementsByName('cenaMin_lo')[0].value = getURLParameter("cenaMin");
-                        if (getURLParameter("cenaMax") != '')
-                            document.getElementsByName('cenaMax_lo')[0].value = getURLParameter("cenaMax");
-                        if (getURLParameter("cenaM2Min") != '')
-                            document.getElementsByName('cenaM2Min_lo')[0].value = getURLParameter("cenaM2Min");
-                        if (getURLParameter("cenaM2Max") != '')
-                            document.getElementsByName('cenaM2Max_lo')[0].value = getURLParameter("cenaM2Max");
-                        if (getURLParameter("powierzchniaMin") != '')
-                            document.getElementsByName('powierzchniaMin_lo')[0].value = getURLParameter("powierzchniaMin");
-                        if (getURLParameter("powierzchniaMax") != '')
-                            document.getElementsByName('powierzchniaMax_lo')[0].value = getURLParameter("powierzchniaMax");
-                        if (getURLParameter("typLokalu") != '')
-                            document.getElementsByName('typLokalu_lo')[0].value = getURLParameter("typLokalu");
-                        if (getURLParameter("rokbudowyMin") != '')
-                            document.getElementsByName('rokbudowyMin_lo')[0].value = getURLParameter("rokbudowyMin");
-                        if (getURLParameter("rokbudowyMax") != '')
-                            document.getElementsByName('rokbudowyMax_lo')[0].value = getURLParameter("rokbudowyMax");
-                        if (getURLParameter("lokalizacja") != '')
-                            document.getElementsByName('lokalizacja_lo')[0].value = getURLParameter("lokalizacja");
+                        if (getURLParameter("typOferty_lo") != '')
+                            document.getElementsByName('typOferty_lo')[0].value = getURLParameter("typOferty_lo");
+                        if (getURLParameter("cenaMin_lo") != '')
+                            document.getElementsByName('cenaMin_lo')[0].value = getURLParameter("cenaMin_lo");
+                        if (getURLParameter("cenaMax_lo") != '')
+                            document.getElementsByName('cenaMax_lo')[0].value = getURLParameter("cenaMax_lo");
+                        if (getURLParameter("cenaM2Min_lo") != '')
+                            document.getElementsByName('cenaM2Min_lo')[0].value = getURLParameter("cenaM2Min_lo");
+                        if (getURLParameter("cenaM2Max_lo") != '')
+                            document.getElementsByName('cenaM2Max_lo')[0].value = getURLParameter("cenaM2Max_lo");
+                        if (getURLParameter("powierzchniaMin_lo") != '')
+                            document.getElementsByName('powierzchniaMin_lo')[0].value = getURLParameter("powierzchniaMin_lo");
+                        if (getURLParameter("powierzchniaMax_lo") != '')
+                            document.getElementsByName('powierzchniaMax_lo')[0].value = getURLParameter("powierzchniaMax_lo");
+                        if (getURLParameter("typLokalu_lo") != '')
+                            document.getElementsByName('typLokalu_lo')[0].value = getURLParameter("typLokalu_lo");
+                        if (getURLParameter("rokbudowyMin_lo") != '')
+                            document.getElementsByName('rokbudowyMin_lo')[0].value = getURLParameter("rokbudowyMin_lo");
+                        if (getURLParameter("rokbudowyMax_lo") != '')
+                            document.getElementsByName('rokbudowyMax_lo')[0].value = getURLParameter("rokbudowyMax_lo");
+                        if (getURLParameter("lokalizacja_lo") != '')
+                            document.getElementsByName('lokalizacja_lo')[0].value = getURLParameter("lokalizacja_lo");
 
                     }
                 });
@@ -147,9 +150,54 @@ $found = $nie->search($query);
         function getURLParameter(name) {
             return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
         }
-        function search()
+
+        function validateSearchForm()
         {
-            var newURL = "http://alpha.vanhausen.pl/search.php";
+            if (getURLParameter("tab") == "mieszkania")
+                $(".search-form1").validate({
+                    highlight: function(element, errorClass) {
+                        $(element).css('backgroundColor', '#EDBBBB');
+                    },
+                    rules: {
+                        cenaMin_mi: "number",
+                        cenaMax_mi: "number"
+                    },
+                    messages: {
+                        cenaMin_mi: "",
+                        cenaMax_mi: ""
+                    },
+                    invalidHandler: function(event, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            var message = 'Formularz zawiera niepoprawne dane.';
+                            $("div.error span").html(message);
+                            $("div.error").show();
+                        } else {
+                            $("div.error").hide();
+                        }
+                    },
+                    submitHandler: search
+                });
+            else if (getURLParameter("tab") == "domy")
+                $(".search-form2").validate({
+                    submitHandler: search
+                });
+            else if (getURLParameter("tab") == "dzialki")
+                $(".search-form3").validate({
+                    submitHandler: search
+                });
+            else if (getURLParameter("tab") == "lokale")
+                $(".search-form4").validate({
+                    submitHandler: search
+                });
+        }
+
+        $(validateSearchForm);
+
+        function search(form)
+        {
+            form.submit();
+           /* var newURL = "http://alpha.vanhausen.pl/search.php";
             newURL = newURL.concat("?tab=");
             var tab = getURLParameter("tab");
             newURL = newURL.concat(tab);
@@ -259,7 +307,7 @@ $found = $nie->search($query);
                     newURL = newURL.concat("&lokalizacja=", document.getElementsByName('lokalizacja_lo')[0].value);
 
             }
-            window.location.href = newURL;
+            window.location.href = newURL;*/
         }
 
 		$(function(){
@@ -353,13 +401,14 @@ $found = $nie->search($query);
           --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="search.php?tab=dzialki">działki</a><!--
           --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="search.php?tab=lokale">lokale komercyjne</a><!--
           --></span>
-	  <div class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
-		  <div class="search-form form-label row1 col1">rodzaj oferty
+	  <form method="get" class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
+		  <input hidden="true" value="mieszkania" name="tab"/>
+          <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
 		    <select name="typOferty_mi" class="search-form row1 col2">
-			  <option>dowolna</option>
+			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
 		    </select>
@@ -367,7 +416,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaMin_mi" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input id="cenaMin_mi" name="cenaMin_mi" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
 		  <input name="cenaMax_mi" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
@@ -406,13 +455,13 @@ $found = $nie->search($query);
 			<option value="6">
 			<option value="7">
      	          </datalist> 
-		  <input  name="pokojeMax_mi" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <input name="pokojeMax_mi" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
 		  <div class="search-form form-label row1 col3">typ budynku
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
 		    <select name="typBudynkuMieszk_mi" class="search-form row1 col4a">
-			  <option>dowolny</option>
+			  <option value="">dowolny</option>
 			  <option>blok</option>
 			  <option>kamienica</option>
 			  <option>dom wielorodzinny</option>
@@ -443,17 +492,19 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <input name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
-		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
-	  </div>
+          <div class="search-form error row4 col4a"><span></span></div>
+          <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+		  <input type="submit" value="" class="search-form button row5 col4a search-button"/>
+	  </form>
 	  
-	  <div class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
-		  <div class="search-form form-label row1 col1">rodzaj oferty
+	  <form method="get" class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
+          <input hidden="true" value="domy" name="tab"/>
+          <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
 		    <select name="typOferty_do" class="search-form row1 col2">
-			  <option>dowolna</option>
+			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
 		    </select>
@@ -542,15 +593,16 @@ $found = $nie->search($query);
 		  </div>
 		  <input name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
-	  </div>
-	  <div class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
-		  <div class="search-form form-label row1 col1">rodzaj oferty
+          <input type="submit" value="" class="search-form button row5 col4a search-button"/>
+      </form>
+	  <form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
+          <input hidden="true" value="dzialki" name="tab"/>
+          <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
 		    <select name="typOferty_dz" class="search-form row1 col2">
-			  <option>dowolna</option>
+			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
 		    </select>
@@ -568,7 +620,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row1 col3">powierzchnia w m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powDzialkiMin_dz" type="text" class="search-form input row1 col4 half" placeholder="np. 10000" autocomplete="off" list="pow_dzialki"/>
+		  <input name="powierzchniaMin_dz" type="text" class="search-form input row1 col4 half" placeholder="np. 10000" autocomplete="off" list="pow_dzialki"/>
 		  <datalist id="pow_dzialki">
 			<option value="1000">
 			<option value="2000">
@@ -581,21 +633,22 @@ $found = $nie->search($query);
 			<option value="50000">
 			<option value="100000">     	          
 		  </datalist> 
-		  <input name="powDzialkiMax_dz" type="text" class="search-form input row1 col4a half" placeholder="np. 50000" autocomplete="off" list="pow_dzialki"/>
+		  <input name="powierzchniaMax_dz" type="text" class="search-form input row1 col4a half" placeholder="np. 50000" autocomplete="off" list="pow_dzialki"/>
 		  <div class="search-form form-label row2 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="lokalizacja_dz" type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+		  <input name="miasto_dz" type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
-	  </div>
-	  <div class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
-		  <div class="search-form form-label row1 col1">rodzaj oferty
+          <input type="submit" value="" class="search-form button row5 col4a search-button"/>
+      </form>
+	  <form method="get" class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
+          <input hidden="true" value="lokale" name="tab"/>
+		   <div class="search-form form-label row1 col1">rodzaj oferty
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
 		    <select name="typOferty_lo" class="search-form row1 col2">
-			  <option>dowolna</option>
+			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
 		    </select>
@@ -634,7 +687,7 @@ $found = $nie->search($query);
 		  </div>
 		  <div class="styled-select">
 		    <select name="typLokalu_lo" class="search-form row1 col4a">
-			  <option>dowolny</option>
+			  <option value="">dowolny</option>
 			  <option>handlowy</option>
 			  <option>biurowy</option>
 			  <option>magazynowy</option>
@@ -664,8 +717,8 @@ $found = $nie->search($query);
 		  </div>
 		  <input name="lokalizacja_lo" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-		  <div class="search-form button row5 col4a search-button" onclick="search()"><img src="public/static/./img/search.png"/></div>
-	  </div>
+          <input type="submit" value="" class="search-form button row5 col4a search-button"/>
+      </form>
 	  
 	</div>
 	

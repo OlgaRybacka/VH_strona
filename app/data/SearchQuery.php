@@ -26,15 +26,19 @@ class SearchQuery {
     private $typLokalu;
     private $miasto;
 
-	public static function fromParams( $params ) {
-		$query = new SearchQuery();
-		foreach ( self::$params as $key ) {
-			if( isset( $params[$key] ) ) {
-				$query->$key = $params[$key];
-			}
-		}
-		return $query;
-	}
+
+    public static function fromParams( $params ) {
+        $query = new SearchQuery();
+        foreach ( $params as $k => $value ) {
+            $key = explode("_", $k)[0];
+            if( in_array( $key ,self::$params ) && !empty( $value ) ) {
+                $query->$key = $value;
+            }
+        }
+        return $query;
+    }
+
+
 
     public function setTab($tab) {
         $this->tab = $tab;
