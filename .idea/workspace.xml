@@ -2,26 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/js/jquery.validate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" afterPath="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/data/SearchQuery.php" afterPath="$PROJECT_DIR$/app/data/SearchQuery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/css/main.css" afterPath="$PROJECT_DIR$/app/public/static/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/js/additional-methods.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/search.php" afterPath="$PROJECT_DIR$/app/search.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VH_strona.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374228894553" ignored="false" />
+    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374246967705" ignored="false" />
     <file path="/.htaccess" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371401005603" ignored="false" />
     <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411024663" ignored="false" />
     <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373978716097" ignored="false" />
     <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373981586778" ignored="false" />
     <file path="/config.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411340174" ignored="false" />
-    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374238965035" ignored="false" />
+    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374246041629" ignored="false" />
     <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374237957096" ignored="false" />
     <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070245191" ignored="false" />
     <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374232965723" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5.rnc" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373960780305" ignored="false" />
+    <file path="/additional-methods.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374246747403" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <file leaf-file-name="ImportService.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -88,10 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="37" selection-start="11748" selection-end="11748" vertical-scroll-proportion="0.7886598">
+            <state line="179" column="44" selection-start="12384" selection-end="12384" vertical-scroll-proportion="-8.568627">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="additional-methods.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/static/js/additional-methods.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="396" column="3" selection-start="14300" selection-end="14300" vertical-scroll-proportion="0.33236152">
               <folding />
             </state>
           </provider>
@@ -164,7 +171,9 @@
         <option value="$PROJECT_DIR$/app/data/NieruchomosciRepository.php" />
         <option value="$PROJECT_DIR$/app/data/SearchQuery.php" />
         <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
+        <option value="$PROJECT_DIR$/app/public/static/js/vendor/additional-methods.js" />
         <option value="$PROJECT_DIR$/app/search.php" />
+        <option value="$PROJECT_DIR$/app/public/static/js/additional-methods.js" />
       </list>
     </option>
   </component>
@@ -320,6 +329,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -387,9 +426,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
       <recent name="D:\projekty\VH_strona\app\public\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projekty\VH_strona\app\public\static\js" />
       <recent name="D:\projekty\VH_strona\app" />
     </key>
   </component>
@@ -486,19 +527,44 @@
       <created>1374070487692</created>
       <updated>1374070487692</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="przygotowane wszystko do walidacji">
+      <created>1374239049334</created>
+      <updated>1374239049334</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="760" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17247097" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17304492" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3294509" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24466339" sideWeight="0.827529" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24466339" sideWeight="0.6705491" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -509,7 +575,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.66450566" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -557,7 +622,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="wyszukiwanie skończone!" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodana i przetestowana metoda do sprawdzania, czy jedna wartość jest mniejsza/większa od drugiej (walidacja formularzy)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -583,16 +648,13 @@
     <MESSAGE value="poprawione: sytuacja, gdy nie ma 4 zdjęć" />
     <MESSAGE value="linki: więcej..., wyszukiwanie po lokalizacji" />
     <MESSAGE value="wyszukiwanie skończone!" />
+    <MESSAGE value="przygotowane wszystko do walidacji" />
+    <MESSAGE value="dodana i przetestowana metoda do sprawdzania, czy jedna wartość jest mniejsza/większa od drugiej (walidacja formularzy)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/data/ImportException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/data/PDOHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="4" selection-start="11" selection-end="12" vertical-scroll-proportion="0.0" />
@@ -611,13 +673,6 @@
     <entry file="file://$PROJECT_DIR$/app/public/static/js/fancybox/jquery.fancybox-1.3.4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="826" column="6" selection-start="20644" selection-end="20644" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/static/index.html">
@@ -691,9 +746,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="37" selection-start="11748" selection-end="11748" vertical-scroll-proportion="0.7886598">
+        <state line="179" column="44" selection-start="12384" selection-end="12384" vertical-scroll-proportion="-8.568627">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/static/js/additional-methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="3" selection-start="14300" selection-end="14300" vertical-scroll-proportion="0.33236152">
           <folding />
         </state>
       </provider>

@@ -30,6 +30,7 @@ $found = $nie->search($query);
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
         <script src="public/static/js/jquery.validate.js"></script>
+        <script src="public/static/js/additional-methods.js"></script>
 		<script src="public/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
 		<script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
@@ -159,12 +160,34 @@ $found = $nie->search($query);
                         $(element).css('backgroundColor', '#EDBBBB');
                     },
                     rules: {
-                        cenaMin_mi: "number",
-                        cenaMax_mi: "number"
+                        cenaMin_mi: {
+                            digits: true,
+                            lessThanEqual: "#cenaMax_mi"
+                        },
+                        cenaMax_mi: "digits",
+                        cenaM2Min_mi: "digits",
+                        cenaM2Max_mi: "digits",
+                        powierzchniaMin_mi: "digits",
+                        powierzchniaMax_mi: "digits",
+                        pokojeMin_mi: "digits",
+                        pokojeMax_mi: "digits",
+                        rokbudowyMin_mi: "digits",
+                        rokbudowyMax_mi: "digits"
                     },
                     messages: {
-                        cenaMin_mi: "",
-                        cenaMax_mi: ""
+                        cenaMin_mi: {
+                            digits: "",
+                            lessThanEqual: ""
+                        },
+                        cenaMax_mi: "",
+                        cenaM2Min_mi: "",
+                        cenaM2Max_mi: "",
+                        powierzchniaMin_mi: "",
+                        powierzchniaMax_mi: "",
+                        pokojeMin_mi: "",
+                        pokojeMax_mi: "",
+                        rokbudowyMin_mi: "",
+                        rokbudowyMax_mi: ""
                     },
                     invalidHandler: function(event, validator) {
                         var errors = validator.numberOfInvalids();
@@ -417,7 +440,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <input id="cenaMin_mi" name="cenaMin_mi" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input name="cenaMax_mi" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input name="cenaMax_mi" id="cenaMax_mi" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
