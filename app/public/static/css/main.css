@@ -558,7 +558,10 @@ body .favourites-page {
   width: 191px
 }
 
-.search-page .search-form.error {
+.search-page .search-form.error_mi,
+.search-page .search-form.error_do,
+.search-page .search-form.error_dz,
+.search-page .search-form.error_lo{
     position: absolute;
     width: 421px;
 }
@@ -979,21 +982,25 @@ input {
   margin-top: 20px;
 }
 
-.search-page .mCSB_scrollTools {
+.search-page .mCSB_scrollTools,
+.favourites-page .mCSB_scrollTools{
     width: 18px;
 }
 
-.search-page .mCSB_scrollTools .mCSB_draggerContainer {
+.search-page .mCSB_scrollTools .mCSB_draggerContainer,
+.favourites-page .mCSB_scrollTools .mCSB_draggerContainer{
     visibility: hidden;
 }
 
-.search-page .mCSB_scrollTools .mCSB_buttonUp{
+.search-page .mCSB_scrollTools .mCSB_buttonUp,
+.favourites-page .mCSB_scrollTools .mCSB_buttonUp {
     background-image: url('../img/roll_up_arrow.png');
     background-repeat: no-repeat;
 	height: 26px;
 }
 
-.search-page .mCSB_scrollTools .mCSB_buttonDown {
+.search-page .mCSB_scrollTools .mCSB_buttonDown,
+.favourites-page .mCSB_scrollTools .mCSB_buttonDown{
     background-image: url('../img/roll_down_arrow.png');
 	background-position: 0 0;
     background-repeat: no-repeat;

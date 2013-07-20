@@ -6,6 +6,8 @@ $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 $id = (int) $_GET['id'];
 $favourites = isset($_GET['f']) ? (bool) $_GET['f'] : false;
+$ifAddFavourite = false;
+if (isset($_GET['u'])) $ifAddFavourite = true;
 $element = $nie->get($id);
 $zdjecia = $zdj->getForNieruchomosc( $id );
 if ($element == null) {
@@ -64,17 +66,17 @@ if ($element == null) {
                     ?>
 				</span>
 			  </span>
-              <?php if ($favourites==true) {
-              echo ' <span class="offer-buttons">
-			    <a class="offer-button" title="Przeglądaj zdjęcia oferty"><img src="./img/off_but1.png"></img></a><!--
-            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=www.onet.pl"><img src="./img/off_but3.png"></img></a><!--
-            --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="./img/off_but5.png"></img></a><!--
+              <?php if (!($ifAddFavourite)) {
+              echo '<span class="offer-buttons">
+			    <a class="offer-button" href="javascript:;" id="gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
+            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
+            --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
+            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
             --></span>'; }
               else {
               echo ' <span class="offer-buttons">
 			    <a class="offer-button" href="javascript:;" id="gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
-            --><a class="offer-button" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
+            --><a class="offer-button favourite-button" data-id=' . $element->getId() . ' title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
             --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
             --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--

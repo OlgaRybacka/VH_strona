@@ -49,9 +49,9 @@ foreach ( $nieruchomosci as $v ) {
                     <img/>
                 </div>
 				<div class="small-buttons">
-					<span class="small-button but1">
-						<img src="public/static/./img/but1.png"></img>
-					</span><!--
+                    <a href="ulubione.php" class="small-button but1">
+                        <img src="public/static/./img/but1.png"></img>
+                    </a><!--
 					--><a href="index.php" class="small-button but2">
 						<img src="public/static/./img/but2.png"></img>
 					</a><!--
@@ -71,7 +71,7 @@ foreach ( $nieruchomosci as $v ) {
             </span><!--
             --><span class="tile img1">
             </span><!--
-            --><a class="tile violet" href="search.php">
+            --><a class="tile violet" href="search.php?tab=mieszkania">
 				<img src="public/static/./img/oferty.png" style="margin-top: 65px"></img>
             </a>
         </div>

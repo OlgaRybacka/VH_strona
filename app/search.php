@@ -1,5 +1,6 @@
 <?php
 require "includes.php";
+
 $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
@@ -164,21 +165,49 @@ $found = $nie->search($query);
                             digits: true,
                             lessThanEqual: "#cenaMax_mi"
                         },
-                        cenaMax_mi: "digits",
-                        cenaM2Min_mi: "digits",
-                        cenaM2Max_mi: "digits",
-                        powierzchniaMin_mi: "digits",
-                        powierzchniaMax_mi: "digits",
-                        pokojeMin_mi: "digits",
-                        pokojeMax_mi: "digits",
-                        rokbudowyMin_mi: "digits",
-                        rokbudowyMax_mi: "digits"
+                        cenaMax_mi: {
+                            digits: true,
+                            greaterThanEqual: "#cenaMin_mi"
+                        },
+                        cenaM2Min_mi: {
+                            digits: true,
+                            lessThanEqual: "#cenaM2Max_mi"
+                        },
+                        cenaM2Max_mi: {
+                            digits: true,
+                            greaterThanEqual: "#cenaM2Min_mi"
+                        },
+                        powierzchniaMin_mi: {
+                            digits: true,
+                            lessThanEqual: "#powierzchniaMax_mi"
+                        },
+                        powierzchniaMax_mi: {
+                            digits: true,
+                            greaterThanEqual: "#powierzchniaMin_mi"
+                        },
+                        pokojeMin_mi: {
+                            digits: true,
+                            lessThanEqual: "#pokojeMax_mi"
+                        },
+                        pokojeMax_mi: {
+                            digits: true,
+                            greaterThanEqual: "#pokojeMin_mi"
+                        },
+                        rokbudowyMin_mi: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            lessThanEqual: "#rokbudowyMax_mi"
+                        },
+                        rokbudowyMax_mi: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            greaterThanEqual: "#rokbudowyMin_mi"
+                        }
                     },
                     messages: {
-                        cenaMin_mi: {
-                            digits: "",
-                            lessThanEqual: ""
-                        },
+                        cenaMin_mi: "",
                         cenaMax_mi: "",
                         cenaM2Min_mi: "",
                         cenaM2Max_mi: "",
@@ -193,24 +222,213 @@ $found = $nie->search($query);
                         var errors = validator.numberOfInvalids();
                         if (errors) {
                             var message = 'Formularz zawiera niepoprawne dane.';
-                            $("div.error span").html(message);
-                            $("div.error").show();
+                            $("div.error_mi span").html(message);
+                            $("div.error_mi").show();
                         } else {
-                            $("div.error").hide();
+                            $("div.error_mi").hide();
                         }
                     },
                     submitHandler: search
                 });
             else if (getURLParameter("tab") == "domy")
                 $(".search-form2").validate({
+                    highlight: function(element, errorClass) {
+                        $(element).css('backgroundColor', '#EDBBBB');
+                    },
+                    rules: {
+                        cenaMin_do: {
+                            digits: true,
+                            lessThanEqual: "#cenaMax_do"
+                        },
+                        cenaMax_do: {
+                            digits: true,
+                            greaterThanEqual: "#cenaMin_do"
+                        },
+                        cenaM2Min_do: {
+                            digits: true,
+                            lessThanEqual: "#cenaM2Max_do"
+                        },
+                        cenaM2Max_do: {
+                            digits: true,
+                            greaterThanEqual: "#cenaM2Min_do"
+                        },
+                        powierzchniaMin_do: {
+                            digits: true,
+                            lessThanEqual: "#powierzchniaMax_do"
+                        },
+                        powierzchniaMax_do: {
+                            digits: true,
+                            greaterThanEqual: "#powierzchniaMin_do"
+                        },
+                        pokojeMin_do: {
+                            digits: true,
+                            lessThanEqual: "#pokojeMax_do"
+                        },
+                        pokojeMax_do: {
+                            digits: true,
+                            greaterThanEqual: "#pokojeMin_do"
+                        },
+                        powDzialkiMin_do: {
+                            digits: true,
+                            lessThanEqual: "#powDzialkiMax_do"
+                        },
+                        powDzialkiMax_do: {
+                            digits: true,
+                            greaterThanEqual: "#powDzialkiMin_do"
+                        },
+                        rokbudowyMin_do: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            lessThanEqual: "#rokbudowyMax_do"
+                        },
+                        rokbudowyMax_do: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            greaterThanEqual: "#rokbudowyMin_do"
+                        }
+                    },
+                    messages: {
+                        cenaMin_do: "",
+                        cenaMax_do: "",
+                        cenaM2Min_do: "",
+                        cenaM2Max_do: "",
+                        powierzchniaMin_do: "",
+                        powierzchniaMax_do: "",
+                        pokojeMin_do: "",
+                        pokojeMax_do: "",
+                        powDzialkiMin_do: "",
+                        powDzialkiMax_do: "",
+                        rokbudowyMin_do: "",
+                        rokbudowyMax_do: ""
+                    },
+                    invalidHandler: function(event, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            var message = 'Formularz zawiera niepoprawne dane.';
+                            $("div.error_do span").html(message);
+                            $("div.error_do").show();
+                        } else {
+                            $("div.error_do").hide();
+                        }
+                    },
                     submitHandler: search
                 });
             else if (getURLParameter("tab") == "dzialki")
                 $(".search-form3").validate({
+                    highlight: function(element, errorClass) {
+                        $(element).css('backgroundColor', '#EDBBBB');
+                    },
+                    rules: {
+                        cenaMin_dz: {
+                            digits: true,
+                            lessThanEqual: "#cenaMax_dz"
+                        },
+                        cenaMax_dz: {
+                            digits: true,
+                            greaterThanEqual: "#cenaMin_dz"
+                        },
+                        cenaM2Min_dz: {
+                            digits: true,
+                            lessThanEqual: "#cenaM2Max_dz"
+                        },
+                        cenaM2Max_dz: {
+                            digits: true,
+                            greaterThanEqual: "#cenaM2Min_dz"
+                        },
+                        powierzchniaMin_dz: {
+                            digits: true,
+                            lessThanEqual: "#powierzchniaMax_dz"
+                        },
+                        powierzchniaMax_dz: {
+                            digits: true,
+                            greaterThanEqual: "#powierzchniaMin_dz"
+                        }
+                    },
+                    messages: {
+                        cenaMin_dz: "",
+                        cenaMax_dz: "",
+                        cenaM2Min_dz: "",
+                        cenaM2Max_dz: "",
+                        powierzchniaMin_dz: "",
+                        powierzchniaMax_dz: ""
+                    },
+                    invalidHandler: function(event, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            var message = 'Formularz zawiera niepoprawne dane.';
+                            $("div.error_dz span").html(message);
+                            $("div.error_dz").show();
+                        } else {
+                            $("div.error_dz").hide();
+                        }
+                    },
                     submitHandler: search
                 });
             else if (getURLParameter("tab") == "lokale")
                 $(".search-form4").validate({
+                    highlight: function(element, errorClass) {
+                        $(element).css('backgroundColor', '#EDBBBB');
+                    },
+                    rules: {
+                        cenaMin_lo: {
+                            digits: true,
+                            lessThanEqual: "#cenaMax_lo"
+                        },
+                        cenaMax_lo: {
+                            digits: true,
+                            greaterThanEqual: "#cenaMin_lo"
+                        },
+                        cenaM2Min_lo: {
+                            digits: true,
+                            lessThanEqual: "#cenaM2Max_lo"
+                        },
+                        cenaM2Max_lo: {
+                            digits: true,
+                            greaterThanEqual: "#cenaM2Min_lo"
+                        },
+                        powierzchniaMin_lo: {
+                            digits: true,
+                            lessThanEqual: "#powierzchniaMax_lo"
+                        },
+                        powierzchniaMax_lo: {
+                            digits: true,
+                            greaterThanEqual: "#powierzchniaMin_lo"
+                        },
+                        rokbudowyMin_lo: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            lessThanEqual: "#rokbudowyMax_lo"
+                        },
+                        rokbudowyMax_lo: {
+                            minlength: 4,
+                            maxlength: 4,
+                            digits: true,
+                            greaterThanEqual: "#rokbudowyMin_lo"
+                        }
+                    },
+                    messages: {
+                        cenaMin_lo: "",
+                        cenaMax_lo: "",
+                        cenaM2Min_lo: "",
+                        cenaM2Max_lo: "",
+                        powierzchniaMin_lo: "",
+                        powierzchniaMax_lo: "",
+                        rokbudowyMin_lo: "",
+                        rokbudowyMax_lo: ""
+                    },
+                    invalidHandler: function(event, validator) {
+                        var errors = validator.numberOfInvalids();
+                        if (errors) {
+                            var message = 'Formularz zawiera niepoprawne dane.';
+                            $("div.error_lo span").html(message);
+                            $("div.error_lo").show();
+                        } else {
+                            $("div.error_lo").hide();
+                        }
+                    },
                     submitHandler: search
                 });
         }
@@ -365,7 +583,8 @@ $found = $nie->search($query);
 			function fetch( id ) {
 				currentFetchingId = id;
 				$.get("item.php", {
-					id: id
+					id: id,
+                    u: 1
 				}, function (data) {
 					if ( id == currentFetchingId ) {
 						$('.details-container').html(data);
@@ -387,6 +606,13 @@ $found = $nie->search($query);
 				fetch( id );
 			});
 		});
+
+        $(function() {
+            $('.favourite-button').live('click', function() {
+                var id = $(this).data('id');
+                $.post('favourites.php', {id: id});
+            });
+        });
 		</script>
     </head>
     <body class="search-page">
@@ -402,9 +628,9 @@ $found = $nie->search($query);
 				</div>
 				<span class="violet-line"><img></img></span>
 				<div class="small-buttons">
-					<span class="small-button but1">
+					<a href="ulubione.php" class="small-button but1">
 						<img src="public/static/./img/but1.png"></img>
-					</span><!--
+					</a><!--
 					--><a href="index.php" class="small-button but2">
 						<img src="public/static/./img/but2.png"></img>
 					</a><!--
@@ -444,12 +670,12 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaM2Min_mi" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input name="cenaM2Max_mi" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input id="cenaM2Min_mi" name="cenaM2Min_mi" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input id="cenaM2Max_mi" name="cenaM2Max_mi" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row4 col1">metraż [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powierzchniaMin_mi" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMin_mi" name="powierzchniaMin_mi" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
 		  <datalist id="metraz">
 			<option value="10">
 			<option value="20">
@@ -464,11 +690,11 @@ $found = $nie->search($query);
 			<option value="150">
 			<option value="200">
 		  </datalist> 
-		  <input name="powierzchniaMax_mi" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMax_mi" name="powierzchniaMax_mi" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
 		  <div class="search-form form-label row5 col1">liczba pokoi [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="pokojeMin_mi" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
+		  <input id="pokojeMin_mi" name="pokojeMin_mi" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
 		  <datalist id="pokoje">
 			<option value="1">
 			<option value="2">
@@ -478,12 +704,12 @@ $found = $nie->search($query);
 			<option value="6">
 			<option value="7">
      	          </datalist> 
-		  <input name="pokojeMax_mi" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <input id="pokojeMax_mi" name="pokojeMax_mi" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
 		  <div class="search-form form-label row1 col3">typ budynku
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select name="typBudynkuMieszk_mi" class="search-form row1 col4a">
+		    <select id="typBudynkuMieszk_mi" name="typBudynkuMieszk_mi" class="search-form row1 col4a">
 			  <option value="">dowolny</option>
 			  <option>blok</option>
 			  <option>kamienica</option>
@@ -495,7 +721,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col3">rok budowy [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="rokbudowyMin_mi" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMin_mi" name="rokbudowyMin_mi" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
 		  <datalist id="rok_budowy">
 			<option value="2012">
 			<option value="2011">
@@ -510,12 +736,12 @@ $found = $nie->search($query);
 			<option value="1970">
 			<option value="1960">
 		  </datalist> 
-		  <input name="rokbudowyMax_mi" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMax_mi" name="rokbudowyMax_mi" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
 		  <div class="search-form form-label row3 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
-          <div class="search-form error row4 col4a"><span></span></div>
+		  <input id="lokalizacja_mi" name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+          <div class="search-form error_mi row4 col4a"><span></span></div>
           <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
 		  <input type="submit" value="" class="search-form button row5 col4a search-button"/>
 	  </form>
@@ -526,7 +752,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select name="typOferty_do" class="search-form row1 col2">
+		    <select id="typOferty_do" name="typOferty_do" class="search-form row1 col2">
 			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
@@ -535,17 +761,17 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" name="cenaMin_do" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input type="text" name="cenaMax_do" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input id="cenaMin_do" name="cenaMin_do" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input id="cenaMax_do" name="cenaMax_do" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" name="cenaM2Min_do" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input type="text" name="cenaM2Max_do" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input id="cenaM2Min_do" name="cenaM2Min_do" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input id="cenaM2Max_do" name="cenaM2Max_do" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row4 col1">metraż [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input type="text" name="powierzchniaMin_do" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMin_do" name="powierzchniaMin_do" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
 		  <datalist id="metraz">
 			<option value="10">
 			<option value="20">
@@ -560,11 +786,11 @@ $found = $nie->search($query);
 			<option value="150">
 			<option value="200">
 		  </datalist> 
-		  <input name="powierzchniaMax_do" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMax_do" name="powierzchniaMax_do" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
 		  <div class="search-form form-label row5 col1">liczba pokoi [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="pokojeMin_do" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
+		  <input id="pokojeMin_do" name="pokojeMin_do" type="text" class="search-form input row5 col2 half" placeholder="np. 2" autocomplete="off" list="pokoje"/>
 		  <datalist id="pokoje">
 			<option value="1">
 			<option value="2">
@@ -574,11 +800,11 @@ $found = $nie->search($query);
 			<option value="6">
 			<option value="7">
      	          </datalist> 
-		  <input name="pokojeMax_do" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
+		  <input id="pokojeMax_do" name="pokojeMax_do" type="text" class="search-form input row5 col2a half" placeholder="np. 4" autocomplete="off" list="pokoje"/>
 		  <div class="search-form form-label row1 col3">pow. działki w m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powDzialkiMin_do" type="text" class="search-form input row1 col4 half" placeholder="np. 2000" autocomplete="off" list="pow_dzialki"/>
+		  <input id="powDzialkiMin_do" name="powDzialkiMin_do" type="text" class="search-form input row1 col4 half" placeholder="np. 2000" autocomplete="off" list="pow_dzialki"/>
 		  <datalist id="pow_dzialki">
 			<option value="1000">
 			<option value="2000">
@@ -591,11 +817,11 @@ $found = $nie->search($query);
 			<option value="50000">
 			<option value="100000">
      	          </datalist> 
-		  <input name="powDzialkiMax_do" type="text" class="search-form input row1 col4a half" placeholder="np. 5000" autocomplete="off" list="pow_dzialki"/>
+		  <input id="powDzialkiMax_do" name="powDzialkiMax_do" type="text" class="search-form input row1 col4a half" placeholder="np. 5000" autocomplete="off" list="pow_dzialki"/>
 		  <div class="search-form form-label row2 col3">rok budowy [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="rokbudowyMin_do" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMin_do" name="rokbudowyMin_do" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
 		  <datalist id="rok_budowy">
 			<option value="2012">
 			<option value="2011">
@@ -610,12 +836,13 @@ $found = $nie->search($query);
 			<option value="1970">
 			<option value="1960">
 		  </datalist> 
-		  <input name="rokbudowyMax_do" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMax_do" name="rokbudowyMax_do" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
 		  <div class="search-form form-label row3 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
-		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+		  <input id="lokalizacja_do" name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+          <div class="search-form error_do row4 col4a"><span></span></div>
+          <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
           <input type="submit" value="" class="search-form button row5 col4a search-button"/>
       </form>
 	  <form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
@@ -624,7 +851,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select name="typOferty_dz" class="search-form row1 col2">
+		    <select id="typOferty_dz" name="typOferty_dz" class="search-form row1 col2">
 			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
@@ -633,17 +860,17 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaMin_dz" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input name="cenaMax_dz" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input id="cenaMin_dz" name="cenaMin_dz" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input id="cenaMax_dz" name="cenaMax_dz" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaM2Min_dz" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input name="cenaM2Max_dz" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input id="cenaM2Min_dz" name="cenaM2Min_dz" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input id="cenaM2Max_dz" name="cenaM2Max_dz" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row1 col3">powierzchnia w m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powierzchniaMin_dz" type="text" class="search-form input row1 col4 half" placeholder="np. 10000" autocomplete="off" list="pow_dzialki"/>
+		  <input id="powierzchniaMin_dz" name="powierzchniaMin_dz" type="text" class="search-form input row1 col4 half" placeholder="np. 10000" autocomplete="off" list="pow_dzialki"/>
 		  <datalist id="pow_dzialki">
 			<option value="1000">
 			<option value="2000">
@@ -656,12 +883,13 @@ $found = $nie->search($query);
 			<option value="50000">
 			<option value="100000">     	          
 		  </datalist> 
-		  <input name="powierzchniaMax_dz" type="text" class="search-form input row1 col4a half" placeholder="np. 50000" autocomplete="off" list="pow_dzialki"/>
+		  <input id="powierzchniaMax_dz" name="powierzchniaMax_dz" type="text" class="search-form input row1 col4a half" placeholder="np. 50000" autocomplete="off" list="pow_dzialki"/>
 		  <div class="search-form form-label row2 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="miasto_dz" type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
-		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+		  <input id="miasto_dz" name="miasto_dz" type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+          <div class="search-form error_dz row4 col4a"><span></span></div>
+          <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
           <input type="submit" value="" class="search-form button row5 col4a search-button"/>
       </form>
 	  <form method="get" class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
@@ -670,7 +898,7 @@ $found = $nie->search($query);
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select name="typOferty_lo" class="search-form row1 col2">
+		    <select id="typOferty_lo" name="typOferty_lo" class="search-form row1 col2">
 			  <option value="">dowolna</option>
 			  <option>sprzedaż</option>
 			  <option>wynajem</option>
@@ -679,17 +907,17 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col1">cena całościowa [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaMin_lo" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
-		  <input name="cenaMax_lo" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
+		  <input id="cenaMin_lo" name="cenaMin_lo" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
+		  <input id="cenaMax_lo" name="cenaMax_lo" type="text" class="search-form input row2 col2a half" placeholder="np. 250000" autocomplete="off"/>
 		  <div class="search-form form-label row3 col1">cena za m<sup>2</sup> [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="cenaM2Min_lo" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
-		  <input name="cenaM2Max_lo" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
+		  <input id="cenaM2Min_lo" name="cenaM2Min_lo" type="text" class="search-form input row3 col2 half" placeholder="np. 3000" autocomplete="off"/>
+		  <input id="cenaM2Max_lo" name="cenaM2Max_lo" type="text" class="search-form input row3 col2a half" placeholder="np. 8900" autocomplete="off"/>
 		  <div class="search-form form-label row4 col1">metraż [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="powierzchniaMin_lo" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMin_lo" name="powierzchniaMin_lo" type="text" class="search-form input row4 col2 half" placeholder="np. 25" autocomplete="off" list="metraz"/>
 		  <datalist id="metraz">
 			<option value="10">
 			<option value="20">
@@ -704,12 +932,12 @@ $found = $nie->search($query);
 			<option value="150">
 			<option value="200">
 		  </datalist> 
-		  <input name="powierzchniaMax_lo" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
+		  <input id="powierzchniaMax_lo" name="powierzchniaMax_lo" type="text" class="search-form input row4 col2a half" placeholder="np. 115" autocomplete="off" list="metraz"/>
 		  <div class="search-form form-label row1 col3">typ lokalu
 		    <div class="arrow-right lila2"></div>
 		  </div>
 		  <div class="styled-select">
-		    <select name="typLokalu_lo" class="search-form row1 col4a">
+		    <select id="typLokalu_lo" name="typLokalu_lo" class="search-form row1 col4a">
 			  <option value="">dowolny</option>
 			  <option>handlowy</option>
 			  <option>biurowy</option>
@@ -719,7 +947,7 @@ $found = $nie->search($query);
 		  <div class="search-form form-label row2 col3">rok budowy [od / do]
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="rokbudowyMin_lo" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMin_lo" name="rokbudowyMin_lo" type="text" class="search-form input row2 col4 half" placeholder="np. 1995" autocomplete="off" list="rok_budowy"/>
 		  <datalist id="rok_budowy">
 			<option value="2012">
 			<option value="2011">
@@ -734,12 +962,13 @@ $found = $nie->search($query);
 			<option value="1970">
 			<option value="1960">
 		  </datalist> 
-		  <input name="rokbudowyMax_lo" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
+		  <input id="rokbudowyMax_lo" name="rokbudowyMax_lo" type="text" class="search-form input row2 col4a half" placeholder="np. 2010" autocomplete="off" list="rok_budowy"/>
 		  <div class="search-form form-label row3 col3" >lokalizacja
 		    <div class="arrow-right lila2"></div>
 		  </div>
-		  <input name="lokalizacja_lo" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
-		  <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+		  <input id="lokalizacja_lo" name="lokalizacja_lo" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
+          <div class="search-form error_lo row4 col4a"><span></span></div>
+          <div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
           <input type="submit" value="" class="search-form button row5 col4a search-button"/>
       </form>
 	  
