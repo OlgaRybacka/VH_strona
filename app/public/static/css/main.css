@@ -1023,6 +1023,33 @@ input {
   font-size: 12px;
 }
 
+.search-page .map-span,
+.favourites-page .map-span {
+    position:absolute;
+    left: 400px;
+    top: 300px;
+    border-style:solid;
+    border-color: #481368;
+    border-width: 3px;
+    -moz-border-radius:10px; /* FF */
+    -webkit-border-radius:10px; /* przeglądarki z webkitem (Safari, Chrome itp.) */
+    -khtml-border-radius:10px; /* przeglądarki typu K-meleon (typowo Linuxowe) */
+    border-radius:10px; /* pozostałe przeglądarki */
+    background-color: #D1D2D4;
+    width: 460px;
+    height: 390px;
+    z-index: 100;
+    display: none;
+}
+
+.search-page .map-span #map-canvas,
+.favourites-page .map-span #map-canvas {
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+    margin-top: 60px;
+}
+
 .search-page .email-form,
 .favourites-page .email-form {
     position: absolute;
@@ -1045,7 +1072,9 @@ input {
 }
 
 .search-page .shadow,
-.favourites-page .shadow{
+.favourites-page .shadow,
+.search-page .shadow2,
+.favourites-page .shadow2{
     width: 900px;
     height: 700px;
     position: absolute;

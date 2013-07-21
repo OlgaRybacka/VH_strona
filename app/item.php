@@ -72,7 +72,7 @@ if ($element == null) {
 			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
             --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
+            --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
             --></span>'; }
               else {
               echo ' <span class="offer-buttons">
@@ -80,7 +80,7 @@ if ($element == null) {
             --><a class="offer-button favourite-button" data-id="' . $element->getId() . '" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
             --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
+            --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
             --></span>';
               }
               ?>
@@ -100,6 +100,10 @@ if ($element == null) {
     <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
     <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
     <?php if (count($zdjecia) >= 4) echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
+</span>
+<span class="shadow2"> </span>
+<span class="map-span">
+    <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
 </span>
 <span class="shadow"> </span>
 <span>
