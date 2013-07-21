@@ -117,6 +117,7 @@ $found = $nie->search($query);
 		}
 
 		MapView.prototype.showInfo = function( id, marker ) {
+			// pobierz info window
 			$.get("item.php?id=" + id, function(contentString) {
 					contentString = $(contentString).html();
 					var infowindow = new google.maps.InfoWindow({
