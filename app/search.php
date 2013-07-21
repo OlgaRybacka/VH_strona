@@ -153,6 +153,43 @@ $found = $nie->search($query);
             return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
         }
 
+        function validateEmailForm()
+        {
+            $(".email-form").validate({
+                highlight: function(element, errorClass) {
+                    $(element).css('backgroundColor', '#EDBBBB');
+                },
+                rules: {
+                    email_address: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    email_address: {
+                        required: "Podaj adres email",
+                        email: "Podaj poprawny adres email"
+                    }
+                },
+                errorLabelContainer: $('div.error-container'),
+                submitHandler: function(form){
+                    var id = $(form).data('id');
+                    var photo = $(form).data('photo');
+                    var opis = $(form).data('opis');
+                    var tab = $(form).data('tab');
+                    var email = $(form).find('#email_address').val();
+                    var cena = $(form).data('cena');
+                    var typ = $(form).data('typ');
+                    var agentnazwisko = $(form).data('agentnazwisko');
+                    var agenttelefon = $(form).data('agenttelefon');
+                    var agentemail = $(form).data('agentemail');
+                    $.post('mailto.php', {id: id, photo: photo, email: email, opis: opis, tab: tab, cena: cena, typ: typ, agentnazwisko: agentnazwisko, agenttelefon: agenttelefon, agentemail: agentemail});
+                    $('.email-form').fadeOut();
+                    $('.shadow').fadeOut();
+                }
+            });
+        }
+
         function validateSearchForm()
         {
             if (getURLParameter("tab") == "mieszkania")
@@ -613,6 +650,29 @@ $found = $nie->search($query);
                 $.post('favourites.php', {id: id});
             });
         });
+
+        $(function() {
+           $('.mailto-button').live('click', function() {
+               $('.email-form').fadeIn();
+               $('.shadow').fadeIn();
+               validateEmailForm();
+            });
+        });
+
+            $(function() {
+                $('.shadow').live('click', function() {
+                    $('.email-form').fadeOut();
+                    $('.shadow').fadeOut();
+                });
+            });
+
+            $(function() {
+                $('.anuluj-button').live('click', function() {
+                    $('.email-form').fadeOut();
+                    $('.shadow').fadeOut();
+                });
+            });
+
 		</script>
     </head>
     <body class="search-page">
