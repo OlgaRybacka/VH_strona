@@ -4,12 +4,17 @@ $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 
-$mieszkanie = $nie->tab('mieszkania');
-$dom        = $nie->tab('domy')[0];
-$dzialka    = $nie->tab('dzialki')[0];
-$lokal      = $nie->tab('lokale')[0];
+$fp = fopen("public/wyroznione.txt", "r");
+$dane = fread($fp, filesize("public/wyroznione.txt"));
+fclose($fp);
+$plik = explode(" ", $dane);
 
-$nieruchomosci = array($mieszkanie[0], $dom, $dzialka, $lokal);
+$mieszkanie = $nie->get($plik[0]);
+$dom        = $nie->get($plik[1]);
+$dzialka    = $nie->get($plik[2]);
+$lokal      = $nie->get($plik[3]);
+
+$nieruchomosci = array($mieszkanie, $dom, $dzialka, $lokal);
 $zdjecie = array();
 foreach ( $nieruchomosci as $v ) {
   $zdjecie[$v->getId()] = $zdj->getForNieruchomosc( $v->getId() )[0];
