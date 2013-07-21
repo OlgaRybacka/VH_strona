@@ -10,12 +10,14 @@ class NieruchomosciRepository {
    * @var PDO
    */
   private $pdo;
+  private $logger;
 
   /**
    * @param $pdo
    */
   public function __construct($pdo) {
     $this->pdo = $pdo;
+    $this->logger = Logger::getLogger("NieruchomosciRepository");;
   }
 
   /**
@@ -140,7 +142,24 @@ class NieruchomosciRepository {
       return Nieruchomosc::fromArray( $cur );
     }
     return null;
-    }
+  }
+  public function removeDuplicates() {
+      $prepared = $this->pdo->prepare("SELECT  n2.id
+            FROM `nieruchomosc` n1
+                INNER JOIN `nieruchomosc` n2 ON n1.ulica = n2.ulica AND n1.cena = n2.cena AND n1.powierzchnia = n2.powierzchnia AND n1.miasto = n2.miasto AND n1.id < n2.id");
+
+	  $prepared->execute();
+	  $cur = null;
+	  $toRemove = array();
+	  while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
+		  $toRemove[] = $cur['id'];
+	  }
+	  $implodedList = implode(',', $toRemove);
+	  $this->logger->info("Remove " . $implodedList);
+	  $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE id in (". $implodedList .")");
+	  $prepared->execute();
+  }
+
 
   public function search( SearchQuery $query ) {
     $toBind = array();
