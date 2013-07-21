@@ -52,6 +52,7 @@ class ImportService {
       $this->extractAndImport( $workPath );
       $this->pdo->commit();
       $this->moveToOld( $workPath, $fileName );
+      $this->nieruchomosciRepository->removeDuplicates();
     } catch ( Exception $e ) {
       if ( $this->pdo->inTransaction() ) {
         self::$logger->error("Rolling back after error.", $e);
