@@ -143,18 +143,18 @@ class ImportService {
       $this->zdjeciaRepository->insertOrUpdate( $zdj );
     }
 
-    self::$logger->info("offers ... ");
-    $list = $xpath->query('/plik/lista_ofert/dzial/oferta');
-    for( $i = 0; $i<$list->length; $i++ ) {
-      $nieruchomosc = Nieruchomosc::fromDomElement( $list->item($i) );
-      $this->nieruchomosciRepository->insertOrUpdate($nieruchomosc);
-    }
-
     self::$logger->info("remove offers ... ");
     $list = $xpath->query('/plik/lista_ofert/dzial/oferta_usun/id');
     for( $i = 0; $i<$list->length; $i++ ) {
       $id = intval( $list->item($i)->textContent );
       $this->nieruchomosciRepository->delete( $id );
+    }
+
+    self::$logger->info("offers ... ");
+    $list = $xpath->query('/plik/lista_ofert/dzial/oferta');
+    for( $i = 0; $i<$list->length; $i++ ) {
+      $nieruchomosc = Nieruchomosc::fromDomElement( $list->item($i) );
+      $this->nieruchomosciRepository->insertOrUpdate($nieruchomosc);
     }
   }
 

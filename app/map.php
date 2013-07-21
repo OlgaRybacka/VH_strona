@@ -57,9 +57,9 @@ $found = $nie->search($query);
         /** @var Nieruchomosc $res */
         if ( $res->getLat() && $res->getLng() ) {
             $elements[] = "{" .
-                "id:" . $found->getId() . "," .
-                "lat:" . $found->getLat() . "," .
-                "lng:" . $found->getLng() . "," .
+                "id:" . $res->getId() . "," .
+                "lat:" . $res->getLat() . "," .
+                "lng:" . $res->getLng() . "," .
                 "}";
         }
     }
@@ -67,59 +67,6 @@ $found = $nie->search($query);
  ?>
 	];
 </script>
-
-<div class="container offers-container" style="display:none;">
-                  <span class="offers-list" style="display:none;">
-<?php
-	                  foreach( $found as $res ) {
-		                  /** @var Nieruchomosc $res */
-		                  if ( $res->getLat() && $res->getLng() ) {
-					        echo '<div style="display:none" class="offer" data-lat="' . $res->getLat() . '" data-lng="' . $res->getLng() . '"' . '>';
-		                  } else if ( ( $res->getMiasto() || $res->getMiejscowosc() ) && $res->getUlica() ) {
-			                  echo '<div style="display:none" class="offer" data-miasto="' . $res->getMiasto() . '" data-miejscowosc="' . $res->getMiejscowosc() . '" data-ulica="' . $res->getUlica() . '"' . '>';
-		                  } else {
-			                  continue;
-		                  }
-		                  /** @var Nieruchomosc $res*/
-		                  if($res->getDzialTab() == "mieszkania"){
-			                  echo '
-								  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
-								  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
-								  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-								  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-								  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>';
-		                  }
-		                  if($res->getDzialTab() == "domy"){
-			                  echo '
-								  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
-								  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
-								  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-								  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-								  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>';
-		                  }
-		                  if($res->getDzialTab() == "dzialki"){
-			                  echo '
-								  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
-								  <div class="offer-data data2"> </div>
-								  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-								  <div class="offer-skrot">' . $res->getMiasto() . '</div>
-								  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>';
-		                  }
-		                  if($res->getDzialTab() == "lokale"){
-			                  echo '
-								  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
-								  <div class="offer-data data2"> </div>
-								  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-								  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
-								  <div class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</div>';
-		                  }
-		                  echo '</div>';
-	                  }
-	                  ?>
-		  </span>
-	      <span class="details-container">
-          </span>
-</div>
 
 
 <div class="map-wrapper" style=" padding: 10px;">

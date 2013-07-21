@@ -37,10 +37,11 @@ class NieruchomosciRepository {
   public function update( Nieruchomosc $obj ) {
     $map = $obj->getKeyValueMap();
         $sets = array();
+    unset($map['id']);
     foreach( array_keys($map) as $x ) {
       $sets[] = " `${x}` = :${x} ";
     }
-    unset($map['id']);
+
     $prepared = $this->pdo->prepare("UPDATE `nieruchomosc` SET " .
       implode(",", $sets ) .
       " WHERE `id` = :id");
@@ -48,6 +49,7 @@ class NieruchomosciRepository {
       $prepared->bindValue( ":$key", $value);
     }
     $prepared->execute();
+    echo "update " . $prepared->rowCount() . "<br/>\n";
   }
 
   /**
@@ -68,6 +70,8 @@ class NieruchomosciRepository {
       $prepared->bindValue( ":$key", $value);
     }
     $prepared->execute();
+    echo "insert " . $obj->getId() . " - " . $obj->getLat() . "<br/>\n";
+    echo "insert " . $prepared->rowCount() . "<br/>\n";
   }
 
   /**
@@ -154,10 +158,12 @@ class NieruchomosciRepository {
 	  while( ($cur = $prepared->fetch(PDO::FETCH_ASSOC)) != null ) {
 		  $toRemove[] = $cur['id'];
 	  }
-	  $implodedList = implode(',', $toRemove);
-	  $this->logger->info("Remove " . $implodedList);
-	  $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE id in (". $implodedList .")");
-	  $prepared->execute();
+	  if( sizeof($toRemove) ) {
+		  $implodedList = implode(',', $toRemove);
+		  $this->logger->info("Remove " . $implodedList);
+		  $prepared = $this->pdo->prepare("DELETE FROM `nieruchomosc` WHERE id in (". $implodedList .")");
+		  $prepared->execute();
+	  }
   }
 
 
