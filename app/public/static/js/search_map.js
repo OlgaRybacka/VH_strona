@@ -560,7 +560,7 @@ else if (bmark == 2) {
 	}*/
 });
 
-/*$("#gallery_button").click(function() {
+$(".gallery_button").live("click",function() {
 	$.fancybox([
 		'http://farm5.static.flickr.com/4044/4286199901_33844563eb.jpg',
 		'http://farm3.static.flickr.com/2687/4220681515_cc4f42d6b9.jpg',
@@ -572,7 +572,7 @@ else if (bmark == 2) {
 		'type' : 'image',
 		'changeFade' : 0
 	});
-});*/
+});
 //$( document ).tooltip();
 });
 

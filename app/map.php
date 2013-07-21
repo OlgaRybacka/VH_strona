@@ -116,16 +116,31 @@ $found = $nie->search($query);
 			}
 		}
 
+		MapView.prototype.showInfo = function( id, marker ) {
+			$.get("item.php?id=" + id, function(contentString) {
+					contentString = $(contentString).html();
+					var infowindow = new google.maps.InfoWindow({
+						content: contentString
+					});
+					infowindow.open(map,marker);
+				});
+		}
+
 		MapView.prototype.addMarker = function(point) {
 			var ll;
+			var self = this;
 			console.log(point.lat + " : " + point.lng);
 			ll = new google.maps.LatLng(point.lat, point.lng);
-			return new google.maps.Marker({
+			var marker = new google.maps.Marker({
 				position: ll,
 				map: map,
 				draggable: false,
 				animation: google.maps.Animation.DROP
 			});
+			google.maps.event.addListener(marker, 'click', function() {
+				self.showInfo( point.id, marker );
+			});
+			return marker;
 		};
 
 		return MapView;
