@@ -70,7 +70,7 @@ $found = $nie->search($query);
 
 
 <div class="map-wrapper" style=" padding: 10px;">
-	<div id="vh-map" style="margin: auto; width: 800px; height: 600px;">
+	<div id="vh-map" style="margin: auto; width: 900px; height: 600px;">
 	</div>
 </div>
 
@@ -118,7 +118,7 @@ $found = $nie->search($query);
 
 		MapView.prototype.showInfo = function( id, marker ) {
 			// pobierz info window
-			$.get("item.php?id=" + id, function(contentString) {
+			$.get("map_item.php?id=" + id, function(contentString) {
 					contentString = $(contentString).html();
 					var infowindow = new google.maps.InfoWindow({
 						content: contentString
