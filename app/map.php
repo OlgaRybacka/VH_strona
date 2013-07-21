@@ -544,6 +544,7 @@ $found = $nie->search($query);
 		}
 
 		function MapView(mapElementId, _data) {
+			var self = this;
 			map = new google.maps.Map(document.getElementById(mapElementId),mapOptions);
 			data = _data;
 			geocoder = new google.maps.Geocoder();
@@ -597,7 +598,9 @@ $found = $nie->search($query);
 				ulica: $(this).data('ulica'),
 				miejscowosc: $(this).data('miejscowosc')
 			};
-			llList.push(ll);
+			if( ll.lat && ll.lng ) {
+				llList.push(ll);
+			}
 		});
 		return llList;
 	}
