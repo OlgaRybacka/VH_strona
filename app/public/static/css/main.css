@@ -332,7 +332,6 @@ body .favourites-page {
   margin: 15px;
   text-align: center;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 13pt;
 }
 
 .home-page .offer-data.status {
@@ -559,6 +558,14 @@ body .favourites-page {
   width: 191px
 }
 
+.search-page .search-form.error_mi,
+.search-page .search-form.error_do,
+.search-page .search-form.error_dz,
+.search-page .search-form.error_lo{
+    position: absolute;
+    width: 421px;
+}
+
 .search-page .search-form.button {
   background: #512b68;
   position: absolute;
@@ -567,6 +574,13 @@ body .favourites-page {
   color: #fff;
   font-weight: bold;
   height: 31px;
+  border: none;
+}
+
+.search-page .search-form.search-button {
+    background-image: url('../img/search.png');
+    background-repeat:no-repeat;
+    background-position:center;
 }
 
 .search-page .search-form.search-mode {
@@ -964,29 +978,25 @@ input {
   display:block;
 }
 
-.offer-page .offer-details .offer-text .text-text .contact-data {
-  margin-top: 20px;
-}
-
-._mCS_1 .mCSB_scrollTools,
-._mCS_2 .mCSB_scrollTools {
+.search-page .mCSB_scrollTools,
+.favourites-page .mCSB_scrollTools{
     width: 18px;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_draggerContainer,
-._mCS_2 .mCSB_scrollTools .mCSB_draggerContainer {
+.search-page .mCSB_scrollTools .mCSB_draggerContainer,
+.favourites-page .mCSB_scrollTools .mCSB_draggerContainer{
     visibility: hidden;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_buttonUp,
-._mCS_2 .mCSB_scrollTools .mCSB_buttonUp {
+.search-page .mCSB_scrollTools .mCSB_buttonUp,
+.favourites-page .mCSB_scrollTools .mCSB_buttonUp {
     background-image: url('../img/roll_up_arrow.png');
     background-repeat: no-repeat;
 	height: 26px;
 }
 
-._mCS_1 .mCSB_scrollTools .mCSB_buttonDown,
-._mCS_2 .mCSB_scrollTools .mCSB_buttonDown {
+.search-page .mCSB_scrollTools .mCSB_buttonDown,
+.favourites-page .mCSB_scrollTools .mCSB_buttonDown{
     background-image: url('../img/roll_down_arrow.png');
 	background-position: 0 0;
     background-repeat: no-repeat;
@@ -995,7 +1005,8 @@ input {
     
 
 .search-page .offer-details .offer-description .contact-data,
-.favourites-page .offer-details .offer-description .contact-data {
+.favourites-page .offer-details .offer-description .contact-data,
+.offer-page .offer-details .offer-description .contact-data {
   position: absolute;
   bottom: 2px;
   left: 2px;
@@ -1005,13 +1016,92 @@ input {
 }
 
 .search-page .offer-details .offer-description .contact-data .text,
-.favourites-page .offer-details .offer-description .contact-data .text {
+.favourites-page .offer-details .offer-description .contact-data .text,
+.offer-page .offer-details .offer-description .contact-data .text{
   margin-top: 5px;
   margin-left: 10px;
   font-size: 12px;
 }
 
+.search-page .email-form,
+.favourites-page .email-form {
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    width: 400px;
+    height: 140px;
+    background: #D1D2D4;
+    z-index: 100;
+    border-style:solid;
+    border-color: #481368;
+    border-width: 3px;
+    -moz-border-radius:10px; /* FF */
+    -webkit-border-radius:10px; /* przeglądarki z webkitem (Safari, Chrome itp.) */
+    -khtml-border-radius:10px; /* przeglądarki typu K-meleon (typowo Linuxowe) */
+    border-radius:10px; /* pozostałe przeglądarki */
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
 
+.search-page .shadow,
+.favourites-page .shadow{
+    width: 900px;
+    height: 700px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 90;
+    display: none;
+}
+
+.search-page .email-form input,
+.favourites-page .email-form input{
+    margin-top: 20px;
+    padding: 5px;
+    width: 300px;
+}
+.search-page .email-form .anuluj-button,
+.search-page .email-form .sendemail-button,
+.favourites-page .email-form .anuluj-button,
+.favourites-page .email-form .sendemail-button{
+background: #512b68;
+position: absolute;
+width: 170px;
+text-align: center;
+color: #fff;
+font-weight: bold;
+height: 31px;
+border: none;
+}
+
+.search-page .email-form .sendemail-button,
+.favourites-page .email-form .sendemail-button{
+    background-image: url('../img/wyslij.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.search-page .email-form .anuluj-button,
+.favourites-page .email-form .anuluj-button{
+    background-image: url('../img/anuluj.png');
+    background-repeat:no-repeat;
+    background-position:center;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.search-page .email-form .error-container,
+.favourites-page .email-form .error-container{
+    bottom: 50px;
+    text-align: center;
+}
 
 /* ==========================================================================
    Media Queries

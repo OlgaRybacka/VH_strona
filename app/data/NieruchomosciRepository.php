@@ -178,10 +178,57 @@ class NieruchomosciRepository {
       $conditions[] = " powierzchnia >= :PowierzchniaMin";
       $toBind[':PowierzchniaMin'] = $query->getPowierzchniaMin();
     }
+    if( $query->getRokbudowyMin() != null ) {
+      $conditions[] = " rokbudowy >= :RokBudowyMin";
+      $toBind[':RokBudowyMin'] = $query->getRokbudowyMin();
+    }
+    if( $query->getRokbudowyMax() != null ) {
+      $conditions[] = " rokbudowy <= :RokBudowyMax";
+      $toBind[':RokBudowyMax'] = $query->getRokbudowyMax();
+    }
+    if( $query->getTypBudynkuMieszk() != null ) {
+      $conditions[] = " typbudynkumieszk = :TypBudynkuMieszk";
+      $toBind[':TypBudynkuMieszk'] = $query->getTypBudynkuMieszk();
+    }
+    if( $query->getTypOferty() != null ) {
+      if ($query->getTypOferty() == "sprzedaż")
+        $conditions[] = " dzial_typ = 'sprzedaz'";
+      else
+        $conditions[] = " dzial_typ = 'wynajem'";
+    }
+    if( $query->getPokojeMax() != null ) {
+      $conditions[] = " pokoje <= :PokojeMax";
+      $toBind[':PokojeMax'] = $query->getPokojeMax();
+    }
+    if( $query->getPokojeMin() != null ) {
+      $conditions[] = " pokoje >= :PokojeMin";
+      $toBind[':PokojeMin'] = $query->getPokojeMin();
+    }
+    if( $query->getPowDzialkiMax() != null ) {
+      $conditions[] = " powierzchniadzialki <= :PowDzialkiMax";
+      $toBind[':PowDzialkiMax'] = $query->getPowDzialkiMax();
+    }
+    if( $query->getPowDzialkiMin() != null ) {
+      $conditions[] = " powierzchniadzialki >= :PowDzialkiMin";
+      $toBind[':PowDzialkiMin'] = $query->getPowDzialkiMin();
+    }
+    if( $query->getLokalizacja() != null ) {
+      $conditions[] = "(upper(ulica) like upper(:Lokalizacja) OR upper(dzielnica) like upper(:Lokalizacja))";
+      $toBind[':Lokalizacja'] = $query->getLokalizacja();
+    }
+    if( $query->getTypLokalu() != null) {
+      $conditions[] = "typlokalu = :typLokalu";
+      $toBind[':typLokalu'] = $query->getTypLokalu();
+    }
+    if( $query->getMiasto() != null ) {
+      $conditions[] = "upper(miasto) like upper(:Miasto)";
+      $toBind[':Miasto'] = $query->getMiasto();
+    }
 
-    if( sizeof($conditions) != 0 ) {
+      if( sizeof($conditions) != 0 ) {
       $queryString .= "WHERE " . join(" and ", $conditions );
     }
+
 
     $prepared = $this->pdo->prepare($queryString);
     foreach( $toBind as $key => $value ) {

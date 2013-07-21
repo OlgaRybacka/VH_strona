@@ -56,10 +56,10 @@ if ($element == null) {
 		    <div class="basic-info">
               <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
 			  <span class="basic-info-text">
-			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> / <span class="big-number"><?php echo $element->getPokoje(); ?></span> pok.<br/></span>
+			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> <?php if($element->getDzialTab() == "mieszkania" || $element->getDzialTab() == "domy") echo '/ <span class="big-number">' . $element->getPokoje() . '</span> pok.'; ?> <br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
 				<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 10px; margin-bottom: 10px"></img>
-				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"> 603 398 098</span></span>
+				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"><?php echo $element->getAgentTelKom() ?></span></span>
 			    <div class="status-nr">
 				  <span class="status"><?php echo $element->getDzialTyp(); ?></span>
 				  <span class="nr"><?php echo $element->getId(); ?></span>
@@ -67,8 +67,8 @@ if ($element == null) {
 			  </span>
 			</div>
 			<div class="offer-description">
-			  <div class="location"><div class="location-text"><b><?php echo $element->getDzielnica(); ?></b>, <?php echo $element->getUlica(); ?></div></div>
-			  <?php
+                <div class="location"><div class="location-text"><b><?php if ($element->getDzialTab() != "dzialki") echo $element->getDzielnica(); else echo $element->getMiasto(); ?></b><?php if ($element->getDzialTab() != "dzialki") echo ', ' . $element->getUlica(); ?></div></div>
+                <?php
               if ($element->getDzialTab() == "mieszkania") {
                   echo
                       '<div class="row1">
@@ -107,13 +107,13 @@ if ($element == null) {
 			    <span class="col1">
 				  <div class="text">
 				    <span style="font-size:12px;">powierzchnia działki</span><br/>
-				    <span style="font-size: 14px; font-weight:bold">' . $element->getPowierzchnia() . '</span>
+				    <span style="font-size: 14px; font-weight:bold">' . $element->getPowierzchniadzialki() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
 				  <div class="text">
 				    <span style="font-size:12px;">kondygnacje / pokoje</span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getPietro() .' / ' . $element->getPokoje() .'</span>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getLiczbapieter() .' / ' . $element->getPokoje() .'</span>
 				  </div>
 				</span>
 			  </div>
@@ -138,7 +138,7 @@ if ($element == null) {
                         <span class="col1">
                           <div class="text">
                             <span style="font-size:12px;">typ działki</span><br/>
-                            <span style="font-size: 14px; font-weight:bold"> tu bedzie typ działki</span>
+                            <span style="font-size: 14px; font-weight:bold">' . $element->getTypdzialki() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -156,7 +156,7 @@ if ($element == null) {
                         <span class="col1">
                           <div class="text">
                             <span style="font-size:12px;">typ lokalu</span><br/>
-                            <span style="font-size: 14px; font-weight:bold"> tu będzie typ lokalu </span>
+                            <span style="font-size: 14px; font-weight:bold">' . $element->getTyplokalu() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -170,7 +170,7 @@ if ($element == null) {
 			    <span class="col1">
 				  <div class="text">
 				    <span style="font-size:12px;">liczba pomieszczeń</span><br/>
-				    <span style="font-size: 14px; font-weight:bold"> tu będzie liczba pomieszczeń</span>
+				    <span style="font-size: 14px; font-weight:bold">' . $element->getLiczbapomieszczen() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -183,25 +183,31 @@ if ($element == null) {
 			</div>';
               }
               ?>
-			<div class="offer-text">
-			    <div class="text-text">
-                    <?php echo $element->getOpis(); ?>
-					<div class="contact-data">
-					  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
-					  <b>Strzesak Mateusz</b> Van Hausen Nieruchomości<br/>
-					  tel. <b>897 887 887</b><br/>
-					  m.strzesak@vanhausen.pl<br/>
-					  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 12987</span><br/>
-					</div>
-				</div>
-				
-			</div>
+              <span class="offer-text">
+			    <span class="text-text">
+                    <?php
+                    $opis = $element->getOpis();
+                    echo stristr($opis, 'kontakt i prezentacja', true);
+                    ?>
+                    <div class="contact-data">
+                        <div class="text">
+                            <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
+                            <b><?php echo $element->getAgentNazwisko(); ?></b><br/>
+                            tel. <b><?php echo $element->getAgentTelKom(); ?></b><br/>
+                            <?php echo $element->getAgentEmail(); ?><br/>
+                            <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 9479</span><br/>
+                        </div>
+                    </div>
+				</span>
+
+			  </span>
+
 			
 		  </span>
 		  <span class="offer-photos">
-			<?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
-            <?php echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
-            <?php echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
+			<?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
+            <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
+            <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
 		  </span>
 		</div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
