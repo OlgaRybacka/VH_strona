@@ -70,10 +70,10 @@ foreach ( $nieruchomosci as $v ) {
             </header>
         </div>
         <div class="container tile-height" style="padding-bottom: 1px;">
-            <span class="tile violet">
+            <a href="map.php?tab=mieszkania" class="tile violet">
 			  <img src="public/static/./img/wyszukaj.png" style="margin-top: 40px"></img>
 			  <div class="arrow-right violet"></div>
-            </span><!--
+            </a><!--
             --><span class="tile img1">
             </span><!--
             --><a class="tile violet" href="search.php?tab=mieszkania">

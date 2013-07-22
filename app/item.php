@@ -103,6 +103,7 @@ if ($element == null) {
 </span>
 <span class="shadow2"> </span>
 <span class="map-span">
+    <div id="zamknij-button"> </div>
     <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
 </span>
 <span class="shadow"> </span>

@@ -1043,6 +1043,21 @@ input {
     display: none;
 }
 
+.search-page .map-span .zamknij-button,
+.favourites-page .map-span .zamknij-button {
+    background: #512b68;
+    position: absolute;
+    width: 201px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    height: 31px;
+    border: none;
+    background-image: url('../img/search.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
 .search-page .map-span #map-canvas,
 .favourites-page .map-span #map-canvas {
     width: 400px;

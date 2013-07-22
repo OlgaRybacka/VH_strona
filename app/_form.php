@@ -1,10 +1,10 @@
 
 <div class="container search-form">
 		<span class="zakladki"><!--
-          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?> " href="search.php?tab=mieszkania">mieszkania</a><!--
-          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>" href="search.php?tab=domy">domy</a><!--
-          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="search.php?tab=dzialki">działki</a><!--
-          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="search.php?tab=lokale">lokale komercyjne</a><!--
+          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?> " href="<?php echo $whichSite?>.php?tab=mieszkania">mieszkania</a><!--
+          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=domy">domy</a><!--
+          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=dzialki">działki</a><!--
+          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=lokale">lokale komercyjne</a><!--
           --></span>
 		<form method="get" class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 			<input hidden="true" value="mieszkania" name="tab"/>
@@ -98,7 +98,9 @@
 			</div>
 			<input id="lokalizacja_mi" name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 			<div class="search-form error_mi row4 col4a"><span></span></div>
-			<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+            <?php if($whichSite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>';
+            else if ($whichSite == "map") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_listy.png"/></div>';
+            ?>
 			<input type="submit" value="" class="search-form button row5 col4a search-button"/>
 		</form>
 
@@ -198,7 +200,9 @@
 			</div>
 			<input id="lokalizacja_do" name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 			<div class="search-form error_do row4 col4a"><span></span></div>
-			<?php if($whichsite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>'; ?>
+			<?php if($whichSite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>';
+            else if ($whichSite == "map") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_listy.png"/></div>';
+            ?>
 			<input type="submit" value="" class="search-form button row5 col4a search-button"/>
 		</form>
 		<form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
@@ -245,8 +249,10 @@
 			</div>
 			<input id="miasto_dz" name="miasto_dz" type="text" class="search-form input row2 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 			<div class="search-form error_dz row4 col4a"><span></span></div>
-			<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
-			<input type="submit" value="" class="search-form button row5 col4a search-button"/>
+            <?php if($whichSite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>';
+            else if ($whichSite == "map") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_listy.png"/></div>';
+            ?>
+            <input type="submit" value="" class="search-form button row5 col4a search-button"/>
 		</form>
 		<form method="get" class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 			<input hidden="true" value="lokale" name="tab"/>
@@ -324,7 +330,9 @@
 			</div>
 			<input id="lokalizacja_lo" name="lokalizacja_lo" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 			<div class="search-form error_lo row4 col4a"><span></span></div>
-			<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+            <?php if($whichSite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>';
+            else if ($whichSite == "map") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_listy.png"/></div>';
+            ?>
 			<input type="submit" value="" class="search-form button row5 col4a search-button"/>
 		</form>
 
