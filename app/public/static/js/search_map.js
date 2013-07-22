@@ -433,120 +433,8 @@ submitHandler: search
 
 $(validateSearchForm);
 
-function search(form)
-        {
+function search(form) {
 			form.submit();
-			/* var newURL = "http://alpha.vanhausen.pl/search.php";
-			 newURL = newURL.concat("?tab=");
-			 var tab = getURLParameter("tab");
-			 newURL = newURL.concat(tab);
-			 if(tab == "mieszkania")
-			 {
-			 if (document.getElementsByName('cenaMin_mi')[0].value != '')
-			 newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_mi')[0].value);
-			 if (document.getElementsByName('cenaMax_mi')[0].value != '')
-			 newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_mi')[0].value);
-			 if (document.getElementsByName('cenaM2Min_mi')[0].value != '')
-			 newURL = newURL.concat("&cenaM2Min=", document.getElementsByName('cenaM2Min_mi')[0].value);
-			 if (document.getElementsByName('cenaM2Max_mi')[0].value != '')
-			 newURL = newURL.concat("&cenaM2Max=", document.getElementsByName('cenaM2Max_mi')[0].value);
-			 if (document.getElementsByName('powierzchniaMin_mi')[0].value != '')
-			 newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powierzchniaMin_mi')[0].value);
-			 if (document.getElementsByName('powierzchniaMax_mi')[0].value != '')
-			 newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powierzchniaMax_mi')[0].value);
-			 if (document.getElementsByName('rokbudowyMin_mi')[0].value != '')
-			 newURL = newURL.concat("&rokbudowyMin=", document.getElementsByName('rokbudowyMin_mi')[0].value);
-			 if (document.getElementsByName('rokbudowyMax_mi')[0].value != '')
-			 newURL = newURL.concat("&rokbudowyMax=", document.getElementsByName('rokbudowyMax_mi')[0].value);
-			 if (document.getElementsByName('typBudynkuMieszk_mi')[0].value != 'dowolny')
-			 newURL = newURL.concat("&typBudynkuMieszk=", document.getElementsByName('typBudynkuMieszk_mi')[0].value);
-			 if (document.getElementsByName('typOferty_mi')[0].value != 'dowolna')
-			 newURL = newURL.concat("&typOferty=", document.getElementsByName('typOferty_mi')[0].value);
-			 if (document.getElementsByName('pokojeMin_mi')[0].value != '')
-			 newURL = newURL.concat("&pokojeMin=", document.getElementsByName('pokojeMin_mi')[0].value);
-			 if (document.getElementsByName('pokojeMax_mi')[0].value != '')
-			 newURL = newURL.concat("&pokojeMax=", document.getElementsByName('pokojeMax_mi')[0].value);
-			 if (document.getElementsByName('lokalizacja_mi')[0].value != '')
-			 newURL = newURL.concat("&lokalizacja=", document.getElementsByName('lokalizacja_mi')[0].value);
-
-			 }
-else if (tab == "domy")
-            {
-				if (document.getElementsByName('typOferty_do')[0].value != 'dowolna')
-				newURL = newURL.concat("&typOferty=", document.getElementsByName('typOferty_do')[0].value);
-				if (document.getElementsByName('cenaMin_do')[0].value != '')
-				newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_do')[0].value);
-				if (document.getElementsByName('cenaMax_do')[0].value != '')
-				newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_do')[0].value);
-				if (document.getElementsByName('cenaM2Min_do')[0].value != '')
-				newURL = newURL.concat("&cenaM2Min=", document.getElementsByName('cenaM2Min_do')[0].value);
-				if (document.getElementsByName('cenaM2Max_do')[0].value != '')
-				newURL = newURL.concat("&cenaM2Max=", document.getElementsByName('cenaM2Max_do')[0].value);
-				if (document.getElementsByName('powierzchniaMin_do')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powierzchniaMin_do')[0].value);
-				if (document.getElementsByName('powierzchniaMax_do')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powierzchniaMax_do')[0].value);
-				if (document.getElementsByName('pokojeMin_do')[0].value != '')
-				newURL = newURL.concat("&pokojeMin=", document.getElementsByName('pokojeMin_do')[0].value);
-				if (document.getElementsByName('pokojeMax_do')[0].value != '')
-				newURL = newURL.concat("&pokojeMax=", document.getElementsByName('pokojeMax_do')[0].value);
-				if (document.getElementsByName('powDzialkiMin_do')[0].value != '')
-				newURL = newURL.concat("&powDzialkiMin=", document.getElementsByName('powDzialkiMin_do')[0].value);
-				if (document.getElementsByName('powDzialkiMax_do')[0].value != '')
-				newURL = newURL.concat("&powDzialkiMax=", document.getElementsByName('powDzialkiMax_do')[0].value);
-				if (document.getElementsByName('rokbudowyMin_do')[0].value != '')
-				newURL = newURL.concat("&rokbudowyMin=", document.getElementsByName('rokbudowyMin_do')[0].value);
-				if (document.getElementsByName('rokbudowyMax_do')[0].value != '')
-				newURL = newURL.concat("&rokbudowyMax=", document.getElementsByName('rokbudowyMax_do')[0].value);
-				if (document.getElementsByName('lokalizacja_do')[0].value != '')
-				newURL = newURL.concat("&lokalizacja=", document.getElementsByName('lokalizacja_do')[0].value);
-				}
-else if (tab == "dzialki")
-            {
-				if (document.getElementsByName('typOferty_dz')[0].value != 'dowolna')
-				newURL = newURL.concat("&typOferty=", document.getElementsByName('typOferty_dz')[0].value);
-				if (document.getElementsByName('cenaMin_dz')[0].value != '')
-				newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_dz')[0].value);
-				if (document.getElementsByName('cenaMax_dz')[0].value != '')
-				newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_dz')[0].value);
-				if (document.getElementsByName('cenaM2Min_dz')[0].value != '')
-				newURL = newURL.concat("&cenaM2Min=", document.getElementsByName('cenaM2Min_dz')[0].value);
-				if (document.getElementsByName('cenaM2Max_dz')[0].value != '')
-				newURL = newURL.concat("&cenaM2Max=", document.getElementsByName('cenaM2Max_dz')[0].value);
-				if (document.getElementsByName('powDzialkiMin_dz')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powDzialkiMin_dz')[0].value);
-				if (document.getElementsByName('powDzialkiMax_dz')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powDzialkiMax_dz')[0].value);
-				if (document.getElementsByName('lokalizacja_dz')[0].value != '')
-				newURL = newURL.concat("&miasto=", document.getElementsByName('lokalizacja_dz')[0].value);
-				}
-else if (tab == "lokale")
-            {
-				if (document.getElementsByName('typOferty_lo')[0].value != 'dowolna')
-				newURL = newURL.concat("&typOferty=", document.getElementsByName('typOferty_lo')[0].value);
-				if (document.getElementsByName('cenaMin_lo')[0].value != '')
-				newURL = newURL.concat("&cenaMin=", document.getElementsByName('cenaMin_lo')[0].value);
-				if (document.getElementsByName('cenaMax_lo')[0].value != '')
-				newURL = newURL.concat("&cenaMax=", document.getElementsByName('cenaMax_lo')[0].value);
-				if (document.getElementsByName('cenaM2Min_lo')[0].value != '')
-				newURL = newURL.concat("&cenaM2Min=", document.getElementsByName('cenaM2Min_lo')[0].value);
-				if (document.getElementsByName('cenaM2Max_lo')[0].value != '')
-				newURL = newURL.concat("&cenaM2Max=", document.getElementsByName('cenaM2Max_lo')[0].value);
-				if (document.getElementsByName('powierzchniaMin_lo')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMin=", document.getElementsByName('powierzchniaMin_lo')[0].value);
-				if (document.getElementsByName('powierzchniaMax_lo')[0].value != '')
-				newURL = newURL.concat("&powierzchniaMax=", document.getElementsByName('powierzchniaMax_lo')[0].value);
-				if (document.getElementsByName('typLokalu_lo')[0].value != 'dowolny')
-				newURL = newURL.concat("&typLokalu=", document.getElementsByName('typLokalu_lo')[0].value);
-				if (document.getElementsByName('rokbudowyMin_lo')[0].value != '')
-				newURL = newURL.concat("&rokbudowyMin=", document.getElementsByName('rokbudowyMin_lo')[0].value);
-				if (document.getElementsByName('rokbudowyMax_lo')[0].value != '')
-				newURL = newURL.concat("&rokbudowyMax=", document.getElementsByName('rokbudowyMax_lo')[0].value);
-				if (document.getElementsByName('lokalizacja_lo')[0].value != '')
-				newURL = newURL.concat("&lokalizacja=", document.getElementsByName('lokalizacja_lo')[0].value);
-
-				}
-window.location.href = newURL;*/
 }
 
 $(function(){
@@ -594,12 +482,13 @@ $(function() {
 // preload first item
 if( $('.offer-zobacz-button').size() > 0 ) {
 	var id;
-	if (getURLParameter("id") != null)
-	id = getURLParameter("id");
-	else
-	id = $($('.offer-zobacz-button').get(0)).data('id');
-	fetch(id);
+	if (getURLParameter("id") != null) {
+		id = getURLParameter("id");
+	} else {
+		id = $($('.offer-zobacz-button').get(0)).data('id');
 	}
+	fetch(id);
+}
 $('.offer-zobacz-button').click(function () {
 	var id = $(this).data('id');
 	fetch( id );

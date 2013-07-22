@@ -118,13 +118,19 @@ $found = $nie->search($query);
 		}
 
 		MapView.prototype.showInfo = function( id, marker ) {
+			var self = this;
 			// pobierz info window
 			$.get("map_item.php?id=" + id, function(contentString) {
+					if(self.infowindow) {
+						self.infowindow.close();
+					}
 					contentString = $(contentString).html();
+					contentString = '<div style="width: 500px;">' + contentString + '</div>'
 					var infowindow = new google.maps.InfoWindow({
 						content: contentString
 					});
 					infowindow.open(map,marker);
+					self.infowindow = infowindow;
 				});
 		}
 

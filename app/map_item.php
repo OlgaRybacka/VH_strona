@@ -22,13 +22,15 @@ if ($element == null) {
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
 				<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 10px; margin-bottom: 10px"></img>
 				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"> <?php echo $element->getAgentTelKom(); ?></span></span>
-			    <div class="status-nr">
+			    <!--
+				<div class="status-nr">
 				  <span class="status"><?php echo $element->getDzialTyp(); ?></span>
 				  <span class="nr"><?php echo $element->getId(); ?></span>
 				</div>
+				  -->
 			  </span>
 			</div>
-			<div class="offer-description">
+			<div class="offer-description" style="clear: both; padding-top: 10px;">
 			  <div class="location"><div class="location-text"><b><?php if ($element->getDzialTab() != "dzialki") echo $element->getDzielnica(); else echo $element->getMiasto(); ?></b><?php if ($element->getDzialTab() != "dzialki") echo ', ' . $element->getUlica(); ?></div></div>
 			  <div class="row1">
 			    <span class="col1">
@@ -67,23 +69,6 @@ if ($element == null) {
                     ?>
 				</span>
 			  </span>
-              <?php if (!($ifAddFavourite)) {
-              echo '<span class="offer-buttons">
-			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
-            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
-            --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
-            --></span>'; }
-              else {
-              echo ' <span class="offer-buttons">
-			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
-            --><a class="offer-button favourite-button" data-id="' . $element->getId() . '" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
-            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=alpha.vanhausen.pl/offer.php?id='. $id .'"><img src="public/static/./img/off_but3.png"></img></a><!--
-            --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
-            --><a class="offer-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
-            --></span>';
-              }
-              ?>
 			  <div class="contact-data">
 			    <div class="text">
 				  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
