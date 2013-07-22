@@ -198,7 +198,7 @@
 			</div>
 			<input id="lokalizacja_do" name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Półwiejska" autocomplete="off" />
 			<div class="search-form error_do row4 col4a"><span></span></div>
-			<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>
+			<?php if($whichsite == "search") echo '<div class="search-form button search-mode row5 col3"><img src="public/static/./img/z_mapy.png"/></div>'; ?>
 			<input type="submit" value="" class="search-form button row5 col4a search-button"/>
 		</form>
 		<form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
