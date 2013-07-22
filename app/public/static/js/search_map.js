@@ -449,11 +449,11 @@ else if (bmark == 2) {
 });
 
 $(".gallery_button").live("click",function() {
-	$.fancybox([
-		'http://farm5.static.flickr.com/4044/4286199901_33844563eb.jpg',
-		'http://farm3.static.flickr.com/2687/4220681515_cc4f42d6b9.jpg',
-		'http://farm5.static.flickr.com/4005/4213562882_851e92f326.jpg'
-	], {
+    var pictures = [];
+    $(this).find('ul.gallery-items > li > img').each(function() {
+        pictures.push($(this).attr('src'));
+    });
+	$.fancybox(pictures, {
 		'padding' : 0,
 		'transitionIn' : 'none',
 		'transitionOut' : 'none',
@@ -535,6 +535,13 @@ $(function() {
 
 $(function() {
     $('.shadow2').live('click', function() {
+        $('.map-span').fadeOut();
+        $('.shadow2').fadeOut();
+    });
+});
+
+$(function() {
+    $('.zamknij-button').live('click', function() {
         $('.map-span').fadeOut();
         $('.shadow2').fadeOut();
     });

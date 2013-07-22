@@ -5,6 +5,7 @@ $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 $id = (int) $_GET['id'];
+$print = (int) $_GET['print'];
 $element = $nie->get($id);
 $zdjecia = $zdj->getForNieruchomosc( $id );
 

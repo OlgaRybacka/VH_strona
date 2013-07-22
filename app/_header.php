@@ -13,12 +13,12 @@
 					--><a href="index.php" class="small-button but2">
 				<img src="public/static/./img/but2.png"></img>
 			</a><!--
-					--><span class="small-button but3">
-						<img src="public/static/./img/but3.png"></img>
-					</span><!--
-					--><span class="small-button but4">
-						<img src="public/static/./img/but4.png"></img>
-					</span>
+			--><a href="search.php?tab=mieszkania" class="small-button but3">
+                <img src="public/static/./img/but3.png"></img>
+            </a><!--
+			--><span class="small-button but4">
+				<img src="public/static/./img/but4.png"></img>
+			</span>
 		</div>
 	</header>
 </div>
