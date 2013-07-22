@@ -737,7 +737,8 @@ input {
 
 .search-page .offer-details .miniatura,
 .favourites-page .offer-details .miniatura,
-.offer-page .offer-details .miniatura {
+.offer-page .offer-details .miniatura,
+.miniatura {
   height: 160px;
   width: 160px;
 }
