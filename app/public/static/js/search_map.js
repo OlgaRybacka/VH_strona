@@ -673,3 +673,12 @@ function initializeMap() {
 }
 
 //google.maps.event.addDomListener(window, 'load', initialize);
+
+$(function() {
+    $('.map-search-button').live('click', function() {
+        $(this).closest('form').attr('action', 'map.php');
+    });
+    $('.list-search-button').live('click', function() {
+        $(this).closest('form').attr('action', 'search.php');
+    });
+});

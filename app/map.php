@@ -38,7 +38,7 @@ $found = $nie->search($query);
 	<script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 	<script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
 
-	<script type="text/javascript" src="public/static/js/search_map.js" ></script>
+	<script type="text/javascript" src="public/static/js/search_map.js?cb=1" ></script>
 
 </head>
 <body class="search-page">

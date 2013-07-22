@@ -583,6 +583,18 @@ body .favourites-page {
     background-position:center;
 }
 
+.search-page .search-form.map-search-button {
+    background-image: url('../img/z_mapy.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.search-page .search-form.list-search-button {
+    background-image: url('../img/z_listy.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
 .search-page .search-form.search-mode {
   right: 240px;
 }
