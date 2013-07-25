@@ -3,7 +3,7 @@
 	<header>
 		<div class="logo">
 			<h1>Van Hausen</h1>
-			<img src="public/static/./img/logo_mini.png" ></img>
+            <a href="index.php"><img src="public/static/./img/logo_mini.png" ></img></a>
 		</div>
 		<span class="violet-line"><img></img></span>
 		<div class="small-buttons">
@@ -16,9 +16,9 @@
 			--><a href="search.php?tab=mieszkania" class="small-button but3">
                 <img src="public/static/./img/but3.png"></img>
             </a><!--
-			--><span class="small-button but4">
+			--><a href="kontakt.php" class="small-button but4">
 				<img src="public/static/./img/but4.png"></img>
-			</span>
+			</a>
 		</div>
 	</header>
 </div>

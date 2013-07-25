@@ -13,7 +13,7 @@
 	margin-right:30px;
 }
 .mCustomScrollBox>.mCSB_scrollTools{
-	width:18px;
+	width:17px;
 	height:100%;
 	top:0;
 	right:3px;
@@ -27,7 +27,7 @@
 	height:auto;
 }
 .mCSB_scrollTools a+.mCSB_draggerContainer{
-	margin:20px 0;
+	margin:27px 0;
 }
 .mCSB_scrollTools .mCSB_draggerRail{
 	width:2px;
@@ -43,12 +43,9 @@
 	height:30px;
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-	width:4px;
+	width:17px;
 	height:100%;
 	margin:0 auto;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
 	text-align:center;
 }
 .mCSB_scrollTools .mCSB_buttonUp,
@@ -145,17 +142,17 @@
 	filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
 }
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-	background:#fff; /* rgba fallback */
-	background:rgba(255,255,255,0.75);
-	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+	/*background:#fff; rgba fallback */
+	background:#aaa;
+	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /*old ie */
 }
 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-	background:rgba(255,255,255,0.85);
+    background:#aaa;
 	filter:"alpha(opacity=85)"; -ms-filter:"alpha(opacity=85)"; /* old ie */
 }
 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-	background:rgba(255,255,255,0.9);
+    background:#aaa;
 	filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
 }
 .mCSB_scrollTools .mCSB_buttonUp,

@@ -33,11 +33,45 @@ foreach ( $nieruchomosci as $v ) {
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="public/static/js/jqueryCookieGuard.1.0.min.js"></script>
+
+        <script>
+
+            $(document).ready(function(){
+                $.cookieguard();
+                $.cookieguard.cookies.add('Custom', 'vanhausen-cookie', 'xxxxxxxxxxxxxxx', false);
+                $.cookieguard.run();
+            });
+
+            $(function() {
+                window.setTimeout(slider, 7000);
+            });
+
+            function slider() {
+                $(".img_slide1").fadeOut(2000);
+                $(".img_slide2").fadeIn(2000);
+                window.setTimeout(slider2, 7000);
+            }
+
+            function slider2() {
+                $(".img_slide2").fadeOut(2000);
+                $(".img_slide3").fadeIn(2000);
+                window.setTimeout(slider3, 7000);
+            }
+
+            function slider3() {
+                $(".img_slide3").fadeOut(2000);
+                $(".img_slide1").fadeIn(2000);
+                window.setTimeout(slider, 7000);
+            }
+
+        </script>
     </head>
     <body class="home-page">
         <!--[if lt IE 7]>
@@ -51,7 +85,9 @@ foreach ( $nieruchomosci as $v ) {
 					<img src="public/static/./img/logo.png" />
 				</div>
                 <div class="slide">
-                    <img/>
+                    <img style="position:absolute; top:0; left:0" class="img_slide1" src="public/static/./img/main_foto.jpg"/>
+                    <img style="position:absolute; top:0; left:0; display: none" class="img_slide2" src="public/static/./img/main_foto2.jpg"/>
+                    <img style="position:absolute; top:0; left:0; display: none" class="img_slide3" src="public/static/./img/main_foto3.jpg"/>
                 </div>
 				<div class="small-buttons">
                     <a href="ulubione.php" class="small-button but1">
@@ -63,9 +99,9 @@ foreach ( $nieruchomosci as $v ) {
 					--><a href="search.php?tab=mieszkania" class="small-button but3">
 						<img src="public/static/./img/but3.png"></img>
 					</a><!--
-					--><span class="small-button but4">
+					--><a href="kontakt.php" class="small-button but4">
 						<img src="public/static/./img/but4.png"></img>
-					</span>
+					</a>
 				</div>
             </header>
         </div>

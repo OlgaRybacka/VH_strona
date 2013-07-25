@@ -33,8 +33,8 @@ if ($element == null) {
 			  <div class="row1">
 			    <span class="col1">
 				  <div class="text">
-				    <span style="font-size:12px;"><?php if($element->getDzialTab() == "mieszkania") echo 'typ zabudowy'; else if($element->getDzialTab() == "domy") echo 'powierzchnia działki'; else if($element->getDzialTab() == "lokale") echo 'typ lokalu'; else if($element->getDzialTab() == "dzialki")  echo 'typ działki'; ?></span><br/>
-				    <span style="font-size: 14px; font-weight:bold"><?php if($element->getDzialTab() == "mieszkania") echo $element->getTypzabudowy(); else if($element->getDzialTab() == "domy") echo $element->getPowierzchniadzialki() . ' m<sup>2</sup>'; else if($element->getDzialTab() == "lokale") echo $element->getTyplokalu(); else if($element->getDzialTab() == "dzialki") echo $element->getTypdzialki(); ?></span>
+				    <span style="font-size:12px;"><?php if($element->getDzialTab() == "mieszkania") echo 'rok budowy'; else if($element->getDzialTab() == "domy") echo 'powierzchnia działki'; else if($element->getDzialTab() == "lokale") echo 'typ lokalu'; else if($element->getDzialTab() == "dzialki")  echo 'typ działki'; ?></span><br/>
+				    <span style="font-size: 14px; font-weight:bold"><?php if($element->getDzialTab() == "mieszkania") echo $element->getRokbudowy(); else if($element->getDzialTab() == "domy") echo $element->getPowierzchniadzialki() . ' m<sup>2</sup>'; else if($element->getDzialTab() == "lokale") echo $element->getTyplokalu(); else if($element->getDzialTab() == "dzialki") echo $element->getTypdzialki(); ?></span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -69,8 +69,15 @@ if ($element == null) {
 			  </span>
               <?php
               if (!($ifAddFavourite)) {
-              echo '<span class="offer-buttons">
-			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty"><img src="public/static/./img/off_but1.png"></img></a><!--
+			    echo ' <span class="offer-buttons">
+			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty">';
+
+                  echo '<ul class="gallery-items" style="display: none">';
+                  foreach($zdjecia as $z) {
+                      echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                  }
+                  echo '</ul>';
+                  echo '<img src="public/static/./img/off_but1.png"></img></a><!--
             --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=' . urlencode( 'http://alpha.vanhausen.pl/offer.php?id='. $id . '&print=1' ) . '"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
             --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
@@ -105,17 +112,32 @@ if ($element == null) {
 			</div>
 		  </span>
 <span class="offer-photos">
-	<?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
-    <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
-    <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
-    <?php if (count($zdjecia) >= 4) echo '<img src="' . getUrl($zdjecia[3]->getUrl()) . '" class=""></img>' ?>
+	<?php if (count($zdjecia) >= 1) {echo '<a style="background-image:url(' . getUrl($zdjecia[0]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+    foreach($zdjecia as $z) {
+        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+    }
+    echo '</ul> </a>';} ?>
+    <?php if (count($zdjecia) >= 2) {echo '<a style="background-image:url(' . getUrl($zdjecia[1]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+    foreach($zdjecia as $z) {
+        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+    }
+    echo '</ul></a>';} ?>
+    <?php if (count($zdjecia) >= 3) {echo '<a style="background-image:url(' . getUrl($zdjecia[2]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+    foreach($zdjecia as $z) {
+        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+    }
+    echo '</ul></a>';} ?>
+    <?php if (count($zdjecia) >= 4) {echo '<a style="background-image:url(' . getUrl($zdjecia[3]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+    foreach($zdjecia as $z) {
+        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+    }
+    echo '</ul></a>';} ?>
 </span>
-<span class="shadow2"> </span>
+
 <span class="map-span">
     <div class="zamknij-button"> </div>
     <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
 </span>
-<span class="shadow"> </span>
 <span>
     <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php echo $element->getAgentTelKom(); ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
         <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>

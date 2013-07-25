@@ -25,6 +25,7 @@ $found = $nie->search($query);
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="public/static/css/normalize.min.css">
 	<link rel="stylesheet" href="public/static/css/main.css">
 	<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -125,8 +126,10 @@ $found = $nie->search($query);
 						self.infowindow.close();
 					}
 					contentString = $(contentString).html();
-					contentString = '<div style="width: 500px;">' + contentString + '</div>'
+					contentString = '<div style="width: 340px;">' + contentString + '</div>'
 					var infowindow = new google.maps.InfoWindow({
+                        maxWidth: 360,
+                        minHeight: 200,
 						content: contentString
 					});
 					infowindow.open(map,marker);

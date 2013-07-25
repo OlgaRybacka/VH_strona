@@ -25,6 +25,7 @@ $found = $nie->search($query);
         <meta name="viewport" content="width=device-width">
 		
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
 		<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -108,7 +109,8 @@ $found = $nie->search($query);
           </span>
 		</div>
 
-
+        <span class="shadow2"> </span>
+        <span class="shadow"> </span>
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>

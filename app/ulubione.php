@@ -63,114 +63,13 @@ session_start();
 <script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
 <script>
 
-(function($){
-    $(window).load(function(){
-        $(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
-    });
-})(jQuery);
-
-function getURLParameter(name) {
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
-}
-
-function validateEmailForm()
-{
-    $(".email-form").validate({
-        highlight: function(element, errorClass) {
-            $(element).css('backgroundColor', '#EDBBBB');
-        },
-        rules: {
-            email_address: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            email_address: {
-                required: "Podaj adres email",
-                email: "Podaj poprawny adres email"
-            }
-        },
-        errorLabelContainer: $('div.error-container'),
-        submitHandler: function(form){
-            var id = $(form).data('id');
-            var photo = $(form).data('photo');
-            var opis = $(form).data('opis');
-            var tab = $(form).data('tab');
-            var email = $(form).find('#email_address').val();
-            var cena = $(form).data('cena');
-            var typ = $(form).data('typ');
-            var agentnazwisko = $(form).data('agentnazwisko');
-            var agenttelefon = $(form).data('agenttelefon');
-            var agentemail = $(form).data('agentemail');
-            $.post('mailto.php', {id: id, photo: photo, email: email, opis: opis, tab: tab, cena: cena, typ: typ, agentnazwisko: agentnazwisko, agenttelefon: agenttelefon, agentemail: agentemail});
-            $('.email-form').fadeOut();
-            $('.shadow').fadeOut();
-        }
-    });
-}
-
-
-$(function() {
-    var currentFetchingId = undefined;
-    function fetch( id ) {
-        currentFetchingId = id;
-        $.get("item.php", {
-            id: id
-        }, function (data) {
-            if ( id == currentFetchingId ) {
-                $('.details-container').html(data);
-                $(".text-text").mCustomScrollbar({scrollButtons:{enable:true}});
-            }
-        });
-    }
-    // preload first item
-    if( $('.offer-zobacz-button').size() > 0 ) {
-        var id;
-        if (getURLParameter("id") != null)
-            id = getURLParameter("id");
-        else
-            id = $($('.offer-zobacz-button').get(0)).data('id');
-        fetch(id);
-    }
-    $('.offer-zobacz-button').click(function () {
-        var id = $(this).data('id');
-        fetch( id );
-    });
-});
-
-$(function() {
-    $('.favourite-button').live('click', function() {
-        var id = $(this).data('id');
-        $.post('favourites.php', {id: id});
-    });
-});
-
-$(function() {
-    $('.mailto-button').live('click', function() {
-        $('.email-form').fadeIn();
-        $('.shadow').fadeIn();
-        validateEmailForm();
-    });
-});
-
-$(function() {
-    $('.shadow').live('click', function() {
-        $('.email-form').fadeOut();
-        $('.shadow').fadeOut();
-    });
-});
-
-$(function() {
-    $('.anuluj-button').live('click', function() {
-        $('.email-form').fadeOut();
-        $('.shadow').fadeOut();
-    });
-});
-
 </script>
 </head>
 <body class="favourites-page">
+
+<script type="text/javascript" src="public/static/js/search_map.js" ></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -179,7 +78,7 @@ $(function() {
     <header>
         <div class="logo">
             <h1>Van Hausen</h1>
-            <img src="public/static/./img/logo_mini.png" ></img>
+            <a href="index.php"><img src="public/static/./img/logo_mini.png" ></img></a>
         </div>
         <span class="violet-line"><img></img></span>
         <div class="small-buttons">
@@ -189,15 +88,19 @@ $(function() {
 			--><a href="index.php" class="small-button but2">
                 <img src="public/static/./img/but2.png"></img>
             </a><!--
-			--><span class="small-button but3">
-				<img src="public/static/./img/but3.png"></img>
-			</span><!--
-			--><span class="small-button but4">
+			--><a href="search.php?tab=mieszkania" class="small-button but3">
+                <img src="public/static/./img/but3.png"></img>
+            </a><!--
+			--><a href="kontakt.php" class="small-button but4">
 				<img src="public/static/./img/but4.png"></img>
-			</span>
+			</a>
         </div>
     </header>
 </div>
+
+<?php if (count($found) == 0)
+echo '<div class="container" style="padding-top: 50px;">Tutaj możesz dodawać oferty, które chcesz zachować do późniejszego przeglądania. Twój zbiór jest obecnie pusty.</div>';
+?>
 
 <div class="container offers-container">
                   <span class="offers-list">
@@ -251,7 +154,8 @@ foreach( $found as $res ) {
           </span>
 </div>
 
-
+<span class="shadow2"> </span>
+<span class="shadow"> </span>
 
 <script src="public/static/js/plugins.js"></script>
 <script src="public/static/js/main.js"></script>
