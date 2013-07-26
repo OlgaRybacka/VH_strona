@@ -1,56 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="naprawiona galeria">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/main_foto2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/main_foto3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/right_gray.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/right_violet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/send_button.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/stamp2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/js/jqueryCookieGuard.1.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/kontakt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/img/roll_down_arrow.png" afterPath="$PROJECT_DIR$/app/public/static/img/roll_down_arrow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/img/roll_up_arrow.png" afterPath="$PROJECT_DIR$/app/public/static/img/roll_up_arrow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/_form.php" afterPath="$PROJECT_DIR$/app/_form.php" />
+    <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ByteStream/AbstractFilterableInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/AbstractHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/AbstractSmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/AntiFloodPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ByteStream/ArrayByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterStream/ArrayCharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache/ArrayKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Loggers/ArrayLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mailer/ArrayRecipientIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Attachment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Attachment.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/Esmtp/AuthHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/Esmtp/Authenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/BandwidthMonitorPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/Base64ContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Encoder/Base64Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/HeaderEncoder/Base64HeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signers/BodySigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/StreamFilters/ByteArrayReplacementFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/CharsetObserver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/CommandEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/CommandListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ConfigurableSpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/Esmtp/Auth/CramMd5Authenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signers/DKIMSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/DateHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/DecoratorPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/DependencyContainer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/DependencyException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache/DiskKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signers/DomainKeySigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Loggers/EchoLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/EmbeddedFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/EmbeddedFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Encoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/EncodingObserver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/EsmtpHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/EsmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/Event.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/EventDispatcher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/EventListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/EventObject.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/FailoverTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/FailoverTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ByteStream/FileByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/FileSpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/FileStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Filterable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReader/GenericFixedWidthReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Grammar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/HeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/HeaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/HeaderSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signers/HeaderSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Reporters/HitReporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Reporters/HtmlReporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/IdentificationHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Image.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/ImpersonatePlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/InputByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/IoBuffer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/IoException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache/KeyCacheInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/LoadBalancedTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/LoadBalancedTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Logger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/LoggerPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/MailInvoker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/MailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/MailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/MailboxHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/MemorySpool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/MessageLogger.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/MimeEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/MimePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/MimePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/NativeQpContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterStream/NgCharacterStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache/NullKeyCache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/NullTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/NullTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/OutputByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ParameterizedHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/ParameterizedHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/PathHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/Esmtp/Auth/PlainAuthenticator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/PlainContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Pop/Pop3Connection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Pop/Pop3Exception.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/PopBeforeSmtpPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Preferences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/QpContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/QpContentEncoderProxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Encoder/QpEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/HeaderEncoder/QpHeaderEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/ContentEncoder/RawContentEncoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mailer/RecipientIterator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/RedirectingPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ReplacementFilterFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Decorator/Replacements.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Reporter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/ReporterPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/ResponseEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/ResponseListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Encoder/Rfc2231Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/RfcComplianceException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signers/SMimeSigner.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/SendEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/SendListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/SendmailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/SendmailTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/SignedMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Signer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReaderFactory/SimpleCharacterReaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/SimpleEventDispatcher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/SimpleHeaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/SimpleHeaderSet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/KeyCache/SimpleKeyCacheInputStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/SimpleMailInvoker.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/SimpleMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/SimpleMimeEntity.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Sleeper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/SmtpAgent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/SmtpTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Spool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/SpoolTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/SpoolTransport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport/StreamBuffer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/StreamFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/StreamFilters/StringReplacementFilter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/StreamFilters/StringReplacementFilterFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/SwiftException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/ByteStream/TemporaryFileByteStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/ThrottlerPlugin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Plugins/Timer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Transport.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/TransportChangeEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/TransportChangeListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/TransportException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/TransportExceptionEvent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Events/TransportExceptionListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/UnstructuredHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReader/UsAsciiReader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/CharacterReader/Utf8Reader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/classes/Swift/Validate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/dependency_maps/cache_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/item_fav.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/dependency_maps/message_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/dependency_maps/mime_deps.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/mime_types.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/preferences.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/swift_init.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/swift_required.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/swift_required_pear.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/swift/dependency_maps/transport_deps.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/_header.php" afterPath="$PROJECT_DIR$/app/_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.php" afterPath="$PROJECT_DIR$/app/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/index.html" afterPath="$PROJECT_DIR$/app/public/static/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/item.php" afterPath="$PROJECT_DIR$/app/item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/css/jquery.mCustomScrollbar.css" afterPath="$PROJECT_DIR$/app/public/static/css/jquery.mCustomScrollbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/kontakt.php" afterPath="$PROJECT_DIR$/app/kontakt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailto.php" afterPath="$PROJECT_DIR$/app/mailto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/css/main.css" afterPath="$PROJECT_DIR$/app/public/static/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/map.php" afterPath="$PROJECT_DIR$/app/map.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/map_item.php" afterPath="$PROJECT_DIR$/app/map_item.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/offer.php" afterPath="$PROJECT_DIR$/app/offer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/search.php" afterPath="$PROJECT_DIR$/app/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/js/search_map.js" afterPath="$PROJECT_DIR$/app/public/static/js/search_map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ulubione.php" afterPath="$PROJECT_DIR$/app/ulubione.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VH_strona.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374754943779" ignored="false" />
+    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374833136953" ignored="false" />
     <file path="/.htaccess" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371401005603" ignored="false" />
-    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374503854326" ignored="false" />
+    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374835830675" ignored="false" />
     <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374514869767" ignored="false" />
-    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374780124802" ignored="false" />
+    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374834372687" ignored="false" />
     <file path="/config.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411340174" ignored="false" />
     <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374474963222" ignored="false" />
-    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374778200217" ignored="false" />
+    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374837904750" ignored="false" />
     <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070245191" ignored="false" />
     <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374232965723" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5.rnc" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373960780305" ignored="false" />
     <file path="/additional-methods.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374246747403" ignored="false" />
     <file path="/favourites.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374314451054" ignored="false" />
-    <file path="/ulubione.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374774731138" ignored="false" />
-    <file path="/mailto.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374422606025" ignored="false" />
+    <file path="/ulubione.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374834658098" ignored="false" />
+    <file path="/mailto.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374839115078" ignored="false" />
     <file path="/topsecretsite.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374432295730" ignored="false" />
     <file path="/search_map.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374480533608" ignored="false" />
     <file path="/_form.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374763351135" ignored="false" />
     <file path="/map_item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374496390999" ignored="false" />
     <file path="/map.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374504967260" ignored="false" />
     <file path="/jquery.mCustomScrollbar.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374769408653" ignored="false" />
-    <file path="/kontakt.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374773901737" ignored="false" />
-    <file path="/_header.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374774667720" ignored="false" />
+    <file path="/kontakt.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374833388834" ignored="false" />
+    <file path="/_header.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374835483080" ignored="false" />
+    <file path="/index.html" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374787685649" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,59 +230,39 @@
       <file leaf-file-name="ulubione.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/ulubione.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="9" selection-start="6751" selection-end="6751" vertical-scroll-proportion="-109.19231">
+            <state line="51" column="0" selection-start="1549" selection-end="1549" vertical-scroll-proportion="-2.0">
               <folding>
-                <marker date="1374774761627" expanded="true" signature="3926:3944" placeholder="..." />
+                <marker date="1374838282203" expanded="false" signature="4053:4071" placeholder="..." />
+                <marker date="1374838282203" expanded="true" signature="4236:4407" placeholder="..." />
+                <marker date="1374838282203" expanded="true" signature="4281:4407" placeholder="..." />
+                <marker date="1374838282203" expanded="true" signature="6759:6775" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/_header.php">
+      <file leaf-file-name="DateHeader.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/DateHeader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="493" selection-end="636" vertical-scroll-proportion="-11.115385">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="offer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/offer.php">
+      <file leaf-file-name="mailto.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/mailto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="12" selection-start="2191" selection-end="2254" vertical-scroll-proportion="-7.1923075">
-              <folding>
-                <marker date="1374774705006" expanded="true" signature="6119:6844" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6189:6285" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6290:6319" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6367:6463" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6468:6489" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6553:6649" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6654:6675" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="6725:6821" placeholder="..." />
-                <marker date="1374774705006" expanded="false" signature="14137:14240" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="14241:14350" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="14269:14350" placeholder="..." />
-                <marker date="1374774705006" expanded="true" signature="14269:14350" placeholder="..." />
-                <marker date="1374774705006" expanded="false" signature="14414:14427" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="89" selection-start="1426" selection-end="1507" vertical-scroll-proportion="-5.230769">
+            <state line="63" column="34" selection-start="2434" selection-end="2434" vertical-scroll-proportion="2.181416">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
+      <file leaf-file-name="SearchQuery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/data/SearchQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="771" column="17" selection-start="14999" selection-end="14999" vertical-scroll-proportion="-11.6">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -134,57 +271,50 @@
       <file leaf-file-name="item.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="129" column="135" selection-start="8905" selection-end="8905" vertical-scroll-proportion="-0.30769232">
+            <state line="9" column="46" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.8846154">
               <folding>
-                <marker date="1374778212402" expanded="true" signature="3684:3775" placeholder="..." />
-                <marker date="1374778212402" expanded="true" signature="3711:3775" placeholder="..." />
-                <marker date="1374778212402" expanded="true" signature="3736:3775" placeholder="..." />
-                <marker date="1374778212402" expanded="false" signature="3759:3774" placeholder="..." />
-                <marker date="1374778212402" expanded="false" signature="4027:4060" placeholder="..." />
-                <marker date="1374778212402" expanded="true" signature="5035:5116" placeholder="..." />
-                <marker date="1374778212402" expanded="false" signature="5178:5191" placeholder="..." />
-                <marker date="1374778212402" expanded="true" signature="6091:6172" placeholder="..." />
-                <marker date="1374778212402" expanded="false" signature="6234:6247" placeholder="..." />
-                <marker date="1374778212402" expanded="true" signature="7877:7934" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="3684:3775" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="3711:3775" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="3736:3775" placeholder="..." />
+                <marker date="1374837716898" expanded="false" signature="3759:3774" placeholder="..." />
+                <marker date="1374837716898" expanded="false" signature="4027:4060" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="5032:5113" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="5175:5188" placeholder="..." />
+                <marker date="1374837716898" expanded="true" signature="6088:6169" placeholder="..." />
+                <marker date="1374837716898" expanded="false" signature="6231:6244" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kontakt.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/kontakt.php">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="24" selection-start="2265" selection-end="2265" vertical-scroll-proportion="-6.0">
-              <folding>
-                <element signature="e#6#159#0" expanded="true" />
-              </folding>
+            <state line="643" column="24" selection-start="12020" selection-end="12026" vertical-scroll-proportion="-8.96">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="15" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.88">
+            <state line="36" column="8" selection-start="1258" selection-end="1390" vertical-scroll-proportion="-9.807693">
               <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#1;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#2;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#span#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1374780434702" expanded="true" signature="6387:6416" placeholder="..." />
+                <marker date="1374835543720" expanded="false" signature="1921:2072" placeholder="..." />
+                <marker date="1374835543720" expanded="false" signature="2112:2138" placeholder="..." />
+                <marker date="1374835543720" expanded="false" signature="2249:2427" placeholder="..." />
+                <marker date="1374835543720" expanded="false" signature="2522:2699" placeholder="..." />
+                <marker date="1374835543720" expanded="true" signature="7367:7396" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jqueryCookieGuard.1.0.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/js/jqueryCookieGuard.1.0.min.js">
+      <file leaf-file-name="includes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/includes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -194,6 +324,15 @@
         <entry file="file://$PROJECT_DIR$/app/public/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_map.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="471" column="18" selection-start="14693" selection-end="14693" vertical-scroll-proportion="-5.36">
               <folding />
             </state>
           </provider>
@@ -219,29 +358,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/public/static/js/search_map.js" />
-        <option value="$PROJECT_DIR$/app/config.php" />
-        <option value="$PROJECT_DIR$/app/map_item.php" />
-        <option value="$PROJECT_DIR$/app/map.php" />
-        <option value="$PROJECT_DIR$/app/mailto.php" />
-        <option value="$PROJECT_DIR$/app/_form.php" />
         <option value="$PROJECT_DIR$/app/public/static/css/jquery.mCustomScrollbar.css" />
         <option value="$PROJECT_DIR$/app/public/kontakt.php" />
+        <option value="$PROJECT_DIR$/app/public/static/js/vendor/jquery-cookie.js" />
+        <option value="$PROJECT_DIR$/app/public/static/index.html" />
+        <option value="$PROJECT_DIR$/app/public/static/js/vendor/cookies.js" />
         <option value="$PROJECT_DIR$/app/search.php" />
-        <option value="$PROJECT_DIR$/app/kontakt.php" />
         <option value="$PROJECT_DIR$/app/_header.php" />
-        <option value="$PROJECT_DIR$/app/offer.php" />
-        <option value="$PROJECT_DIR$/app/ulubione.php" />
-        <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
-        <option value="$PROJECT_DIR$/app/item.php" />
         <option value="$PROJECT_DIR$/app/index.php" />
+        <option value="$PROJECT_DIR$/app/offer.php" />
+        <option value="$PROJECT_DIR$/app/kontakt.php" />
+        <option value="$PROJECT_DIR$/app/item_fav.php" />
+        <option value="$PROJECT_DIR$/app/public/static/js/search_map.js" />
+        <option value="$PROJECT_DIR$/app/item.php" />
+        <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
+        <option value="$PROJECT_DIR$/app/ulubione.php" />
+        <option value="$PROJECT_DIR$/app/mailto.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
-    <option name="height" value="760" />
+    <option name="height" value="762" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -269,6 +408,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,6 +456,136 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Swift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Mime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Headers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,7 +677,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -533,17 +859,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/tmp" />
-    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="PublishConfig" serverName="vanhausen@vanhausen.home.pl" serverId="50a4c31e-b3e4-41d7-ab5a-21859ea23a5a" autoUpload="true" autoUploadExternalChanges="true">
@@ -559,11 +884,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projekty\VH_strona\app" />
       <recent name="D:\projekty\VH_strona\app\public\static\js" />
       <recent name="D:\projekty\VH_strona\app\public\static\img" />
       <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
       <recent name="D:\projekty\VH_strona\app" />
       <recent name="D:\projekty\VH_strona\app\public\static\js" />
     </key>
@@ -697,7 +1024,11 @@
       <created>1374480744463</created>
       <updated>1374480744463</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="nowe zakładki w formularzu, galeria otwierana przez klik w zdjęcie, suwaki, strona z kontaktem, slider na głównej">
+      <created>1374780686107</created>
+      <updated>1374780686107</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -721,15 +1052,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="760" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="762" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.108153075" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10779436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27586207" sideWeight="0.8918469" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28078818" sideWeight="0.89220566" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -788,7 +1119,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="naprawiona galeria" />
+    <option name="LAST_COMMIT_MESSAGE" value="nowe zakładki w formularzu, galeria otwierana przez klik w zdjęcie, suwaki, strona z kontaktem, slider na głównej" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -823,97 +1154,68 @@
     <MESSAGE value="rozróżnienie map i search w formularzu" />
     <MESSAGE value="przyciski w formularzu, przekierowanie z głównej na mapę" />
     <MESSAGE value="naprawiona galeria" />
+    <MESSAGE value="nowe zakładki w formularzu, galeria otwierana przez klik w zdjęcie, suwaki, strona z kontaktem, slider na głównej" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
+    <entry file="file://$PROJECT_DIR$/app/data/Nieruchomosc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="450" column="0" selection-start="14176" selection-end="14507" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/map_item.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="114" selection-start="606" selection-end="609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="67" selection-start="1808" selection-end="1808" vertical-scroll-proportion="-13.269231">
+        <state line="91" column="44" selection-start="2978" selection-end="2982" vertical-scroll-proportion="-2.8039215">
           <folding>
-            <marker date="1374423202555" expanded="true" signature="-1:-1" placeholder="..." />
+            <element signature="e#6#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/css/jquery.mCustomScrollbar.css">
+    <entry file="file://$PROJECT_DIR$/app/data/ImportService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="22" selection-start="947" selection-end="947" vertical-scroll-proportion="-14.96">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/NieruchomosciRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="87" selection-end="89" vertical-scroll-proportion="-2.3333333">
+          <folding>
+            <element signature="e#6#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/ZdjeciaRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="266" selection-end="282" vertical-scroll-proportion="-5.8846154">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="100" selection-start="6015" selection-end="6103" vertical-scroll-proportion="-2.7058823">
+        <state line="17" column="120" selection-start="1055" selection-end="1056" vertical-scroll-proportion="94.333336">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/map.php">
+    <entry file="file://$PROJECT_DIR$/app/includes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="59" selection-start="4469" selection-end="4469" vertical-scroll-proportion="-71.57692">
-          <folding>
-            <marker date="1374505054011" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/kontakt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="24" selection-start="2265" selection-end="2265" vertical-scroll-proportion="-6.0">
-          <folding>
-            <element signature="e#6#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="493" selection-end="636" vertical-scroll-proportion="-11.115385">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/offer.php">
+    <entry file="file://$PROJECT_DIR$/app/data/SearchQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="12" selection-start="2191" selection-end="2254" vertical-scroll-proportion="-7.1923075">
-          <folding>
-            <marker date="1374774705006" expanded="true" signature="6119:6844" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6189:6285" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6290:6319" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6367:6463" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6468:6489" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6553:6649" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6654:6675" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="6725:6821" placeholder="..." />
-            <marker date="1374774705006" expanded="false" signature="14137:14240" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="14241:14350" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="14269:14350" placeholder="..." />
-            <marker date="1374774705006" expanded="true" signature="14269:14350" placeholder="..." />
-            <marker date="1374774705006" expanded="false" signature="14414:14427" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="89" selection-start="1426" selection-end="1507" vertical-scroll-proportion="-5.230769">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -925,61 +1227,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
+    <entry file="file://$PROJECT_DIR$/app/item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="771" column="17" selection-start="14999" selection-end="14999" vertical-scroll-proportion="-11.6">
+        <state line="9" column="46" selection-start="302" selection-end="302" vertical-scroll-proportion="-5.8846154">
+          <folding>
+            <marker date="1374837716898" expanded="true" signature="3684:3775" placeholder="..." />
+            <marker date="1374837716898" expanded="true" signature="3711:3775" placeholder="..." />
+            <marker date="1374837716898" expanded="true" signature="3736:3775" placeholder="..." />
+            <marker date="1374837716898" expanded="false" signature="3759:3774" placeholder="..." />
+            <marker date="1374837716898" expanded="false" signature="4027:4060" placeholder="..." />
+            <marker date="1374837716898" expanded="true" signature="5032:5113" placeholder="..." />
+            <marker date="1374837716898" expanded="true" signature="5175:5188" placeholder="..." />
+            <marker date="1374837716898" expanded="true" signature="6088:6169" placeholder="..." />
+            <marker date="1374837716898" expanded="false" signature="6231:6244" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="471" column="18" selection-start="14693" selection-end="14693" vertical-scroll-proportion="-5.36">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/item.php">
+    <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="135" selection-start="8905" selection-end="8905" vertical-scroll-proportion="-0.30769232">
-          <folding>
-            <marker date="1374778212402" expanded="true" signature="3684:3775" placeholder="..." />
-            <marker date="1374778212402" expanded="true" signature="3711:3775" placeholder="..." />
-            <marker date="1374778212402" expanded="true" signature="3736:3775" placeholder="..." />
-            <marker date="1374778212402" expanded="false" signature="3759:3774" placeholder="..." />
-            <marker date="1374778212402" expanded="false" signature="4027:4060" placeholder="..." />
-            <marker date="1374778212402" expanded="true" signature="5035:5116" placeholder="..." />
-            <marker date="1374778212402" expanded="false" signature="5178:5191" placeholder="..." />
-            <marker date="1374778212402" expanded="true" signature="6091:6172" placeholder="..." />
-            <marker date="1374778212402" expanded="false" signature="6234:6247" placeholder="..." />
-            <marker date="1374778212402" expanded="true" signature="7877:7934" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ulubione.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="9" selection-start="6751" selection-end="6751" vertical-scroll-proportion="-109.19231">
-          <folding>
-            <marker date="1374774761627" expanded="true" signature="3926:3944" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/js/jqueryCookieGuard.1.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="643" column="24" selection-start="12020" selection-end="12026" vertical-scroll-proportion="-8.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="15" selection-start="2039" selection-end="2039" vertical-scroll-proportion="0.88">
+        <state line="36" column="8" selection-start="1258" selection-end="1390" vertical-scroll-proportion="-9.807693">
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#2;n#div#1;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#a#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#span#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1374780434702" expanded="true" signature="6387:6416" placeholder="..." />
+            <marker date="1374835543720" expanded="false" signature="1921:2072" placeholder="..." />
+            <marker date="1374835543720" expanded="false" signature="2112:2138" placeholder="..." />
+            <marker date="1374835543720" expanded="false" signature="2249:2427" placeholder="..." />
+            <marker date="1374835543720" expanded="false" signature="2522:2699" placeholder="..." />
+            <marker date="1374835543720" expanded="true" signature="7367:7396" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ulubione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1549" selection-end="1549" vertical-scroll-proportion="-2.0">
+          <folding>
+            <marker date="1374838282203" expanded="false" signature="4053:4071" placeholder="..." />
+            <marker date="1374838282203" expanded="true" signature="4236:4407" placeholder="..." />
+            <marker date="1374838282203" expanded="true" signature="4281:4407" placeholder="..." />
+            <marker date="1374838282203" expanded="true" signature="6759:6775" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/DateHeader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="34" selection-start="2434" selection-end="2434" vertical-scroll-proportion="2.181416">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -41,16 +41,19 @@
         <br/>tel. 61 222 47 60, fax. 61 222 47 61
     </div>
     <form class="contact-form">
-        <div class="col1 row1 form-label">imię i nazwisko</div>
+        <div class="col1 row1 form-label">imię i nazwisko<div class="arrow-right"> </div></div>
         <div class="col2 row1"><input name="imie_nazwisko" type="text"/></div>
-        <div class="col1 row2 form-label">temat wiadomości</div>
+        <div class="col1 row2 form-label">temat wiadomości<div class="arrow-right"> </div></div>
         <div class="col2 row2"><input name="temat" type="text"/></div>
-        <div class="col1 row3 form-label">treść wiadomości</div>
+        <div class="col1 row3 form-label">treść wiadomości<div class="arrow-right"> </div></div>
         <div class="col2 row3"><textarea name="tresc"></textarea></div>
         <input type="submit" value="" class="send-button"/>
     </form>
     <div class="stamp"> </div>
 </div>
+
+<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
+
 
 </body>
 

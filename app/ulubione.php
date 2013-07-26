@@ -49,6 +49,7 @@ session_start();
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="public/static/css/normalize.min.css">
 <link rel="stylesheet" href="public/static/css/main.css">
 <link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -82,7 +83,7 @@ session_start();
         </div>
         <span class="violet-line"><img></img></span>
         <div class="small-buttons">
-            <a href="ulubione.php" class="small-button but1">
+            <a href="ulubione.php?u=1" class="small-button but1">
                 <img src="public/static/./img/but1.png"></img>
             </a><!--
 			--><a href="index.php" class="small-button but2">
@@ -156,6 +157,7 @@ foreach( $found as $res ) {
 
 <span class="shadow2"> </span>
 <span class="shadow"> </span>
+<?php if (count($found) != 0) echo '<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>';?>
 
 <script src="public/static/js/plugins.js"></script>
 <script src="public/static/js/main.js"></script>

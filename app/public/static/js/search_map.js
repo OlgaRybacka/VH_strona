@@ -469,8 +469,7 @@ $(function() {
 	function fetch( id ) {
         currentFetchingId = id;
         $.get("item.php", {
-            id: id,
-            u: 1
+            id: id
         }, function (data) {
         if ( id == currentFetchingId ) {
             $('.details-container').html(data);

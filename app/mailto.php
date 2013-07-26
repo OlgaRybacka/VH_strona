@@ -6,6 +6,7 @@
  * Time: 19:22
  * To change this template use File | Settings | File Templates.*/
 
+require_once 'swift/swift_required.php';
 
 $tab = (isset($_GET['tab'])) ? $_GET['tab'] : $_POST['tab'];
 $id = (isset($_GET['id'])) ? $_GET['id'] : $_POST['id'];
@@ -20,26 +21,52 @@ $agentemail = (isset($_GET['agentemail'])) ? $_GET['agentemail'] : $_POST['agent
 
 $opis = str_replace("</form>", "", $opis);
 
-$message = '<html>
-<body>';
-$message = $message . '<img style="width:400px" src="alpha.vanhausen.pl/' . $photo . '" class=""></img>';
+
+$message = '<img style="width:400px" src="alpha.vanhausen.pl/' . $photo . '" class=""></img>';
 $message = $message . "<br/>Link do oferty: vanhausen.pl/search.php?tab=" . $tab . "&id=" . $id;
 $message = $message . "<br/><br/>Numer oferty: " . $id;
 $message = $message . "<br/><br/>Cena: " . $cena . " zł" . ' (' . $typ . ')';
 $message = $message . "<br/><br/>" . stristr($opis, 'kontakt i prezentacja', true);
 $message = $message . "<br/><br/>Kontakt i prezentacja:<br/>" . $agentnazwisko . "<br/>tel. " . $agenttelefon . "<br/>email. " . $agentemail;
-$message = $message . '</body>
-</html>';
-// In case any of our lines are larger than 70 characters, we should use wordwrap()
-$message = wordwrap($message, 70, "\r\n");
+
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 $headers .= 'From: VanHausen <vanhausen@home.pl >' . "\r\n";
 
+
+// Create the message
+$message = Swift_Message::newInstance()
+
+    // Give the message a subject
+    ->setSubject('Oferta nr ' . $id)
+
+    // Set the From address with an associative array
+    ->setFrom(array('vanhausen@home.pl' => 'VanHausen'))
+
+    // Set the To addresses with an associative array
+    ->setTo(array($email))
+
+    // Give it a body
+    ->setBody($message, 'text/html')
+
+    // And optionally an alternative body
+    ->addPart('PlainText test', 'text/plain')
+
+    // Optionally add any attachments
+    ->attach(Swift_Attachment::fromPath('alpha.vanhausen.pl/' . $photo))
+;
+
+
+$transport = Swift_MailTransport::newInstance();
+$mailer = Swift_Mailer::newInstance($transport);
+$result = $mailer->send($message);
+
+
+
 // Send
-mail($email, 'Oferta nr ' . $id , $message, $headers);
+//mail($email, 'Oferta nr ' . $id , $message, $headers);
 
 
 ?>

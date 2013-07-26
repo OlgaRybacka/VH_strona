@@ -154,7 +154,7 @@ if ($element == null) {
                 <?php if (!($print)) echo '
                 <span class="violet-line"><img></img></span>
                 <div class="small-buttons">
-                    <a href="ulubione.php" class="small-button but1">
+                    <a href="ulubione.php?u=1" class="small-button but1">
                         <img src="public/static/./img/but1.png"></img>
                     </a><!--
                             --><a href="index.php" class="small-button but2">
@@ -196,8 +196,8 @@ if ($element == null) {
                       '<div class="row1">
                         <span class="col1">
                           <div class="text">
-                            <span style="font-size:12px;">typ zabudowy</span><br/>
-                            <span style="font-size: 14px; font-weight:bold">' . $element->getTypzabudowy() . '</span>
+                            <span style="font-size:12px;">rok budowy</span><br/>
+                            <span style="font-size: 14px; font-weight:bold">' . $element->getRokbudowy() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -338,14 +338,28 @@ if ($element == null) {
             --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
             --></span></span>';
                     }?>
+                    <div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
+
 				</span>
 			  </span>
 		  </span>
 		  <span class="offer-photos">
-			<?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
-            <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
-            <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
-		  </span>
+			<?php if (count($zdjecia) >= 1) {echo '<a style="background-image:url(' . getUrl($zdjecia[0]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul> </a>';} ?>
+            <?php if (count($zdjecia) >= 2) {echo '<a style="background-image:url(' . getUrl($zdjecia[1]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul></a>';} ?>
+            <?php if (count($zdjecia) >= 3) {echo '<a style="background-image:url(' . getUrl($zdjecia[2]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul></a>';} ?>
+          </span>
 		</div>
 
         <script src="public/static/js/plugins.js"></script>

@@ -68,7 +68,7 @@ if ($element == null) {
 				</span>
 			  </span>
               <?php
-              if (!($ifAddFavourite)) {
+              if ($ifAddFavourite) {
 			    echo ' <span class="offer-buttons">
 			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty">';
 

@@ -76,7 +76,7 @@ body .favourites-page {
 .home-page header {
   height: 250px;
   position: relative;
-  padding-top; 20px;
+  padding-top: 20px;
 }
 
 .search-page header,
@@ -1001,6 +1001,10 @@ input {
   cursor: pointer;
 }
 
+.favourites-page .offer-details .offer-description .offer-buttons .favourite-button {
+    display:none;
+}
+
 .search-page .offer-details .offer-description .offer-text,
 .favourites-page .offer-details .offer-description .offer-text {
   position: absolute;
@@ -1091,14 +1095,12 @@ input {
 .favourites-page .map-span,
 .offer-page .map-span{
     position:absolute;
-    left: 400px;
-    top: 200px;
     border-style:solid;
     border-color: #481368;
     border-width: 3px;
     background-color: #D1D2D4;
-    width: 460px;
-    height: 390px;
+    width: 900px;
+    height: 700px;
     z-index: 100;
     display: none;
 }
@@ -1125,8 +1127,8 @@ input {
 .search-page .map-span #map-canvas,
 .favourites-page .map-span #map-canvas,
 .offer-page .map-span #map-canvas{
-    width: 400px;
-    height: 300px;
+    width: 840px;
+    height: 600px;
     margin: 30px;
     margin-top: 60px;
 }
@@ -1307,9 +1309,41 @@ border: none;
     bottom: 0px;
     right: 0px;
     background-image: url('../img/stamp2.png');
-;
 }
 
+.contact-page .contact-form .arrow-right {
+    width: 8px;
+    height: 15px;
+    right: -8px;
+    bottom: 8px;
+    position: absolute;
+    z-index: 10;
+    background-image: url('../img/right_violet.png');
+}
+
+.footer {
+    width: 900px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.offer-page .footer {
+    width: 900px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 40px;
+}
+
+.favourites-page .footer,
+.search-page .footer{
+    width: 900px;
+    text-align: center;
+    font-size: 10px;
+    margin: auto;
+    position: relative;
+    top: 715px;
+}
 
 /* ==========================================================================
    Media Queries

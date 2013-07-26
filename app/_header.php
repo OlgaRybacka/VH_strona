@@ -7,7 +7,7 @@
 		</div>
 		<span class="violet-line"><img></img></span>
 		<div class="small-buttons">
-			<a href="ulubione.php" class="small-button but1">
+			<a href="ulubione.php?u=1" class="small-button but1">
 				<img src="public/static/./img/but1.png"></img>
 			</a><!--
 					--><a href="index.php" class="small-button but2">

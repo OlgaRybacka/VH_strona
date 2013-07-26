@@ -39,14 +39,22 @@ foreach ( $nieruchomosci as $v ) {
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
-        <script type="text/javascript" src="public/static/js/jqueryCookieGuard.1.0.min.js"></script>
+        <script src="public/static/js/vendor/cookies.js"></script>
 
         <script>
 
             $(document).ready(function(){
-                $.cookieguard();
-                $.cookieguard.cookies.add('Custom', 'vanhausen-cookie', 'xxxxxxxxxxxxxxx', false);
-                $.cookieguard.run();
+                if ( Cookies.get('allowCookies') ) return;
+                var div = $('<div style="z-index: 100; font-size: 12px; bottom: 0; position:fixed; padding-top: 5px; background: #F5F5F5; border-top: 1px solid rgba(0, 0, 0, 0.15); width: 100%">' +
+                    '<span style="margin: 8px 10px 8px 40px;">Ta strona wykorzystuje pliki cookies</span>' +
+                    '<a href="#" class="accept-cookie" style="display: inline-block; padding: 2px 10px; margin: 10px 10px; background: none repeat scroll 0 0 #D1ECBE; border: 1px solid #A2BF8E;border-radius: 3px 3px 3px 3px; color: #384C2A;">Akceptuj</a>' +
+                    '<a href="http://google.pl" class="reject-cookie" style="display: inline-block; margin: 10px 10px; padding: 2px 10px;background: none repeat scroll 0 0 #ECC1C1; border: 1px solid #CC9C9C;border-radius: 3px 3px 3px 3px; color: #7E5353;">Odrzuć</a>' +
+                    '</div>');
+                div.find(".accept-cookie").click(function() {
+                    div.fadeOut("slow");
+                    Cookies.set('allowCookies', true, { expires: 60 * 60 * 24 * 360 * 10 });
+                });
+                div.appendTo("body");
             });
 
             $(function() {
@@ -90,7 +98,7 @@ foreach ( $nieruchomosci as $v ) {
                     <img style="position:absolute; top:0; left:0; display: none" class="img_slide3" src="public/static/./img/main_foto3.jpg"/>
                 </div>
 				<div class="small-buttons">
-                    <a href="ulubione.php" class="small-button but1">
+                    <a href="ulubione.php?u=1" class="small-button but1">
                         <img src="public/static/./img/but1.png"></img>
                     </a><!--
 					--><a href="index.php" class="small-button but2">
@@ -213,6 +221,7 @@ foreach ( $nieruchomosci as $v ) {
                 </div>
             </span>
         </div>
+        <div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="public/static/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
