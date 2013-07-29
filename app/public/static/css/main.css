@@ -61,7 +61,7 @@ textarea {
    ========================================================================== */
 body {
   font-family: 'Titillium Web', sans-serif;
-  color: #404040;
+  color: black;
 }
 
 .home-page {
@@ -421,7 +421,7 @@ body .favourites-page {
 }
 
 .big-number {
-  font-size: 15pt;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -474,6 +474,30 @@ body .favourites-page {
   width: 900px;
   margin-top: 60px;
   position: relative;
+}
+
+.search-page .container.search-form .search-sort {
+    position: relative;
+    top: 175px;
+    background-color: #481368;
+    color: white;
+    height: 29px;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+.search-page .container.search-form .search-sort #sortuj_wg{
+    position:absolute;
+    top: 4px;
+    left: 140px;
+    height: 26px;
+    padding: 0;
+}
+
+.search-page .container.search-form .search-sort .liczba_ofert{
+    position:absolute;
+    right: 40px;
+    top: 5px;
 }
 
 .search-page .container.search-form .zakladki {
@@ -538,6 +562,15 @@ body .favourites-page {
   position: absolute;
 }
 
+.search-page .search-form.form-label.row1.col1
+{
+    background-color: #481368;
+    color: #d1d2d4;
+}
+.search-page .search-form.form-label.row1.col1 .arrow-right.lila2
+{
+    border-left: 8px solid #481368;
+}
 .search-page .search-form.row1 {
   top: 15px;
 }
@@ -673,7 +706,7 @@ input {
 .search-page .offers-container,
 .favourites-page .offers-container,
 .offer-page .offers-container {
-  margin-top: 30px;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -689,9 +722,10 @@ input {
 
 .search-page .offers-container .offers-list .offer,
 .favourites-page .offers-container .offers-list .offer {
-  width: 266px;
-  height: 60px;
+  width: 262px;
+  height: 56px;
   background-color: #d1d2d4;
+  border: 2px solid #481368;
   position: relative;
   margin-bottom: 4px;
 }
@@ -702,7 +736,6 @@ input {
   width: 86px;
   background-color: #fff;
   height: 23px;
-  margin-top: 2px;
   position:absolute;
   font-weight: bold;
 }
@@ -720,6 +753,7 @@ input {
   color: #fff;
   font-size: 11px;
   cursor: pointer;
+    border-left: 4px solid #d1d2d4;
 }
 
 .search-page .offers-container .offers-list .offer .offer-skrot,
@@ -733,32 +767,38 @@ input {
 
 .search-page .offers-container .offers-list .offer .offer-data.data1,
 .favourites-page .offers-container .offers-list .offer .offer-data.data1 {
-  margin-left: 2px;
+  margin-left: 0px;
   padding-top: 2px;
   font-size: 14px;
 }
 
 .search-page .offers-container .offers-list .offer .offer-data.data2,
 .favourites-page .offers-container .offers-list .offer .offer-data.data2 {
-  margin-left: 90px;
+  margin-left: 88px;
   padding-top: 2px;
   font-size: 14px;
 }
 
 .search-page .offers-container .offers-list .offer .offer-data.data3,
 .favourites-page .offers-container .offers-list .offer .offer-data.data3 {
-  margin-left: 178px;
+  margin-left: 176px;
   padding-top: 2px;
   font-size: 14px;
 }
 
 .search-page .offer-photos,
-.favourites-page .offer-photos,
-.offer-page .offer-photos {
+.favourites-page .offer-photos {
   position: absolute;
   right: 0px;
   width: 243px;
   top: 0px;
+}
+
+.offer-page .offer-photos {
+    right: 0px;
+    width: 243px;
+    top: 0px;
+    float: right;
 }
 
 .search-page .offer-photos a,
@@ -782,7 +822,6 @@ input {
 }
 
 .offer-page .offer-details {
-  position: absolute;
   right: 250px;
   width: 650px;
   top: 0px;
@@ -793,8 +832,11 @@ input {
 .favourites-page .offer-details .miniatura,
 .offer-page .offer-details .miniatura,
 .miniatura {
-  height: 160px;
-  width: 160px;
+    display:block;
+    background-size:160px 160px;
+    cursor: pointer;
+    height: 160px;
+    width: 160px;
 }
 
 .search-page .basic-info-text,
@@ -886,8 +928,8 @@ input {
 .favourites-page .offer-details .offer-description .location .location-text,
 .offer-page .offer-details .offer-description .location .location-text {
   color: #fff;
-  padding-top: 2px;
-  font-size: 20px;
+  padding-top: 4px;
+  font-size: 18px;
   display:block;
   text-align:center;
 }
@@ -1016,9 +1058,7 @@ input {
 }
 
 .offer-page .offer-details .offer-text {
-  position: absolute;
-  top: 165px;
-  left: 0px;
+  float: left;
   width: 645px;
   font-size: 13px;
 }
@@ -1035,8 +1075,6 @@ input {
 }
 
 .offer-page .offer-details .offer-text .text-text {
-  position: absolute;
-  height: 240px;
   width: 640px;
   padding-left: 0px;
   padding-right: 7px;
@@ -1323,9 +1361,13 @@ border: none;
 
 .footer {
     width: 900px;
+    height: 20px;
     text-align: center;
     font-size: 10px;
     margin-top: 10px;
+    padding-top: 10px;
+    background-color: #481368;
+    color: white;
 }
 
 .offer-page .footer {

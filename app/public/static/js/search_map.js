@@ -461,6 +461,20 @@ $(".gallery_button").live("click",function() {
 		'changeFade' : 0
 	});
 });
+
+    $(".miniatura").live("click",function() {
+        var pictures = [];
+        $(this).find('ul.gallery-items > li > img').each(function() {
+            pictures.push($(this).attr('src'));
+        });
+        $.fancybox(pictures, {
+            'padding' : 0,
+            'transitionIn' : 'none',
+            'transitionOut' : 'none',
+            'type' : 'image',
+            'changeFade' : 0
+        });
+    });
 //$( document ).tooltip();
 });
 

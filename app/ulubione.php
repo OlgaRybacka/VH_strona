@@ -83,16 +83,16 @@ session_start();
         </div>
         <span class="violet-line"><img></img></span>
         <div class="small-buttons">
-            <a href="ulubione.php?u=1" class="small-button but1">
+            <a href="ulubione.php?u=1" title="Przeglądaj ulubione oferty" class="small-button but1">
                 <img src="public/static/./img/but1.png"></img>
             </a><!--
-			--><a href="index.php" class="small-button but2">
+			--><a href="index.php" title="Powrót do strony głównej" class="small-button but2">
                 <img src="public/static/./img/but2.png"></img>
             </a><!--
-			--><a href="search.php?tab=mieszkania" class="small-button but3">
+			--><a href="search.php?tab=mieszkania" title="Wyszukiwarka ofert" class="small-button but3">
                 <img src="public/static/./img/but3.png"></img>
             </a><!--
-			--><a href="kontakt.php" class="small-button but4">
+			--><a href="kontakt.php" title="Skontaktuj się z nami" class="small-button but4">
 				<img src="public/static/./img/but4.png"></img>
 			</a>
         </div>
@@ -114,7 +114,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -124,7 +124,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -134,7 +134,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-skrot">' . substr($res->getMiasto(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -144,7 +144,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }

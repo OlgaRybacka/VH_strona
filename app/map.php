@@ -71,7 +71,7 @@ $found = $nie->search($query);
 </script>
 
 
-<div class="map-wrapper" style=" padding: 10px;">
+<div class="map-wrapper" style=" padding: 50px;">
 	<div id="vh-map" style="margin: auto; width: 900px; height: 600px;">
 	</div>
 </div>
@@ -180,6 +180,8 @@ $found = $nie->search($query);
 
 	google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+<div class="container footer" style="top:-40px"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
 
 
 <script src="public/static/js/plugins.js"></script>

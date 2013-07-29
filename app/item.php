@@ -16,12 +16,16 @@ if ($element == null) {
 ?>
 <span class="offer-details">
 		    <div class="basic-info">
-                <?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
-			  <span class="basic-info-text">
+                <?php if (count($zdjecia) >= 1) {echo '<a style="background-image:url(' . getUrl($zdjecia[0]->getUrl()) . ')" class="miniatura"> <ul class="gallery-items" style="display: none">';
+                    foreach($zdjecia as $z) {
+                        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                    }
+                    echo '</ul> </a>';} ?>
+                <span class="basic-info-text">
 			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> <?php if($element->getDzialTab() == "mieszkania" || $element->getDzialTab() == "domy") echo '/ <span class="big-number">' . $element->getPokoje() . '</span> pok.'; ?> <br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
 				<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 10px; margin-bottom: 10px"></img>
-				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"> <?php echo $element->getAgentTelKom(); ?></span></span>
+				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"> <?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?></span></span>
 			    <div class="status-nr">
 				  <span class="status"><?php echo $element->getDzialTyp(); ?></span>
 				  <span class="nr"><?php echo $element->getId(); ?></span>
@@ -55,7 +59,7 @@ if ($element == null) {
 				<span class="col2">
 				  <div class="text">
 				    <span style="font-size:12px;">cena zł/m<sup>2</sup></span><br/>
-				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . round($element->getCena()/$element->getPowierzchnia()) . ' zł</span>
+				    <span style="font-size: 14px; font-weight:bold; text-align: center">'; if ($element->getPowierzchnia() != 0) echo round($element->getCena()/$element->getPowierzchnia()); else echo '0'; echo ' zł</span>
 				  </div>
 				</span>
 			  </div>';} ?>
@@ -104,7 +108,7 @@ if ($element == null) {
 			    <div class="text">
 				  <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
 				  <b><?php echo $element->getAgentNazwisko(); ?></b><br/>
-				  tel. <b><?php echo $element->getAgentTelKom(); ?></b><br/>
+				  tel. <b><?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?></b><br/>
                   <?php echo $element->getAgentEmail(); ?><br/>
 				  <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 9479</span><br/>
 				</div>
@@ -139,7 +143,7 @@ if ($element == null) {
     <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
 </span>
 <span>
-    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php echo $element->getAgentTelKom(); ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
+    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
         <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>
         <input name="email_address" id="email_address" type="text"/>
         <div class="anuluj-button"> </div>

@@ -68,7 +68,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -78,7 +78,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -88,7 +88,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-skrot">' . substr($res->getMiasto(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -98,7 +98,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }

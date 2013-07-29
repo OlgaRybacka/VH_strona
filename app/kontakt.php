@@ -19,12 +19,27 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
+
     <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="public/static/css/normalize.min.css">
     <link rel="stylesheet" href="public/static/css/main.css">
 
     <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+
+    <script>
+
+        $(function(){
+            $(".send-button").live("click",function() {
+                var imie_nazwisko = $(".contact-form").data('imie_nazwisko');
+                var temat = $(".contact-form").data('temat');
+                var tresc = $(".contact-form").data('tresc');
+                $.post('contact_mail.php', {imie_nazwisko:imie_nazwisko, temat:temat, tresc:tresc});
+            });
+//$( document ).tooltip();
+        });
+</script>
 </head>
 <body class="contact-page">
 <!--[if lt IE 7]>

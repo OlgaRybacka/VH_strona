@@ -17,6 +17,7 @@ $lokal      = $nie->get($plik[3]);
 $nieruchomosci = array($mieszkanie, $dom, $dzialka, $lokal);
 $zdjecie = array();
 foreach ( $nieruchomosci as $v ) {
+    if ($v != null)
   $zdjecie[$v->getId()] = $zdj->getForNieruchomosc( $v->getId() )[0];
 }
 ?>
@@ -98,16 +99,16 @@ foreach ( $nieruchomosci as $v ) {
                     <img style="position:absolute; top:0; left:0; display: none" class="img_slide3" src="public/static/./img/main_foto3.jpg"/>
                 </div>
 				<div class="small-buttons">
-                    <a href="ulubione.php?u=1" class="small-button but1">
+                    <a href="ulubione.php?u=1" title="Przeglądaj ulubione oferty" class="small-button but1">
                         <img src="public/static/./img/but1.png"></img>
                     </a><!--
-					--><a href="index.php" class="small-button but2">
+					--><a href="index.php" title="Powrót do strony głównej" class="small-button but2">
 						<img src="public/static/./img/but2.png"></img>
 					</a><!--
-					--><a href="search.php?tab=mieszkania" class="small-button but3">
+					--><a href="search.php?tab=mieszkania" title="Wyszukiwarka ofert" class="small-button but3">
 						<img src="public/static/./img/but3.png"></img>
 					</a><!--
-					--><a href="kontakt.php" class="small-button but4">
+					--><a href="kontakt.php" title="Skontaktuj się z nami" class="small-button but4">
 						<img src="public/static/./img/but4.png"></img>
 					</a>
 				</div>
@@ -157,6 +158,8 @@ foreach ( $nieruchomosci as $v ) {
 				<div class="arrow-right violet"></div>
 			</div>
 <?php foreach( $nieruchomosci as $nieruchomosc) {
+    if ($nieruchomosc != null)
+    {
 	echo '<span class="span1">
 				<div class="offer-data">';
                 /** @var Nieruchomosc $nieruchomosc */
@@ -203,19 +206,23 @@ foreach ( $nieruchomosci as $v ) {
                  echo
                  '<div class="offer-data wiecej"><a href="search.php?tab=lokale&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
                 </span>';
+    }
 
 } ?>
 		</div>
                 <div class="sales">
 <?php foreach( $nieruchomosci as $nieruchomosc) {
-                    echo '<span class="span1">
-			<div class="offer-data status">' . $nieruchomosc->getDzialTyp() . '
-			  <div class="arrow-down lila"></div>
-			</div>
-			<div class="offer-data phone_nr">
-			  <img src="public/static/./img/phone.png">' . $nieruchomosc->getAgentTelKom() . '
-			</div>
-                      </span>';
+    if ($nieruchomosc != null)
+    {
+                        echo '<span class="span1">
+                <div class="offer-data status">' . $nieruchomosc->getDzialTyp() . '
+                  <div class="arrow-down lila"></div>
+                </div>
+                <div class="offer-data phone_nr">
+                  <img src="public/static/./img/phone.png">' . $nieruchomosc->getAgentTelKom() . '
+                </div>
+                          </span>';
+    }
 }
 ?>
                 </div>
