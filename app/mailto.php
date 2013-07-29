@@ -22,8 +22,8 @@ $agentemail = (isset($_GET['agentemail'])) ? $_GET['agentemail'] : $_POST['agent
 $opis = str_replace("</form>", "", $opis);
 
 
-$message = '<img style="width:400px" src="alpha.vanhausen.pl/' . $photo . '" class=""></img>';
-$message = $message . "<br/>Link do oferty: vanhausen.pl/search.php?tab=" . $tab . "&id=" . $id;
+$message = '<img style="width:400px" src="alpha.vanhausen.pl' . $photo . '" class=""></img>';
+$message = '<br/>Link do oferty: <a href="vanhausen.pl/search.php?tab=' . $tab . "&id=" . $id . '">vanhausen.pl/search.php?tab=' . $tab . "&id=" . $id . "</a>";
 $message = $message . "<br/><br/>Numer oferty: " . $id;
 $message = $message . "<br/><br/>Cena: " . $cena . " zł" . ' (' . $typ . ')';
 $message = $message . "<br/><br/>" . stristr($opis, 'kontakt i prezentacja', true);
@@ -49,13 +49,13 @@ $message = Swift_Message::newInstance()
     ->setTo(array($email))
 
     // Give it a body
-    ->setBody($message, 'text/html')
+    ->setBody('<img style="width:400px" src="http://alpha.vanhausen.pl' . $photo . '" class=""></img>' . $message, 'text/html')
 
     // And optionally an alternative body
-    ->addPart('PlainText test', 'text/plain')
+    ->addPart($message, 'text/plain')
 
     // Optionally add any attachments
-    ->attach(Swift_Attachment::fromPath('alpha.vanhausen.pl/' . $photo))
+    ->attach(Swift_Attachment::fromPath($photo))
 ;
 
 
