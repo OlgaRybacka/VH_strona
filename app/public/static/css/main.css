@@ -60,8 +60,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  font-family: Anivers-Regular;
-  color: #404040;
+  font-family: 'Titillium Web', sans-serif;
+  color: black;
 }
 
 .home-page {
@@ -76,12 +76,13 @@ body .favourites-page {
 .home-page header {
   height: 250px;
   position: relative;
-  padding-top; 20px;
+  padding-top: 20px;
 }
 
 .search-page header,
 .favourites-page header,
-.offer-page header {
+.offer-page header,
+.contact-page header{
   height: 100px;
   position: relative;
   padding-top: 20px;
@@ -93,7 +94,7 @@ body .favourites-page {
   top: 20px;
   width: 512px;
   height: 270px;
-  background-image:url('../img/main_foto.jpg');
+  background-color: #777;
 }
 
 .home-page header .small-buttons {
@@ -103,7 +104,9 @@ body .favourites-page {
 }
 
 .search-page header .small-buttons,
-.favourites-page header .small-buttons {
+.favourites-page header .small-buttons,
+.offer-page header .small-buttons,
+.contact-page header .small-buttons{
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -120,7 +123,8 @@ body .favourites-page {
 }
 
 .search-page .small-buttons .small-button,
-.favourites-page .small-buttons .small-button {
+.favourites-page .small-buttons .small-button,
+.contact-page .small-buttons .small-button{
   margin-top: 0;
 }
 
@@ -130,7 +134,8 @@ body .favourites-page {
 
 .home-page .small-buttons .small-button img,
 .search-page .small-buttons .small-button img,
-.favourites-page .small-buttons .small-button img {
+.favourites-page .small-buttons .small-button img,
+.contact-page .small-buttons .small-button img{
   margin: 0;
   top: 0;
   left: 0;
@@ -146,10 +151,12 @@ body .favourites-page {
 
 .search-page header h1,
 .favourites-page header h1, 
-.offer-page header h1 {
+.offer-page header h1,
+.contact-page header h1{
   padding-top: 80px;
   padding-left: 20px;
   color: #fff;
+  font-size: 10px;
 }
 
 .home-page header img {
@@ -160,7 +167,8 @@ body .favourites-page {
 
 .search-page header img,
 .favourites-page header img,
-.offer-page header img  {
+.offer-page header img,
+.contact-page header img{
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -279,6 +287,20 @@ body .favourites-page {
   z-index: 10;
 }
 
+.search-page .search-form .zakladki .arrow-right {
+    width: 8px;
+    height: 15px;
+    right: -8px;
+    bottom: 8px;
+    position: absolute;
+    z-index: 10;
+    background-image: url('../img/right_gray.png');
+}
+
+.search-page .search-form .zakladki .arrow-right.active {
+    background-image: url('../img/right_violet.png');
+}
+
 .home-page .tile .arrow-right.violet {
   top: 10px;
 }
@@ -346,7 +368,7 @@ body .favourites-page {
 .home-page .offers .skrot {
   font-size: 10pt;
   text-align: left;
-  font-family: Anivers-Regular;
+  font-family: 'Titillium Web', sans-serif;
   height: 130px;
   overflow: hidden;
 }
@@ -399,7 +421,7 @@ body .favourites-page {
 }
 
 .big-number {
-  font-size: 15pt;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -418,14 +440,17 @@ body .favourites-page {
 .home-page .dane_center,
 .search-page .dane_center,
 .favourites-page .dane_center,
-.offer-page .dane_center {
+.offer-page .dane_center,
+.contact-page .dane_center {
   display: block;
   margin: auto;
   text-align: center;
 }
 
 .search-page header .violet-line,
-.favourites-page header .violet-line {
+.favourites-page header .violet-line,
+.offer-page header .violet-line,
+.contact-page header .violet-line{
   background-color: #481368;
   height: 34px;
   width: 560px;
@@ -434,7 +459,7 @@ body .favourites-page {
   right: 165px;
 }
 
-.offer-page header .violet-line {
+.offer-page header .violet-line2 {
   background-color: #481368;
   height: 34px;
   width: 725px;
@@ -449,6 +474,30 @@ body .favourites-page {
   width: 900px;
   margin-top: 60px;
   position: relative;
+}
+
+.search-page .container.search-form .search-sort {
+    position: relative;
+    top: 175px;
+    background-color: #481368;
+    color: white;
+    height: 29px;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+.search-page .container.search-form .search-sort #sortuj_wg{
+    position:absolute;
+    top: 4px;
+    left: 140px;
+    height: 26px;
+    padding: 0;
+}
+
+.search-page .container.search-form .search-sort .liczba_ofert{
+    position:absolute;
+    right: 40px;
+    top: 5px;
 }
 
 .search-page .container.search-form .zakladki {
@@ -473,11 +522,19 @@ body .favourites-page {
   margin-right: 1px;
   color: #481368;
   text-decoration: none;
-  -moz-border-radius:0 15px 0 0; /* FF */
-  -webkit-border-radius:0 15px 0 0; /* przegl�darki z webkitem (Safari, Chrome itp.) */
-  -khtml-border-radius:0 15px 0 0; /* przegl�darki typu K-meleon (typowo Linuxowe) */
-  border-radius:0 15px 0 0; /* pozosta�e przegl�darki */
+  position: absolute;
 }
+.search-page .container.search-form .zakladki .zakladka_domy {
+    left: 225px;
+}
+.search-page .container.search-form .zakladki .zakladka_dzialki {
+    left: 450px;
+}
+.search-page .container.search-form .zakladki .zakladka_komercyjne {
+    left: 675px;
+}
+
+
 
 .search-page .container.search-form .zakladki .zakladka_mieszkania.active,
 .search-page .container.search-form .zakladki .zakladka_domy.active,
@@ -505,6 +562,15 @@ body .favourites-page {
   position: absolute;
 }
 
+.search-page .search-form.form-label.row1.col1
+{
+    background-color: #481368;
+    color: #d1d2d4;
+}
+.search-page .search-form.form-label.row1.col1 .arrow-right.lila2
+{
+    border-left: 8px solid #481368;
+}
 .search-page .search-form.row1 {
   top: 15px;
 }
@@ -604,23 +670,23 @@ body .favourites-page {
 }
 
 ::-webkit-input-placeholder {
-   font-family: Anivers-Regular;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   font-family: Anivers-Regular;  
+    font-family: 'Titillium Web', sans-serif;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   font-family: Anivers-Regular;  
+    font-family: 'Titillium Web', sans-serif;
 }
 
-:-ms-input-placeholder {  
-   font-family: Anivers-Regular;  
+:-ms-input-placeholder {
+    font-family: 'Titillium Web', sans-serif;
 }
 
 input {
-   font-family: Anivers-Regular;  
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .search-form .styled-select select{
@@ -634,13 +700,13 @@ input {
   padding-right: 5px;
   width: 201px;
   -webkit-appearance: none;
-  font-family: Anivers-Regular;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .search-page .offers-container,
 .favourites-page .offers-container,
 .offer-page .offers-container {
-  margin-top: 30px;
+  margin-top: 60px;
   position: relative;
 }
 
@@ -656,9 +722,10 @@ input {
 
 .search-page .offers-container .offers-list .offer,
 .favourites-page .offers-container .offers-list .offer {
-  width: 266px;
-  height: 60px;
+  width: 262px;
+  height: 56px;
   background-color: #d1d2d4;
+  border: 2px solid #481368;
   position: relative;
   margin-bottom: 4px;
 }
@@ -668,8 +735,7 @@ input {
   text-align: center;
   width: 86px;
   background-color: #fff;
-  height: 25px;
-  margin-top: 2px;
+  height: 23px;
   position:absolute;
   font-weight: bold;
 }
@@ -687,6 +753,7 @@ input {
   color: #fff;
   font-size: 11px;
   cursor: pointer;
+    border-left: 4px solid #d1d2d4;
 }
 
 .search-page .offers-container .offers-list .offer .offer-skrot,
@@ -700,34 +767,49 @@ input {
 
 .search-page .offers-container .offers-list .offer .offer-data.data1,
 .favourites-page .offers-container .offers-list .offer .offer-data.data1 {
-  margin-left: 2px;
+  margin-left: 0px;
+  padding-top: 2px;
+  font-size: 14px;
 }
 
 .search-page .offers-container .offers-list .offer .offer-data.data2,
 .favourites-page .offers-container .offers-list .offer .offer-data.data2 {
-  margin-left: 90px;
+  margin-left: 88px;
+  padding-top: 2px;
+  font-size: 14px;
 }
 
 .search-page .offers-container .offers-list .offer .offer-data.data3,
 .favourites-page .offers-container .offers-list .offer .offer-data.data3 {
-  margin-left: 178px;
+  margin-left: 176px;
+  padding-top: 2px;
+  font-size: 14px;
 }
 
 .search-page .offer-photos,
-.favourites-page .offer-photos,
-.offer-page .offer-photos {
+.favourites-page .offer-photos {
   position: absolute;
   right: 0px;
   width: 243px;
   top: 0px;
 }
 
-.search-page .offer-photos img,
-.favourites-page .offer-photos img,
-.offer-page .offer-photos img {
+.offer-page .offer-photos {
+    right: 0px;
+    width: 243px;
+    top: 0px;
+    float: right;
+}
+
+.search-page .offer-photos a,
+.favourites-page .offer-photos a,
+.offer-page .offer-photos a {
+  display:block;
   margin-bottom: 4px;
   height: 172px;
   width: 243px;
+  background-size:243px 172px;
+  cursor: pointer;
 }
 
 .search-page .offer-details,
@@ -740,7 +822,6 @@ input {
 }
 
 .offer-page .offer-details {
-  position: absolute;
   right: 250px;
   width: 650px;
   top: 0px;
@@ -751,11 +832,14 @@ input {
 .favourites-page .offer-details .miniatura,
 .offer-page .offer-details .miniatura,
 .miniatura {
-  height: 160px;
-  width: 160px;
+    display:block;
+    background-size:160px 160px;
+    cursor: pointer;
+    height: 160px;
+    width: 160px;
 }
 
-.search-page .offer-details .basic-info-text,
+.search-page .basic-info-text,
 .favourites-page .offer-details .basic-info-text {
   position: absolute;
   left: 160px;
@@ -772,7 +856,7 @@ input {
   top: 18px;
 }
 
-.search-page .offer-details .basic-info-text .status-nr,
+.search-page .basic-info-text .status-nr,
 .favourites-page .offer-details .basic-info-text .status-nr,
 .offer-page .offer-details .basic-info-text .status-nr {
   position:absolute;
@@ -785,7 +869,7 @@ input {
   font-size: 12px;
 }
 
-.search-page .offer-details .basic-info-text .status-nr .status,
+.search-page .basic-info-text .status-nr .status,
 .favourites-page .offer-details .basic-info-text .status-nr .status,
 .offer-page .offer-details .basic-info-text .status-nr .status {
   position: absolute;
@@ -793,7 +877,7 @@ input {
   margin-left: 10px;
 }
 
-.search-page .offer-details .basic-info-text .status-nr .nr,
+.search-page .basic-info-text .status-nr .nr,
 .favourites-page .offer-details .basic-info-text .status-nr .nr,
 .offer-page .offer-details .basic-info-text .status-nr .nr {
   position: absolute;
@@ -844,8 +928,8 @@ input {
 .favourites-page .offer-details .offer-description .location .location-text,
 .offer-page .offer-details .offer-description .location .location-text {
   color: #fff;
-  padding-top: 2px;
-  font-size: 20px;
+  padding-top: 4px;
+  font-size: 18px;
   display:block;
   text-align:center;
 }
@@ -928,7 +1012,14 @@ input {
   
 }
 
-.search-page .offer-details .offer-description .offer-buttons .offer-button {
+.offer-page .offer-buttons{
+    position: absolute;
+    width: 337px;
+    right: 3px;
+}
+
+.search-page .offer-details .offer-description .offer-buttons .offer-button,
+.offer-page .offer-buttons .offer-button{
   width: 66px;
   height: 25px;
   background-color: #6d6e71;
@@ -952,6 +1043,10 @@ input {
   cursor: pointer;
 }
 
+.favourites-page .offer-details .offer-description .offer-buttons .favourite-button {
+    display:none;
+}
+
 .search-page .offer-details .offer-description .offer-text,
 .favourites-page .offer-details .offer-description .offer-text {
   position: absolute;
@@ -963,9 +1058,7 @@ input {
 }
 
 .offer-page .offer-details .offer-text {
-  position: absolute;
-  top: 165px;
-  left: 0px;
+  float: left;
   width: 645px;
   font-size: 13px;
 }
@@ -982,8 +1075,6 @@ input {
 }
 
 .offer-page .offer-details .offer-text .text-text {
-  position: absolute;
-  height: 240px;
   width: 640px;
   padding-left: 0px;
   padding-right: 7px;
@@ -996,13 +1087,14 @@ input {
     width: 18px;
 }
 
-.search-page .mCSB_scrollTools .mCSB_draggerContainer,
-.favourites-page .mCSB_scrollTools .mCSB_draggerContainer{
-    visibility: hidden;
+.search-page .mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail,
+.favourites-page .mCSB_scrollTools .mCSB_draggerContainer .mCSB_draggerRail{
+    background-color: rgba(0,0,0,0);
 }
 
 .search-page .mCSB_scrollTools .mCSB_buttonUp,
 .favourites-page .mCSB_scrollTools .mCSB_buttonUp {
+    background-color: #aaa;
     background-image: url('../img/roll_up_arrow.png');
     background-repeat: no-repeat;
 	height: 26px;
@@ -1010,6 +1102,7 @@ input {
 
 .search-page .mCSB_scrollTools .mCSB_buttonDown,
 .favourites-page .mCSB_scrollTools .mCSB_buttonDown{
+    background-color: #aaa;
     background-image: url('../img/roll_down_arrow.png');
 	background-position: 0 0;
     background-repeat: no-repeat;
@@ -1037,49 +1130,50 @@ input {
 }
 
 .search-page .map-span,
-.favourites-page .map-span {
+.favourites-page .map-span,
+.offer-page .map-span{
     position:absolute;
-    left: 400px;
-    top: 300px;
     border-style:solid;
     border-color: #481368;
     border-width: 3px;
-    -moz-border-radius:10px; /* FF */
-    -webkit-border-radius:10px; /* przeglądarki z webkitem (Safari, Chrome itp.) */
-    -khtml-border-radius:10px; /* przeglądarki typu K-meleon (typowo Linuxowe) */
-    border-radius:10px; /* pozostałe przeglądarki */
     background-color: #D1D2D4;
-    width: 460px;
-    height: 390px;
+    width: 900px;
+    height: 700px;
     z-index: 100;
     display: none;
 }
 
 .search-page .map-span .zamknij-button,
-.favourites-page .map-span .zamknij-button {
+.favourites-page .map-span .zamknij-button,
+.offer-page .map-span .zamknij-button{
     background: #512b68;
     position: absolute;
+    right: 30px;
+    top: 15px;
     width: 201px;
     text-align: center;
     color: #fff;
     font-weight: bold;
     height: 31px;
     border: none;
-    background-image: url('../img/search.png');
+    background-image: url('../img/zamknij.png');
     background-repeat:no-repeat;
     background-position:center;
+    cursor: pointer;
 }
 
 .search-page .map-span #map-canvas,
-.favourites-page .map-span #map-canvas {
-    width: 400px;
-    height: 300px;
+.favourites-page .map-span #map-canvas,
+.offer-page .map-span #map-canvas{
+    width: 840px;
+    height: 600px;
     margin: 30px;
     margin-top: 60px;
 }
 
 .search-page .email-form,
-.favourites-page .email-form {
+.favourites-page .email-form,
+.offer-page .email-form{
     position: absolute;
     left: 400px;
     top: 300px;
@@ -1090,10 +1184,6 @@ input {
     border-style:solid;
     border-color: #481368;
     border-width: 3px;
-    -moz-border-radius:10px; /* FF */
-    -webkit-border-radius:10px; /* przeglądarki z webkitem (Safari, Chrome itp.) */
-    -khtml-border-radius:10px; /* przeglądarki typu K-meleon (typowo Linuxowe) */
-    border-radius:10px; /* pozostałe przeglądarki */
     text-align: center;
     padding: 20px;
     display: none;
@@ -1101,11 +1191,13 @@ input {
 
 .search-page .shadow,
 .favourites-page .shadow,
+.offer-page .shadow,
 .search-page .shadow2,
-.favourites-page .shadow2{
-    width: 900px;
-    height: 700px;
-    position: absolute;
+.favourites-page .shadow2,
+.offer-page .shadow2{
+    width: 100%;
+    height: 100%;
+    position: fixed;
     top:0px;
     left: 0px;
     background-color: rgba(0,0,0,0.8);
@@ -1114,7 +1206,8 @@ input {
 }
 
 .search-page .email-form input,
-.favourites-page .email-form input{
+.favourites-page .email-form input,
+.offer-page .email-form input{
     margin-top: 20px;
     padding: 5px;
     width: 300px;
@@ -1122,7 +1215,9 @@ input {
 .search-page .email-form .anuluj-button,
 .search-page .email-form .sendemail-button,
 .favourites-page .email-form .anuluj-button,
-.favourites-page .email-form .sendemail-button{
+.favourites-page .email-form .sendemail-button,
+.offer-page .email-form .anuluj-button,
+.offer-page .email-form .sendemail-button{
 background: #512b68;
 position: absolute;
 width: 170px;
@@ -1134,7 +1229,8 @@ border: none;
 }
 
 .search-page .email-form .sendemail-button,
-.favourites-page .email-form .sendemail-button{
+.favourites-page .email-form .sendemail-button,
+.offer-page .email-form .sendemail-button{
     background-image: url('../img/wyslij.png');
     background-repeat:no-repeat;
     background-position:center;
@@ -1144,7 +1240,8 @@ border: none;
 }
 
 .search-page .email-form .anuluj-button,
-.favourites-page .email-form .anuluj-button{
+.favourites-page .email-form .anuluj-button,
+.offer-page .email-form .anuluj-button{
     background-image: url('../img/anuluj.png');
     background-repeat:no-repeat;
     background-position:center;
@@ -1155,9 +1252,139 @@ border: none;
 }
 
 .search-page .email-form .error-container,
-.favourites-page .email-form .error-container{
+.favourites-page .email-form .error-container,
+.offer-page .email-form .error-container{
     bottom: 50px;
     text-align: center;
+}
+
+.contact-page .contact-container {
+    position: relative;
+    margin-top: 30px;
+    background-color: #d9dbda;
+    height: 700px;
+}
+
+.contact-page .contact-container .address-data {
+    position: absolute;
+    top: 60px;
+    left: 180px;
+}
+
+.contact-page .contact-container .contact-form {
+    position: absolute;
+    top: 220px;
+    left: 180px;
+}
+
+.contact-page .contact-container .contact-form .form-label {
+    color: #fff;
+    padding-left: 15px;
+    padding-top: 2px;
+}
+
+.contact-page .contact-container .contact-form .col1{
+    position: absolute;
+    left: 0px;
+    background-color: #512b68;
+    width: 135px;
+    height: 28px;
+}
+
+.contact-page .contact-container .contact-form .col2{
+    position: absolute;
+    left: 150px;
+}
+
+.contact-page .contact-container .contact-form .row1{
+    position: absolute;
+    top: 0;
+}
+
+.contact-page .contact-container .contact-form .row2{
+    position: absolute;
+    top: 40px;
+}
+
+.contact-page .contact-container .contact-form .row3{
+    position: absolute;
+    top: 80px;
+}
+
+.contact-page .contact-container .contact-form input {
+    width: 300px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    height: 30px;
+    padding-left: 10px;
+    position: absolute;
+}
+
+.contact-page .contact-container .contact-form textarea {
+    width: 300px;
+    height: 180px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    padding-left: 10px;
+    position: absolute;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contact-page .contact-container .contact-form .send-button {
+    position: absolute;
+    top: -20px;
+    background-color: #d9dbda;
+    background-image: url('../img/send_button.png');
+    width: 36px;
+    height: 11px;
+    border: none;
+}
+
+.contact-page .contact-container .stamp {
+    width: 314px;
+    height: 254px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-image: url('../img/stamp2.png');
+}
+
+.contact-page .contact-form .arrow-right {
+    width: 8px;
+    height: 15px;
+    right: -8px;
+    bottom: 8px;
+    position: absolute;
+    z-index: 10;
+    background-image: url('../img/right_violet.png');
+}
+
+.footer {
+    width: 900px;
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: #481368;
+    color: white;
+}
+
+.offer-page .footer {
+    width: 900px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 40px;
+}
+
+.favourites-page .footer,
+.search-page .footer{
+    width: 900px;
+    text-align: center;
+    font-size: 10px;
+    margin: auto;
+    position: relative;
+    top: 715px;
 }
 
 /* ==========================================================================

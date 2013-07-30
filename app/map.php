@@ -25,6 +25,7 @@ $found = $nie->search($query);
 	<meta name="viewport" content="width=device-width">
 
 	<link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="public/static/css/normalize.min.css">
 	<link rel="stylesheet" href="public/static/css/main.css">
 	<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -70,7 +71,7 @@ $found = $nie->search($query);
 </script>
 
 
-<div class="map-wrapper" style=" padding: 10px;">
+<div class="map-wrapper" style=" padding: 50px;">
 	<div id="vh-map" style="margin: auto; width: 900px; height: 600px;">
 	</div>
 </div>
@@ -125,8 +126,10 @@ $found = $nie->search($query);
 						self.infowindow.close();
 					}
 					contentString = $(contentString).html();
-					contentString = '<div style="width: 500px;">' + contentString + '</div>'
+					contentString = '<div style="width: 340px;">' + contentString + '</div>'
 					var infowindow = new google.maps.InfoWindow({
+                        maxWidth: 360,
+                        minHeight: 200,
 						content: contentString
 					});
 					infowindow.open(map,marker);
@@ -178,15 +181,24 @@ $found = $nie->search($query);
 	google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
+<div class="container footer" style="top:-40px"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
+
 
 <script src="public/static/js/plugins.js"></script>
 <script src="public/static/js/main.js"></script>
 
-<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42732274-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
 </script>
 </body>
 </html>

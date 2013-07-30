@@ -49,6 +49,7 @@ session_start();
 <meta name="viewport" content="width=device-width">
 
 <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="public/static/css/normalize.min.css">
 <link rel="stylesheet" href="public/static/css/main.css">
 <link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -63,114 +64,13 @@ session_start();
 <script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
 <script>
 
-(function($){
-    $(window).load(function(){
-        $(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
-    });
-})(jQuery);
-
-function getURLParameter(name) {
-    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
-}
-
-function validateEmailForm()
-{
-    $(".email-form").validate({
-        highlight: function(element, errorClass) {
-            $(element).css('backgroundColor', '#EDBBBB');
-        },
-        rules: {
-            email_address: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            email_address: {
-                required: "Podaj adres email",
-                email: "Podaj poprawny adres email"
-            }
-        },
-        errorLabelContainer: $('div.error-container'),
-        submitHandler: function(form){
-            var id = $(form).data('id');
-            var photo = $(form).data('photo');
-            var opis = $(form).data('opis');
-            var tab = $(form).data('tab');
-            var email = $(form).find('#email_address').val();
-            var cena = $(form).data('cena');
-            var typ = $(form).data('typ');
-            var agentnazwisko = $(form).data('agentnazwisko');
-            var agenttelefon = $(form).data('agenttelefon');
-            var agentemail = $(form).data('agentemail');
-            $.post('mailto.php', {id: id, photo: photo, email: email, opis: opis, tab: tab, cena: cena, typ: typ, agentnazwisko: agentnazwisko, agenttelefon: agenttelefon, agentemail: agentemail});
-            $('.email-form').fadeOut();
-            $('.shadow').fadeOut();
-        }
-    });
-}
-
-
-$(function() {
-    var currentFetchingId = undefined;
-    function fetch( id ) {
-        currentFetchingId = id;
-        $.get("item.php", {
-            id: id
-        }, function (data) {
-            if ( id == currentFetchingId ) {
-                $('.details-container').html(data);
-                $(".text-text").mCustomScrollbar({scrollButtons:{enable:true}});
-            }
-        });
-    }
-    // preload first item
-    if( $('.offer-zobacz-button').size() > 0 ) {
-        var id;
-        if (getURLParameter("id") != null)
-            id = getURLParameter("id");
-        else
-            id = $($('.offer-zobacz-button').get(0)).data('id');
-        fetch(id);
-    }
-    $('.offer-zobacz-button').click(function () {
-        var id = $(this).data('id');
-        fetch( id );
-    });
-});
-
-$(function() {
-    $('.favourite-button').live('click', function() {
-        var id = $(this).data('id');
-        $.post('favourites.php', {id: id});
-    });
-});
-
-$(function() {
-    $('.mailto-button').live('click', function() {
-        $('.email-form').fadeIn();
-        $('.shadow').fadeIn();
-        validateEmailForm();
-    });
-});
-
-$(function() {
-    $('.shadow').live('click', function() {
-        $('.email-form').fadeOut();
-        $('.shadow').fadeOut();
-    });
-});
-
-$(function() {
-    $('.anuluj-button').live('click', function() {
-        $('.email-form').fadeOut();
-        $('.shadow').fadeOut();
-    });
-});
-
 </script>
 </head>
 <body class="favourites-page">
+
+<script type="text/javascript" src="public/static/js/search_map.js" ></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
@@ -179,25 +79,29 @@ $(function() {
     <header>
         <div class="logo">
             <h1>Van Hausen</h1>
-            <img src="public/static/./img/logo_mini.png" ></img>
+            <a href="index.php"><img src="public/static/./img/logo_mini.png" ></img></a>
         </div>
         <span class="violet-line"><img></img></span>
         <div class="small-buttons">
-            <a href="ulubione.php" class="small-button but1">
+            <a href="ulubione.php?u=1" title="Przeglądaj ulubione oferty" class="small-button but1">
                 <img src="public/static/./img/but1.png"></img>
             </a><!--
-			--><a href="index.php" class="small-button but2">
+			--><a href="index.php" title="Powrót do strony głównej" class="small-button but2">
                 <img src="public/static/./img/but2.png"></img>
             </a><!--
-			--><span class="small-button but3">
-				<img src="public/static/./img/but3.png"></img>
-			</span><!--
-			--><span class="small-button but4">
+			--><a href="search.php?tab=mieszkania" title="Wyszukiwarka ofert" class="small-button but3">
+                <img src="public/static/./img/but3.png"></img>
+            </a><!--
+			--><a href="kontakt.php" title="Skontaktuj się z nami" class="small-button but4">
 				<img src="public/static/./img/but4.png"></img>
-			</span>
+			</a>
         </div>
     </header>
 </div>
+
+<?php if (count($found) == 0)
+echo '<div class="container" style="padding-top: 50px;">Tutaj możesz dodawać oferty, które chcesz zachować do późniejszego przeglądania. Twój zbiór jest obecnie pusty.</div>';
+?>
 
 <div class="container offers-container">
                   <span class="offers-list">
@@ -210,7 +114,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -220,7 +124,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -230,7 +134,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-skrot">' . substr($res->getMiasto(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -240,7 +144,7 @@ foreach( $found as $res ) {
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
     }
@@ -251,16 +155,25 @@ foreach( $found as $res ) {
           </span>
 </div>
 
-
+<span class="shadow2"> </span>
+<span class="shadow"> </span>
+<?php if (count($found) != 0) echo '<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>';?>
 
 <script src="public/static/js/plugins.js"></script>
 <script src="public/static/js/main.js"></script>
 
-<script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42732274-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
 </script>
 </body>
 </html>

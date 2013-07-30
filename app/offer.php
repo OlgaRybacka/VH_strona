@@ -5,6 +5,7 @@ $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
 $id = (int) $_GET['id'];
+$print = (int) $_GET['print'];
 $element = $nie->get($id);
 $zdjecia = $zdj->getForNieruchomosc( $id );
 
@@ -24,14 +25,119 @@ if ($element == null) {
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-		
+
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
-		<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
-		
-		<script src="public/static/js/jquery-1.10.1.min.js"></script>
+        <link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="public/static/css/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
+        <script src="public/static/js/jquery.validate.js"></script>
+        <script src="public/static/js/additional-methods.js"></script>
+        <script src="public/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+        <script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+        <script>
+
+            $(function() {
+                initializeMap();
+            });
+
+            $(function() {
+                $('.favourite-button').live('click', function() {
+                    var id = $(this).data('id');
+                    $.post('favourites.php', {id: id});
+                });
+            });
+
+            $(function() {
+                $('.mailto-button').live('click', function() {
+                    $('.email-form').fadeIn();
+                    $('.shadow').fadeIn();
+                    validateEmailForm();
+                });
+            });
+
+            $(function() {
+                $('.shadow').live('click', function() {
+                    $('.email-form').fadeOut();
+                    $('.shadow').fadeOut();
+                });
+            });
+
+            $(function() {
+                $('.anuluj-button').live('click', function() {
+                    $('.email-form').fadeOut();
+                    $('.shadow').fadeOut();
+                });
+            });
+
+            $(function() {
+                $('.showmap-button').live('click', function() {
+                    $('.map-span').fadeIn();
+                    $('.shadow2').fadeIn();
+                    google.maps.event.trigger( smallmap, 'resize' );
+                    smallmap.setCenter(new google.maps.LatLng(smallmap.getCenter().lat() + 0.004, smallmap.getCenter().lng() - 0.01));
+                });
+            });
+
+            $(function() {
+                $('.shadow2').live('click', function() {
+                    $('.map-span').fadeOut();
+                    $('.shadow2').fadeOut();
+                });
+            });
+
+            $(function() {
+                $('.zamknij-button').live('click', function() {
+                    $('.map-span').fadeOut();
+                    $('.shadow2').fadeOut();
+                });
+            });
+
+            $(function() {
+                $(".gallery_button").live("click",function() {
+                    var pictures = [];
+                    $(this).find('ul.gallery-items > li > img').each(function() {
+                        pictures.push($(this).attr('src'));
+                    });
+                    $.fancybox(pictures, {
+                        'padding' : 0,
+                        'transitionIn' : 'none',
+                        'transitionOut' : 'none',
+                        'type' : 'image',
+                        'changeFade' : 0
+                    });
+                });
+            });
+
+            var smallmap;
+
+            function initializeMap() {
+                var lat = $("#map-canvas").data('lat');
+                var lng = $("#map-canvas").data('lng');
+                var myLatlng = new google.maps.LatLng(lat, lng)
+                var mapOptions = {
+                    center: myLatlng,
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                smallmap = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: smallmap
+                });
+            }
+        </script>
 		
     </head>
     <body class="offer-page">
@@ -43,30 +149,63 @@ if ($element == null) {
             <header>
                 <div class="logo">
 					<h1>Van Hausen</h1>
-					<img src="public/static/./img/logo_mini.png" ></img>
+                    <a href="index.php"><img src="public/static/./img/logo_mini.png" ></img></a>
 				</div>
-				<span class="violet-line"><img></img></span>
+                <?php if (!($print)) echo '
+                <span class="violet-line"><img></img></span>
+                <div class="small-buttons">
+                    <a href="ulubione.php?u=1" title="Przeglądaj ulubione oferty" class="small-button but1">
+                        <img src="public/static/./img/but1.png"></img>
+                    </a><!--
+                            --><a href="index.php" title="Powrót do strony głównej" class="small-button but2">
+                        <img src="public/static/./img/but2.png"></img>
+                    </a><!--
+                    --><a href="search.php?tab=mieszkania" title="Wyszukiwarka ofert" class="small-button but3">
+                        <img src="public/static/./img/but3.png"></img>
+                    </a><!--
+                    --><a href="kontakt.php" title="Skontaktuj się z nami" class="small-button but4">
+                        <img src="public/static/./img/but4.png"></img>
+                    </a>
+                </div>';
+                else echo '<span class="violet-line2"><img></img></span>'; ?>
 				
             </header>
         </div>
 		
 		<div class="container offers-container">
-      
+
+		  <span class="offer-photos">
+			<?php if (count($zdjecia) >= 1) {echo '<a style="background-image:url(' . getUrl($zdjecia[0]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul> </a>';} ?>
+            <?php if (count($zdjecia) >= 2) {echo '<a style="background-image:url(' . getUrl($zdjecia[1]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul></a>';} ?>
+            <?php if (count($zdjecia) >= 3) {echo '<a style="background-image:url(' . getUrl($zdjecia[2]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+                foreach($zdjecia as $z) {
+                    echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                }
+                echo '</ul></a>';} ?>
+          </span>
 		  <span class="offer-details">
-		    <div class="basic-info">
+		    <div class="basic-info" style="float: left; width: 330px;">
               <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
 			  <span class="basic-info-text">
 			    <span class="dane_center"><span class="big-number"><?php echo $element->getPowierzchnia(); ?></span> m<sup>2</sup> <?php if($element->getDzialTab() == "mieszkania" || $element->getDzialTab() == "domy") echo '/ <span class="big-number">' . $element->getPokoje() . '</span> pok.'; ?> <br/></span>
                 <span class="dane_center"><span class="big-number"><?php echo $element->getCena(); ?></span> zł</span>
 				<img src="public/static/./img/hor_line.png" style="display: block; margin: auto; margin-top: 10px; margin-bottom: 10px"></img>
-				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"><?php echo $element->getAgentTelKom() ?></span></span>
+				<span class="dane_center"><img src="public/static/./img/phone.png"><span class="big-number"><?php if ($element->getAgentTelKom() != "") echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?></span></span>
 			    <div class="status-nr">
 				  <span class="status"><?php echo $element->getDzialTyp(); ?></span>
 				  <span class="nr"><?php echo $element->getId(); ?></span>
 				</div>
 			  </span>
 			</div>
-			<div class="offer-description">
+			<div class="offer-description" style="float: left; position: relative;">
                 <div class="location"><div class="location-text"><b><?php if ($element->getDzialTab() != "dzialki") echo $element->getDzielnica(); else echo $element->getMiasto(); ?></b><?php if ($element->getDzialTab() != "dzialki") echo ', ' . $element->getUlica(); ?></div></div>
                 <?php
               if ($element->getDzialTab() == "mieszkania") {
@@ -74,8 +213,8 @@ if ($element == null) {
                       '<div class="row1">
                         <span class="col1">
                           <div class="text">
-                            <span style="font-size:12px;">typ zabudowy</span><br/>
-                            <span style="font-size: 14px; font-weight:bold">' . $element->getTypzabudowy() . '</span>
+                            <span style="font-size:12px;">rok budowy</span><br/>
+                            <span style="font-size: 14px; font-weight:bold">' . $element->getRokbudowy() . '</span>
 				  </div>
 				</span>
 				<span class="col2">
@@ -193,34 +332,68 @@ if ($element == null) {
                         <div class="text">
                             <span style="font-size: 10px">KONTAKT I PREZENTACJA:</span><br/>
                             <b><?php echo $element->getAgentNazwisko(); ?></b><br/>
-                            tel. <b><?php echo $element->getAgentTelKom(); ?></b><br/>
+                            tel. <b><?php if ($element->getAgentTelKom() != "") echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?></b><br/>
                             <?php echo $element->getAgentEmail(); ?><br/>
                             <span style="font-size: 10px">odpowiedzialność zawodowa - nr licencji: 9479</span><br/>
                         </div>
                     </div>
+                    <?php  if(!($print))
+                    {
+                        echo ' <span class="offer-buttons-container" style="width:100%; position: relative; background-color:#D1D2D4; display:block; height: 28px; padding-top:3px;"><span class="offer-buttons">
+			    <a class="offer-button gallery_button" title="Przeglądaj zdjęcia oferty">';
+
+                    echo '<ul class="gallery-items" style="display: none">';
+                    foreach($zdjecia as $z) {
+                        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+                    }
+                    echo '</ul>';
+
+                    echo '<img src="public/static/./img/off_but1.png"></img></a><!--
+            --><a class="offer-button favourite-button" data-id="' . $element->getId() . '" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
+            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=' . urlencode( 'http://alpha.vanhausen.pl/offer.php?id='. $id . '&print=1' ) . '"><img src="public/static/./img/off_but3.png"></img></a><!--
+            --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
+            --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
+            --></span></span>';
+                    }?>
+
 				</span>
 
 			  </span>
-
-			
-		  </span>
-		  <span class="offer-photos">
-			<?php if (count($zdjecia) >= 1) echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class=""></img>' ?>
-            <?php if (count($zdjecia) >= 2) echo '<img src="' . getUrl($zdjecia[1]->getUrl()) . '" class=""></img>' ?>
-            <?php if (count($zdjecia) >= 3) echo '<img src="' . getUrl($zdjecia[2]->getUrl()) . '" class=""></img>' ?>
 		  </span>
 		</div>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="public/static/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+        <span class="shadow2"> </span>
+<span class="map-span">
+    <div class="zamknij-button"> </div>
+    <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
+</span>
+        <span class="shadow"> </span>
+<span>
+    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
+        <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>
+        <input name="email_address" id="email_address" type="text"/>
+        <div class="anuluj-button"> </div>
+        <input type="submit" value="" class="sendemail-button"/>
+        <div class="error-container"> </div>
+    </form>
+</span>
+
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42732274-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
         </script>
     </body>
 </html>

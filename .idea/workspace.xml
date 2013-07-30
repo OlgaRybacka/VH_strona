@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="mapka do ofert">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/_form.php" afterPath="$PROJECT_DIR$/app/_form.php" />
+    <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/contact_mail.php" afterPath="$PROJECT_DIR$/app/contact_mail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/kontakt.php" afterPath="$PROJECT_DIR$/app/kontakt.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/map.php" afterPath="$PROJECT_DIR$/app/map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/offer.php" afterPath="$PROJECT_DIR$/app/offer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/search.php" afterPath="$PROJECT_DIR$/app/search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ulubione.php" afterPath="$PROJECT_DIR$/app/ulubione.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VH_strona.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374474415734" ignored="false" />
+    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375096305462" ignored="false" />
     <file path="/.htaccess" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371401005603" ignored="false" />
-    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374423649048" ignored="false" />
-    <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374438902784" ignored="false" />
-    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374430566080" ignored="false" />
+    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375092747229" ignored="false" />
+    <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375093539020" ignored="false" />
+    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375094493451" ignored="false" />
     <file path="/config.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411340174" ignored="false" />
-    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374474963222" ignored="false" />
-    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374438191155" ignored="false" />
+    <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375091702182" ignored="false" />
+    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375094727900" ignored="false" />
     <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070245191" ignored="false" />
     <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374232965723" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5.rnc" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373960780305" ignored="false" />
     <file path="/additional-methods.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374246747403" ignored="false" />
     <file path="/favourites.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374314451054" ignored="false" />
-    <file path="/ulubione.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374320538720" ignored="false" />
-    <file path="/mailto.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374422606025" ignored="false" />
+    <file path="/ulubione.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375091291097" ignored="false" />
+    <file path="/mailto.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374843353493" ignored="false" />
     <file path="/topsecretsite.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374432295730" ignored="false" />
-    <file path="/search_map.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374441194440" ignored="false" />
-    <file path="/_form.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374475145685" ignored="false" />
+    <file path="/search_map.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374480533608" ignored="false" />
+    <file path="/_form.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375090831559" ignored="false" />
+    <file path="/map_item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374496390999" ignored="false" />
+    <file path="/map.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375093246010" ignored="false" />
+    <file path="/jquery.mCustomScrollbar.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374769408653" ignored="false" />
+    <file path="/kontakt.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375095202174" ignored="false" />
+    <file path="/_header.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375094190779" ignored="false" />
+    <file path="/index.html" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374787685649" ignored="false" />
+    <file path="/contact_mail.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375097527253" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,28 +57,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/search.php">
+      <file leaf-file-name="ulubione.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ulubione.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="145" selection-end="167" vertical-scroll-proportion="-3.9230769">
-              <folding />
+            <state line="176" column="9" selection-start="7433" selection-end="7433" vertical-scroll-proportion="-11.5">
+              <folding>
+                <marker date="1375097904811" expanded="true" signature="4178:4196" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="map.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/map.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="-1.764151">
-              <folding />
+            <state line="201" column="9" selection-start="6532" selection-end="6532" vertical-scroll-proportion="-16.076923">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1375097904839" expanded="false" signature="4459:4472" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_map.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
+      <file leaf-file-name="mailto.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/mailto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="642" column="119" selection-start="24313" selection-end="24313" vertical-scroll-proportion="0.0">
+            <state line="25" column="157" selection-start="1232" selection-end="1232" vertical-scroll-proportion="8.5">
               <folding />
             </state>
           </provider>
@@ -76,76 +92,87 @@
       <file leaf-file-name="_header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="6" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1374435334726" expanded="true" signature="23:698" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="33:691" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="54:142" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="219:680" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="272:331" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="336:342" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="390:449" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="454:460" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="494:560" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="565:571" placeholder="..." />
-                <marker date="1374435334726" expanded="true" signature="605:671" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/_form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="44" selection-start="10121" selection-end="10121" vertical-scroll-proportion="-130.76923">
+            <state line="23" column="6" selection-start="1" selection-end="910" vertical-scroll-proportion="-15.038462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/item.php">
+      <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="89" selection-start="7783" selection-end="7783" vertical-scroll-proportion="0.0">
+            <state line="130" column="17" selection-start="6180" selection-end="6180" vertical-scroll-proportion="-20.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
+      <file leaf-file-name="kontakt.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/kontakt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1029" column="15" selection-start="20995" selection-end="20995" vertical-scroll-proportion="0.0">
+            <state line="87" column="9" selection-start="3576" selection-end="3576" vertical-scroll-proportion="-16.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="28" selection-start="145" selection-end="284" vertical-scroll-proportion="0.0">
+            <state line="250" column="17" selection-start="12645" selection-end="12645" vertical-scroll-proportion="0.92477876">
               <folding>
-                <marker date="1374443065286" expanded="true" signature="889:9390" placeholder="..." />
-                <marker date="1374443065286" expanded="true" signature="889:1269" placeholder="..." />
+                <marker date="1375097904802" expanded="false" signature="1941:2092" placeholder="..." />
+                <marker date="1375097904802" expanded="false" signature="2132:2158" placeholder="..." />
+                <marker date="1375097904802" expanded="false" signature="2269:2447" placeholder="..." />
+                <marker date="1375097904802" expanded="false" signature="2542:2719" placeholder="..." />
+                <marker date="1375097904802" expanded="true" signature="7549:7578" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topsecretsite.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/topsecretsite.php">
+      <file leaf-file-name="contact_mail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/contact_mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="64" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="27" column="34" selection-start="831" selection-end="831" vertical-scroll-proportion="18.576923">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="changeOffers.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/changeOffers.php">
+      <file leaf-file-name="offer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/offer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="396" column="17" selection-start="19172" selection-end="19172" vertical-scroll-proportion="-7.7058825">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1375097904749" expanded="true" signature="6119:6973" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6228:6324" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6329:6358" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6439:6535" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6540:6561" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6652:6748" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6753:6774" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="6854:6950" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="15642:15745" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="15746:15855" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="15774:15855" placeholder="..." />
+                <marker date="1375097904749" expanded="true" signature="15919:15932" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_map.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="590" column="61" selection-start="17608" selection-end="17661" vertical-scroll-proportion="-5.5">
               <folding />
             </state>
           </provider>
@@ -171,29 +198,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/public/static/js/vendor/additional-methods.js" />
-        <option value="$PROJECT_DIR$/app/public/static/js/additional-methods.js" />
-        <option value="$PROJECT_DIR$/app/favourites.php" />
+        <option value="$PROJECT_DIR$/app/public/static/index.html" />
+        <option value="$PROJECT_DIR$/app/public/static/js/vendor/cookies.js" />
+        <option value="$PROJECT_DIR$/app/item_fav.php" />
         <option value="$PROJECT_DIR$/app/mailto.php" />
-        <option value="$PROJECT_DIR$/app/offer.php" />
-        <option value="$PROJECT_DIR$/app/public/static/favourites.html" />
-        <option value="$PROJECT_DIR$/app/ulubione.php" />
-        <option value="$PROJECT_DIR$/app/public/wyroznione.txt" />
-        <option value="$PROJECT_DIR$/app/index.php" />
-        <option value="$PROJECT_DIR$/app/topsecretsite.php" />
+        <option value="$PROJECT_DIR$/app/_form.php" />
         <option value="$PROJECT_DIR$/app/item.php" />
+        <option value="$PROJECT_DIR$/app/_header.php" />
         <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
         <option value="$PROJECT_DIR$/app/public/static/js/search_map.js" />
+        <option value="$PROJECT_DIR$/app/contact_mail.php" />
         <option value="$PROJECT_DIR$/app/search.php" />
+        <option value="$PROJECT_DIR$/app/ulubione.php" />
         <option value="$PROJECT_DIR$/app/map.php" />
-        <option value="$PROJECT_DIR$/app/_form.php" />
+        <option value="$PROJECT_DIR$/app/offer.php" />
+        <option value="$PROJECT_DIR$/app/kontakt.php" />
+        <option value="$PROJECT_DIR$/app/index.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="width" value="1280" />
-    <option name="height" value="761" />
+    <option name="height" value="762" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -221,7 +248,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -360,7 +386,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -382,7 +412,91 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="import" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="working" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="import" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waiting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="import" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,19 +520,20 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/tmp" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
-  <component name="PublishConfig" serverName="vanhausen@vanhausen.home.pl" serverId="50a4c31e-b3e4-41d7-ab5a-21859ea23a5a" autoUpload="true">
+  <component name="PublishConfig" serverName="vanhausen@vanhausen.home.pl" serverId="50a4c31e-b3e4-41d7-ab5a-21859ea23a5a" autoUpload="true" autoUploadExternalChanges="true">
     <servers>
       <server id="50a4c31e-b3e4-41d7-ab5a-21859ea23a5a">
         <serverdata>
@@ -431,13 +546,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projekty\VH_strona\app" />
       <recent name="D:\projekty\VH_strona\app\public\static\img" />
-      <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
       <recent name="D:\projekty\VH_strona\app\public\static\js" />
+      <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projekty\VH_strona\app\public\static\js" />
+      <recent name="D:\projekty\VH_strona\app\public\static\js\vendor" />
       <recent name="D:\projekty\VH_strona\app" />
+      <recent name="D:\projekty\VH_strona\app\public\static\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -557,7 +674,35 @@
       <created>1374441681673</created>
       <updated>1374441681673</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="rozróżnienie map i search w formularzu">
+      <created>1374475277307</created>
+      <updated>1374475277307</updated>
+    </task>
+    <task id="LOCAL-00022" summary="przyciski w formularzu, przekierowanie z głównej na mapę">
+      <created>1374476862018</created>
+      <updated>1374476862018</updated>
+    </task>
+    <task id="LOCAL-00023" summary="naprawiona galeria">
+      <created>1374480744463</created>
+      <updated>1374480744463</updated>
+    </task>
+    <task id="LOCAL-00024" summary="nowe zakładki w formularzu, galeria otwierana przez klik w zdjęcie, suwaki, strona z kontaktem, slider na głównej">
+      <created>1374780686107</created>
+      <updated>1374780686107</updated>
+    </task>
+    <task id="LOCAL-00025" summary="poprawiona mapa, próba zrobienia mailto">
+      <created>1374839502754</created>
+      <updated>1374839502754</updated>
+    </task>
+    <task id="LOCAL-00026" summary="poprawione mailto">
+      <created>1375084502827</created>
+      <updated>1375084502827</updated>
+    </task>
+    <task id="LOCAL-00027" summary="footer, przycięte zdj na głównej, ciemna obwódka na liście ofert, czarna czcionka, inne tło w rodzaju oferty, sortuj wg - niedokończone, enter - wyszukaj z listy, 35 znaków do lokalizacji, pusty nr kom -&gt; numer biura, usunięty fatalerror gdy złe id wyróżnionej oferty, tooltipy w małych ikonkach na górze, wszystkie oferty - poprawiony import.">
+      <created>1375096318250</created>
+      <updated>1375096318250</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -581,29 +726,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="761" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="762" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17880794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10779436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26108375" sideWeight="0.6710963" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.89220566" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32781458" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32615894" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.66450566" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3306321" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -648,7 +793,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="mapka do ofert" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer, przycięte zdj na głównej, ciemna obwódka na liście ofert, czarna czcionka, inne tło w rodzaju oferty, sortuj wg - niedokończone, enter - wyszukaj z listy, 35 znaków do lokalizacji, pusty nr kom -&gt; numer biura, usunięty fatalerror gdy złe id wyróżnionej oferty, tooltipy w małych ikonkach na górze, wszystkie oferty - poprawiony import." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -680,123 +825,177 @@
     <MESSAGE value="wysyłanie maila, drobne poprawki w wyświetlaniu (głównie różnice między różnymi typami ofert)" />
     <MESSAGE value="zmiana wyróżnionych ofert" />
     <MESSAGE value="mapka do ofert" />
+    <MESSAGE value="rozróżnienie map i search w formularzu" />
+    <MESSAGE value="przyciski w formularzu, przekierowanie z głównej na mapę" />
+    <MESSAGE value="naprawiona galeria" />
+    <MESSAGE value="nowe zakładki w formularzu, galeria otwierana przez klik w zdjęcie, suwaki, strona z kontaktem, slider na głównej" />
+    <MESSAGE value="poprawiona mapa, próba zrobienia mailto" />
+    <MESSAGE value="poprawione mailto" />
+    <MESSAGE value="footer, przycięte zdj na głównej, ciemna obwódka na liście ofert, czarna czcionka, inne tło w rodzaju oferty, sortuj wg - niedokończone, enter - wyszukaj z listy, 35 znaków do lokalizacji, pusty nr kom -&gt; numer biura, usunięty fatalerror gdy złe id wyróżnionej oferty, tooltipy w małych ikonkach na górze, wszystkie oferty - poprawiony import." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/public/static/favourites.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="14" selection-start="3341" selection-end="3341" vertical-scroll-proportion="3.0682926" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/favourites.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="56" selection-start="259" selection-end="315" vertical-scroll-proportion="-6.5384617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/NieruchomosciRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="0" selection-start="2226" selection-end="2226" vertical-scroll-proportion="20.923077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/wyroznione.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ulubione.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="4162" selection-end="4162" vertical-scroll-proportion="14.961538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="15" selection-start="2201" selection-end="2201" vertical-scroll-proportion="-37.923077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="145" selection-end="284" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1374443065286" expanded="true" signature="889:9390" placeholder="..." />
-            <marker date="1374443065286" expanded="true" signature="889:1269" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/changeOffers.php">
+    <entry file="file://$PROJECT_DIR$/app/swift/classes/Swift/Mime/Headers/DateHeader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/topsecretsite.php">
+    <entry file="file://$PROJECT_DIR$/app/public/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="64" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/_header.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1374435334726" expanded="true" signature="23:698" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="33:691" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="54:142" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="219:680" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="272:331" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="336:342" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="390:449" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="454:460" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="494:560" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="565:571" placeholder="..." />
-            <marker date="1374435334726" expanded="true" signature="605:671" placeholder="..." />
-          </folding>
+        <state line="123" column="23" selection-start="3271" selection-end="3271" vertical-scroll-proportion="0.33263597">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1029" column="15" selection-start="20995" selection-end="20995" vertical-scroll-proportion="0.0">
+        <state line="423" column="17" selection-start="7671" selection-end="7671" vertical-scroll-proportion="-6.88">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="89" selection-start="7783" selection-end="7783" vertical-scroll-proportion="0.0">
+        <state line="145" column="19" selection-start="9783" selection-end="9792" vertical-scroll-proportion="-48.333332">
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#2;n#div#1;n#span#0;n#!!top" expanded="true" />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1375094052766" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="101" selection-start="327" selection-end="345" vertical-scroll-proportion="-2.6666667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="642" column="119" selection-start="24313" selection-end="24313" vertical-scroll-proportion="0.0">
+        <state line="590" column="61" selection-start="17608" selection-end="17661" vertical-scroll-proportion="-5.5">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="1" selection-end="910" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/contact_mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="34" selection-start="831" selection-end="831" vertical-scroll-proportion="18.576923">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="145" selection-end="167" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="44" selection-start="10121" selection-end="10121" vertical-scroll-proportion="-130.76923">
+        <state line="130" column="17" selection-start="6180" selection-end="6180" vertical-scroll-proportion="-20.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/map.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="-1.764151">
+        <state line="201" column="9" selection-start="6532" selection-end="6532" vertical-scroll-proportion="-16.076923">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1375097904839" expanded="false" signature="4459:4472" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="17" selection-start="19172" selection-end="19172" vertical-scroll-proportion="-7.7058825">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1375097904749" expanded="true" signature="6119:6973" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6228:6324" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6329:6358" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6439:6535" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6540:6561" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6652:6748" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6753:6774" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="6854:6950" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="15642:15745" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="15746:15855" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="15774:15855" placeholder="..." />
+            <marker date="1375097904749" expanded="true" signature="15919:15932" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ulubione.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="9" selection-start="7433" selection-end="7433" vertical-scroll-proportion="-11.5">
+          <folding>
+            <marker date="1375097904811" expanded="true" signature="4178:4196" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="157" selection-start="1232" selection-end="1232" vertical-scroll-proportion="8.5">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/kontakt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="9" selection-start="3576" selection-end="3576" vertical-scroll-proportion="-16.076923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="250" column="17" selection-start="12645" selection-end="12645" vertical-scroll-proportion="0.92477876">
+          <folding>
+            <marker date="1375097904802" expanded="false" signature="1941:2092" placeholder="..." />
+            <marker date="1375097904802" expanded="false" signature="2132:2158" placeholder="..." />
+            <marker date="1375097904802" expanded="false" signature="2269:2447" placeholder="..." />
+            <marker date="1375097904802" expanded="false" signature="2542:2719" placeholder="..." />
+            <marker date="1375097904802" expanded="true" signature="7549:7578" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

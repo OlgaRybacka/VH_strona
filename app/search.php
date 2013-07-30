@@ -25,6 +25,7 @@ $found = $nie->search($query);
         <meta name="viewport" content="width=device-width">
 		
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
         <link rel="stylesheet" href="public/static/css/main.css">
 		<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
@@ -67,7 +68,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -77,7 +78,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -87,7 +88,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getMiasto() . '</div>
+			  <div class="offer-skrot">' . substr($res->getMiasto(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -97,7 +98,7 @@ $found = $nie->search($query);
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
-			  <div class="offer-skrot">' . $res->getDzielnica() . ', ' .  $res->getUlica() . '</div>
+			  <div class="offer-skrot">' . substr($res->getDzielnica() . ', ' .  $res->getUlica(), 0, 35) . '</div>
 			  <a class="offer-zobacz-button" data-id="' . $res->getId() . '">zobacz</a>
                     </div>';
                       }
@@ -108,16 +109,25 @@ $found = $nie->search($query);
           </span>
 		</div>
 
-
+        <span class="shadow2"> </span>
+        <span class="shadow"> </span>
+        <?php if (count($found) != 0) echo '<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>';?>
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>
 
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-42732274-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
         </script>
     </body>
 </html>
