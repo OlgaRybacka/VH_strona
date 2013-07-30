@@ -75,6 +75,8 @@ class Nieruchomosc {
   private $miasto;           // varchar(45) 
   private $miejscowosc;      // varchar(45) 
   private $kraj;             // varchar(45)
+  private $dataaktualizacji;
+  private $datawprowadzenia;
 
   private $typdzialki;
   private $liczbapomieszczen;
@@ -84,7 +86,8 @@ class Nieruchomosc {
 
   public static function fromDomElement( DOMElement $domElement ) {
     $simple_varchar = array('typdzialki', 'typlokalu', 'kraj', 'miejscowosc', 'miasto', 'typbudynkumieszk', 'ulica', 'dzielnica', 'wojewodztwo'
-        , 'agent_gg', 'agent_skype', 'agent_tel_kom', 'agent_tel_biuro', 'agent_email', 'agent_nazwisko', 'forma_wlasnosci', 'typzabudowy' );
+        , 'agent_gg', 'agent_skype', 'agent_tel_kom', 'agent_tel_biuro', 'agent_email', 'agent_nazwisko', 'forma_wlasnosci', 'typzabudowy'
+        , 'dataaktualizacji', 'datawprowadzenia' );
     $nieruchomosc = new Nieruchomosc();
     $nieruchomosc->setDzialTab( $domElement->parentNode->getAttribute("tab") );
     $nieruchomosc->setDzialTyp( $domElement->parentNode->getAttribute("typ") );
@@ -128,8 +131,10 @@ class Nieruchomosc {
           $nieruchomosc->liczbapomieszczen = intval( $child->textContent );
         } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'powierzchniadzialki' ) {
           $nieruchomosc->powierzchniadzialki = floatval( $child->textContent );
-        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'liczbapieter' ) {
-          $nieruchomosc->liczbapieter = intval( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'dataaktualizacji' ) {
+          $nieruchomosc->dataaktualizacji = ( $child->textContent );
+        } else if ( $child->tagName == 'param' && $child->getAttribute('nazwa') == 'datawprowadzenia' ) {
+          $nieruchomosc->datawprowadzenia = ( $child->textContent );
         }
       }
     }
@@ -407,4 +412,20 @@ class Nieruchomosc {
   public function getTyplokalu() {
     return $this->typlokalu;
   }
+
+	public function setDataaktualizacji($dataaktualizacji) {
+		$this->dataaktualizacji = $dataaktualizacji;
+	}
+
+	public function getDataaktualizacji() {
+		return $this->dataaktualizacji;
+	}
+
+	public function setDatawprowadzenia($datawprowadzenia) {
+		$this->datawprowadzenia = $datawprowadzenia;
+	}
+
+	public function getDatawprowadzenia() {
+		return $this->datawprowadzenia;
+	}
 }

@@ -63,7 +63,7 @@ $found = $nie->search($query);
                       /** @var Nieruchomosc $res*/
                       if($res->getDzialTab() == "mieszkania"){
                     echo '
-		    <div class="offer">
+		    <div class="offer" data-date="' . $res->getDatawprowadzenia() . '">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
@@ -73,7 +73,7 @@ $found = $nie->search($query);
                       }
                       if($res->getDzialTab() == "domy"){
                           echo '
-		    <div class="offer">
+		    <div class="offer" data-date="' . $res->getDatawprowadzenia() . '">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2">' . $res->getPokoje() . ' pok.</div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
@@ -83,7 +83,7 @@ $found = $nie->search($query);
                       }
                       if($res->getDzialTab() == "dzialki"){
                           echo '
-		    <div class="offer">
+		    <div class="offer" data-date="' . $res->getDatawprowadzenia() . '">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
@@ -93,7 +93,7 @@ $found = $nie->search($query);
                       }
                       if($res->getDzialTab() == "lokale"){
                           echo '
-		    <div class="offer">
+		    <div class="offer" data-date="' . $res->getDatawprowadzenia() . '">
 			  <div class="offer-data data1">' . $res->getPowierzchnia(). ' m<sup>2</sup></div>
 			  <div class="offer-data data2"> </div>
 			  <div class="offer-data data3">' . $res->getCena() . ' zł</div>
