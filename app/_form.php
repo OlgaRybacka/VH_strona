@@ -25,7 +25,6 @@ function switchButton() {
 			</div>
 			<div class="styled-select">
 				<select name="typOferty_mi" class="search-form row1 col2">
-					<option value="">dowolna</option>
 					<option>sprzedaż</option>
 					<option>wynajem</option>
 				</select>
@@ -110,8 +109,8 @@ function switchButton() {
 			</div>
 			<input id="lokalizacja_mi" name="lokalizacja_mi" type="text" class="search-form input row3 col4a" placeholder="np. Nowe Miasto" autocomplete="off" />
 			<div class="search-form error_mi row4 col4a"><span></span></div>
-			<input type="submit" value="" class="search-form button row5 col4a list-search-button"/>
-            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value=""/>
+			<input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
+            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
 		</form>
 
 		<form method="get" class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
@@ -121,7 +120,6 @@ function switchButton() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_do" name="typOferty_do" class="search-form row1 col2">
-					<option value="">dowolna</option>
 					<option>sprzedaż</option>
 					<option>wynajem</option>
 				</select>
@@ -210,8 +208,8 @@ function switchButton() {
 			</div>
 			<input id="lokalizacja_do" name="lokalizacja_do" type="text" class="search-form input row3 col4a" placeholder="np. Nowe Miasto" autocomplete="off" />
 			<div class="search-form error_do row4 col4a"><span></span></div>
-            <input type="submit" value="" class="search-form button row5 col4a list-search-button"/>
-            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value=""/>
+            <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
+            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
         </form>
 		<form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 			<input hidden="true" value="dzialki" name="tab"/>
@@ -220,7 +218,6 @@ function switchButton() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_dz" name="typOferty_dz" class="search-form row1 col2">
-					<option value="">dowolna</option>
 					<option>sprzedaż</option>
 					<option>wynajem</option>
 				</select>
@@ -257,8 +254,8 @@ function switchButton() {
 			</div>
 			<input id="miasto_dz" name="miasto_dz" type="text" class="search-form input row2 col4a" placeholder="np. Nowe Miasto" autocomplete="off" />
 			<div class="search-form error_dz row4 col4a"><span></span></div>
-            <input type="submit" value="" class="search-form button row5 col4a list-search-button"/>
-            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value=""/>
+            <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
+            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
         </form>
 		<form method="get" class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 			<input hidden="true" value="lokale" name="tab"/>
@@ -267,9 +264,8 @@ function switchButton() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_lo" name="typOferty_lo" class="search-form row1 col2">
-					<option value="">dowolna</option>
-					<option>sprzedaż</option>
 					<option>wynajem</option>
+                    <option>sprzedaż</option>
 				</select>
 			</div>
 			<div class="search-form form-label row2 col1">cena całościowa [od / do]
@@ -336,8 +332,8 @@ function switchButton() {
 			</div>
 			<input id="lokalizacja_lo" name="lokalizacja_lo" type="text" class="search-form input row3 col4a" placeholder="np. Nowe Miasto" autocomplete="off" />
 			<div class="search-form error_lo row4 col4a"><span></span></div>
-            <input type="submit" value="" class="search-form button row5 col4a list-search-button"/>
-            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value=""/>
+            <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
+            <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
         </form>
     <div class="search-sort">
         sortuj wg
@@ -348,7 +344,7 @@ function switchButton() {
                 <option value="biura/biuro">cena za m2</option>
             </select>
         </div>
-        <div class="liczba_ofert">Liczba ofert: <?php echo count($found);?></div>
+        <div class="liczba_ofert">Liczba niepowtarzalnych ofert: <?php echo count($found);?></div>
     </div>
 
 </div>

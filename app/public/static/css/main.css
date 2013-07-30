@@ -562,15 +562,6 @@ body .favourites-page {
   position: absolute;
 }
 
-.search-page .search-form.form-label.row1.col1
-{
-    background-color: #481368;
-    color: #d1d2d4;
-}
-.search-page .search-form.form-label.row1.col1 .arrow-right.lila2
-{
-    border-left: 8px solid #481368;
-}
 .search-page .search-form.row1 {
   top: 15px;
 }
@@ -637,28 +628,9 @@ body .favourites-page {
   position: absolute;
   width: 201px;
   text-align: center;
-  color: #fff;
-  font-weight: bold;
+  color: #d1d2d4;
   height: 31px;
   border: none;
-}
-
-.search-page .search-form.search-button {
-    background-image: url('../img/search.png');
-    background-repeat:no-repeat;
-    background-position:center;
-}
-
-.search-page .search-form.map-search-button {
-    background-image: url('../img/z_mapy.png');
-    background-repeat:no-repeat;
-    background-position:center;
-}
-
-.search-page .search-form.list-search-button {
-    background-image: url('../img/z_listy.png');
-    background-repeat:no-repeat;
-    background-position:center;
 }
 
 .search-page .search-form.search-mode {
@@ -1366,6 +1338,7 @@ border: none;
     font-size: 10px;
     margin-top: 10px;
     padding-top: 10px;
+    margin-bottom: 20px;
     background-color: #481368;
     color: white;
 }

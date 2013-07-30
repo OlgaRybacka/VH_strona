@@ -157,7 +157,7 @@ foreach( $found as $res ) {
 
 <span class="shadow2"> </span>
 <span class="shadow"> </span>
-<?php if (count($found) != 0) echo '<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>';?>
+<?php if (count($found) != 0) echo '<div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61<br/><br/><br/></div>';?>
 
 <script src="public/static/js/plugins.js"></script>
 <script src="public/static/js/main.js"></script>

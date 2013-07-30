@@ -116,22 +116,22 @@ if ($element == null) {
 			</div>
 		  </span>
 <span class="offer-photos">
-	<?php if (count($zdjecia) >= 1) {echo '<a style="background-image:url(' . getUrl($zdjecia[0]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+	<?php if (count($zdjecia) >= 2) {echo '<a style="background-image:url(' . getUrl($zdjecia[1]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
     foreach($zdjecia as $z) {
         echo '<li><img src="' . $z->getUrl() . '"></img></li>';
     }
     echo '</ul> </a>';} ?>
-    <?php if (count($zdjecia) >= 2) {echo '<a style="background-image:url(' . getUrl($zdjecia[1]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
-    foreach($zdjecia as $z) {
-        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
-    }
-    echo '</ul></a>';} ?>
     <?php if (count($zdjecia) >= 3) {echo '<a style="background-image:url(' . getUrl($zdjecia[2]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
     foreach($zdjecia as $z) {
         echo '<li><img src="' . $z->getUrl() . '"></img></li>';
     }
     echo '</ul></a>';} ?>
     <?php if (count($zdjecia) >= 4) {echo '<a style="background-image:url(' . getUrl($zdjecia[3]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
+    foreach($zdjecia as $z) {
+        echo '<li><img src="' . $z->getUrl() . '"></img></li>';
+    }
+    echo '</ul></a>';} ?>
+    <?php if (count($zdjecia) >= 5) {echo '<a style="background-image:url(' . getUrl($zdjecia[4]->getUrl()) . ')" class="gallery_button"> <ul class="gallery-items" style="display: none">';
     foreach($zdjecia as $z) {
         echo '<li><img src="' . $z->getUrl() . '"></img></li>';
     }
