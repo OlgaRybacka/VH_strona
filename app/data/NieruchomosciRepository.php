@@ -250,10 +250,10 @@ class NieruchomosciRepository {
       $toBind[':Miasto'] = $query->getMiasto();
     }
 
-      if( sizeof($conditions) != 0 ) {
+    if( sizeof($conditions) != 0 ) {
       $queryString .= "WHERE " . join(" and ", $conditions );
     }
-
+    $queryString .= " ORDER BY " . $query->getSortujWg();
 
     $prepared = $this->pdo->prepare($queryString);
     foreach( $toBind as $key => $value ) {

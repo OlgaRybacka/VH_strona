@@ -478,7 +478,7 @@ body .favourites-page {
 
 .search-page .container.search-form .search-sort {
     position: relative;
-    top: 175px;
+    top: 205px;
     background-color: #481368;
     color: white;
     height: 29px;
@@ -486,7 +486,7 @@ body .favourites-page {
     padding-left: 40px;
 }
 
-.search-page .container.search-form .search-sort #sortuj_wg{
+.search-page .container.search-form .search-sort #sortujWg{
     position:absolute;
     top: 4px;
     left: 140px;

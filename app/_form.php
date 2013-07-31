@@ -10,6 +10,20 @@ function switchButton() {
     }
 }
 
+function sortPanel() {
+	global $found;
+	echo '<div class="search-sort">
+        sortuj wg
+        <div class="styled-select">
+            <select id="sortujWg" name="sortujWg">
+                <option value="datawprowadzenia">data dodania</option>
+                <option value="cena">cena</option>
+                <option value="cenaM2">cena za m2</option>
+            </select>
+        </div>
+        <div class="liczba_ofert">Liczba niepowtarzalnych ofert: ' . count($found) . '</div>
+    </div>';
+}
 ?>
 <div class="container search-form">
 		<span class="zakladki"><!--
@@ -111,6 +125,7 @@ function switchButton() {
 			<div class="search-form error_mi row4 col4a"><span></span></div>
 			<input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
             <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
+			<?php sortPanel(); ?>
 		</form>
 
 		<form method="get" class="search-form2" <?php if ($offertype == "domy") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
@@ -210,6 +225,7 @@ function switchButton() {
 			<div class="search-form error_do row4 col4a"><span></span></div>
             <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
             <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
+			<?php sortPanel(); ?>
         </form>
 		<form method="get" class="search-form3" <?php if ($offertype == "dzialki") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 			<input hidden="true" value="dzialki" name="tab"/>
@@ -256,6 +272,7 @@ function switchButton() {
 			<div class="search-form error_dz row4 col4a"><span></span></div>
             <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
             <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
+			<?php sortPanel(); ?>
         </form>
 		<form method="get" class="search-form4" <?php if ($offertype == "lokale") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?>>
 			<input hidden="true" value="lokale" name="tab"/>
@@ -334,17 +351,7 @@ function switchButton() {
 			<div class="search-form error_lo row4 col4a"><span></span></div>
             <input type="submit" value="wyszukaj" class="search-form button row5 col4a list-search-button"/>
             <input type="submit" class="search-form button search-mode row5 col3 map-search-button" value="wyszukaj na mapie"/>
+			<?php sortPanel(); ?>
         </form>
-    <div class="search-sort">
-        sortuj wg
-        <div class="styled-select">
-            <select id="sortuj_wg" name="sortuj_wg">
-                <option value="">data dodania</option>
-                <option value="handel i usługi/lokal handlowy">cena</option>
-                <option value="biura/biuro">cena za m2</option>
-            </select>
-        </div>
-        <div class="liczba_ofert">Liczba niepowtarzalnych ofert: <?php echo count($found);?></div>
-    </div>
 
 </div>

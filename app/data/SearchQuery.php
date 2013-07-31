@@ -6,16 +6,19 @@
  */
 
 class SearchQuery {
-	private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max", "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk", "typOferty", "pokojeMin", "pokojeMax", "lokalizacja", "powDzialkiMin", "powDzialkiMax", "typLokalu", "miasto" );
+    private static $params = array ("tab", "cenaMin", "cenaMax", "cenaM2Min", "cenaM2Max",
+        "powierzchniaMin", "powierzchniaMax", "rokbudowyMin", "rokbudowyMax", "typBudynkuMieszk",
+        "typOferty", "pokojeMin", "pokojeMax", "lokalizacja", "powDzialkiMin", "powDzialkiMax",
+        "typLokalu", "miasto", "sortujWg" );
     private $tab;
     private $cenaMin;             // float
-	private $cenaMax;             // float
-	private $cenaM2Min;           // float
-	private $cenaM2Max;           // float
-	private $powierzchniaMin;     // float
-	private $powierzchniaMax;     // float
-	private $rokbudowyMin;        // int(11)
-	private $rokbudowyMax;
+    private $cenaMax;             // float
+    private $cenaM2Min;           // float
+    private $cenaM2Max;           // float
+    private $powierzchniaMin;     // float
+    private $powierzchniaMax;     // float
+    private $rokbudowyMin;        // int(11)
+    private $rokbudowyMax;
     private $typBudynkuMieszk;
     private $typOferty;
     private $pokojeMin;
@@ -25,6 +28,7 @@ class SearchQuery {
     private $powDzialkiMax;
     private $typLokalu;
     private $miasto;
+    private $sortujWg;
 
 
     public static function fromParams( $params ) {
@@ -35,6 +39,9 @@ class SearchQuery {
                 $query->$key = $value;
             }
         }
+        if( !in_array( $query->sortujWg, array("datawprowadzenia", "cenaM2", "cena") ) ) { $query->sortujWg = null; }
+        if( empty($query->sortujWg) ) { $query->sortujWg = 'datawprowadzenia'; }
+	    $query->sortujWg = preg_replace("/cenaM2/", "cena/powierzchnia", $query->sortujWg);
         return $query;
     }
 
@@ -48,69 +55,69 @@ class SearchQuery {
         return $this->tab;
     }
 
-	public function setCenaM2Max($cenaM2Max) {
-		$this->cenaM2Max = $cenaM2Max;
-	}
+    public function setCenaM2Max($cenaM2Max) {
+        $this->cenaM2Max = $cenaM2Max;
+    }
 
-	public function getCenaM2Max() {
-		return $this->cenaM2Max;
-	}
+    public function getCenaM2Max() {
+        return $this->cenaM2Max;
+    }
 
-	public function setCenaM2Min($cenaM2Min) {
-		$this->cenaM2Min = $cenaM2Min;
-	}
+    public function setCenaM2Min($cenaM2Min) {
+        $this->cenaM2Min = $cenaM2Min;
+    }
 
-	public function getCenaM2Min() {
-		return $this->cenaM2Min;
-	}
+    public function getCenaM2Min() {
+        return $this->cenaM2Min;
+    }
 
-	public function setCenaMax($cenaMax) {
-		$this->cenaMax = $cenaMax;
-	}
+    public function setCenaMax($cenaMax) {
+        $this->cenaMax = $cenaMax;
+    }
 
-	public function getCenaMax() {
-		return $this->cenaMax;
-	}
+    public function getCenaMax() {
+        return $this->cenaMax;
+    }
 
-	public function setCenaMin($cenaMin) {
-		$this->cenaMin = $cenaMin;
-	}
+    public function setCenaMin($cenaMin) {
+        $this->cenaMin = $cenaMin;
+    }
 
-	public function getCenaMin() {
-		return $this->cenaMin;
-	}
+    public function getCenaMin() {
+        return $this->cenaMin;
+    }
 
-	public function setPowierzchniaMax($powierzchniaMax) {
-		$this->powierzchniaMax = $powierzchniaMax;
-	}
+    public function setPowierzchniaMax($powierzchniaMax) {
+        $this->powierzchniaMax = $powierzchniaMax;
+    }
 
-	public function getPowierzchniaMax() {
-		return $this->powierzchniaMax;
-	}
+    public function getPowierzchniaMax() {
+        return $this->powierzchniaMax;
+    }
 
-	public function setPowierzchniaMin($powierzchniaMin) {
-		$this->powierzchniaMin = $powierzchniaMin;
-	}
+    public function setPowierzchniaMin($powierzchniaMin) {
+        $this->powierzchniaMin = $powierzchniaMin;
+    }
 
-	public function getPowierzchniaMin() {
-		return $this->powierzchniaMin;
-	}
+    public function getPowierzchniaMin() {
+        return $this->powierzchniaMin;
+    }
 
-	public function setRokbudowyMax($rokbudowyMax) {
-		$this->rokbudowyMax = $rokbudowyMax;
-	}
+    public function setRokbudowyMax($rokbudowyMax) {
+        $this->rokbudowyMax = $rokbudowyMax;
+    }
 
-	public function getRokbudowyMax() {
-		return $this->rokbudowyMax;
-	}
+    public function getRokbudowyMax() {
+        return $this->rokbudowyMax;
+    }
 
-	public function setRokbudowyMin($rokbudowyMin) {
-		$this->rokbudowyMin = $rokbudowyMin;
-	}
+    public function setRokbudowyMin($rokbudowyMin) {
+        $this->rokbudowyMin = $rokbudowyMin;
+    }
 
-	public function getRokbudowyMin() {
-		return $this->rokbudowyMin;
-	}        // int(11)
+    public function getRokbudowyMin() {
+        return $this->rokbudowyMin;
+    }        // int(11)
 
     public function setTypBudynkuMieszk($typBudynkuMieszk) {
         $this->typBudynkuMieszk = $typBudynkuMieszk;
@@ -182,5 +189,13 @@ class SearchQuery {
 
     public function getTypLokalu() {
         return $this->typLokalu;
+    }
+
+    public function setSortujWg($sortujWg) {
+        $this->sortujWg = $sortujWg;
+    }
+
+    public function getSortujWg() {
+        return $this->sortujWg;
     }
 }
