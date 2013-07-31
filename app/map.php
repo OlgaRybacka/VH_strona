@@ -57,13 +57,15 @@ $found = $nie->search($query);
     $elements = array();
     foreach( $found as $res ) {
         /** @var Nieruchomosc $res */
-        if ( $res->getLat() && $res->getLng() ) {
-            $elements[] = "{" .
-                "id:" . $res->getId() . "," .
-                "lat:" . $res->getLat() . "," .
-                "lng:" . $res->getLng() . "," .
-                "}";
-        }
+        $elements[] = "{" .
+            "id:" . $res->getId() . "," .
+            "lat:" . ( $res->getLat() ? $res->getLat() : "null" )  . "," .
+            "lng:" . ( $res->getLng() ? $res->getLng() : "null" ) . "," .
+            "ulica:\"" . addcslashes( $res->getUlica(), '"' ) . "\"," .
+            "miasto:\"" . addcslashes( $res->getMiasto(), '"' ) . "\"," .
+            "miejscowosc:\"" . addcslashes( $res->getMiejscowosc(), '"' ) . "\"" .
+            "}\n";
+
     }
     echo implode(", ", $elements);
  ?>
@@ -99,21 +101,25 @@ $found = $nie->search($query);
 				if (d.lat && d.lng) {
 					self.addMarker(d);
 				} else {
-					geocoder.geocode({
-						address: [d.miasto || d.miejscowosc, d.ulica].join(),
-						location: new google.maps.LatLng(52.406189,16.925125),
-						region: "Poland"
-					}, function(res, status) {
-						console.log(status);
-						console.log(res);
-						if (res && res.results && res.results[0]) {
-							var p = {
-								lat: res.results[0].geometry.location.getLat(),
-								lng: res.results[0].geometry.location.getLng()
-							};
-							self.addMarker(p);
-						}
-					});
+					(function(d) {
+						console.log("geocode: " + [d.miasto || d.miejscowosc, d.ulica].join());
+						geocoder.geocode({
+							address: [d.miasto || d.miejscowosc, d.ulica].join(),
+							location: new google.maps.LatLng(52.406189,16.925125),
+							region: "Poland"
+						}, function(res, status) {
+							console.log(status);
+							console.log(res);
+							if (res && res.results && res.results[0]) {
+								var p = {
+									lat: res.results[0].geometry.location.getLat(),
+									lng: res.results[0].geometry.location.getLng()
+								};
+								$.post('./update_lat_lng.php', {lat: p.lat, lng:p.lng, id:d.id });
+								self.addMarker(p);
+							}
+						});
+					})(d);
 				}
 			}
 		}

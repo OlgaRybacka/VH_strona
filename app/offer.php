@@ -1,6 +1,6 @@
 <?php
 
-require "includes.php";
+require_once "includes.php";
 $pdo = PDOHelper::fromConfig();
 $zdj = new ZdjeciaRepository( $pdo );
 $nie = new NieruchomosciRepository( $pdo );
