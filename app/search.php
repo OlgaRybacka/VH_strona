@@ -27,7 +27,7 @@ $found = $nie->search($query);
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
-        <link rel="stylesheet" href="public/static/css/main.css">
+        <link rel="stylesheet" href="public/static/css/main.css?cb=<?php cacheBuster(); ?>">
 		<link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="public/static/css/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
@@ -39,7 +39,7 @@ $found = $nie->search($query);
 		<script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 		<script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
 
-	    <script type="text/javascript" src="public/static/js/search_map.js" ></script>
+	    <script type="text/javascript" src="public/static/js/search_map.js?cb=<?php cacheBuster(); ?>" ></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 

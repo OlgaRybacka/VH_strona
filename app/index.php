@@ -36,7 +36,7 @@ foreach ( $nieruchomosci as $v ) {
         <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="public/static/css/normalize.min.css">
-        <link rel="stylesheet" href="public/static/css/main.css">
+        <link rel="stylesheet" href="public/static/css/main.css?cb=<?php cacheBuster(); ?>">
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.js"></script>
         <script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
