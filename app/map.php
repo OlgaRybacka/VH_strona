@@ -110,10 +110,10 @@ $found = $nie->search($query);
 						}, function(res, status) {
 							console.log(status);
 							console.log(res);
-							if (res && res.results && res.results[0]) {
+							if (res && res[0]) {
 								var p = {
-									lat: res.results[0].geometry.location.getLat(),
-									lng: res.results[0].geometry.location.getLng()
+									lat: res[0].geometry.location.getLat(),
+									lng: res[0].geometry.location.getLng()
 								};
 								$.post('./update_lat_lng.php', {lat: p.lat, lng:p.lng, id:d.id });
 								self.addMarker(p);
