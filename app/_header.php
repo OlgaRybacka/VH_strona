@@ -19,6 +19,11 @@
 			--><a href="kontakt.php" title="Skontaktuj się z nami" class="small-button but4">
 				<img src="public/static/./img/but4.png"></img>
 			</a>
-		</div>
+            <div class="facebook_like">
+                <script src="http://connect.facebook.net/pl_PL/all.js#xfbml=1"></script>
+                <fb:like href="https://www.facebook.com/pages/NIERUCHOMOŚCI-Van-Hausen/204027112959346" layout="button_count"></fb:like>
+		    </div>
+        </div>
+
 	</header>
 </div>
