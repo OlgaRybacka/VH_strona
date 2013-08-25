@@ -112,6 +112,7 @@ $found = $nie->search($query);
 							console.log(res);
 							if (res && res[0] && res[0].geometry && res[0].geometry.location ) {
 								var p = {
+									id: d.id,
 									lat: res[0].geometry.location.lat(),
 									lng: res[0].geometry.location.lng()
 								};
