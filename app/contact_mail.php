@@ -22,7 +22,7 @@ $message = Swift_Message::newInstance()
     ->setFrom(array('vanhausen@home.pl' => $imie_nazwisko))
 
     // Set the To addresses with an associative array
-    ->setTo(array('biuro@vanhausen.pl'))
+    ->setTo(array('kontakt@vanhausen.pl'))
 
     // Give it a body
     ->setBody($tresc ,'text/html')

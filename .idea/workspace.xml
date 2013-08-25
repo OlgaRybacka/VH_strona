@@ -2,72 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81165629-3df2-470e-aa59-44f4d791d9e8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostka_galeria.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostka_kontakt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostka_uslugi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostka_zespol.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostki.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_galeria_de.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_galeria_en.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_galeria_pl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_kontakt_de.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_kontakt_en.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_kontakt_pl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_o_firmie_de.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_o_firmie_en.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_o_firmie_pl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_uslugi_de.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_uslugi_en.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_uslugi_pl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_zespol_de.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_zespol_en.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/menu_zespol_pl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_gallery.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_gallery_act.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_kontakt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_kontakt_act.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_o_firmie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_o_firmie_act.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_uslugi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_uslugi_act.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_zespol.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_zespol_act.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/o_firmie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/pole_txt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/stopka_scalleir.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/uslugi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/de.png" afterPath="$PROJECT_DIR$/app/scallier/img/de.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/de_act.png" afterPath="$PROJECT_DIR$/app/scallier/img/de_act.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/en.png" afterPath="$PROJECT_DIR$/app/scallier/img/en.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/en_act.png" afterPath="$PROJECT_DIR$/app/scallier/img/en_act.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/pl.png" afterPath="$PROJECT_DIR$/app/scallier/img/pl.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/pl_act.png" afterPath="$PROJECT_DIR$/app/scallier/img/pl_act.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/img/kostka_o_firmie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/mCSB_buttons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/static/img/usun.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/galeria.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/js/jquery.mCustomScrollbar.concat.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/jquery.mCustomScrollbar.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/kontakt.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/o_firmie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scallier/zespol.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/mini_menu_kontakt.png" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_kontakt.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/img/mini_menu_zespol.png" afterPath="$PROJECT_DIR$/app/scallier/img/mini_menu_zespol.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/_form.php" afterPath="$PROJECT_DIR$/app/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/_header.php" afterPath="$PROJECT_DIR$/app/_header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.php" afterPath="$PROJECT_DIR$/app/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/contact_mail.php" afterPath="$PROJECT_DIR$/app/contact_mail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/index.php" afterPath="$PROJECT_DIR$/app/scallier/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/languages/lang.de.php" afterPath="$PROJECT_DIR$/app/scallier/languages/lang.de.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/languages/lang.en.php" afterPath="$PROJECT_DIR$/app/scallier/languages/lang.en.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/languages/lang.pl.php" afterPath="$PROJECT_DIR$/app/scallier/languages/lang.pl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/css/main.css" afterPath="$PROJECT_DIR$/app/public/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/main.css" afterPath="$PROJECT_DIR$/app/scallier/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/static/js/search_map.js" afterPath="$PROJECT_DIR$/app/public/static/js/search_map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/ulubione.php" afterPath="$PROJECT_DIR$/app/ulubione.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/offer.php" afterPath="$PROJECT_DIR$/app/offer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scallier/uslugi.php" afterPath="$PROJECT_DIR$/app/scallier/uslugi.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VH_strona.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376465733646" ignored="false" />
+    <file path="/Dummy.txt" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1377444690978" ignored="false" />
     <file path="/.htaccess" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371401005603" ignored="false" />
-    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375092747229" ignored="false" />
+    <file path="/offer.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1377446463646" ignored="false" />
     <file path="/item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375093539020" ignored="false" />
-    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376423941209" ignored="false" />
+    <file path="/index.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376497743572" ignored="false" />
     <file path="/config.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1371411340174" ignored="false" />
     <file path="/search.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375186232162" ignored="false" />
-    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376470251247" ignored="false" />
+    <file path="/main.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376497695656" ignored="false" />
     <file path="/SearchQuery.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374070245191" ignored="false" />
     <file path="/NieruchomosciRepository.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374232965723" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5.rnc" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1373960780305" ignored="false" />
@@ -77,18 +43,21 @@
     <file path="/mailto.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374843353493" ignored="false" />
     <file path="/topsecretsite.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374432295730" ignored="false" />
     <file path="/search_map.js" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375358516324" ignored="false" />
-    <file path="/_form.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375358942914" ignored="false" />
+    <file path="/_form.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1377445221993" ignored="false" />
     <file path="/map_item.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374496390999" ignored="false" />
     <file path="/map.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375093246010" ignored="false" />
     <file path="/jquery.mCustomScrollbar.css" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374769408653" ignored="false" />
-    <file path="/kontakt.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375095202174" ignored="false" />
+    <file path="/kontakt.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376497651320" ignored="false" />
     <file path="/_header.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375356628290" ignored="false" />
     <file path="/index.html" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1374787685649" ignored="false" />
     <file path="/contact_mail.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375097527253" ignored="false" />
-    <file path="/lang.pl.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1375110873497" ignored="false" />
-    <file path="/lang.en.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376468921460" ignored="false" />
-    <file path="/lang.de.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376469205437" ignored="false" />
-    <file path="/uslugi.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376469427916" ignored="false" />
+    <file path="/lang.pl.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376474167447" ignored="false" />
+    <file path="/lang.en.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376473558726" ignored="false" />
+    <file path="/lang.de.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376474387768" ignored="false" />
+    <file path="/uslugi.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376473008531" ignored="false" />
+    <file path="/o_firmie.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376473707680" ignored="false" />
+    <file path="/zespol.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376474033842" ignored="false" />
+    <file path="/galeria.php" changelist="81165629-3df2-470e-aa59-44f4d791d9e8" time="1376497872744" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,85 +77,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_map.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="453" column="0" selection-start="14315" selection-end="14646" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lang.de.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.de.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="5" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-7.230769">
-              <folding>
-                <marker date="1376469215241" expanded="true" signature="1712:1850" placeholder="..." />
-                <marker date="1376469215241" expanded="true" signature="1894:2235" placeholder="..." />
-                <marker date="1376469215241" expanded="true" signature="2279:2447" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lang.en.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.en.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="5" selection-start="2100" selection-end="2100" vertical-scroll-proportion="-9.846154">
-              <folding>
-                <marker date="1376468983167" expanded="true" signature="1669:1772" placeholder="..." />
-                <marker date="1376468983167" expanded="true" signature="1820:2093" placeholder="..." />
-                <marker date="1376468983167" expanded="true" signature="2133:2301" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scallier/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="110" selection-start="4736" selection-end="4736" vertical-scroll-proportion="-5.923077">
+            <state line="90" column="108" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scallier/main.css">
+      <file leaf-file-name="galeria.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scallier/galeria.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="32" selection-start="3980" selection-end="3980" vertical-scroll-proportion="1.2047873">
+            <state line="67" column="71" selection-start="2676" selection-end="2676" vertical-scroll-proportion="-13.384615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uslugi.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scallier/uslugi.php">
+      <file leaf-file-name="contact_mail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/contact_mail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="42" selection-start="1773" selection-end="1789" vertical-scroll-proportion="-9.846154">
+            <state line="24" column="26" selection-start="759" selection-end="759" vertical-scroll-proportion="-12.423077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lang.pl.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.pl.php">
+      <file leaf-file-name="_form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="0" selection-start="1839" selection-end="1844" vertical-scroll-proportion="-9.807693">
+            <state line="18" column="44" selection-start="612" selection-end="612" vertical-scroll-proportion="123.57692">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="offer.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/offer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="189" column="15" selection-start="8661" selection-end="8661" vertical-scroll-proportion="0.9262473">
               <folding>
-                <marker date="1376467036700" expanded="true" signature="1694:1837" placeholder="..." />
-                <marker date="1376467036700" expanded="true" signature="1875:2229" placeholder="..." />
-                <marker date="1376467036700" expanded="true" signature="2258:2416" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1377446486842" expanded="true" signature="6124:6978" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6233:6329" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6334:6363" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6444:6540" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6545:6566" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6657:6753" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6758:6779" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="6859:6955" placeholder="..." />
+                <marker date="1377446486842" expanded="false" signature="17208:17311" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="17312:17421" placeholder="..." />
+                <marker date="1377446486842" expanded="true" signature="17340:17421" placeholder="..." />
+                <marker date="1377446486842" expanded="false" signature="17485:17498" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -195,23 +143,58 @@
       <file leaf-file-name="search.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="89" selection-start="1453" selection-end="1534" vertical-scroll-proportion="-0.65384614">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="63.346153">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.php">
+      <file leaf-file-name="item.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/item.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="26" selection-start="5792" selection-end="5792" vertical-scroll-proportion="-0.65384614">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="86.23077">
               <folding>
-                <marker date="1375356874471" expanded="false" signature="1968:2119" placeholder="..." />
-                <marker date="1375356874471" expanded="false" signature="2159:2185" placeholder="..." />
-                <marker date="1375356874471" expanded="false" signature="2296:2474" placeholder="..." />
-                <marker date="1375356874471" expanded="false" signature="2569:2746" placeholder="..." />
-                <marker date="1375356874471" expanded="true" signature="7893:7922" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="4029:4120" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="4056:4120" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="4081:4120" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="4104:4119" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="4372:4405" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="4730:4904" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="4755:4904" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="4778:4793" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="4850:4903" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="5438:5519" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="5581:5594" placeholder="..." />
+                <marker date="1375186452882" expanded="true" signature="6494:6575" placeholder="..." />
+                <marker date="1375186452882" expanded="false" signature="6637:6650" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scallier/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="196" column="42" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kontakt.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scallier/kontakt.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="31" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.mCustomScrollbar.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scallier/jquery.mCustomScrollbar.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="558" column="1" selection-start="16641" selection-end="16641" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,22 +219,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/scallier/common.php" />
-        <option value="$PROJECT_DIR$/app/item.php" />
-        <option value="$PROJECT_DIR$/app/offer.php" />
-        <option value="$PROJECT_DIR$/app/search.php" />
-        <option value="$PROJECT_DIR$/app/_header.php" />
-        <option value="$PROJECT_DIR$/app/ulubione.php" />
-        <option value="$PROJECT_DIR$/app/index.php" />
         <option value="$PROJECT_DIR$/app/public/static/css/main.css" />
-        <option value="$PROJECT_DIR$/app/_form.php" />
         <option value="$PROJECT_DIR$/app/public/static/js/search_map.js" />
-        <option value="$PROJECT_DIR$/app/scallier/index.php" />
-        <option value="$PROJECT_DIR$/app/scallier/languages/lang.pl.php" />
+        <option value="$PROJECT_DIR$/app/scallier/jquery.mCustomScrollbar.css" />
+        <option value="$PROJECT_DIR$/app/scallier/uslugi.php" />
+        <option value="$PROJECT_DIR$/app/scallier/o_firmie.php" />
+        <option value="$PROJECT_DIR$/app/scallier/zespol.php" />
         <option value="$PROJECT_DIR$/app/scallier/languages/lang.en.php" />
         <option value="$PROJECT_DIR$/app/scallier/languages/lang.de.php" />
-        <option value="$PROJECT_DIR$/app/scallier/uslugi.php" />
+        <option value="$PROJECT_DIR$/app/scallier/languages/lang.pl.php" />
+        <option value="$PROJECT_DIR$/app/scallier/kontakt.php" />
         <option value="$PROJECT_DIR$/app/scallier/main.css" />
+        <option value="$PROJECT_DIR$/app/scallier/index.php" />
+        <option value="$PROJECT_DIR$/app/scallier/galeria.php" />
+        <option value="$PROJECT_DIR$/app/contact_mail.php" />
+        <option value="$PROJECT_DIR$/app/_form.php" />
+        <option value="$PROJECT_DIR$/app/offer.php" />
       </list>
     </option>
   </component>
@@ -288,7 +271,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,6 +358,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="languages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scallier" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,6 +523,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VH_strona" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -623,6 +653,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -649,11 +680,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projekty\VH_strona\app\scallier\img" />
-      <recent name="D:\projekty\VH_strona\app\scallier" />
-      <recent name="D:\projekty\VH_strona\app\scallier\languages" />
-      <recent name="D:\projekty\VH_strona\app" />
       <recent name="D:\projekty\VH_strona\app\public\static\img" />
+      <recent name="D:\projekty\VH_strona\app\scallier" />
+      <recent name="D:\projekty\VH_strona\app\scallier\img" />
+      <recent name="D:\projekty\VH_strona\app\scallier\js" />
+      <recent name="D:\projekty\VH_strona\app\scallier\languages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projekty\VH_strona\app\scallier\img" />
@@ -825,7 +856,11 @@
       <created>1375187569268</created>
       <updated>1375187569268</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="scallier - strona główna i prawie usługi">
+      <created>1376470374283</created>
+      <updated>1376470374283</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -852,17 +887,17 @@
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11793215" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11631664" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3063209" sideWeight="0.6833603" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31685576" sideWeight="0.8836834" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31663975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31604537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,7 +951,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="drobne poprawki." />
+    <option name="LAST_COMMIT_MESSAGE" value="scallier - strona główna i prawie usługi" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -930,7 +965,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="różne okienka w offer, w zależności od typu oferty" />
     <MESSAGE value="różne okienka w searchu, w zależności od typu oferty, otwieranie odpowiedniej zakładki w zależności od parametru ?t=" />
     <MESSAGE value="z przycisków na głównej przejścia do różnych formularzy searcha" />
     <MESSAGE value="cośtam w searchu" />
@@ -955,128 +989,163 @@
     <MESSAGE value="footer, przycięte zdj na głównej, ciemna obwódka na liście ofert, czarna czcionka, inne tło w rodzaju oferty, sortuj wg - niedokończone, enter - wyszukaj z listy, 35 znaków do lokalizacji, pusty nr kom -&gt; numer biura, usunięty fatalerror gdy złe id wyróżnionej oferty, tooltipy w małych ikonkach na górze, wszystkie oferty - poprawiony import." />
     <MESSAGE value="kontakt i google analytics" />
     <MESSAGE value="drobne poprawki." />
+    <MESSAGE value="scallier - strona główna i prawie usługi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/offer.php">
+    <entry file="file://$PROJECT_DIR$/app/scallier/uslugi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="41" selection-start="7410" selection-end="7410" vertical-scroll-proportion="0.0" />
+        <state line="64" column="96" selection-start="2540" selection-end="2540" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ulubione.php">
+    <entry file="file://$PROJECT_DIR$/app/scallier/zespol.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="42" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="896" selection-end="1162" vertical-scroll-proportion="-15.692307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scallier/common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="67" column="70" selection-start="2672" selection-end="2672" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1329" column="45" selection-start="27802" selection-end="27843" vertical-scroll-proportion="24.28" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/static/js/search_map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="453" column="0" selection-start="14315" selection-end="14646" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="89" selection-start="1453" selection-end="1534" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.pl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="1839" selection-end="1844" vertical-scroll-proportion="-9.807693">
-          <folding>
-            <marker date="1376467036700" expanded="true" signature="1694:1837" placeholder="..." />
-            <marker date="1376467036700" expanded="true" signature="1875:2229" placeholder="..." />
-            <marker date="1376467036700" expanded="true" signature="2258:2416" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.en.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="2100" selection-end="2100" vertical-scroll-proportion="-9.846154">
+        <state line="39" column="449" selection-start="3044" selection-end="3044" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1376468983167" expanded="true" signature="1669:1772" placeholder="..." />
-            <marker date="1376468983167" expanded="true" signature="1820:2093" placeholder="..." />
-            <marker date="1376468983167" expanded="true" signature="2133:2301" placeholder="..." />
+            <marker date="1376474222095" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474222095" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474222095" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.de.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-7.230769">
+        <state line="38" column="40" selection-start="2582" selection-end="2582" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1376469215241" expanded="true" signature="1712:1850" placeholder="..." />
-            <marker date="1376469215241" expanded="true" signature="1894:2235" placeholder="..." />
-            <marker date="1376469215241" expanded="true" signature="2279:2447" placeholder="..." />
+            <marker date="1376474480950" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474480950" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474480950" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scallier/index.php">
+    <entry file="file://$PROJECT_DIR$/app/scallier/languages/lang.pl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="110" selection-start="4736" selection-end="4736" vertical-scroll-proportion="-5.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scallier/uslugi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="42" selection-start="1773" selection-end="1789" vertical-scroll-proportion="-9.846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="26" selection-start="5792" selection-end="5792" vertical-scroll-proportion="-0.65384614">
+        <state line="38" column="20" selection-start="2869" selection-end="2869" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1375356874471" expanded="false" signature="1968:2119" placeholder="..." />
-            <marker date="1375356874471" expanded="false" signature="2159:2185" placeholder="..." />
-            <marker date="1375356874471" expanded="false" signature="2296:2474" placeholder="..." />
-            <marker date="1375356874471" expanded="false" signature="2569:2746" placeholder="..." />
-            <marker date="1375356874471" expanded="true" signature="7893:7922" placeholder="..." />
+            <marker date="1376474536398" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474536398" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376474536398" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scallier/o_firmie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="57" selection-start="2147" selection-end="2147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scallier/kontakt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="31" selection-start="1952" selection-end="1952" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scallier/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="32" selection-start="3980" selection-end="3980" vertical-scroll-proportion="1.2047873">
+        <state line="196" column="42" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scallier/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="108" selection-start="5423" selection-end="5423" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scallier/galeria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="71" selection-start="2676" selection-end="2676" vertical-scroll-proportion="-13.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scallier/jquery.mCustomScrollbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="558" column="1" selection-start="16641" selection-end="16641" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/contact_mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="26" selection-start="759" selection-end="759" vertical-scroll-proportion="-12.423077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="612" selection-end="612" vertical-scroll-proportion="123.57692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="63.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="86.23077">
+          <folding>
+            <marker date="1375186452882" expanded="true" signature="4029:4120" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="4056:4120" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="4081:4120" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="4104:4119" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="4372:4405" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="4730:4904" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="4755:4904" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="4778:4793" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="4850:4903" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="5438:5519" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="5581:5594" placeholder="..." />
+            <marker date="1375186452882" expanded="true" signature="6494:6575" placeholder="..." />
+            <marker date="1375186452882" expanded="false" signature="6637:6650" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/offer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="15" selection-start="8661" selection-end="8661" vertical-scroll-proportion="0.9262473">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#span#0;n#span#0;n#div#1;n#span#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1377446486842" expanded="true" signature="6124:6978" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6233:6329" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6334:6363" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6444:6540" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6545:6566" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6657:6753" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6758:6779" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="6859:6955" placeholder="..." />
+            <marker date="1377446486842" expanded="false" signature="17208:17311" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="17312:17421" placeholder="..." />
+            <marker date="1377446486842" expanded="true" signature="17340:17421" placeholder="..." />
+            <marker date="1377446486842" expanded="false" signature="17485:17498" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

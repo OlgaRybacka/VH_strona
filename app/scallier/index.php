@@ -85,10 +85,10 @@ require "common.php";
                 <img id="menu-map-img" src="img/map.png" usemap="#Image-Map" border="0" width="570" height="413" alt="" />
                 <map id="Image-Maps" name="Image-Map">
                     <area class="area1" shape="poly" coords="105,116,204,215,104,314,4,214," href="uslugi.php?lang=<?php echo $lang['LANG'];?>" alt="" title=""   />
-                    <area class="area2" shape="poly" coords="313,2,376,67,319,125,311,120,300,129,244,71," href="http://www.image-maps.com/" alt="" title=""   />
-                    <area class="area3" shape="poly" coords="311,128,398,214,311,300,223,217," href="http://www.image-maps.com/" alt="" title=""   />
-                    <area class="area4" shape="poly" coords="405,208,406,219,482,294,564,213,482,131," href="http://www.image-maps.com/" alt="" title=""   />
-                    <area class="area5" shape="poly" coords="213,218,304,311,214,406,118,312," href="http://www.image-maps.com/" alt="" title=""   />
+                    <area class="area2" shape="poly" coords="313,2,376,67,319,125,311,120,300,129,244,71," href="zespol.php?lang=<?php echo $lang['LANG'];?>" alt="" title=""   />
+                    <area class="area3" shape="poly" coords="311,128,398,214,311,300,223,217," href="o_firmie.php?lang=<?php echo $lang['LANG'];?>" alt="" title=""   />
+                    <area class="area4" shape="poly" coords="405,208,406,219,482,294,564,213,482,131," href="galeria.php?lang=<?php echo $lang['LANG'];?>" alt="" title=""   />
+                    <area class="area5" shape="poly" coords="213,218,304,311,214,406,118,312," href="kontakt.php?lang=<?php echo $lang['LANG'];?>" alt="" title=""   />
                 </map>
             </div>
         </div>
