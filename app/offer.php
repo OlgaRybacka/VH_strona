@@ -43,7 +43,7 @@ if ($element == null) {
 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
-        <script>
+        <script type="text/javascript">
 
             $(function() {
                 initializeMap();
@@ -119,9 +119,43 @@ if ($element == null) {
 
             var smallmap;
 
-            function initializeMap() {
-                var lat = $("#map-canvas").data('lat');
-                var lng = $("#map-canvas").data('lng');
+            function getPos( callback ) {
+	            var geocoder = new google.maps.Geocoder();
+	            var d = {
+		            lat: $("#map-canvas").data('lat'),
+		            lng: $("#map-canvas").data('lng'),
+		            miejscowosc: $("#map-canvas").data('miejscowosc'),
+		            miasto: $("#map-canvas").data('miasto'),
+		            ulica: $("#map-canvas").data('ulica')
+	            };
+	            if (d.lat && d.lng) {
+		            callback(d);
+	            } else {
+		            (function(d) {
+			            console.log("geocode: " + [d.miasto || d.miejscowosc, d.ulica].join());
+			            geocoder.geocode({
+				            address: [d.miasto || d.miejscowosc, d.ulica].join(),
+				            location: new google.maps.LatLng(52.406189,16.925125),
+				            region: "Poland"
+			            }, function(res, status) {
+				            console.log(status);
+				            console.log(res);
+				            if (res && res[0] && res[0].geometry && res[0].geometry.location ) {
+					            var p = {
+						            id: d.id,
+						            lat: res[0].geometry.location.lat(),
+						            lng: res[0].geometry.location.lng()
+					            };
+					            $.post('./update_lat_lng.php', {lat: p.lat, lng:p.lng, id:d.id });
+					            callback(p);
+				            }
+			            });
+		            })(d);
+	            }
+
+            }
+
+            function initializeMapFor( lat, lng ) {
                 var myLatlng = new google.maps.LatLng(lat, lng)
                 var mapOptions = {
                     center: myLatlng,
@@ -137,6 +171,12 @@ if ($element == null) {
                     map: smallmap
                 });
             }
+
+	        function initializeMap() {
+		        getPos( function( d ) {
+			        initializeMapFor(d.lat, d.lng);
+		        } );
+	        }
         </script>
 		
     </head>
@@ -175,7 +215,12 @@ if ($element == null) {
             <span class="shadow2"> </span>
                     <span class="map-span">
                         <div class="zamknij-button"> </div>
-                        <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
+                        <div id="map-canvas"
+                             data-lng="<?php echo $element->getLng(); ?>"
+                             data-lat="<?php echo $element->getLat(); ?>"
+	                         data-ulica="<?php echo addcslashes( $element->getUlica(), '"' ); ?>"
+                             data-miasto="<?php echo addcslashes( $element->getMiasto(), '"' ); ?>"
+                             data-miejscowosc="<?php echo addcslashes( $element->getMiejscowosc(), '"' ); ?>" .></div>
                     </span>
              <span class="shadow"> </span>
                     <span>
@@ -385,7 +430,7 @@ if ($element == null) {
 
 
 
-        <script type="text/javascript">
+        <script type="text/mi">
 
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-42732274-1']);
