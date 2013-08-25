@@ -113,6 +113,19 @@ body .favourites-page {
   height: 34px;
 }
 
+.search-page header .small-buttons .facebook_like,
+.favourites-page header .small-buttons .facebook_like,
+.offer-page header .small-buttons .facebook_like,
+.contact-page header .small-button .facebook_like,
+.home-page header .small-button .facebook_like{
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+
+
+
+
 .small-buttons .small-button {
   height: 34px;
   width: 38px;
@@ -700,6 +713,21 @@ input {
   border: 2px solid #481368;
   position: relative;
   margin-bottom: 4px;
+}
+
+.search-page .offers-container .offers-list .offer.chosenOffer,
+.favourites-page .offers-container .offers-list .offer.chosenOffer {
+    background-color: #481368;
+}
+
+.search-page .offers-container .offers-list .offer.chosenOffer .offer-skrot,
+.favourites-page .offers-container .offers-list .offer.chosenOffer .offer-skrot{
+    color: #d1d2d4;
+}
+
+.search-page .offers-container .offers-list .offer.chosenOffer .offer-zobacz-button,
+.favourites-page .offers-container .offers-list .offer.chosenOffer .offer-zobacz-button {
+    border-left: 4px solid #481368;
 }
 
 .search-page .offers-container .offers-list .offer .offer-data,

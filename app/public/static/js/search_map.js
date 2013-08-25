@@ -1,6 +1,9 @@
 (function($){
 	$(window).load(function(){
 		$(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
+
+        if (getURLParameter("sortujWg") != '')
+            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
 if (getURLParameter("tab") == "mieszkania")
                     {
 						if (getURLParameter("cenaMin_mi") != '')
@@ -500,10 +503,13 @@ if( $('.offer-zobacz-button').size() > 0 ) {
 	} else {
 		id = $($('.offer-zobacz-button').get(0)).data('id');
 	}
+    $('.offer:first').addClass('chosenOffer');
 	fetch(id);
 }
 $('.offer-zobacz-button').click(function () {
 	var id = $(this).data('id');
+    $('.offer').removeClass('chosenOffer');
+    $(this).closest('.offer').addClass('chosenOffer');
 	fetch( id );
 	});
 });
@@ -558,6 +564,12 @@ $(function() {
         $('.map-span').fadeOut();
         $('.shadow2').fadeOut();
     });
+});
+$(function() {
+    $('.sort-select').change(
+        function(){
+            $(this).closest('form').trigger('submit');
+        });
 });
 
 var smallmap;

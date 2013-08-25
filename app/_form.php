@@ -14,8 +14,8 @@ function sortPanel() {
 	global $found;
 	echo '<div class="search-sort">
         sortuj wg
-        <div class="styled-select">
-            <select id="sortujWg" name="sortujWg">
+        <div class="styled-select sort-select">
+            <select id="sortujWg" name="sortujWg" on>
                 <option value="datawprowadzenia">data dodania</option>
                 <option value="cena">cena</option>
                 <option value="cenaM2">cena za m2</option>
@@ -43,7 +43,7 @@ function sortPanel() {
 					<option>wynajem</option>
 				</select>
 			</div>
-			<div class="search-form form-label row2 col1">cena całościowa [od / do]
+			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
 				<div class="arrow-right lila2"></div>
 			</div>
 			<input id="cenaMin_mi" name="cenaMin_mi" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
@@ -139,7 +139,7 @@ function sortPanel() {
 					<option>wynajem</option>
 				</select>
 			</div>
-			<div class="search-form form-label row2 col1">cena całościowa [od / do]
+			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
 				<div class="arrow-right lila2"></div>
 			</div>
 			<input id="cenaMin_do" name="cenaMin_do" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
@@ -238,7 +238,7 @@ function sortPanel() {
 					<option>wynajem</option>
 				</select>
 			</div>
-			<div class="search-form form-label row2 col1">cena całościowa [od / do]
+			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
 				<div class="arrow-right lila2"></div>
 			</div>
 			<input id="cenaMin_dz" name="cenaMin_dz" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
@@ -285,7 +285,7 @@ function sortPanel() {
                     <option>sprzedaż</option>
 				</select>
 			</div>
-			<div class="search-form form-label row2 col1">cena całościowa [od / do]
+			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
 				<div class="arrow-right lila2"></div>
 			</div>
 			<input id="cenaMin_lo" name="cenaMin_lo" type="text" class="search-form input row2 col2 half" placeholder="np. 100000" autocomplete="off"/>
