@@ -16,7 +16,7 @@ function sortPanel() {
         sortuj wg
         <div class="styled-select sort-select">
             <select id="sortujWg" name="sortujWg" on>
-                <option value="datawprowadzenia">data dodania</option>
+                <option selected="selected" value="datawprowadzenia">data dodania</option>
                 <option value="cena">cena</option>
                 <option value="cenaM2">cena za m2</option>
             </select>
@@ -39,7 +39,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select name="typOferty_mi" class="search-form row1 col2">
-					<option>sprzedaż</option>
+					<option value="">sprzedaż</option>
 					<option>wynajem</option>
 				</select>
 			</div>
@@ -135,7 +135,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_do" name="typOferty_do" class="search-form row1 col2">
-					<option>sprzedaż</option>
+					<option value="">sprzedaż</option>
 					<option>wynajem</option>
 				</select>
 			</div>
@@ -234,7 +234,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_dz" name="typOferty_dz" class="search-form row1 col2">
-					<option>sprzedaż</option>
+					<option value="">sprzedaż</option>
 					<option>wynajem</option>
 				</select>
 			</div>
@@ -281,7 +281,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_lo" name="typOferty_lo" class="search-form row1 col2">
-					<option>wynajem</option>
+					<option value="">wynajem</option>
                     <option>sprzedaż</option>
 				</select>
 			</div>

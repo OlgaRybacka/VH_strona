@@ -35,4 +35,6 @@ $lang['SERVICES'] = 'Scallier to firma doradcza w branży nieruchomości handlow
 <li>Wyspecjalizowany i doświadczony zespół</li>
 <li>Mobilni zarządcy</li>
 <li>Autorski system informatyczny</li></ul>';
+$lang['TEAM'] ='<b>Wojciech Jurga</b> – ur. 1979, w firmie dzieli czas pomiędzy nadzorowanie negocjacji związanych z wynajmem nieruchomości,  zarządzanie firmą i przygotowywanie projektów nieruchomościowych do sprzedaży lub realizacji. W przeszłości zajmował się wynajmem parków handlowych i sprzedażą nieruchomości w firmie Świtalski&Synowie. Prywatnie lubi jazdę na nartach, naukę języków obcych oraz podróże bliższe i dalsze.
+<br/><br/><br/><br/><b>Bartosz Nowak</b> – ur. 1984, z zamiłowania i profesji zarządca. Skutecznie i efektywnie zarządza zarówno nieruchomościami jak i firmą. Opracowuje strategie, kontroluje wykonanie, a do tego panuje nad wszystkimi szczegółami. Doradza przy zakupie i sprzedaży nieruchomości, a wraz z zespołem zarządza kilkudziesięcioma nieruchomościami. Szlify zarządcy zdobywał opiekując się portfelem nieruchomości należących do firmy Świtalski&Synowie. Snowboardzista, piwosz, dumny ojciec rodziny.';
 ?>

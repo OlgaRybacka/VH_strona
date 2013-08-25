@@ -184,6 +184,26 @@ body {
     background-image: url(img/kostka_uslugi.png);
 }
 
+.main-container .text-area .kostka.o-firmie
+{
+    background-image: url(img/kostka_o_firmie.png);
+}
+
+.main-container .text-area .kostka.zespol
+{
+    background-image: url(img/kostka_zespol.png);
+}
+
+.main-container .text-area .kostka.kontakt
+{
+    background-image: url(img/kostka_kontakt.png);
+}
+
+.main-container .text-area .kostka.galeria
+{
+    background-image: url(img/kostka_galeria.png);
+}
+
 .main-container .text-area .text-field
 {
     position: absolute;
@@ -192,7 +212,7 @@ body {
     width: 487px;
     height: 364px;
     text-align: left;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -221,10 +241,46 @@ body {
 
 .main-container .text-area .mini-menu a{
     display: inline-block;
-    width: 29px;
-    height: 30px;
+    width: 21px;
+    height: 17px;
 }
 
 .main-container .text-area .mini-menu .mini-menu-uslugi{
-    background-image: url(img/pl.png);
+    background-image: url(img/mini_menu_uslugi.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-uslugi.active{
+    background-image: url(img/mini_menu_uslugi_act.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-o-firmie{
+    background-image: url(img/mini_menu_o_firmie.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-o-firmie.active{
+    background-image: url(img/mini_menu_o_firmie_act.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-zespol{
+    background-image: url(img/mini_menu_zespol.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-zespol.active{
+    background-image: url(img/mini_menu_zespol_act.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-kontakt{
+    background-image: url(img/mini_menu_kontakt.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-kontakt.active{
+    background-image: url(img/mini_menu_kontakt_act.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-galeria{
+    background-image: url(img/mini_menu_gallery.png);
+}
+
+.main-container .text-area .mini-menu .mini-menu-galeria.active{
+    background-image: url(img/mini_menu_gallery_act.png);
 }

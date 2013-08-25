@@ -48,25 +48,24 @@ require "common.php";
         <a href="index.php?lang=<?php echo $lang['LANG'];?>"><div class="logo"> </div></a>
         <div class="page-header">
             <div class="lang-buttons">
-                <a class="lang_but1 <?php if ($lang['LANG'] == 'pl') echo "active"; ?>" href="uslugi.php?lang=pl"></a>
-                <a class="lang_but2 <?php if ($lang['LANG'] == 'en') echo "active"; ?>" href="uslugi.php?lang=en"></a>
-                <a class="lang_but3 <?php if ($lang['LANG'] == 'de') echo "active"; ?>" href="uslugi.php?lang=de"></a>
+                <a class="lang_but1 <?php if ($lang['LANG'] == 'pl') echo "active"; ?>" href="galeria.php?lang=pl"></a>
+                <a class="lang_but2 <?php if ($lang['LANG'] == 'en') echo "active"; ?>" href="galeria.php?lang=en"></a>
+                <a class="lang_but3 <?php if ($lang['LANG'] == 'de') echo "active"; ?>" href="galeria.php?lang=de"></a>
             </div>
         </div>
         <div class="text-area">
-            <div class="kostka uslugi"> </div>
+            <div class="kostka galeria"> </div>
             <div class="tlo">
             </div>
             <div class="mini-menu">
-                <a class="mini-menu-uslugi active"></a>
+                <a class="mini-menu-uslugi" href="uslugi.php?lang=<?php echo $lang['LANG'];?>"></a>
                 <a class="mini-menu-o-firmie" href="o_firmie.php?lang=<?php echo $lang['LANG'];?>"></a>
                 <a class="mini-menu-zespol" href="zespol.php?lang=<?php echo $lang['LANG'];?>"></a>
-                <a class="mini-menu-kontakt" href="kontakt.php?lang=<?php echo $lang['LANG'];?>"></a>
-                <a class="mini-menu-galeria" href="galeria.php?lang=<?php echo $lang['LANG'];?>"></a>
+                <a class="mini-menu-kontakt" href="galeria.php?lang=<?php echo $lang['LANG'];?>"></a>
+                <a class="mini-menu-galeria active"></a>
             </div>
             <div class="text-field">
-                <div class="menu-title"> <?php echo $lang['MENU_USLUGI'];?></div>
-                <div class="content-text"> <?php echo $lang['SERVICES'];?> </div>
+                <div class="menu-title"> <?php echo $lang['MENU_GALERIA'];?></div>
             </div>
         </div>
         <div class="stopka"> </div>

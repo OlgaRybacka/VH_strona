@@ -171,7 +171,23 @@ if ($element == null) {
 				
             </header>
         </div>
-		
+        <div class="container">
+            <span class="shadow2"> </span>
+                    <span class="map-span">
+                        <div class="zamknij-button"> </div>
+                        <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
+                    </span>
+             <span class="shadow"> </span>
+                    <span>
+                        <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
+                            <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>
+                            <input name="email_address" id="email_address" type="text"/>
+                            <div class="anuluj-button"> </div>
+                            <input type="submit" value="" class="sendemail-button"/>
+                            <div class="error-container"> </div>
+                        </form>
+                    </span>
+            </div>
 		<div class="container offers-container">
 
 		  <span class="offer-photos">
@@ -191,6 +207,7 @@ if ($element == null) {
                 }
                 echo '</ul></a>';} ?>
           </span>
+
 		  <span class="offer-details">
 		    <div class="basic-info" style="float: left; width: 330px;">
               <?php echo '<img src="' . getUrl($zdjecia[0]->getUrl()) . '" class="miniatura"></img>' ?>
@@ -359,28 +376,14 @@ if ($element == null) {
 				</span>
 
 			  </span>
-		  </span>
+		    </span>
 		</div>
         <div class="container footer"><b>VAN HAUSEN Nieruchomości</b> ul. Mielżyńskiego 16/4, 61-725 Poznań, tel. 61 222 47 60, fax. 61 222 47 61</div>
 
         <script src="public/static/js/plugins.js"></script>
         <script src="public/static/js/main.js"></script>
 
-        <span class="shadow2"> </span>
-<span class="map-span">
-    <div class="zamknij-button"> </div>
-    <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
-</span>
-        <span class="shadow"> </span>
-<span>
-    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
-        <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>
-        <input name="email_address" id="email_address" type="text"/>
-        <div class="anuluj-button"> </div>
-        <input type="submit" value="" class="sendemail-button"/>
-        <div class="error-container"> </div>
-    </form>
-</span>
+
 
         <script type="text/javascript">
 
