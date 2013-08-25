@@ -74,7 +74,7 @@ session_start();
 	$(function() {
 		$('.remove-favourite-button').live('click', function() {
 			var id = $(this).data('id');
-			$.post('favourites.php', {remove: id});
+			$.post('favourites.php', {remove: id}, function() { location.reload(); });
 		});
 	});
 </script>
