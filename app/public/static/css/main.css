@@ -1032,7 +1032,7 @@ input {
 }
 
 .favourites-page .offer-details .offer-description .offer-buttons .offer-button {
-  width: 82px;
+  width: 66px;
   height: 25px;
   background-color: #6d6e71;
   text-align: center;
@@ -1044,6 +1044,10 @@ input {
 }
 
 .favourites-page .offer-details .offer-description .offer-buttons .favourite-button {
+    display:none;
+}
+
+.search-page .offer-details .offer-description .offer-buttons .remove-favourite-button {
     display:none;
 }
 

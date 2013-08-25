@@ -1,5 +1,5 @@
 <?php
-function cacheBuster() { echo "4"; }
+function cacheBuster() { echo "5"; }
 $dir = dirname(__FILE__);
 if( !@include_once( "{$dir}/vendor/autoload.php" ) ) {
 	include_once("{$dir}/vendor/apache/log4php/src/main/php/Logger.php");

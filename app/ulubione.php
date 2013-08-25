@@ -9,7 +9,7 @@ $found = array();
 
 session_start();
 
-    if (isset($_SESSION['favourites']))
+    if ( isset($_SESSION['favourites']) && sizeof($_SESSION['favourites']) > 0 )
     {
         $toBind = array();
         $queryString = "SELECT * FROM `nieruchomosc`  ";
@@ -51,7 +51,7 @@ session_start();
 <link rel="stylesheet" href="public/static/fonts/klavika/MyFontsWebfontsKit.css">
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="public/static/css/normalize.min.css">
-<link rel="stylesheet" href="public/static/css/main.css">
+<link rel="stylesheet" href="public/static/css/main.css?cb=<?php cacheBuster(); ?>">
 <link href="public/static/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="public/static/css/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 
@@ -70,6 +70,14 @@ session_start();
 
 <script type="text/javascript" src="public/static/js/search_map.js" ></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+	$(function() {
+		$('.remove-favourite-button').live('click', function() {
+			var id = $(this).data('id');
+			$.post('favourites.php', {remove: id});
+		});
+	});
+</script>
 
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
