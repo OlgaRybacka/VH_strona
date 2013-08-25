@@ -18,4 +18,10 @@ $id = (isset($_GET['id'])) ? $_GET['id'] : $_POST['id'];
 if( isset($id) && !in_array($id, $_SESSION['favourites']) ) {
     $_SESSION['favourites'][] = $id;
 }
+
+$removeId = (isset($_GET['remove'])) ? $_GET['remove'] : $_POST['remove'];
+if(($key = array_search($removeId, $_SESSION['favourites'])) !== false) {
+	unset($_SESSION['favourites'][$key]);
+}
+
 echo "[" . implode(',', $_SESSION['favourites']) . "]";
