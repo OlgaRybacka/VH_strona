@@ -32,7 +32,9 @@ if (getURLParameter("tab") == "mieszkania")
 						document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax_mi");
 						if (getURLParameter("lokalizacja_mi") != '')
 						document.getElementsByName('lokalizacja_mi')[0].value = getURLParameter("lokalizacja_mi");
-						}
+						if (getURLParameter("sortujWg") != '')
+                        document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
+                    }
 else if (getURLParameter("tab") == "domy")
                     {
 						if (getURLParameter("typOferty_do") != '')
@@ -63,6 +65,8 @@ else if (getURLParameter("tab") == "domy")
 						document.getElementsByName('rokbudowyMax_do')[0].value = getURLParameter("rokbudowyMax_do");
 						if (getURLParameter("lokalizacja_do") != '')
 						document.getElementsByName('lokalizacja_do')[0].value = getURLParameter("lokalizacja_do");
+                        if (getURLParameter("sortujWg") != '')
+                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
 						}
 else if (getURLParameter("tab") == "dzialki")
                     {
@@ -82,6 +86,8 @@ else if (getURLParameter("tab") == "dzialki")
 						document.getElementsByName('powierzchniaMax_dz')[0].value = getURLParameter("powierzchniaMax_dz");
 						if (getURLParameter("miasto_dz") != '')
 						document.getElementsByName('miasto_dz')[0].value = getURLParameter("miasto_dz");
+                        if (getURLParameter("sortujWg") != '')
+                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
 
 						}
 else if (getURLParameter("tab") == "lokale")
@@ -108,7 +114,8 @@ else if (getURLParameter("tab") == "lokale")
 						document.getElementsByName('rokbudowyMax_lo')[0].value = getURLParameter("rokbudowyMax_lo");
 						if (getURLParameter("lokalizacja_lo") != '')
 						document.getElementsByName('lokalizacja_lo')[0].value = getURLParameter("lokalizacja_lo");
-
+                        if (getURLParameter("sortujWg") != '')
+                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
 						}
 });
 })(jQuery);
