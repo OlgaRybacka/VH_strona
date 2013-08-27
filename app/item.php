@@ -144,7 +144,7 @@ if ($element == null) {
     <div id="map-canvas" data-lng="<?php echo $element->getLng()?>" data-lat="<?php echo $element->getLat()?>"></div>
 </span>
 <span>
-    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo $element->getOpis(); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
+    <form data-tab="<?php echo $element->getDzialTab(); ?>" data-id="<?php echo $element->getId(); ?>" data-photo="<?php echo getUrl($zdjecia[0]->getUrl())?>" data-opis="<?php echo htmlspecialchars ( $element->getOpis() ); ?>" data-cena="<?php echo $element->getCena(); ?>" data-typ="<?php echo $element->getDzialTyp(); ?>" data-powierzchnia="<?php echo $element->getPowierzchnia(); ?>" data-agentnazwisko="<?php echo $element->getAgentNazwisko(); ?>" data-agenttelefon="<?php if ($element->getAgentTelKom() != null) echo $element->getAgentTelKom(); else echo $element->getAgentTelBiuro() ?>" data-agentemail="<?php echo $element->getAgentEmail(); ?>" class="email-form">
         <label>Podaj adres e-mail, na który chcesz otrzymać ofertę.</label>
         <input name="email_address" id="email_address" type="text"/>
         <div class="anuluj-button"> </div>
