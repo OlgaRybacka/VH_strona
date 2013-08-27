@@ -39,8 +39,8 @@ class SearchQuery {
                 $query->$key = $value;
             }
         }
-        if( !in_array( $query->sortujWg, array("datawprowadzenia", "cenaM2", "cena") ) ) { $query->sortujWg = null; }
-        if( empty($query->sortujWg) ) { $query->sortujWg = 'datawprowadzenia'; }
+        if( !in_array( $query->sortujWg, array("datawprowadzenia", "cenaM2", "cena", "datawprowadzenia desc") ) ) { $query->sortujWg = null; }
+        if( empty($query->sortujWg) ) { $query->sortujWg = 'datawprowadzenia DESC'; }
 	    $query->sortujWg = preg_replace("/cenaM2/", "cena/powierzchnia", $query->sortujWg);
         return $query;
     }

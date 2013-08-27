@@ -16,7 +16,7 @@ function sortPanel() {
         sortuj wg
         <div class="styled-select sort-select">
             <select id="sortujWg" name="sortujWg" on>
-                <option selected="selected" value="datawprowadzenia">data dodania</option>
+                <option selected="selected" value="datawprowadzenia desc">data dodania</option>
                 <option value="cena">cena</option>
                 <option value="cenaM2">cena za m2</option>
             </select>
