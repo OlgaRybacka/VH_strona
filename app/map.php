@@ -38,7 +38,7 @@ $found = $nie->search($query);
 	<script src="public/static/js/vendor/modernizr-2.6.2.min.js"></script>
 	<script type="text/javascript" src="public/static/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 	<script type="text/javascript" src="public/static/js/fancybox/jquery.easing-1.3.pack.js"></script>
-
+	<script type="text/javascript" src="public/static/js/markercluster.js" ></script>
 	<script type="text/javascript" src="public/static/js/search_map.js?cb=<?php cacheBuster(); ?>" ></script>
 
 </head>
@@ -84,7 +84,7 @@ $found = $nie->search($query);
 	var MapView;
 
 	MapView = (function() {
-		var map, data, geocoder, self;
+		var map, data, geocoder, markerClusterer, self;
 		var mapOptions = {
 			zoom: 12,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -94,12 +94,14 @@ $found = $nie->search($query);
 		function MapView(mapElementId, _data) {
 			var self = this;
 			map = new google.maps.Map(document.getElementById(mapElementId),mapOptions);
+			markerClusterer = new MarkerClusterer(map, [], { zoomOnClick: false });
 			data = _data;
 			geocoder = new google.maps.Geocoder();
+			var markers = [];
 			for( var i in data ) {
 				var d = data[i];
 				if (d.lat && d.lng) {
-					self.addMarker(d);
+					markers.push(d);
 				} else {
 					(function(d) {
 						console.log("geocode: " + [d.miasto || d.miejscowosc, d.ulica].join());
@@ -123,6 +125,12 @@ $found = $nie->search($query);
 					})(d);
 				}
 			}
+			google.maps.event.addListener( markerClusterer, 'clusterclick', function( cluster ) {
+				console.log(cluster);
+				var markers = cluster.getMarkers();
+				self.showInfos( markers );
+			});
+			self.addMarkers( markers );
 		}
 
 		MapView.prototype.showInfo = function( id, marker ) {
@@ -144,21 +152,71 @@ $found = $nie->search($query);
 				});
 		}
 
-		MapView.prototype.addMarker = function(point) {
-			var ll;
+		MapView.prototype.showInfos = function( markers ) {
 			var self = this;
-			console.log(point.lat + " : " + point.lng);
-			ll = new google.maps.LatLng(point.lat, point.lng);
-			var marker = new google.maps.Marker({
-				position: ll,
-				map: map,
-				draggable: false,
-				animation: google.maps.Animation.DROP
-			});
-			google.maps.event.addListener(marker, 'click', function() {
-				self.showInfo( point.id, marker );
-			});
-			return marker;
+			if(self.infowindow) {
+				self.infowindow.close();
+				self.infowindow = null;
+			}
+			var responses = [];
+			function show() {
+				if(self.infowindow) {
+					self.infowindow.close();
+					self.infowindow = null;
+				}
+				var contentString = '';
+				for ( var i in responses ) {
+					contentString += '<div style="width: 340px; height: 170px; clear: both; position: relative;">' + responses[i] + '</div>';
+				}
+				contentString = '<div style="width: 360px;">' + contentString + '</div>';
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString
+				});
+				infowindow.setPosition( markers[0].getPosition() );
+				infowindow.open( map );
+				self.infowindow = infowindow;
+			}
+			for( var i in markers ) {
+			// pobierz info window
+				var marker = markers[i], id = marker.get('point').id;
+				$.get("map_item.php?id=" + id, function(contentString) {
+					responses.push( $(contentString).html() );
+					if( responses.length == markers.length ) {
+						show();
+					}
+				});
+			}
+		}
+
+		MapView.prototype.addMarker = function(point) {
+			var markers = this.addMarkers([point]);
+			return markers[0];
+		};
+
+		MapView.prototype.addMarkers = function(points) {
+			var markers = [];
+			var self = this;
+			for( var i in points ) {
+				var marker = (function(point) {
+					var ll;
+					console.log(point.lat + " : " + point.lng);
+					ll = new google.maps.LatLng(point.lat, point.lng);
+					var marker = new google.maps.Marker({
+						position: ll,
+						map: map,
+						draggable: false,
+						animation: google.maps.Animation.DROP
+					});
+					marker.set( 'point', point );
+					google.maps.event.addListener(marker, 'click', function() {
+						self.showInfo( point.id, marker );
+					});
+					return marker;
+				}) (points[i]);
+				markers.push( marker );
+			}
+			markerClusterer.addMarkers( markers, false );
+			return markers;
 		};
 
 		return MapView;
