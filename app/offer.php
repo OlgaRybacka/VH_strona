@@ -313,7 +313,10 @@ if ($element == null) {
 				</span>
 				<span class="col2">
 				  <div class="text">
-				    <span style="font-size:12px;">kondygnacje / pokoje</span><br/>
+				    <span style="font-size:12px;">';
+                  if ($print) echo 'kond.';
+                  else echo 'kondygnacje';
+                  echo'/ pokoje</span><br/>
 				    <span style="font-size: 14px; font-weight:bold; text-align: center">' . $element->getLiczbapieter() .' / ' . $element->getPokoje() .'</span>
 				  </div>
 				</span>
@@ -412,7 +415,7 @@ if ($element == null) {
 
                     echo '<img src="public/static/./img/off_but1.png"></img></a><!--
             --><a class="offer-button favourite-button" data-id="' . $element->getId() . '" title="Dodaj do swoich ulubionych ofert, możesz je przejrzeć w każdej chwili."><img src="public/static/./img/off_but2.png"></img></a><!--
-            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=' . urlencode( 'http://alpha.vanhausen.pl/offer.php?id='. $id . '&print=1' ) . '"><img src="public/static/./img/off_but3.png"></img></a><!--
+            --><a class="offer-button" title="Pobierz pdf z ofertą" href="http://pdfmyurl.com?url=' . urlencode( 'http://vanhausen.pl/offer.php?id='. $id . '&print=1' ) . '&-O=Portrait&--filename=VANHAUSENoferta' . $id .'.pdf' . '"><img src="public/static/./img/off_but3.png"></img></a><!--
             --><a class="offer-button mailto-button" title="Wyślij ofertę na swoją skrzynkę mailową"><img src="public/static/./img/off_but4.png"></img></a><!--
             --><a class="offer-button showmap-button" title="Pokaż ofertę na mapie"><img src="public/static/./img/off_but5.png"></img></a><!--
             --></span></span>';

@@ -211,12 +211,12 @@ class NieruchomosciRepository {
       $conditions[] = " rokbudowy <= :RokBudowyMax";
       $toBind[':RokBudowyMax'] = $query->getRokbudowyMax();
     }
-    if( $query->getTypBudynkuMieszk() != null ) {
+    if( $query->getTypBudynkuMieszk() != null && $query->getTypBudynkuMieszk() != "dowolny") {
       $conditions[] = " typbudynkumieszk = :TypBudynkuMieszk";
       $toBind[':TypBudynkuMieszk'] = $query->getTypBudynkuMieszk();
     }
     if( $query->getTypOferty() != null ) {
-      if ($query->getTypOferty() == "sprzedaż")
+      if ($query->getTypOferty() == "sprzedaż" || $query->getTypOferty() == "sprzedaz")
         $conditions[] = " dzial_typ = 'sprzedaz'";
       else
         $conditions[] = " dzial_typ = 'wynajem'";
@@ -241,7 +241,7 @@ class NieruchomosciRepository {
       $conditions[] = "(upper(ulica) like upper(:Lokalizacja) OR upper(dzielnica) like upper(:Lokalizacja))";
       $toBind[':Lokalizacja'] = $query->getLokalizacja();
     }
-    if( $query->getTypLokalu() != null) {
+    if( $query->getTypLokalu() != null && $query->getTypLokalu() != "dowolny") {
       $conditions[] = "typlokalu = :typLokalu";
       $toBind[':typLokalu'] = $query->getTypLokalu();
     }

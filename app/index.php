@@ -125,7 +125,7 @@ foreach ( $nieruchomosci as $v ) {
             </a><!--
             --><span class="tile img1">
             </span><!--
-            --><a class="tile violet" href="search.php?tab=mieszkania">
+            --><a class="tile violet" href="search.php?tab=mieszkania&typOferty_mi=sprzedaz&sortujWg=datawprowadzenia+desc&typBudynku_mi=dowolny">
 				<img src="public/static/./img/oferty.png" style="margin-top: 65px"></img>
             </a>
         </div>
@@ -134,19 +134,19 @@ foreach ( $nieruchomosci as $v ) {
 			  <img src="public/static/./img/about.png"></img>
 			</span><!--
             --><span class="tile"></span><!--
-            --><a class="tile violet" href="search.php?tab=mieszkania">
+            --><a class="tile violet" href="search.php?tab=mieszkania&typOferty_mi=sprzedaz&sortujWg=datawprowadzenia+desc&typBudynku_mi=dowolny">
 			  <img src="public/static/./img/mieszkania.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?tab=domy">
+            --><a class="tile gray" href="search.php?tab=domy&typOferty_do=sprzedaz&sortujWg=datawprowadzenia+desc">
               <img src="public/static/./img/domy.png"></img>
               <div class="arrow-down gray"></div>
 			</a><!--
-            --><a class="tile violet" href="search.php?tab=dzialki">
+            --><a class="tile violet" href="search.php?tab=dzialki&typOferty_dz=sprzedaz&sortujWg=datawprowadzenia+desc">
 			  <img src="public/static/./img/dzialki.png"></img>
               <div class="arrow-down violet"></div>
             </a><!--
-            --><a class="tile gray" href="search.php?tab=lokale">
+            --><a class="tile gray" href="search.php?tab=lokale&typOferty_lo=wynajem&sortujWg=datawprowadzenia+desc&typLokalu_lo=dowolny">
 			  <img src="public/static/./img/komercyjne.png" style="margin-top: 65px"></img>
               <div class="arrow-down gray"></div>
             </a>
@@ -211,6 +211,24 @@ foreach ( $nieruchomosci as $v ) {
                  '<div class="offer-data wiecej"><a href="search.php?tab=lokale&id=' . $nieruchomosc->getId() . '">więcej...</a></div>
                 </span>';
     }
+    else {
+        echo '<span class="span1">
+				<div class="offer-data" style="height:102px">';
+
+            echo '<span class="dane_center"><span class="big-number">'. ' ' . '</span> <span class="big-number">' . ' ' . '</span><br/></span>
+					<span class="dane_center"><span class="big-number">' . ' ' . '</span></span>
+					<img style="display: block; margin: auto; margin-top: 5px; margin-bottom: 5px"></img>
+					<span class="miejsce1 dane_center">' . ' ' .'</span>
+					<span class="miejsce2 dane_center">' . ' ' . '&nbsp;</span>';
+
+        echo
+            '</div>
+            <img' . ' style="display: block; margin: auto; margin-top: 5px; width: 148px; height: 111px;"></img>
+				<div class="offer-data skrot">
+					' . ' ' . '
+				</div><div class="offer-data wiecej">&nbsp;</div>
+                </span>';
+    }
 
 } ?>
 		</div>
@@ -225,6 +243,11 @@ foreach ( $nieruchomosci as $v ) {
                 <div class="offer-data phone_nr">
                   <img src="public/static/./img/phone.png">' . $nieruchomosc->getAgentTelKom() . '
                 </div>
+                          </span>';
+    }
+    else {
+        echo '<span class="span1">
+        <div class="offer-data" style="height:66px">&nbsp;</div>
                           </span>';
     }
 }

@@ -16,7 +16,7 @@ function sortPanel() {
         sortuj wg
         <div class="styled-select sort-select">
             <select id="sortujWg" name="sortujWg" on>
-                <option selected="selected" value="datawprowadzenia desc">data dodania</option>
+                <option value="datawprowadzenia desc">data dodania</option>
                 <option value="cena">cena</option>
                 <option value="cenaM2">cena za m2</option>
             </select>
@@ -27,10 +27,10 @@ function sortPanel() {
 ?>
 <div class="container search-form">
 		<span class="zakladki"><!--
-          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?> " href="<?php echo $whichSite?>.php?tab=mieszkania">mieszkania<div class="arrow-right <?php if ($offertype == "mieszkania") {echo 'active';}?> "> </div></a><!--
-          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=domy">domy<div class="arrow-right <?php if ($offertype == "domy") {echo 'active';}?> "> </div></a><!--
-          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=dzialki">działki<div class="arrow-right <?php if ($offertype == "dzialki") {echo 'active';}?> "> </div></a><!--
-          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=lokale">lokale komercyjne<div class="arrow-right <?php if ($offertype == "lokale") {echo 'active';}?> "> </div></a><!--
+          --><a class="zakladka_mieszkania <?php if ($offertype == "mieszkania") {echo 'active';}?> " href="<?php echo $whichSite?>.php?tab=mieszkania&typOferty_mi=sprzedaz&sortujWg=datawprowadzenia+desc">mieszkania<div class="arrow-right <?php if ($offertype == "mieszkania") {echo 'active';}?> "> </div></a><!--
+          --><a class="zakladka_domy <?php if ($offertype == "domy") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=domy&typOferty_do=sprzedaz&sortujWg=datawprowadzenia+desc">domy<div class="arrow-right <?php if ($offertype == "domy") {echo 'active';}?> "> </div></a><!--
+          --><a class="zakladka_dzialki <?php if ($offertype == "dzialki") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=dzialki&typOferty_dz=sprzedaz&sortujWg=datawprowadzenia+desc">działki<div class="arrow-right <?php if ($offertype == "dzialki") {echo 'active';}?> "> </div></a><!--
+          --><a class="zakladka_komercyjne <?php if ($offertype == "lokale") {echo 'active';}?>" href="<?php echo $whichSite?>.php?tab=lokale&typOferty_lo=wynajem&sortujWg=datawprowadzenia+desc">lokale komercyjne<div class="arrow-right <?php if ($offertype == "lokale") {echo 'active';}?> "> </div></a><!--
           --></span>
 		<form method="get" class="search-form1" <?php if ($offertype == "mieszkania") {echo 'style="visibility:visible;"';} else {echo 'style="visibility:hidden"';}?> >
 			<input hidden="true" value="mieszkania" name="tab"/>
@@ -39,8 +39,8 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select name="typOferty_mi" class="search-form row1 col2">
-					<option value="">sprzedaż</option>
-					<option>wynajem</option>
+					<option value='sprzedaz'>sprzedaż</option>
+					<option value='wynajem'>wynajem</option>
 				</select>
 			</div>
 			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
@@ -91,7 +91,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typBudynkuMieszk_mi" name="typBudynkuMieszk_mi" class="search-form row1 col4a">
-					<option value="">dowolny</option>
+					<option value="dowolny">dowolny</option>
 					<option>blok</option>
 					<option>kamienica</option>
 					<option>dom wielorodzinny</option>
@@ -135,8 +135,8 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_do" name="typOferty_do" class="search-form row1 col2">
-					<option value="">sprzedaż</option>
-					<option>wynajem</option>
+                    <option value='sprzedaz'>sprzedaż</option>
+                    <option value='wynajem'>wynajem</option>
 				</select>
 			</div>
 			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
@@ -234,8 +234,8 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_dz" name="typOferty_dz" class="search-form row1 col2">
-					<option value="">sprzedaż</option>
-					<option>wynajem</option>
+                    <option value='sprzedaz'>sprzedaż</option>
+                    <option value='wynajem'>wynajem</option>
 				</select>
 			</div>
 			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
@@ -281,8 +281,8 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typOferty_lo" name="typOferty_lo" class="search-form row1 col2">
-					<option value="">wynajem</option>
-                    <option>sprzedaż</option>
+                    <option value='sprzedaz'>sprzedaż</option>
+                    <option value='wynajem'>wynajem</option>
 				</select>
 			</div>
 			<div class="search-form form-label row2 col1">cena nieruchomości [od / do]
@@ -319,7 +319,7 @@ function sortPanel() {
 			</div>
 			<div class="styled-select">
 				<select id="typLokalu_lo" name="typLokalu_lo" class="search-form row1 col4a">
-					<option value="">dowolny</option>
+					<option value="dowolny">dowolny</option>
 					<option value="handel i usługi/lokal handlowy">handlowy</option>
 					<option value="biura/biuro">biurowy</option>
 					<option value="magazyny i hale/magazyn">magazynowy</option>

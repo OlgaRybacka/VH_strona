@@ -2,8 +2,6 @@
 	$(window).load(function(){
 		$(".offers-list").mCustomScrollbar({scrollButtons:{enable:true}});
 
-        if (getURLParameter("sortujWg") != '')
-            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
 if (getURLParameter("tab") == "mieszkania")
                     {
 						if (getURLParameter("cenaMin_mi") != '')
@@ -26,7 +24,9 @@ if (getURLParameter("tab") == "mieszkania")
 						document.getElementsByName('typBudynkuMieszk_mi')[0].value = getURLParameter("typBudynkuMieszk_mi");
 						if (getURLParameter("typOferty_mi") != '')
 						document.getElementsByName('typOferty_mi')[0].value = getURLParameter("typOferty_mi");
-						if (getURLParameter("pokojeMin_mi") != '')
+                        else
+                        document.getElementsByName('typOferty_mi')[0].value = "sprzedaz";
+                        if (getURLParameter("pokojeMin_mi") != '')
 						document.getElementsByName('pokojeMin_mi')[0].value = getURLParameter("pokojeMin_mi");
 						if (getURLParameter("pokojeMax_mi") != '')
 						document.getElementsByName('pokojeMax_mi')[0].value = getURLParameter("pokojeMax_mi");
@@ -34,12 +34,16 @@ if (getURLParameter("tab") == "mieszkania")
 						document.getElementsByName('lokalizacja_mi')[0].value = getURLParameter("lokalizacja_mi");
 						if (getURLParameter("sortujWg") != '')
                         document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
+                        else
+                        document.getElementsByName('sortujWg')[0].value = "datawprowadzenia desc";
                     }
 else if (getURLParameter("tab") == "domy")
                     {
 						if (getURLParameter("typOferty_do") != '')
 						document.getElementsByName('typOferty_do')[0].value = getURLParameter("typOferty_do");
-						if (getURLParameter("cenaMin_do") != '')
+                        else
+                        document.getElementsByName('typOferty_do')[0].value = "sprzedaz";
+                        if (getURLParameter("cenaMin_do") != '')
 						document.getElementsByName('cenaMin_do')[0].value = getURLParameter("cenaMin_do");
 						if (getURLParameter("cenaMax_do") != '')
 						document.getElementsByName('cenaMax_do')[0].value = getURLParameter("cenaMax_do");
@@ -66,13 +70,17 @@ else if (getURLParameter("tab") == "domy")
 						if (getURLParameter("lokalizacja_do") != '')
 						document.getElementsByName('lokalizacja_do')[0].value = getURLParameter("lokalizacja_do");
                         if (getURLParameter("sortujWg") != '')
-                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
+                            document.getElementsByName('sortujWg')[1].value = getURLParameter("sortujWg");
+                        else
+                            document.getElementsByName('sortujWg')[1].value = "datawprowadzenia desc";
 						}
 else if (getURLParameter("tab") == "dzialki")
                     {
 						if (getURLParameter("typOferty_dz") != '')
 						document.getElementsByName('typOferty_dz')[0].value = getURLParameter("typOferty_dz");
-						if (getURLParameter("cenaMin_dz") != '')
+                        else
+                        document.getElementsByName('typOferty_dz')[0].value = "sprzedaz";
+                        if (getURLParameter("cenaMin_dz") != '')
 						document.getElementsByName('cenaMin_dz')[0].value = getURLParameter("cenaMin_dz");
 						if (getURLParameter("cenaMax_dz") != '')
 						document.getElementsByName('cenaMax_dz')[0].value = getURLParameter("cenaMax_dz");
@@ -87,14 +95,18 @@ else if (getURLParameter("tab") == "dzialki")
 						if (getURLParameter("miasto_dz") != '')
 						document.getElementsByName('miasto_dz')[0].value = getURLParameter("miasto_dz");
                         if (getURLParameter("sortujWg") != '')
-                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
+                            document.getElementsByName('sortujWg')[2].value = getURLParameter("sortujWg");
+                        else
+                            document.getElementsByName('sortujWg')[2].value = "datawprowadzenia desc";
 
 						}
 else if (getURLParameter("tab") == "lokale")
                     {
 						if (getURLParameter("typOferty_lo") != '')
 						document.getElementsByName('typOferty_lo')[0].value = getURLParameter("typOferty_lo");
-						if (getURLParameter("cenaMin_lo") != '')
+                        else
+                        document.getElementsByName('typOferty_lo')[0].value = "wynajem";
+                        if (getURLParameter("cenaMin_lo") != '')
 						document.getElementsByName('cenaMin_lo')[0].value = getURLParameter("cenaMin_lo");
 						if (getURLParameter("cenaMax_lo") != '')
 						document.getElementsByName('cenaMax_lo')[0].value = getURLParameter("cenaMax_lo");
@@ -115,7 +127,9 @@ else if (getURLParameter("tab") == "lokale")
 						if (getURLParameter("lokalizacja_lo") != '')
 						document.getElementsByName('lokalizacja_lo')[0].value = getURLParameter("lokalizacja_lo");
                         if (getURLParameter("sortujWg") != '')
-                            document.getElementsByName('sortujWg')[0].value = getURLParameter("sortujWg");
+                            document.getElementsByName('sortujWg')[3].value = getURLParameter("sortujWg");
+                        else
+                            document.getElementsByName('sortujWg')[3].value = "datawprowadzenia desc";
 						}
 });
 })(jQuery);
